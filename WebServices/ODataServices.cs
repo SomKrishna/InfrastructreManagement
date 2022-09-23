@@ -172,6 +172,70 @@ namespace WebServices
             return obj.ExportMaintanenceAndAMC();
         }
 
+        #region DTET services
+        public static string ExportDTETEstimatePreparationMonitoring()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            return obj.ExportDTETEstimatePreparationMonitoring();
+        }
+
+        public static string ExportDTETAuditoriumBuilding()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            return obj.ExportDTETAuditoriumBuilding();
+        }
+
+        public static string ExportDTETHostelBuilding()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            return obj.ExportDTETHostelBuilding();
+        }
+
+        public static string ExportDTETInstitutionalBuilding()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            return obj.ExportDTETInstitutionalBuilding();
+        }
+
+        public static string ExportDTETStaffBuilding()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            return obj.ExportDTETStaffBuilding();
+        }
+
+        public static string ExportDTETLandDataDetails()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            return obj.ExportDTETLandDataDetails();
+        }
+
+        public static string ExportDTETMaintanenceAndAMC()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            return obj.ExportDTETMaintanenceAndAMC();
+        }
+
+        public static string ExportDTETProjectProgressDetails()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            return obj.ExportDTETProjectProgressDetails();
+        }
+
+        public static string ExportDTETServiceMonitoring()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            return obj.ExportDTETServiceMonitoring();
+        }
+        #endregion
         public static string CreateInstituteBuilding(InstituteReference.InstituteBuildingCard obj)
         {
             try

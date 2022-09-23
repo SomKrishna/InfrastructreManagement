@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true" CodeBehind="Reports.aspx.cs" Inherits="InfrastructureManagement.Reports" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BuildingMaster.Master" AutoEventWireup="true" CodeBehind="Reports.aspx.cs" Inherits="InfrastructureManagement.Reports" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -135,25 +135,23 @@
                                     <div class="row md-12 marginx">
                                         <ol>
                                             <li>
-                                                <asp:LinkButton runat="server">Report 1</asp:LinkButton></li>
+                                                <asp:LinkButton ID="btnEstimatePreparation" OnClick="btnEstimatePreparation_Click" runat="server">Download DTET Estimate Preparation Monitoring Report</asp:LinkButton></li>
                                             <li>
-                                                <asp:LinkButton runat="server">Report 2</asp:LinkButton></li>
+                                                <asp:LinkButton ID="btnAuditoriumBuilding" OnClick="btnAuditoriumBuilding_Click" runat="server">Download DTET Auditorium Building Report</asp:LinkButton></li>
                                             <li>
-                                                <asp:LinkButton runat="server">Report 3</asp:LinkButton></li>
+                                                <asp:LinkButton ID="btnHostelBuilding" OnClick="btnHostelBuilding_Click" runat="server">Download DTET Hostel Building Report</asp:LinkButton></li>
                                             <li>
-                                                <asp:LinkButton runat="server">Report 4</asp:LinkButton></li>
+                                                <asp:LinkButton ID="btnInstitutionalBuilding" OnClick="btnInstitutionalBuilding_Click" runat="server">Download DTET Institutional Building Report</asp:LinkButton></li>
                                             <li>
-                                                <asp:LinkButton runat="server">Report 5</asp:LinkButton></li>
+                                                <asp:LinkButton ID="btnStaffBuilding" OnClick="btnStaffBuilding_Click" runat="server">Download DTET Staff Building Report</asp:LinkButton></li>
                                             <li>
-                                                <asp:LinkButton runat="server">Report 6</asp:LinkButton></li>
+                                                <asp:LinkButton ID="btnLandDataDetail" OnClick="btnLandDataDetail_Click" runat="server">Download DTET Land Data Details Report</asp:LinkButton></li>
                                             <li>
-                                                <asp:LinkButton runat="server">Report 7</asp:LinkButton></li>
+                                                <asp:LinkButton ID="btnMaintanenceAndAMC" OnClick="btnMaintanenceAndAMC_Click" runat="server">Download DTET Maintanence And AMC Report</asp:LinkButton></li>
                                             <li>
-                                                <asp:LinkButton runat="server">Report 8</asp:LinkButton></li>
+                                                <asp:LinkButton ID="btnProjectProgressDetail" OnClick="btnProjectProgressDetail_Click" runat="server">Download DTET Project Progress Details Report</asp:LinkButton></li>
                                             <li>
-                                                <asp:LinkButton runat="server">Report 9</asp:LinkButton></li>
-                                            <li>
-                                                <asp:LinkButton runat="server">Report 10</asp:LinkButton></li>
+                                                <asp:LinkButton ID="btnServiceMonitoring" OnClick="btnServiceMonitoring_Click" runat="server">Download DTET Service Monitoring Report</asp:LinkButton></li>
                                         </ol>
                                     </div>
                                 </div>

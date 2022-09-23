@@ -363,26 +363,24 @@
 </head>
 <body>
     <div class="loader">
-        <img src="images/loader_icon.gif" class="fa-spinner" />
+        <%--<img src="images/loader_icon.gif" class="fa-spinner" />--%>
         <%--<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>--%>
     </div>
     <div id="wrappergb" runat="server"></div>
     <div class="wrapper">
         <form id="form1" runat="server">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-            <asp:HiddenField ID="hdnMainMenuClass" runat="server" Value="lblMainTst" />
-            <asp:HiddenField ID="hdnSubMenuClass" runat="server" Value="lblTSTSub" />
-            <header>
+            <%--<header>
                 <div class="top_header_ber">
                     <div class="container">
                         <span class="announcement_heading">Announcement <i class="fa fa-hand-o-right" aria-hidden="true"></i></span>
                         <div id="announcement_carousel" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner" role="listbox">
-                               <%-- <asp:Repeater ID="rptrAnnoucement" runat="server">
+                                <asp:Repeater ID="rptrAnnoucement" runat="server">
                                     <ItemTemplate>
                                         <div class='<%#Eval("CSSClass")%>'><%#Eval("AnnouncementText")%> </div>
                                     </ItemTemplate>
-                                </asp:Repeater>--%>
+                                </asp:Repeater>
                             </div>
                         </div>
                         <div class="pull-right current-user-name">
@@ -424,7 +422,7 @@
 
 
                             <div class="collapse navbar-collapse" id="myNavbar1" style="display: none !important;">
-                                <%--<ul class="nav navbar-nav">
+                                <ul class="nav navbar-nav">
                                     <asp:Repeater ID="reptrMainManu1" runat="server" OnItemCommand="reptrMainManu1_ItemCommand">
                                         <ItemTemplate>
                                             <li id='<%# Eval("liID") %>'>
@@ -446,10 +444,10 @@
                                             </asp:Repeater>
                                         </ul>
                                     </li>
-                                </ul>--%>
+                                </ul>
                             </div>
 
-                            <%--<ul class="nav navbar-nav navbar-right user-drop">
+                            <ul class="nav navbar-nav navbar-right user-drop">
                                 <li class="dropdown clearfix">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <asp:Panel ID="pnlImgBlank" runat="server">
@@ -472,24 +470,24 @@
                                         </li>
                                         <li id="liUPDProfile" runat="server"><a href="javascript:void(0);" id="uploadProfilePic">Upload Profile Picture</a></li>
                                         <li id="liChangePassword" runat="server"><a href="ChangePassword.aspx">Change Password</a></li>
-<%--                                        <li>
+                                       <li>
                                            <asp:Button ID="btndownloadusermannual" runat="server" CssClass="download-manual" Text="Download user Manual" OnClick="btndownloadusermannual_Click" />
                                             <asp:LinkButton ID="btndownloadusermannual" runat="server" CssClass="download-manual" Text="Download User Manual" OnClick="btndownloadusermannual_Click"></asp:LinkButton>
-                                        </li>--%>
-                                      <%--  <li><a href="loginForm.aspx">Sign Out</a></li>
+                                        </li>
+                                        <li><a href="loginForm.aspx">Sign Out</a></li>
                                     </ul>
                                 </li>
-                            </ul>--%>
+                            </ul>
                         </div>
                     </nav>
                 </div>
-            </header>
-            <div class="banner">
+            </header>--%>
+            <%--<div class="banner">
                 <img src="assets/vendor/images/mu-acadamic-lp.jpg" class="full-img" />
-            </div>
+            </div>--%>
 
-            <div class="container">
-                <%--<ul class="row breadcrumb">
+            <%--<div class="container">
+                <ul class="row breadcrumb">
                     <li>
                         <asp:LinkButton ID="lnkBtnHome" runat="server" OnClick="lnkBtnHome_Click">
                         <i class="fa fa-home" aria-hidden="true"></i> My Home Page
@@ -505,11 +503,11 @@
                             <asp:Label ID="Label2StudentName" runat="server" Visible="false" CssClass="bg-after-heading1"></asp:Label></b><asp:Label ID="Label2Enrollment" runat="server" Visible="false" CssClass="bg-after-heading1"></asp:Label>
                         <asp:LinkButton ID="lnkback" runat="server" OnClick="lnkback_Click" Visible="false">Back <span class="fa fa-hand-o-left back-sign"></span></asp:LinkButton>
                     </li>
-                </ul>--%>
-            </div>
+                </ul>
+            </div>--%>
             <div class="bodymain">
                 <div class="container tabbable tabs-left">
-                    <div id="divLeft" runat="server" class="left_col">
+                    <%--<div id="divLeft" runat="server" class="left_col">
                         <div class="row">
                             <h2 class="left_col_heading text-center m-0">
                                 <asp:Label ID="lblSubManuName" runat="server"></asp:Label></h2>
@@ -521,7 +519,7 @@
                             </button>
                         </div>
 
-                       <%-- <ul class="nav nav-tabs" id="sub-tabs-list">
+                       <ul class="nav nav-tabs" id="sub-tabs-list">
                             <asp:Repeater ID="rtpSubMenu" runat="server" OnItemCommand="rtpSubMenu_ItemCommand">
                                 <ItemTemplate>
                                     <asp:HiddenField ID="hdnLink" runat="server" Value='<%# Eval("LINK") %>' />
@@ -532,17 +530,17 @@
                                         </asp:LinkButton></li>
                                 </ItemTemplate>
                             </asp:Repeater>
-                        </ul>--%>
-                    </div>
+                        </ul>
+                    </div>--%>
                     <div id="divRight" runat="server" class="right_col tab-content">
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                         </asp:ContentPlaceHolder>
                     </div>
                 </div>
             </div>
-            <footer class="p-10">©YEAR Institute Name here, City Name here</footer>
+            <%--<footer class="p-10">©YEAR Institute Name here, City Name here</footer>--%>
 
-            <div id="profilePictureModal" class="modal fade" role="dialog">
+            <%--<div id="profilePictureModal" class="modal fade" role="dialog">
                 <div class="modal-dialog modal-sm" style="margin-top: 10%;">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -568,7 +566,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>--%>
         </form>
     </div>
 

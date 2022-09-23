@@ -238,43 +238,43 @@
                                             <div class="col-md-8 space">
                                                 <div class="row">
                                                     <div class="col-md-12 ">
-                                                        <label runat="server" id="Label1" for="exampleAccount">Distict- </label>
+                                                        <label runat="server" id="Label1" for="exampleAccount">Distict - </label>
                                                         <label runat="server" id="lblDistrict" for="exampleAccount"></label>
                                                     </div>
                                                     <div class="col-md-12 ">
-                                                        <label runat="server" id="Label2" for="exampleAccount">Name Of the Institute- </label>
+                                                        <label runat="server" id="Label2" for="exampleAccount">Name Of the Institute - </label>
                                                         <label runat="server" id="lblInstitute" for="exampleAccount"></label>
                                                     </div>
                                                     <div class="col-md-12 ">
-                                                         <label runat="server" id="Label3" for="exampleAccount">Project Type- </label>
+                                                         <label runat="server" id="Label3" for="exampleAccount">Project Type - </label>
                                                         <label runat="server" id="lblProjectType" for="exampleAccount"></label>
                                                     </div>
                                                     <div class="col-md-12 ">
-                                                         <label runat="server" id="Label4" for="exampleAccount">Building Id (for Improvement type Projects only)- </label>
+                                                         <label runat="server" id="Label4" for="exampleAccount">Building Id (for Improvement type Projects only) - </label>
                                                         <label runat="server" id="lblBuildingId" for="exampleAccount"></label>
                                                     </div>
                                                     <div class="col-md-12 ">
-                                                         <label runat="server" id="Label5" for="exampleAccount">Name of the Project- </label>
+                                                         <label runat="server" id="Label5" for="exampleAccount">Name of the Project - </label>
                                                         <label runat="server" id="lblProjectName" for="exampleAccount"></label>
                                                     </div>
                                                     <div class="col-md-12 ">
-                                                         <label runat="server" id="Label6" for="exampleAccount">Name of the Agency- </label>
+                                                         <label runat="server" id="Label6" for="exampleAccount">Name of the Agency -</label>
                                                         <label runat="server" id="lblAgencyName" for="exampleAccount"></label>
                                                     </div>
                                                     <div class="col-md-12 ">
-                                                        <label runat="server" id="Label7" for="exampleAccount">Type of the Work- </label>
+                                                        <label runat="server" id="Label7" for="exampleAccount">Type of the Work -</label>
                                                         <label runat="server" id="lblWorkType" for="exampleAccount"></label>
                                                     </div>
                                                     <div class="col-md-12 ">
-                                                        <label runat="server" id="Label8" for="exampleAccount">Mode of the Work- </label>
+                                                        <label runat="server" id="Label8" for="exampleAccount">Mode of the Work - </label>
                                                         <label runat="server" id="lblWorkMode" for="exampleAccount"></label>
                                                     </div>
                                                     <div class="col-md-12 ">
-                                                        <label runat="server" id="Label9" for="exampleAccount">Date of Commencement as per agreement- </label>
+                                                        <label runat="server" id="Label9" for="exampleAccount">Date of Commencement as per agreement -</label>
                                                         <label runat="server" id="lblCommencementDate" for="exampleAccount"></label>
                                                     </div>
                                                     <div class="col-md-12 ">
-                                                        <label runat="server" id="Label10" for="exampleAccount">Date of Completion as per agreement- </label>
+                                                        <label runat="server" id="Label10" for="exampleAccount">Date of Completion as per agreement -</label>
                                                         <label runat="server" id="lblCompletionDate" for="exampleAccount"></label>
                                                     </div>
                                                 </div>

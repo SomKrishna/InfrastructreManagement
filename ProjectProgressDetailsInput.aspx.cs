@@ -22,10 +22,10 @@ namespace InfrastructureManagement
             var improvementObj = new InfraOdata.Improvementprojectcard();
             var InputProgectCode = txtProjectSearch.Text;
             //var projectProgressData = ODataServices.GetProjectProgressByProjectCode(InputProgectCode);
-            ongoingobj = ODataServices.GetOnGoingTypeProjectDetails().Where(x => x.Project_Code == InputProgectCode).FirstOrDefault();
+            ongoingobj = ODataServices.GetOnGoingTypeProjectDetails().Where(x => string.Equals(x.Project_Code, InputProgectCode, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
             if (ongoingobj == null)
             {
-                improvementObj = ODataServices.GetImprovementTypeProjectDetails().Where(x => x.Project_Code == InputProgectCode).FirstOrDefault();
+                improvementObj = ODataServices.GetImprovementTypeProjectDetails().Where(x => string.Equals(x.Project_Code, InputProgectCode, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
             }
             if (ongoingobj == null && improvementObj != null)
             {

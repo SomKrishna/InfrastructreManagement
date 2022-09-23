@@ -375,7 +375,7 @@
                         <span class="announcement_heading">Announcement <i class="fa fa-hand-o-right" aria-hidden="true"></i></span>
                         <div id="announcement_carousel" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner" role="listbox">
-                               <%-- <asp:Repeater ID="rptrAnnoucement" runat="server">
+                                <%-- <asp:Repeater ID="rptrAnnoucement" runat="server">
                                     <ItemTemplate>
                                         <div class='<%#Eval("CSSClass")%>'><%#Eval("AnnouncementText")%> </div>
                                     </ItemTemplate>
@@ -388,7 +388,7 @@
                                 <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
                                 <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                             </span>
-                             <asp:Button ID="btnResultPage" runat="server" CssClass="Learner blink_me"  Text="Click Here For Results" Visible="true"></asp:Button>
+                            <asp:Button ID="btnResultPage" runat="server" CssClass="Learner blink_me" Text="Click Here For Results" Visible="true"></asp:Button>
                             <asp:Label ID="lblUserName" runat="server"></asp:Label>
                         </div>
                     </div>
@@ -409,74 +409,37 @@
                                 <path id="tab-shape" class="tab-shape" d="M116.486,29.036c-23.582-8-14.821-29-42.018-29h-62.4C5.441,0.036,0,5.376,0,12.003v28.033h122v-11H116.486z"></path>
                             </svg>
                             <div class="collapse navbar-collapse" id="myNavbar">
-                               <%-- <ul class="nav navbar-nav"> 
-                                    <li id="liMore">
-                                        <asp:LinkButton ID="lnkbtn" runat="server" OnClientClick="BuildingEntryPageRedirect(); return false;" Text="Building New Entry"></asp:LinkButton>
-                                    </li>
-                                    <li id="liMore1">
-                                        <asp:LinkButton ID="LinkButton1" runat="server" OnClientClick="BuildingUpdatePageRedirect(); return false;" Text="Update Building"></asp:LinkButton>
-                                    </li>
-                                </ul>--%>
-                            </div>
-
-
-                            <div class="collapse navbar-collapse" id="myNavbar1" style="display: none !important;">
-                                <%--<ul class="nav navbar-nav">
-                                    <asp:Repeater ID="reptrMainManu1" runat="server" OnItemCommand="reptrMainManu1_ItemCommand">
-                                        <ItemTemplate>
-                                            <li id='<%# Eval("liID") %>'>
-                                                <asp:HiddenField ID="hdnLink" runat="server" Value='<%# Eval("LINK") %>' />
-                                                <asp:LinkButton ID="lnkbtn" runat="server" Text='<%# Eval("MENU_NAME") %>' CommandArgument='<%# Eval("id") %>'></asp:LinkButton>
-                                            </li>
-                                        </ItemTemplate>
-                                    </asp:Repeater>
-
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <asp:Repeater ID="reptrMainManu2" runat="server" OnItemCommand="reptrMainManu2_ItemCommand">
-                                                <ItemTemplate>
-                                                    <asp:HiddenField ID="hdnLink" runat="server" Value='<%# Eval("LINK") %>' />
-                                                    <li id='<%# Eval("liID") %>'>
-                                                        <asp:LinkButton ID="lnkbtn" runat="server" Text='<%# Eval("MENU_NAME") %>' CommandArgument='<%# Eval("id") %>'></asp:LinkButton></li>
-                                                </ItemTemplate>
-                                            </asp:Repeater>
+                                <ul class="nav navbar-nav navbar-right user-drop">
+                                    <li class="dropdown clearfix">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Land<b class="caret"></b></a>
+                                        <ul class="dropdown-menu" id="lidropmenu" runat="server">
+                                            <li><a href="MasterDataOnLandAndBuildings.aspx">Land Master</a></li>
+                                            <li><a href="LandRecord.aspx">Land Records</a></li>
                                         </ul>
                                     </li>
-                                </ul>--%>
+                                     <li class="dropdown clearfix">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Building<b class="caret"></b></a>
+                                        <ul class="dropdown-menu" id="Ul1" runat="server">
+                                            <li><a href="NewEntryBuilding.aspx">New Entry</a></li>
+                                            <li><a href="UpdateBuildings.aspx">Edit</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown clearfix">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project<b class="caret"></b></a>
+                                        <ul class="dropdown-menu" id="Ul2" runat="server">
+                                            <li><a href="ProjectWorkInput.aspx">New Project</a></li>
+                                            <li><a href="ProjectList.aspx">All Projects</a></li>
+                                            <li><a href="ProjectProgressDetailsInput.aspx">Project Progress</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="SecurityServices.aspx">Services</a>
+                                    </li>
+                                     <li>
+                                        <a href="MaintenanceAndAMC.aspx">AMC</a>
+                                    </li>
+                                </ul>
                             </div>
-
-                            <%--<ul class="nav navbar-nav navbar-right user-drop">
-                                <li class="dropdown clearfix">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <asp:Panel ID="pnlImgBlank" runat="server">
-                                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                                            <span class="user-caret" style="top: -7px;"><b class="caret"></b></span>
-                                        </asp:Panel>
-                                        <asp:Panel ID="pnlImgRepeater" runat="server">
-                                            <asp:Repeater ID="Repeater1" runat="server">
-                                                <ItemTemplate>
-                                                    <asp:Image ID="Image2" ImageUrl='<%#Eval("imgpath2") %>' runat="server" class="circle-img" alt="ProfilePic" />
-                                                    <span class="user-caret"><b class="caret"></b></span>
-                                                </ItemTemplate>
-                                            </asp:Repeater>
-                                        </asp:Panel>
-                                    </a>
-
-                                    <ul class="dropdown-menu" id="lidropmenu" runat="server">
-                                        <li id="liProfile" runat="server">
-                                            <asp:LinkButton ID="lnkProfileView" runat="server" Text="My Profile" OnClick="lnkProfileView_Click"></asp:LinkButton>
-                                        </li>
-                                        <li id="liUPDProfile" runat="server"><a href="javascript:void(0);" id="uploadProfilePic">Upload Profile Picture</a></li>
-                                        <li id="liChangePassword" runat="server"><a href="ChangePassword.aspx">Change Password</a></li>
-<%--                                        <li>
-                                           <asp:Button ID="btndownloadusermannual" runat="server" CssClass="download-manual" Text="Download user Manual" OnClick="btndownloadusermannual_Click" />
-                                            <asp:LinkButton ID="btndownloadusermannual" runat="server" CssClass="download-manual" Text="Download User Manual" OnClick="btndownloadusermannual_Click"></asp:LinkButton>
-                                        </li>--%>
-                                      <%--  <li><a href="loginForm.aspx">Sign Out</a></li>
-                                    </ul>
-                                </li>
-                            </ul>--%>
                         </div>
                     </nav>
                 </div>
@@ -518,7 +481,7 @@
                             </button>
                         </div>
 
-                       <%-- <ul class="nav nav-tabs" id="sub-tabs-list">
+                        <%-- <ul class="nav nav-tabs" id="sub-tabs-list">
                             <asp:Repeater ID="rtpSubMenu" runat="server" OnItemCommand="rtpSubMenu_ItemCommand">
                                 <ItemTemplate>
                                     <asp:HiddenField ID="hdnLink" runat="server" Value='<%# Eval("LINK") %>' />

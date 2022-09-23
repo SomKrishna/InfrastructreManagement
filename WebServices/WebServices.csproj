@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{995A9CD9-87F1-49B8-A1E6-A35405A2387F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebServices</RootNamespace>
+    <AssemblyName>WebServices</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.OData.Client, Version=7.12.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Client.7.12.2\lib\net45\Microsoft.OData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Core, Version=7.12.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Core.7.12.2\lib\net45\Microsoft.OData.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=7.12.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Edm.7.12.2\lib\net45\Microsoft.OData.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Spatial, Version=7.12.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Spatial.7.12.2\lib\net45\Microsoft.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Connected Services\OData Service\Odata Reference.cs" />
+    <Compile Include="ODataServices.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AMCCardReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AuditoriumReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CodeUnitReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EstimatePrepReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HostelReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ImprovementProjectReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\InstituteReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NewProjectReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\OngoingProjectReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProjectProgressReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceCardReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\StaffReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\OData Service\ConnectedService.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AMCCardReference\AMCCard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AMCCardReference\AMCCard.wsdl" />
+    <None Include="Web References\AMCCardReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AuditoriumReference\AuditoriumBuilding.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuditoriumReference\AuditoriumBuilding.wsdl" />
+    <None Include="Web References\AuditoriumReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CodeUnitReference\InfraCodeunit.wsdl" />
+    <None Include="Web References\CodeUnitReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EstimatePrepReference\EstimatePrepCard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EstimatePrepReference\EstimatePrepCard.wsdl" />
+    <None Include="Web References\EstimatePrepReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HostelReference\HostelBuildingCard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HostelReference\HostelBuildingCard.wsdl" />
+    <None Include="Web References\HostelReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ImprovementProjectReference\Improvementprojectcard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ImprovementProjectReference\Improvementprojectcard.wsdl" />
+    <None Include="Web References\ImprovementProjectReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\InstituteReference\InstituteBuildingCard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InstituteReference\InstituteBuildingCard.wsdl" />
+    <None Include="Web References\InstituteReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\NewProjectReference\Newprojectcard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NewProjectReference\Newprojectcard.wsdl" />
+    <None Include="Web References\NewProjectReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\OngoingProjectReference\Ongoingprojectcard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\OngoingProjectReference\Ongoingprojectcard.wsdl" />
+    <None Include="Web References\OngoingProjectReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProjectProgressReference\Projectprogressdetailscard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ProjectProgressReference\Projectprogressdetailscard.wsdl" />
+    <None Include="Web References\ProjectProgressReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceCardReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceCardReference\ServiceCard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServiceCardReference\ServiceCard.wsdl" />
+    <None Include="Web References\StaffReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\StaffReference\StaffQuarterCard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\StaffReference\StaffQuarterCard.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Codeunit/InfraCodeunit">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CodeUnitReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Codeunit/InfraCodeunit</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_CodeUnitReference_InfraCodeunit</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/AMCCard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AMCCardReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/AMCCard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_AMCCardReference_AMCCard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/AuditoriumBuilding">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AuditoriumReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/AuditoriumBuilding</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_AuditoriumReference_AuditoriumBuilding_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/EstimatePrepCard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EstimatePrepReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/EstimatePrepCard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_EstimatePrepReference_EstimatePrepCard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/HostelBuildingCard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HostelReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/HostelBuildingCard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_HostelReference_HostelBuildingCard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/Improvementprojectcard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ImprovementProjectReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/Improvementprojectcard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_ImprovementProjectReference_Improvementprojectcard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/InstituteBuildingCard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\InstituteReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/InstituteBuildingCard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_InstituteReference_InstituteBuildingCard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/Newprojectcard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NewProjectReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/Newprojectcard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_NewProjectReference_Newprojectcard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/Ongoingprojectcard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\OngoingProjectReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/Ongoingprojectcard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_OngoingProjectReference_Ongoingprojectcard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/Projectprogressdetailscard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProjectProgressReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/Projectprogressdetailscard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_ProjectProgressReference_Projectprogressdetailscard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/ServiceCard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceCardReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/ServiceCard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_ServiceCardReference_ServiceCard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/StaffQuarterCard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\StaffReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/StaffQuarterCard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_StaffReference_StaffQuarterCard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Connected Services\OData Service\OData ServiceCsdl.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>

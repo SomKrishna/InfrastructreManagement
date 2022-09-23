@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebServices.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WebServices_InstituteReference_InstituteBuildingCard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/InstituteBuildingCard</Value>
+    </Setting>
+    <Setting Name="WebServices_HostelReference_HostelBuildingCard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/HostelBuildingCard</Value>
+    </Setting>
+    <Setting Name="WebServices_StaffReference_StaffQuarterCard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/StaffQuarterCard</Value>
+    </Setting>
+    <Setting Name="WebServices_AuditoriumReference_AuditoriumBuilding_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/AuditoriumBuilding</Value>
+    </Setting>
+    <Setting Name="WebServices_NewProjectReference_Newprojectcard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/Newprojectcard</Value>
+    </Setting>
+    <Setting Name="WebServices_ImprovementProjectReference_Improvementprojectcard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/Improvementprojectcard</Value>
+    </Setting>
+    <Setting Name="WebServices_OngoingProjectReference_Ongoingprojectcard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/Ongoingprojectcard</Value>
+    </Setting>
+    <Setting Name="WebServices_ProjectProgressReference_Projectprogressdetailscard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/Projectprogressdetailscard</Value>
+    </Setting>
+    <Setting Name="WebServices_EstimatePrepReference_EstimatePrepCard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/EstimatePrepCard</Value>
+    </Setting>
+    <Setting Name="WebServices_AMCCardReference_AMCCard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/AMCCard</Value>
+    </Setting>
+    <Setting Name="WebServices_ServiceCardReference_ServiceCard_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/ServiceCard</Value>
+    </Setting>
+    <Setting Name="WebServices_CodeUnitReference_InfraCodeunit" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Codeunit/InfraCodeunit</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

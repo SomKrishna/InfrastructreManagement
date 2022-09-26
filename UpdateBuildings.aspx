@@ -125,7 +125,7 @@
             <%-- Master Data --%>
             <div class="col-lg-12 col-md-12 summary-box">
                 <div class="col-lg-12 NewEntrydiv">
-                    <p class="NewEntry">New Entry - Master Data On Building</p>
+                    <p class="NewEntry">Update Building</p>
                 </div>
                 <div class="row">
                     <div class="card-body">
@@ -137,7 +137,7 @@
                                     </div>
                                     <div class="col-md-5 ">
                                         <asp:DropDownList ID="ddlBuildings" CssClass="form-control" runat="server">
-                                            <asp:ListItem Selected="True" Value="IndustrialBuldings">Industrial Building</asp:ListItem>
+                                            <asp:ListItem Selected="True" Value="InstitutionalBuildings">Institutional Building</asp:ListItem>
                                             <asp:ListItem Value="HostelBuildings">Hostel Building</asp:ListItem>
                                             <asp:ListItem Value="StaffQuarters">Staff Quarter</asp:ListItem>
                                             <asp:ListItem Value="Auditoriums">Auditorium</asp:ListItem>
@@ -154,10 +154,10 @@
                                         <asp:TextBox ID="txtSearch" CssClass="form-control" runat="server"></asp:TextBox>
                                     </div>
                                     <div class="col-md-2 ">
-                                        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" CssClass="btn-s float-right" type="submit" Text="Search" />
+                                        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" CssClass="btn-s float-right submit" type="submit" Text="Search" />
                                     </div>
                                     <div class="col-md-2">
-                                        <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn-s float-right" Visible="false" type="submit" Text="Edit" />
+                                        <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn-s float-right submit btn-yellow" Visible="false" type="submit" Text="Edit" />
                                     </div>
                                 </div>
                                 <div class="col-md-7" style="padding-top: 0.5%;">

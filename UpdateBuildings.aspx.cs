@@ -19,7 +19,7 @@ namespace InfrastructureManagement
         {
             ddlBuildings.SelectedValue = ddlBuildings.SelectedValue;
 
-            if (ddlBuildings.SelectedValue == "IndustrialBuldings")
+            if (ddlBuildings.SelectedValue == "InstitutionalBuildings")
             {
                 var data = ODataServices.GetInstituteBuilding(txtSearch.Text);
                 if (data != null && !string.IsNullOrEmpty(data.Block_Code))
@@ -54,6 +54,10 @@ namespace InfrastructureManagement
             if (!btnEdit.Visible)
             {
                 LblMessage.Text = "No record found. Please try with valid Building No.";
+            }
+            else
+            {
+                LblMessage.Text = string.Empty;
             }
         }
 

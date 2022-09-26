@@ -100,7 +100,7 @@ namespace InfrastructureManagement
                     Project_Code = txtProjectCode.Text,
                     Project_Type = WebServices.NewProjectReference.Project_Type.Improvement,
                     District = ddlDistrict.SelectedItem.Text,
-                    Name_of_the_Institute = ddlInstituteName.SelectedItem.Text,
+                    Name_of_the_Institute = ddlInstituteName.SelectedItem.Value,
                     Name_of_the_project = txtProjectName.Text,
                     Type_of_work = ddlTypeOfWork.SelectedValue == "Civil" ? WebServices.NewProjectReference.Type_of_work.Civil : ddlTypeOfWork.SelectedValue == "Electrical" ? WebServices.NewProjectReference.Type_of_work.Electrical : WebServices.NewProjectReference.Type_of_work.PH,
                     Agency = ddlNameOfAgency.SelectedValue == "R&B" ? WebServices.NewProjectReference.Agency.R_x0026_B

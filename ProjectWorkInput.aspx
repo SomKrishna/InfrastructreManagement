@@ -216,9 +216,9 @@
                                                 </asp:DropDownList>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6 Buliding">
+                                    </div>                                    
                                         <div class="row show-hide divBuilding" id="divBuilding">
+                                            <div class="col-md-6 Buliding">
                                             <div class="col-md-6 ">
                                                 <label for="exampleCtrl" runat="server" id="lblbuilding">Building ID</label>
                                             </div>
@@ -226,8 +226,8 @@
                                                 <asp:TextBox ID="txtBuildingId" CssClass="form-control" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                       </div>
+                                    </div>                                
                                 <div class="col-md-12" id="Improvement">
                                     <div class="row">
                                         <h3 class="hadingline">Enter Project Details Below</h3>
@@ -322,8 +322,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('.show-hide').hide(); //hide
-            $('.divBuilding').show(); //set default class to be shown here, or remove to hide all
+            var dropDownValue = $('select').val();
+            if (dropDownValue == 'Ongoing' || dropDownValue == 'New') {
+                $('.divBuilding').hide();
+            }
+            else
+            {
+                $('.divBuilding').show();
+            }
         });
         $('select').change(function () { //on change do stuff
             $('.show-hide').hide(); //hide all with .box class

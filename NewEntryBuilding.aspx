@@ -136,7 +136,7 @@
                                     </div>
                                     <div class="col-md-5 ">
                                         <asp:DropDownList ID="ddlBuildingList" CssClass="form-control" runat="server">
-                                            <asp:ListItem Selected="True" Value="InstitutionalBuldings">Institutional Building</asp:ListItem>
+                                            <asp:ListItem Selected="True" Value="InstitutionalBuildings">Institutional Building</asp:ListItem>
                                             <asp:ListItem Value="HostelBuildings">Hostel Building</asp:ListItem>
                                             <asp:ListItem Value="StaffQuarters">Staff Quarter</asp:ListItem>
                                             <asp:ListItem Value="Auditoriums">Auditorium</asp:ListItem>
@@ -144,7 +144,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <%--<div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-6 ">
                                         <label for="exampleCtrl">Total Number of block Available</label>
@@ -153,9 +153,9 @@
                                         <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"></asp:TextBox>
                                     </div>
                                 </div>
-                            </div>
+                            </div>--%>
                             <!-- Institutional Building -->
-                            <div class="col-md-12 show-hide IndustrialBuldings" id="InstitutionalBuildings">
+                            <div class="col-md-12 show-hide InstitutionalBuildings" id="InstitutionalBuildings">
                                 <div class="row">
                                     <div class="col-md-6 ">
                                         <div class="row">
@@ -259,7 +259,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 Buliding">
+                                                <%--<div class="col-md-6 Buliding">
                                                     <div class="row">
                                                         <div class="col-md-6 ">
                                                             <label for="exampleCtrl">Total Number of block Available</label>
@@ -268,7 +268,7 @@
                                                             <asp:TextBox ID="TextBox2" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div>--%>
                                             </div>
 
 
@@ -437,7 +437,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 Buliding">
+                                                <%--<div class="col-md-6 Buliding">
                                                     <div class="row">
                                                         <div class="col-md-6 ">
                                                             <label for="exampleCtrl">Total Number of block Available</label>
@@ -446,7 +446,7 @@
                                                             <asp:TextBox ID="TextBox21" CssClass="form-control" runat="server"></asp:TextBox>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div>--%>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="row">
@@ -622,7 +622,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 Buliding">
+                                                <%--<div class="col-md-6 Buliding">
                                                     <div class="row">
                                                         <div class="col-md-6 ">
                                                             <label for="exampleCtrl">Total Number of block Available</label>
@@ -631,7 +631,7 @@
                                                             <asp:TextBox ID="TextBox44" CssClass="form-control" runat="server"></asp:TextBox>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div>--%>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="row">

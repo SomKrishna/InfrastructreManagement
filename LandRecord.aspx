@@ -174,7 +174,6 @@
                                     </div>
                                     <div class="col-lg-12 ExportFoot">
                                         <asp:Button ID="btnExport" CssClass="exportcss" OnClick="btnExport_Click" runat="server" Text="Export" />
-                                        <asp:Button ID="Button2" CssClass="printcss" runat="server" Text="Print" />
                                     </div>
                                 </div>
                             </div>

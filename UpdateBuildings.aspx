@@ -148,7 +148,7 @@
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-4 ">
-                                        <label for="exampleCtrl">Search Building No.</label>
+                                        <label for="exampleCtrl">Search Building Block Code.</label>
                                     </div>
                                     <div class="col-md-4 ">
                                         <asp:TextBox ID="txtSearch" CssClass="form-control" runat="server"></asp:TextBox>

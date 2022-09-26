@@ -539,6 +539,7 @@
     <Content Include="assets\vendor\plugins\jquery-ui\jquery-ui.min.css" />
     <Content Include="assets\vendor\plugins\jquery-ui\jquery-ui.min.js" />
     <Content Include="assets\vendor\plugins\jquery-ui\moment.min.js" />
+    <Content Include="BuildingList.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="EstimatePreparationMonitoring.aspx" />
     <Content Include="LandRecord.aspx" />
@@ -632,6 +633,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BuildingList.aspx.cs">
+      <DependentUpon>BuildingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuildingList.aspx.designer.cs">
+      <DependentUpon>BuildingList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BuildingMaster.Master.cs">
       <DependentUpon>BuildingMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

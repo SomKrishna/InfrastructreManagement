@@ -260,7 +260,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Date of Commencement</label>
-                                                    <asp:TextBox ID="txtCommencementDate" type="date" CssClass="form-control" runat="server"></asp:TextBox>
+                                                    <asp:TextBox ID="txtCommencementDate" type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
@@ -289,18 +289,18 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Date of Completion as per agreement</label>
-                                                    <asp:TextBox ID="txtCompletionPerAgreement" type="date" CssClass="form-control" runat="server"></asp:TextBox>
+                                                    <asp:TextBox ID="txtCompletionPerAgreement" type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                                 </div>
-                                                <div class="form-group">
+                                                <%--<div class="form-group">
                                                     <p class="textalline">upload pages of Agreement showing tender variation,date of commencement,Date of completion,Agency name </p>
                                                     <div class='file'>
                                                         <label for='input-file'>
                                                             <i class="material-icons">cloud_queue
                                                             </i>Max PDF file size 5MB
                                                         </label>
-                                                        <asp:FileUpload ID="FileUpload2" accept="application/pdf" runat="server" />
+                                                        <asp:FileUpload ID="pdfUploader" accept="application/pdf" runat="server" />
                                                     </div>
-                                                </div>
+                                                </div>--%>
                                             </div>
                                         </div>
                                     </div>

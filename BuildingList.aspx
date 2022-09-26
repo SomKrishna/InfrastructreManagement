@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true" CodeBehind="ProjectList.aspx.cs" Inherits="InfrastructureManagement.ProjectList" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true" CodeBehind="BuildingList.aspx.cs" Inherits="InfrastructureManagement.BuildingList" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -71,7 +71,7 @@
                 <div class="col-lg-3 col-md-2"></div>
                 <div class="col-lg-12 col-md-12 summary-box">
                     <div class="col-lg-12 NewEntrydiv">
-                        <p class="NewEntry">New Project List</p>
+                        <p class="NewEntry">Building List</p>
                     </div>
                     <div class="tab-pane active" id="1">
                         <div class="right_col_bg">

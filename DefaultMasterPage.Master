@@ -430,6 +430,7 @@
                                             <li><a href="ProjectWorkInput.aspx">New Project</a></li>
                                             <li><a href="ProjectList.aspx">All Projects</a></li>
                                             <li><a href="ProjectProgressDetailsInput.aspx">Project Progress</a></li>
+                                            <li><a href="EstimatePreparationMonitoring.aspx">Estimate Preparation Monitoring</a></li>
                                         </ul>
                                     </li>
                                     <li>

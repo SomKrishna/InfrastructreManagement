@@ -15,6 +15,7 @@ namespace InfrastructureManagement
         {
             var obj = new WebServices.EstimatePrepReference.EstimatePrepCard
             {
+                Estimate_amountSpecified = true,
                 Name_of_building_work = txtbuildingName.Text,
                 Present_Status = txtPresentStatus.Text,
                 Estimate_amount = NumericHandler.ConvertToDecimal(txtEstimatedAmount.Text),

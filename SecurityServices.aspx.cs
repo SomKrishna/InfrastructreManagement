@@ -31,6 +31,8 @@ namespace InfrastructureManagement
         {
             var obj = new WebServices.ServiceCardReference.ServiceCard
             {
+                No_of_person_engagedSpecified = true,
+                No_of_person_sanctionedSpecified = true,
                 Agency_Code = ddlAgencyName.SelectedItem.Value,
                 No_of_person_engaged = NumericHandler.ConvertToInteger(txtNumberOfPersonEngaged.Text),
                 Type_of_service = ddlTypeOfService.SelectedItem.Text == "Security" ? WebServices.ServiceCardReference.Type_of_service.Security : ddlTypeOfService.SelectedItem.Text == "Sweeper" ? WebServices.ServiceCardReference.Type_of_service.Sweeper : ddlTypeOfService.SelectedItem.Text == "Driver" ? WebServices.ServiceCardReference.Type_of_service.Driver : WebServices.ServiceCardReference.Type_of_service.Others,

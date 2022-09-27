@@ -224,7 +224,7 @@
                                                     <asp:TextBox ID="txtItemNo" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Equipment Id  </label>
+                                                    <label for="exampleAccount">Equipment ID  </label>
                                                     <asp:TextBox ID="txtEquipmentId" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>

@@ -42,6 +42,24 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtAnnualAMCCost;
 
         /// <summary>
+        /// txtItemNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtItemNo;
+
+        /// <summary>
+        /// txtEquipmentId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEquipmentId;
+
+        /// <summary>
         /// txtTypeOfEquipment control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace InfrastructureManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlPaymentStatus;
+
+        /// <summary>
+        /// txtItemDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtItemDescription;
 
         /// <summary>
         /// btnExport control.

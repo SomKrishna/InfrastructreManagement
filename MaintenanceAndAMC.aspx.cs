@@ -34,12 +34,16 @@ namespace InfrastructureManagement
                 DurationSpecified = true,
                 Date_of_ExpirySpecified = true,
                 Annual_Cost_of_AMCSpecified = true,
+
                 Agency_No = ddlAgencyName.SelectedItem.Value,
                 Type_of_equipment_under_AMC = txtTypeOfEquipment.Text,
                 Duration = NumericHandler.ConvertToInteger(txtDuration.Text),
                 Date_of_Expiry = DateTimeParser.ParseDateTime(txtDateOfExpiry.Text),
                 Annual_Cost_of_AMC = NumericHandler.ConvertToDecimal(txtAnnualAMCCost.Text),
-                Payment_Status = ddlPaymentStatus.SelectedItem.Text == "Already Paid" ? WebServices.AMCCardReference.Payment_Status.Paid : WebServices.AMCCardReference.Payment_Status.To_be_paid
+                Payment_Status = ddlPaymentStatus.SelectedItem.Text == "Already Paid" ? WebServices.AMCCardReference.Payment_Status.Paid : WebServices.AMCCardReference.Payment_Status.To_be_paid,
+                Item_No = txtItemNo.Text,
+                Equipment_Id = txtEquipmentId.Text,
+                Item_Name = txtItemDescription.Text
             };
             var result = ODataServices.CreateMaintainceAndAMC(obj);
             Alert.ShowAlert(this, "s", result);

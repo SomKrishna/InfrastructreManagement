@@ -163,7 +163,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Fire Safety valid Up to</label>
-                                                            <asp:TextBox ID="txtAudiFireSafetyUpto" Type="date" CssClass="form-control" runat="server"></asp:TextBox>
+                                                            <asp:TextBox ID="txtAudiFireSafetyUpto" Type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Electricity Supplier Agency </label>

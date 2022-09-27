@@ -399,6 +399,12 @@ namespace WebServices.AMCCardReference {
         
         private bool payment_StatusFieldSpecified;
         
+        private string item_NoField;
+        
+        private string item_NameField;
+        
+        private string equipment_IdField;
+        
         /// <remarks/>
         public string Key {
             get {
@@ -523,6 +529,36 @@ namespace WebServices.AMCCardReference {
                 this.payment_StatusFieldSpecified = value;
             }
         }
+        
+        /// <remarks/>
+        public string Item_No {
+            get {
+                return this.item_NoField;
+            }
+            set {
+                this.item_NoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Item_Name {
+            get {
+                return this.item_NameField;
+            }
+            set {
+                this.item_NameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Equipment_Id {
+            get {
+                return this.equipment_IdField;
+            }
+            set {
+                this.equipment_IdField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -597,6 +633,15 @@ namespace WebServices.AMCCardReference {
         
         /// <remarks/>
         Payment_Status,
+        
+        /// <remarks/>
+        Item_No,
+        
+        /// <remarks/>
+        Item_Name,
+        
+        /// <remarks/>
+        Equipment_Id,
     }
     
     /// <remarks/>

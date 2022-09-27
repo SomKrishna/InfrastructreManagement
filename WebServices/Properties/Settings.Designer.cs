@@ -126,17 +126,6 @@ namespace WebServices.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/" +
-            "AMCCard")]
-        public string WebServices_AMCCardReference_AMCCard_Service {
-            get {
-                return ((string)(this["WebServices_AMCCardReference_AMCCard_Service"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/" +
             "ServiceCard")]
         public string WebServices_ServiceCardReference_ServiceCard_Service {
             get {
@@ -152,6 +141,17 @@ namespace WebServices.Properties {
         public string WebServices_CodeUnitReference_InfraCodeunit {
             get {
                 return ((string)(this["WebServices_CodeUnitReference_InfraCodeunit"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/" +
+            "AMCCard")]
+        public string WebServices_AMCCardReference_AMCCard_Service {
+            get {
+                return ((string)(this["WebServices_AMCCardReference_AMCCard_Service"]));
             }
         }
     }

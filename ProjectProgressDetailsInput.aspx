@@ -326,7 +326,7 @@
                                         <div class="container">
                                             <div class="form-group">
                                                 <label for="exampleAccount">AA Date</label>
-                                                <asp:TextBox ID="txtAADate" type="date" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtAADate" type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleAccount">Aggrement value with GST (Rs In Lakh)</label>
@@ -343,7 +343,7 @@
 
                                             <div class="form-group">
                                                 <label for="exampleAccount">Expected/Target date for complection </label>
-                                                <asp:TextBox ID="txtExpectedDate" type="date" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtExpectedDate" type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleAccount">Tender Variation</label>

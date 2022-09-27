@@ -212,12 +212,20 @@
                                                     </asp:DropDownList>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Duration</label>
+                                                    <label for="exampleAccount">Duration in months</label>
                                                     <asp:TextBox ID="txtDuration" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Annual AMC cost (in Rs. Lakh) </label>
                                                     <asp:TextBox ID="txtAnnualAMCCost" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleAccount">Item No. </label>
+                                                    <asp:TextBox ID="txtItemNo" CssClass="form-control" runat="server"></asp:TextBox>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleAccount">Equipment Id  </label>
+                                                    <asp:TextBox ID="txtEquipmentId" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
@@ -229,7 +237,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Date of expiry of AMC</label>
-                                                    <asp:TextBox ID="txtDateOfExpiry" type="date" CssClass="form-control" runat="server"></asp:TextBox>
+                                                    <asp:TextBox ID="txtDateOfExpiry" type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Payment Status</label>
@@ -238,6 +246,10 @@
                                                         <asp:ListItem>Already Paid</asp:ListItem>
                                                         <asp:ListItem>To be Paid</asp:ListItem>
                                                     </asp:DropDownList>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleAccount">Item Description </label>
+                                                    <asp:TextBox ID="txtItemDescription" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>

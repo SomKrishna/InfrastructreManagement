@@ -18,6 +18,9 @@
           <xsd:element minOccurs="0" maxOccurs="1" name="Date_of_Expiry" type="xsd:date" />
           <xsd:element minOccurs="0" maxOccurs="1" name="Annual_Cost_of_AMC" type="xsd:decimal" />
           <xsd:element minOccurs="0" maxOccurs="1" name="Payment_Status" type="tns:Payment_Status" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Item_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Item_Name" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Equipment_Id" type="xsd:string" />
         </xsd:sequence>
       </xsd:complexType>
       <xsd:complexType name="AMCCard_List">
@@ -34,6 +37,9 @@
           <xsd:enumeration value="Date_of_Expiry" />
           <xsd:enumeration value="Annual_Cost_of_AMC" />
           <xsd:enumeration value="Payment_Status" />
+          <xsd:enumeration value="Item_No" />
+          <xsd:enumeration value="Item_Name" />
+          <xsd:enumeration value="Equipment_Id" />
         </xsd:restriction>
       </xsd:simpleType>
       <xsd:complexType name="AMCCard_Filter">

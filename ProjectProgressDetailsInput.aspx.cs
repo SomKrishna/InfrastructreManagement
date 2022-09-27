@@ -40,19 +40,29 @@ namespace InfrastructureManagement
                 lblCommencementDate.InnerText = Convert.ToString(improvementObj.Date_of_commencement_as_per_agreement);
                 lblCompletionDate.InnerText = Convert.ToString(improvementObj.Date_of_completion_as_per_agreement);
             }
+            else if (ongoingobj != null)
+            {
+                lblDistrict.InnerText = ongoingobj.District;
+                lblInstitute.InnerText = ongoingobj.Name_of_the_Institute;
+                lblProjectType.InnerText = ongoingobj.Project_Type;
+                lblProjectName.InnerText = ongoingobj.Name_of_the_project;
+                lblAgencyName.InnerText = ongoingobj.Agency;
+                lblWorkType.InnerText = ongoingobj.Type_of_work;
+                lblWorkMode.InnerText = ongoingobj.Mode_of_Work;
+                lblCompletionDate.InnerText = Convert.ToString(ongoingobj.Date_of_completion_as_per_agreement);
+            }
             else
             {
-                if (ongoingobj != null)
-                {
-                    lblDistrict.InnerText = ongoingobj.District;
-                    lblInstitute.InnerText = ongoingobj.Name_of_the_Institute;
-                    lblProjectType.InnerText = ongoingobj.Project_Type;
-                    lblProjectName.InnerText = ongoingobj.Name_of_the_project;
-                    lblAgencyName.InnerText = ongoingobj.Agency;
-                    lblWorkType.InnerText = ongoingobj.Type_of_work;
-                    lblWorkMode.InnerText = ongoingobj.Mode_of_Work;
-                    lblCompletionDate.InnerText = Convert.ToString(ongoingobj.Date_of_completion_as_per_agreement);
-                }
+                lblDistrict.InnerText = string.Empty;
+                lblInstitute.InnerText = string.Empty;
+                lblProjectType.InnerText = string.Empty;
+                lblBuildingId.InnerText = string.Empty;
+                lblProjectName.InnerText = string.Empty;
+                lblAgencyName.InnerText = string.Empty;
+                lblWorkType.InnerText = string.Empty;
+                lblWorkMode.InnerText = string.Empty;
+                lblCommencementDate.InnerText = string.Empty;
+                lblCompletionDate.InnerText = string.Empty;
             }
             if (ongoingobj == null && improvementObj == null)
             {

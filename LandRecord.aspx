@@ -62,6 +62,30 @@
         .col-lg-12.col-md-12.summary-box {
             margin: 94px 10px 10px -113px;
         }
+        .custom-file-input::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+        .custom-file-input::before {
+            content: 'Choose File';
+            display: inline-block;
+            background: linear-gradient(top, #f9f9f9, #e3e3e3);
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 5px 8px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            text-shadow: 1px 1px #fff;
+            font-weight: 700;
+            font-size: 10pt;
+        }
+        .custom-file-input:hover::before {
+            border-color: black;
+        }
+        .custom-file-input:active::before {
+            background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <contenttemplate>
@@ -159,9 +183,9 @@
                                                             <td>
                                                                 <div class="input-group">
                                                                     <label class="input-group-btn">
-                                                                        <span class="btn btn-upload">Choose File&hellip; 
-                                                                <asp:FileUpload ID="LandpdfUploader" runat="server" Style="display: none" class="btn btn-light-grey form-control btn-upload" accept=".pdf" />
-                                                                        <asp:LinkButton ID="btnUpload" CssClass="btn btn-yellow" OnClick="btnUpload_Click"  runat="server">Upload</asp:LinkButton>
+                                                                        <span class="custom-file-input btn"> 
+                                                                            <asp:FileUpload ID="LandpdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:LinkButton ID="btnUpload" CssClass="btn btn-yellow" OnClick="btnUpload_Click"  runat="server">Upload</asp:LinkButton>
                                                                         </span>
                                                                     </label>
                                                                 </div>

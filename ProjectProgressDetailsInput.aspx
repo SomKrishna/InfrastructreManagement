@@ -213,7 +213,7 @@
 
                 <div class="col-lg-12 col-md-12 summary-box">
                     <div class="col-lg-12 NewEntrydiv">
-                        <p class="NewEntry">Project Work Input</p>
+                        <p class="NewEntry">Add Ongoing Project Progress Details</p>
                     </div>
                     <div class="row">
                         <div class="card-body">
@@ -221,8 +221,8 @@
                                 <div class="headerbox">
                                     <div class="col-md-6 Buliding">
                                         <div class="row">
-                                            <div class="col-md-2 ">
-                                                <label for="exampleAccount">Project Id </label>
+                                            <div class="col-md-3 ">
+                                                <label for="exampleAccount">Project Code </label>
                                             </div>
                                             <div class="col-md-5 input-icons">
                                                 <i class="fa fa-search icon"></i>
@@ -230,6 +230,11 @@
                                             </div>
                                             <div class="col-md-3 input-icons">
                                                 <asp:Button ID="btnSearch" OnClick="btnSearch_Click" CssClass="btn-s float-right submit" Text="Search" runat="server" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-8" style="padding-top: 0.5%;">
+                                                 <asp:Label CssClass="message" ID="LblMessage" runat="server"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
@@ -285,7 +290,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="row">
-                                    <h3 class="hadingline">Enter Project Details Below</h3>
+                                    <h3 class="hadingline">Enter Project Progress Details Below</h3>
                                     <div class="col-md-6 contact-info">
                                         <div class="container">
                                             <div class="form-group">
@@ -301,11 +306,11 @@
                                                 <asp:TextBox ID="txtAmountOfAA" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleAccount">Running Current Expenditure</label>
+                                                <label for="exampleAccount">Running FY expenditure In lakh</label>
                                                 <asp:TextBox ID="txtRunningExp" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleAccount">Balance fund required for commencement of work in 22-23 (Rs In Lakh)</label>
+                                                <label for="exampleAccount">Balance fund required for commencement of work in Running FY in Lakh</label>
                                                 <asp:TextBox ID="txtCommencementBalanceWork" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
@@ -313,12 +318,16 @@
                                                 <asp:TextBox ID="txtPresentStatus" CssClass="form-control" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleAccount">Reason for dealy if dealy</label>
+                                                <label for="exampleAccount">Reason for delay, if delayed</label>
                                                 <asp:TextBox ID="txtDelayReason" CssClass="form-control" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleAccount">% of work completion</label>
                                                 <asp:TextBox ID="txtWorkCompletionPercentage" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleAccount">Running Financial Year (yyyy-yy)</label>
+                                                <asp:TextBox ID="txtRunningFinanacialYear" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -333,7 +342,7 @@
                                                 <asp:TextBox ID="txtAgreementValue" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleAccount">Expenditure made as on 31/03/2022 (Rs In Lakh)</label>
+                                                <label for="exampleAccount">Expenditure made as on 31 march of Last FY in lakh</label>
                                                 <asp:TextBox ID="txtExpenditureMade" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
@@ -353,11 +362,11 @@
                                                 </asp:DropDownList>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleAccount">Fund now purpose for release in 22-23 (Rs In Lakh)</label>
+                                                <label for="exampleAccount">Fund now proposed for release in Running FY in Lakh</label>
                                                 <asp:TextBox ID="txtFundNow" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleAccount">UC Status ,If Any</label>
+                                                <label for="exampleAccount">UC status</label>
                                                 <asp:DropDownList ID="ddlUCStatus" CssClass="form-control" runat="server">
                                                     <asp:ListItem Value="blank"></asp:ListItem>
                                                     <asp:ListItem Value="Submitted">Submitted</asp:ListItem>

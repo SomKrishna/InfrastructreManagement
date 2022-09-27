@@ -54,6 +54,14 @@ namespace InfrastructureManagement
                     lblCompletionDate.InnerText = Convert.ToString(ongoingobj.Date_of_completion_as_per_agreement);
                 }
             }
+            if (ongoingobj == null && improvementObj == null)
+            {
+                LblMessage.Text = "No record found. Please try with valid Project Code";
+            }
+            else
+            {
+                LblMessage.Text = string.Empty;
+            }
         }
 
         protected void txtProjectProgressSubmit_Click(object sender, EventArgs e)
@@ -87,7 +95,8 @@ namespace InfrastructureManagement
                 Tender_Variation = ddlTenderVariation.SelectedItem.Text == "Excess" ? WebServices.ProjectProgressReference.Tender_Variation.Excess : WebServices.ProjectProgressReference.Tender_Variation.Less,
                 Percentage_of_work_completion = NumericHandler.ConvertToDecimal(txtWorkCompletionPercentage.Text),
                 Fund_now_proposed_for_release_in_Running_FY_in = NumericHandler.ConvertToDecimal(txtFundNow.Text),
-                UC_status = ddlUCStatus.SelectedValue == "blank" ? WebServices.ProjectProgressReference.UC_status._blank_ : ddlUCStatus.SelectedValue == "Submitted" ? WebServices.ProjectProgressReference.UC_status.Submitted : WebServices.ProjectProgressReference.UC_status.To_be_submitted
+                UC_status = ddlUCStatus.SelectedValue == "blank" ? WebServices.ProjectProgressReference.UC_status._blank_ : ddlUCStatus.SelectedValue == "Submitted" ? WebServices.ProjectProgressReference.UC_status.Submitted : WebServices.ProjectProgressReference.UC_status.To_be_submitted,
+                Running_Financial_Year = txtRunningFinanacialYear.Text
             };
             var result = ODataServices.AddProjectProgressDeatils(obj);
             Alert.ShowAlert(this, "s", result);

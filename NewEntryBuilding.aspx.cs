@@ -30,6 +30,11 @@ namespace InfrastructureManagement
                 No_Of_FloorSpecified = true,
                 Fire_Safety_Valid_UptoSpecified = true,
                 Fire_Safety_StatusSpecified = true,
+                Year_of_ConstructionSpecified = true,
+                No_of_Smart_ClassesSpecified = true,
+                Computer_Lab_AvailableSpecified = true,
+                No_of_RO_Water_PurifierSpecified = true,
+                No_of_Non_RO_Water_PurifierSpecified = true,
 
                 Building_Width_in_meter = NumericHandler.ConvertToInteger(txtInstituteBreath.Text),
                 Fire_Safety_Status = IntituteFireSafetyDDList.SelectedValue == "CertificateObtained" ? WebServices.InstituteReference.Fire_Safety_Status.Certificate_Obtained : WebServices.InstituteReference.Fire_Safety_Status.No_Certificate,
@@ -47,7 +52,12 @@ namespace InfrastructureManagement
                 Book_Of_Account = InstituteBookOfAccountDDL.SelectedValue == "PWD" ? WebServices.InstituteReference.Book_Of_Account.PWD : InstituteBookOfAccountDDL.SelectedValue == "IDCO" ? WebServices.InstituteReference.Book_Of_Account.IDCO : WebServices.InstituteReference.Book_Of_Account.SOIC,
                 Electricity_Consumer_No = txtInstituteElcConsumerNo.Text,
                 Transformer_Type = InstituteTransferTypeDDL.SelectedValue == "Own" ? WebServices.InstituteReference.Transformer_Type.Own : WebServices.InstituteReference.Transformer_Type.Public,
-                Building_Safety_Status = InstituteSafetyStatusDDL.SelectedValue == "Safe" ? WebServices.InstituteReference.Building_Safety_Status.Safe : WebServices.InstituteReference.Building_Safety_Status.UnSafe
+                Building_Safety_Status = InstituteSafetyStatusDDL.SelectedValue == "Safe" ? WebServices.InstituteReference.Building_Safety_Status.Safe : WebServices.InstituteReference.Building_Safety_Status.UnSafe,
+                Year_of_Construction = NumericHandler.ConvertToInteger(txtYearOfConstruction.Text),
+                No_of_Smart_Classes = NumericHandler.ConvertToInteger(txtNoOfSmartClasses.Text),
+                Computer_Lab_Available = ddlCompLabAvailable.SelectedValue == "Yes" ? WebServices.InstituteReference.Computer_Lab_Available.Yes : WebServices.InstituteReference.Computer_Lab_Available.No,
+                No_of_RO_Water_Purifier = NumericHandler.ConvertToInteger(txtNoOfROPurifier.Text),
+                No_of_Non_RO_Water_Purifier = NumericHandler.ConvertToInteger(txtNoOfNonROPurifier.Text),
             };
             var result = ODataServices.CreateInstituteBuilding(obj);
             Alert.ShowAlert(this, "s", result);
@@ -65,11 +75,14 @@ namespace InfrastructureManagement
                 No_Of_FloorSpecified = true,
                 Fire_Safety_Valid_UptoSpecified = true,
                 Fire_Safety_StatusSpecified = true,
+                Year_of_ConstructionSpecified = true,
+                No_of_Non_RO_Water_PurifierSpecified = true,
+                No_of_RO_Water_PurifierSpecified = true,
 
                 Block_Code = txtHostelBlockCode.Text,
                 Hostel_Type = ddlHostelBlockType.SelectedValue == "Boys" ? WebServices.HostelReference.Hostel_Type.Boys : WebServices.HostelReference.Hostel_Type.Girls,
                 Block_Name = txtHostelBlockName.Text,
-                No_Of_Room = NumericHandler.ConvertToInteger(txtHostelClassRoomsAvailable.Text),
+                //No_Of_Room = NumericHandler.ConvertToInteger(txtHostelClassRoomsAvailable.Text),
                 No_Of_Floor = NumericHandler.ConvertToInteger(txtHostelNumberOfFloors.Text),
                 Total_Floor_Area_in_sqft = NumericHandler.ConvertToDecimal(txtHostelTotalFloorArea.Text),
                 Total_Capacity = NumericHandler.ConvertToInteger(txtHostelCapacity.Text),
@@ -87,7 +100,10 @@ namespace InfrastructureManagement
                 Source_Of_Water = ddlHostelWaterSupply.SelectedValue == "OwnSource" ? WebServices.HostelReference.Source_Of_Water.Own_Source : WebServices.HostelReference.Source_Of_Water.PHD_Source,
                 Transformer_Type = ddlHostelTransformerType.SelectedValue == "Own" ? WebServices.HostelReference.Transformer_Type.Own : WebServices.HostelReference.Transformer_Type.Public,
                 PHD_Consumer_No = txtPHDConsumerNo.Text,
-                Building_Safety_Status = ddlHostelBuildingSafetyStatus.SelectedValue == "Safe" ? WebServices.HostelReference.Building_Safety_Status.Safe : WebServices.HostelReference.Building_Safety_Status.UnSafe
+                Building_Safety_Status = ddlHostelBuildingSafetyStatus.SelectedValue == "Safe" ? WebServices.HostelReference.Building_Safety_Status.Safe : WebServices.HostelReference.Building_Safety_Status.UnSafe,
+                Year_of_Construction = NumericHandler.ConvertToInteger(txtHostelYearOfContruction.Text),
+                No_of_Non_RO_Water_Purifier = NumericHandler.ConvertToInteger(txtHostelNonROPurifier.Text),
+                No_of_RO_Water_Purifier = NumericHandler.ConvertToInteger(txtHostelNoOfROPurifier.Text)
             };
             var result = ODataServices.CreateHostelBuilding(obj);
             Alert.ShowAlert(this, "s", result);
@@ -105,6 +121,7 @@ namespace InfrastructureManagement
                 No_Of_FloorSpecified = true,
                 Fire_Safety_Valid_UptoSpecified = true,
                 Fire_Safety_StatusSpecified = true,
+                Year_of_ConstructionSpecified = true,
 
 
                 Quarter_Code = txtStaffQuarterCode.Text,
@@ -116,7 +133,7 @@ namespace InfrastructureManagement
                 WebServices.StaffReference.Quarter_Type.E : ddlStaffBlockType.SelectedValue == "E" ?
                 WebServices.StaffReference.Quarter_Type.E : WebServices.StaffReference.Quarter_Type.F,
                 Quarter_Block_Name = txtStaffBlockName.Text,
-                No_Of_Room = NumericHandler.ConvertToInteger(txtStaffClassRoomsAvailable.Text),
+                //No_Of_Room = NumericHandler.ConvertToInteger(txtStaffClassRoomsAvailable.Text),
                 No_Of_Floor = NumericHandler.ConvertToInteger(txtStaffNumberOfFloor.Text),
                 Total_Floor_Area_in_sqft = NumericHandler.ConvertToDecimal(txtStaffFloorArea.Text),
                 Building_Length = NumericHandler.ConvertToInteger(txtStaffLengthofBuilding.Text),
@@ -135,7 +152,8 @@ namespace InfrastructureManagement
                 Transformer_Type = ddlTransformerType.SelectedValue == "Own" ? WebServices.StaffReference.Transformer_Type.Own : WebServices.StaffReference.Transformer_Type.Public,
                 PHD_Consumer_No = txtStaffPHDConsumerNo.Text,
                 Building_Safety_Status = ddlStaffSafetyStatus.SelectedValue == "Safe" ? WebServices.StaffReference.Building_Safety_Status.Safe : WebServices.StaffReference.Building_Safety_Status.UnSafe,
-                Occupancy_Status = ddlStaffOccupancyStatus.SelectedValue == "Occupied" ? WebServices.StaffReference.Occupancy_Status.Occupied : WebServices.StaffReference.Occupancy_Status.Vacancy
+                Occupancy_Status = ddlStaffOccupancyStatus.SelectedValue == "Occupied" ? WebServices.StaffReference.Occupancy_Status.Occupied : WebServices.StaffReference.Occupancy_Status.Vacancy,
+                Year_of_Construction = NumericHandler.ConvertToInteger(txtStaffYearOfConstruction.Text)
             };
             var result = ODataServices.UpdateStaffQuarter(obj);
             Alert.ShowAlert(this, "s", result);
@@ -151,6 +169,7 @@ namespace InfrastructureManagement
                 Building_LengthSpecified = true,
                 Fire_Safety_Valid_UptoSpecified = true,
                 Fire_Safety_StatusSpecified = true,
+                Year_of_ConstructionSpecified = true,
 
                 Building_Code = txtAudiBuildingCode.Text,
                 Total_Capacity = NumericHandler.ConvertToInteger(txtAudiSittingCapacity.Text),
@@ -166,7 +185,8 @@ namespace InfrastructureManagement
                 Book_Of_Account = ddlAudiBuildingBookOfAccount.SelectedValue == "PWD" ? WebServices.AuditoriumReference.Book_Of_Account.PWD : ddlAudiBuildingBookOfAccount.SelectedValue == "IDCO" ? WebServices.AuditoriumReference.Book_Of_Account.IDCO : WebServices.AuditoriumReference.Book_Of_Account.SOIC,
                 Electricity_Load_in_KW = txtAudiLoadInKW.Text,
                 Electricity_Consumer_No = txtElectricityConsumerNo.Text,
-                Building_Safety_Status = ddlAudiBuildingSafetyStatus.SelectedValue == "Safe" ? WebServices.AuditoriumReference.Building_Safety_Status.Safe : WebServices.AuditoriumReference.Building_Safety_Status.UnSafe
+                Building_Safety_Status = ddlAudiBuildingSafetyStatus.SelectedValue == "Safe" ? WebServices.AuditoriumReference.Building_Safety_Status.Safe : WebServices.AuditoriumReference.Building_Safety_Status.UnSafe,
+                Year_of_Construction = NumericHandler.ConvertToInteger(txtAudiYearOfConstruction.Text)
             };
             var result = ODataServices.CreateAuditorium(obj);
             Alert.ShowAlert(this, "s", result);

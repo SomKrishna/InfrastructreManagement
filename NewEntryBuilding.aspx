@@ -252,7 +252,7 @@
                                                         <div class="col-md-6 ">
                                                             <label for="exampleAccount">Type of Buliding </label>
                                                         </div>
-                                                        <div class="col-md-5 ">
+                                                        <div class="col-md-6 ">
                                                             <asp:DropDownList ID="DropDownList2" CssClass="form-control" runat="server">
                                                                 <asp:ListItem Selected="True">Institutional Building</asp:ListItem>
                                                             </asp:DropDownList>
@@ -294,7 +294,7 @@
                                                                 <asp:TextBox ID="txtInstituteTotalArea" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleAccount">Breath of the Building Block (in meter)</label>
+                                                                <label for="exampleAccount">Width of the Building Block (in meter)</label>
                                                                 <asp:TextBox ID="txtInstituteBreath" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
@@ -327,6 +327,17 @@
                                                                 <label for="exampleAccount">PHD Consumer No.(If Any) </label>
                                                                 <asp:TextBox ID="txtInstitutePHDConsumerNumber" CssClass="form-control" runat="server"></asp:TextBox>
                                                             </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleAccount">Year of Construction </label>
+                                                                <asp:TextBox ID="txtYearOfConstruction" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleAccount">Computer Lab Available </label>
+                                                                <asp:DropDownList ID="ddlCompLabAvailable" CssClass="form-control" runat="server">
+                                                                    <asp:ListItem Selected="True" Value="Yes">Yes</asp:ListItem>
+                                                                    <asp:ListItem Value="No">No</asp:ListItem>
+                                                                </asp:DropDownList>
+                                                            </div>                                                           
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 contact-info">
@@ -349,7 +360,7 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Fire Safety valid Up to</label>
-                                                                <asp:TextBox ID="txtInstituteSafetyValidUpTo" Type="date" CssClass="form-control" runat="server"></asp:TextBox>
+                                                                <asp:TextBox ID="txtInstituteSafetyValidUpTo" Type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Building Approval Status</label>
@@ -383,6 +394,18 @@
                                                                     <asp:ListItem Selected="True" Value="Safe">Safe</asp:ListItem>
                                                                     <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>
                                                                 </asp:DropDownList>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleAccount">No. of Smart Classes</label>
+                                                                <asp:TextBox ID="txtNoOfSmartClasses" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleAccount">No. of RO Water Purifier </label>
+                                                                <asp:TextBox ID="txtNoOfROPurifier" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
+                                                            </div>
+                                                             <div class="form-group">
+                                                                <label for="exampleAccount">No. of Non-RO water purifier </label>
+                                                                <asp:TextBox ID="txtNoOfNonROPurifier" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -428,11 +451,11 @@
                                                 <div class="col-md-6 Buliding">
                                                     <div class="row">
                                                         <div class="col-md-6 ">
-                                                            <label for="exampleAccount">Type of Buliding </label>
+                                                            <label for="exampleAccount">Type of Building </label>
                                                         </div>
-                                                        <div class="col-md-5 ">
+                                                        <div class="col-md-6 ">
                                                             <asp:DropDownList ID="DropDownList7" CssClass="form-control" runat="server">
-                                                                <asp:ListItem Selected="True">Hostel Bulding</asp:ListItem>
+                                                                <asp:ListItem Selected="True">Hostel Building</asp:ListItem>
                                                             </asp:DropDownList>
                                                         </div>
                                                     </div>
@@ -464,10 +487,10 @@
                                                                     <asp:ListItem Value="Girls">Girls</asp:ListItem>
                                                                 </asp:DropDownList>
                                                             </div>
-                                                            <div class="form-group">
+                                                            <%--<div class="form-group">
                                                                 <label for="exampleAccount">No. of class room available</label>
                                                                 <asp:TextBox ID="txtHostelClassRoomsAvailable" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
-                                                            </div>
+                                                            </div>--%>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Total area of floor/s in sqft</label>
                                                                 <asp:TextBox ID="txtHostelTotalFloorArea" CssClass="form-control" runat="server"></asp:TextBox>
@@ -510,6 +533,14 @@
                                                                 <label for="exampleAccount">PHD Consumer No.(If Any) </label>
                                                                 <asp:TextBox ID="txtPHDConsumerNo" CssClass="form-control" runat="server"></asp:TextBox>
                                                             </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleAccount">Year of Construction </label>
+                                                                <asp:TextBox ID="txtHostelYearOfContruction" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
+                                                            </div>
+                                                             <div class="form-group">
+                                                                <label for="exampleAccount">No. of RO Water Purifier </label>
+                                                                <asp:TextBox ID="txtHostelNoOfROPurifier" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 contact-info">
@@ -532,7 +563,7 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Fire Safety valid Up to</label>
-                                                                <asp:TextBox ID="txtHostelFireSafetyValidUpTo" Type="date" CssClass="form-control" runat="server"></asp:TextBox>
+                                                                <asp:TextBox ID="txtHostelFireSafetyValidUpTo" Type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Building Approval Status</label>
@@ -566,6 +597,10 @@
                                                                     <asp:ListItem Selected="True" Value="Safe">Safe</asp:ListItem>
                                                                     <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>
                                                                 </asp:DropDownList>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleAccount">No. of Non-RO water purifier </label>
+                                                                <asp:TextBox ID="txtHostelNonROPurifier" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -613,9 +648,9 @@
                                                 <div class="col-md-6 Buliding">
                                                     <div class="row">
                                                         <div class="col-md-6 ">
-                                                            <label for="exampleAccount">Type of Buliding </label>
+                                                            <label for="exampleAccount">Type of Building </label>
                                                         </div>
-                                                        <div class="col-md-5 ">
+                                                        <div class="col-md-6 ">
                                                             <asp:DropDownList ID="DropDownList12" CssClass="form-control" runat="server">
                                                                 <asp:ListItem Selected="True">Staff Quarter</asp:ListItem>
                                                             </asp:DropDownList>
@@ -653,16 +688,16 @@
                                                                     <asp:ListItem Value="F">F</asp:ListItem>
                                                                 </asp:DropDownList>
                                                             </div>
-                                                            <div class="form-group">
+                                                            <%--<div class="form-group">
                                                                 <label for="exampleAccount">No. of class room available</label>
                                                                 <asp:TextBox ID="txtStaffClassRoomsAvailable" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
-                                                            </div>
+                                                            </div>--%>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Total area of floor/s in sqft</label>
                                                                 <asp:TextBox ID="txtStaffFloorArea" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleAccount">Breath of the Building Block (in meter)</label>
+                                                                <label for="exampleAccount">Width of the Building Block (in meter)</label>
                                                                 <asp:TextBox ID="txtStaffBreath" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
@@ -698,7 +733,11 @@
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">PHD Consumer No.(If Any) </label>
                                                                 <asp:TextBox ID="txtStaffPHDConsumerNo" CssClass="form-control" runat="server"></asp:TextBox>
-                                                            </div>                                                            
+                                                            </div> 
+                                                             <div class="form-group">
+                                                                <label for="exampleAccount">Year of Construction </label>
+                                                                <asp:TextBox ID="txtStaffYearOfConstruction" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 contact-info">
@@ -721,7 +760,7 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Fire Safety valid Up to</label>
-                                                                <asp:TextBox ID="txtStaffFireSafetyValidUpto" Type="date" CssClass="form-control" runat="server"></asp:TextBox>
+                                                                <asp:TextBox ID="txtStaffFireSafetyValidUpto" Type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Building Approval Status</label>
@@ -817,21 +856,11 @@
                                                         </div>
                                                         <div class="col-md-5 ">
                                                             <asp:DropDownList ID="DropDownList17" CssClass="form-control" runat="server">
-                                                                <asp:ListItem Selected="True">Hostel Bulding</asp:ListItem>
+                                                                <asp:ListItem Selected="True">Auditorium</asp:ListItem>
                                                             </asp:DropDownList>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6 Buliding">
-                                                    <div class="row">
-                                                        <div class="col-md-6 ">
-                                                            <label for="exampleCtrl">Total Number of block Available</label>
-                                                        </div>
-                                                        <div class="col-md-5 ">
-                                                            <asp:TextBox ID="TextBox65" CssClass="form-control" runat="server"></asp:TextBox>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                </div>                                               
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="row">
@@ -843,6 +872,10 @@
                                                                 <asp:TextBox ID="txtAudiBuildingCode" CssClass="form-control" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
+                                                                <label for="exampleAccount">Building Name</label>
+                                                                <asp:TextBox ID="txtAudiBuildingName" CssClass="form-control" runat="server"></asp:TextBox>
+                                                            </div>
+                                                            <div class="form-group">
                                                                 <label for="exampleAccount">Sitting Capacity</label>
                                                                 <asp:TextBox ID="txtAudiSittingCapacity" CssClass="form-control" runat="server"></asp:TextBox>
                                                             </div>
@@ -851,7 +884,7 @@
                                                                 <asp:TextBox ID="txtAudiTotalAreaOfFloor" CssClass="form-control" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleAccount">Breath of the Building Block (in meter)</label>
+                                                                <label for="exampleAccount">Width of the Building Block (in meter)</label>
                                                                 <asp:TextBox ID="txtAudiTotalBreath" CssClass="form-control" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
@@ -863,16 +896,12 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Fire Safety valid Up to</label>
-                                                                <asp:TextBox ID="txtAudiFireSafetyUpto" Type="date" CssClass="form-control" runat="server"></asp:TextBox>
+                                                                <asp:TextBox ID="txtAudiFireSafetyUpto" Type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Electricity Supplier Agency </label>
                                                                 <asp:TextBox ID="txtAudiSuplierAgency" CssClass="form-control" runat="server"></asp:TextBox>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="exampleAccount">Load in KW</label>
-                                                                <asp:TextBox ID="txtAudiLoadInKW" CssClass="form-control" runat="server"></asp:TextBox>
-                                                            </div>
+                                                            </div>                                                            
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 contact-info">
@@ -896,13 +925,14 @@
                                                                     <asp:ListItem Value="ApprovalNotObtained">Approval Not Obtained</asp:ListItem>
                                                                 </asp:DropDownList>
                                                             </div>
+                                                            <div class="form-group">
                                                             <label for="exampleAccount">Building in Book of Account of</label>
                                                              <asp:DropDownList ID="ddlAudiBuildingBookOfAccount" CssClass="form-control" runat="server">
                                                                     <asp:ListItem Selected="True" Value="PWD">PWD</asp:ListItem>
                                                                     <asp:ListItem Value="IDCO">IDCO</asp:ListItem>
                                                                     <asp:ListItem Value="SOIC">SOIC</asp:ListItem>
                                                                 </asp:DropDownList>
-                                                        </div>
+                                                            </div>                                                            
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Electicity Consumer No.</label>
                                                             <asp:TextBox ID="txtElectricityConsumerNo" CssClass="form-control" runat="server"></asp:TextBox>
@@ -913,6 +943,15 @@
                                                                     <asp:ListItem Selected="True" Value="Safe">Safe</asp:ListItem>
                                                                     <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>
                                                                 </asp:DropDownList>
+                                                        </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleAccount">Load in KW</label>
+                                                                <asp:TextBox ID="txtAudiLoadInKW" CssClass="form-control" runat="server"></asp:TextBox>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleAccount">Year of Construction </label>
+                                                                <asp:TextBox ID="txtAudiYearOfConstruction" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -937,7 +976,7 @@
     <script>
         $(document).ready(function () {
             $('.show-hide').hide(); //hide
-            $('.IndustrialBuldings').show(); //set default class to be shown here, or remove to hide all
+            $('.InstitutionalBuildings').show(); //set default class to be shown here, or remove to hide all
         });
         $('select').change(function () { //on change do stuff
             $('.show-hide').hide(); //hide all with .box class

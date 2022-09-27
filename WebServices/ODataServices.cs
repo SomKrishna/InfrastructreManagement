@@ -11,24 +11,24 @@ namespace WebServices
 {
     public class ODataServices
     {
-        public static List<InfraOdata.LandDetailList> GetLandDetailList()
+        public static List<Infra.LandDetailList> GetLandDetailList()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.LandDetailList> q = container.CreateQuery<InfraOdata.LandDetailList>("LandDetailList").ToList();
+            List<Infra.LandDetailList> q = container.CreateQuery<Infra.LandDetailList>("LandDetailList").ToList();
 
             return q;
         }
 
-        public static List<InfraOdata.AuditoriumBuilding> GetAuditoriumList()
+        public static List<Infra.AuditoriumBuilding> GetAuditoriumList()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.AuditoriumBuilding> q = container.CreateQuery<InfraOdata.AuditoriumBuilding>("AuditoriumBuilding").ToList();
+            List<Infra.AuditoriumBuilding> q = container.CreateQuery<Infra.AuditoriumBuilding>("AuditoriumBuilding").ToList();
 
             return q;
         }
@@ -53,7 +53,7 @@ namespace WebServices
             {
                 AuditoriumReference.AuditoriumBuilding_Service _obj_Binding = (AuditoriumReference.AuditoriumBuilding_Service)Configuration.getNavService(new AuditoriumReference.AuditoriumBuilding_Service(), "AuditoriumBuilding", "Page");
                 AuditoriumReference.AuditoriumBuilding obj = new AuditoriumReference.AuditoriumBuilding();
-                List<InfraOdata.AuditoriumBuilding> objList = GetAuditoriumList().Where(x => string.Equals(x.Building_Code, input.Building_Code, StringComparison.OrdinalIgnoreCase)).ToList();
+                List<Infra.AuditoriumBuilding> objList = GetAuditoriumList().Where(x => string.Equals(x.Building_Code, input.Building_Code, StringComparison.OrdinalIgnoreCase)).ToList();
 
                 obj = _obj_Binding.Read(input.Building_Code);
 
@@ -81,11 +81,11 @@ namespace WebServices
             }
         }
 
-        public static InfraOdata.AuditoriumBuilding GetAuditorium(string buildingCode)
+        public static Infra.AuditoriumBuilding GetAuditorium(string buildingCode)
         {
             AuditoriumReference.AuditoriumBuilding_Service _obj_Binding = (AuditoriumReference.AuditoriumBuilding_Service)Configuration.getNavService(new AuditoriumReference.AuditoriumBuilding_Service(), "AuditoriumBuilding", "Page");
             AuditoriumReference.AuditoriumBuilding obj = new AuditoriumReference.AuditoriumBuilding();
-            List<InfraOdata.AuditoriumBuilding> objList = GetAuditoriumList().Where(x => string.Equals(x.Building_Code, buildingCode, StringComparison.OrdinalIgnoreCase)).ToList();
+            List<Infra.AuditoriumBuilding> objList = GetAuditoriumList().Where(x => string.Equals(x.Building_Code, buildingCode, StringComparison.OrdinalIgnoreCase)).ToList();
             return objList.FirstOrDefault();
         }
 
@@ -250,13 +250,13 @@ namespace WebServices
             }
         }
 
-        public static List<InfraOdata.InstituteBuildingsList> GetInstituteBuildings()
+        public static List<Infra.InstituteBuildingsList> GetInstituteBuildings()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.InstituteBuildingsList> q = container.CreateQuery<InfraOdata.InstituteBuildingsList>("InstituteBuildingsList").ToList();
+            List<Infra.InstituteBuildingsList> q = container.CreateQuery<Infra.InstituteBuildingsList>("InstituteBuildingsList").ToList();
 
             return q;
         }
@@ -267,7 +267,7 @@ namespace WebServices
             {
                 InstituteReference.InstituteBuildingCard_Service _obj_Binding = (InstituteReference.InstituteBuildingCard_Service)Configuration.getNavService(new InstituteReference.InstituteBuildingCard_Service(), "InstituteBuildingCard", "Page");
                 InstituteReference.InstituteBuildingCard obj = new InstituteReference.InstituteBuildingCard();
-                List<InfraOdata.InstituteBuildingsList> objList = GetInstituteBuildings().Where(x => string.Equals(x.Block_Code, input.Block_Code, StringComparison.OrdinalIgnoreCase)).ToList();
+                List<Infra.InstituteBuildingsList> objList = GetInstituteBuildings().Where(x => string.Equals(x.Block_Code, input.Block_Code, StringComparison.OrdinalIgnoreCase)).ToList();
 
 
                 obj = _obj_Binding.Read(input.Block_Code);
@@ -301,11 +301,11 @@ namespace WebServices
             }
         }
 
-        public static InfraOdata.InstituteBuildingsList GetInstituteBuilding(string blockCode)
+        public static Infra.InstituteBuildingsList GetInstituteBuilding(string blockCode)
         {
             InstituteReference.InstituteBuildingCard_Service _obj_Binding = (InstituteReference.InstituteBuildingCard_Service)Configuration.getNavService(new InstituteReference.InstituteBuildingCard_Service(), "InstituteBuildingCard", "Page");
             InstituteReference.InstituteBuildingCard obj = new InstituteReference.InstituteBuildingCard();
-            List<InfraOdata.InstituteBuildingsList> objList = GetInstituteBuildings().Where(x => string.Equals(x.Block_Code, blockCode, StringComparison.OrdinalIgnoreCase)).ToList();
+            List<Infra.InstituteBuildingsList> objList = GetInstituteBuildings().Where(x => string.Equals(x.Block_Code, blockCode, StringComparison.OrdinalIgnoreCase)).ToList();
             return objList.FirstOrDefault();
         }
 
@@ -323,22 +323,22 @@ namespace WebServices
             }
         }
 
-        public static List<InfraOdata.HostelBuildingsList> GetHostelBuildings()
+        public static List<Infra.HostelBuildingsList> GetHostelBuildings()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.HostelBuildingsList> q = container.CreateQuery<InfraOdata.HostelBuildingsList>("HostelBuildingsList").ToList();
+            List<Infra.HostelBuildingsList> q = container.CreateQuery<Infra.HostelBuildingsList>("HostelBuildingsList").ToList();
 
             return q;
         }
 
-        public static InfraOdata.HostelBuildingsList GetHostelBuilding(string blockCode)
+        public static Infra.HostelBuildingsList GetHostelBuilding(string blockCode)
         {
             HostelReference.HostelBuildingCard_Service _obj_Binding = (HostelReference.HostelBuildingCard_Service)Configuration.getNavService(new HostelReference.HostelBuildingCard_Service(), "HostelBuildingCard", "Page");
             HostelReference.HostelBuildingCard obj = new HostelReference.HostelBuildingCard();
-            List<InfraOdata.HostelBuildingsList> objList = GetHostelBuildings().Where(x => string.Equals(x.Block_Code, blockCode, StringComparison.OrdinalIgnoreCase)).ToList();
+            List<Infra.HostelBuildingsList> objList = GetHostelBuildings().Where(x => string.Equals(x.Block_Code, blockCode, StringComparison.OrdinalIgnoreCase)).ToList();
             return objList.FirstOrDefault();
 
         }
@@ -349,7 +349,7 @@ namespace WebServices
             {
                 HostelReference.HostelBuildingCard_Service _obj_Binding = (HostelReference.HostelBuildingCard_Service)Configuration.getNavService(new HostelReference.HostelBuildingCard_Service(), "HostelBuildingCard", "Page");
                 HostelReference.HostelBuildingCard obj = new HostelReference.HostelBuildingCard();
-                List<InfraOdata.HostelBuildingsList> objList = GetHostelBuildings().Where(x => string.Equals(x.Block_Code, input.Block_Code, StringComparison.OrdinalIgnoreCase)).ToList();
+                List<Infra.HostelBuildingsList> objList = GetHostelBuildings().Where(x => string.Equals(x.Block_Code, input.Block_Code, StringComparison.OrdinalIgnoreCase)).ToList();
 
                 obj = _obj_Binding.Read(input.Block_Code);
 
@@ -396,22 +396,22 @@ namespace WebServices
             }
         }
 
-        public static List<InfraOdata.StaffQuartersList> GetStaffQuarters()
+        public static List<Infra.StaffQuartersList> GetStaffQuarters()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.StaffQuartersList> q = container.CreateQuery<InfraOdata.StaffQuartersList>("StaffQuartersList").ToList();
+            List<Infra.StaffQuartersList> q = container.CreateQuery<Infra.StaffQuartersList>("StaffQuartersList").ToList();
 
             return q;
         }
 
-        public static InfraOdata.StaffQuartersList GetStaffQuarter(string quaterNo)
+        public static Infra.StaffQuartersList GetStaffQuarter(string quaterNo)
         {
             StaffReference.StaffQuarterCard_Service _obj_Binding = (StaffReference.StaffQuarterCard_Service)Configuration.getNavService(new StaffReference.StaffQuarterCard_Service(), "StaffQuarterCard", "Page");
             StaffReference.StaffQuarterCard obj = new StaffReference.StaffQuarterCard();
-            List<InfraOdata.StaffQuartersList> objList = GetStaffQuarters().Where(x => string.Equals(x.Quarter_Code, quaterNo, StringComparison.OrdinalIgnoreCase)).ToList();
+            List<Infra.StaffQuartersList> objList = GetStaffQuarters().Where(x => string.Equals(x.Quarter_Code, quaterNo, StringComparison.OrdinalIgnoreCase)).ToList();
             return objList.FirstOrDefault();
         }
 
@@ -421,7 +421,7 @@ namespace WebServices
             {
                 StaffReference.StaffQuarterCard_Service _obj_Binding = (StaffReference.StaffQuarterCard_Service)Configuration.getNavService(new StaffReference.StaffQuarterCard_Service(), "StaffQuarterCard", "Page");
                 StaffReference.StaffQuarterCard obj = new StaffReference.StaffQuarterCard();
-                List<InfraOdata.StaffQuartersList> objList = GetStaffQuarters().Where(x => string.Equals(x.Quarter_Code, input.Quarter_Code, StringComparison.OrdinalIgnoreCase)).ToList();
+                List<Infra.StaffQuartersList> objList = GetStaffQuarters().Where(x => string.Equals(x.Quarter_Code, input.Quarter_Code, StringComparison.OrdinalIgnoreCase)).ToList();
 
                 obj = _obj_Binding.Read(input.Quarter_Code);
 
@@ -459,13 +459,24 @@ namespace WebServices
             }
         }
 
-        public static List<InfraOdata.NewProjectDetails> GetAllNewProjectDetails()
+        public static List<Infra.NewProjectDetails> GetAllNewProjectDetails()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.NewProjectDetails> q = container.CreateQuery<InfraOdata.NewProjectDetails>("NewProjectDetails").ToList();
+            List<Infra.NewProjectDetails> q = container.CreateQuery<Infra.NewProjectDetails>("NewProjectDetails").ToList();
+
+            return q;
+        }
+
+        public static List<Infra.AllProjectList> GetAllProjectDetails()
+        {
+            string serviceUrl = string.Format(Configuration.ODataServiceUrl());
+            Uri uri = new Uri(serviceUrl);
+            var container = new Infra.NAV(uri);
+            container.BuildingRequest += Context_BuildingRequest;
+            List<Infra.AllProjectList> q = container.CreateQuery<Infra.AllProjectList>("AllProjectList").ToList();
 
             return q;
         }
@@ -512,66 +523,66 @@ namespace WebServices
             }
         }
 
-        public static List<InfraOdata.Ongoingprojectcard> GetOnGoingTypeProjectDetails()
+        public static List<Infra.Ongoingprojectcard> GetOnGoingTypeProjectDetails()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.Ongoingprojectcard> q = container.CreateQuery<InfraOdata.Ongoingprojectcard>("Ongoingprojectcard").ToList();
+            List<Infra.Ongoingprojectcard> q = container.CreateQuery<Infra.Ongoingprojectcard>("Ongoingprojectcard").ToList();
 
             return q;
         }
 
-        public static List<InfraOdata.Improvementprojectcard> GetImprovementTypeProjectDetails()
+        public static List<Infra.Improvementprojectcard> GetImprovementTypeProjectDetails()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.Improvementprojectcard> q = container.CreateQuery<InfraOdata.Improvementprojectcard>("Improvementprojectcard").ToList();
+            List<Infra.Improvementprojectcard> q = container.CreateQuery<Infra.Improvementprojectcard>("Improvementprojectcard").ToList();
 
             return q;
         }
 
-        public static List<InfraOdata.Institutelist> GetAllInstitutes()
+        public static List<Infra.Institutelist> GetAllInstitutes()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.Institutelist> q = container.CreateQuery<InfraOdata.Institutelist>("Institutelist").ToList();
+            List<Infra.Institutelist> q = container.CreateQuery<Infra.Institutelist>("Institutelist").ToList();
 
             return q;
         }
 
-        public static List<InfraOdata.Districtlist> GetAllDistricts()
+        public static List<Infra.Districtlist> GetAllDistricts()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.Districtlist> q = container.CreateQuery<InfraOdata.Districtlist>("Districtlist").ToList();
+            List<Infra.Districtlist> q = container.CreateQuery<Infra.Districtlist>("Districtlist").ToList();
 
             return q;
         }
 
-        public static List<InfraOdata.Projectprogressdetailscard> GetAllProjectProgress()
+        public static List<Infra.Projectprogressdetailscard> GetAllProjectProgress()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.Projectprogressdetailscard> q = container.CreateQuery<InfraOdata.Projectprogressdetailscard>("Projectprogressdetailscard").ToList();
+            List<Infra.Projectprogressdetailscard> q = container.CreateQuery<Infra.Projectprogressdetailscard>("Projectprogressdetailscard").ToList();
 
             return q;
         }
 
-        public static InfraOdata.Projectprogressdetailscard GetProjectProgressByProjectCode(string projectCode)
+        public static Infra.Projectprogressdetailscard GetProjectProgressByProjectCode(string projectCode)
         {
             ProjectProgressReference.Projectprogressdetailscard_Service _obj_Binding = (ProjectProgressReference.Projectprogressdetailscard_Service)Configuration.getNavService(new ProjectProgressReference.Projectprogressdetailscard_Service(), "Projectprogressdetailscard", "Page");
             ProjectProgressReference.Projectprogressdetailscard obj = new ProjectProgressReference.Projectprogressdetailscard();
-            List<InfraOdata.Projectprogressdetailscard> objList = GetAllProjectProgress().Where(x => string.Equals(x.Project_Code, projectCode, StringComparison.OrdinalIgnoreCase)).ToList();
+            List<Infra.Projectprogressdetailscard> objList = GetAllProjectProgress().Where(x => string.Equals(x.Project_Code, projectCode, StringComparison.OrdinalIgnoreCase)).ToList();
             return objList.FirstOrDefault();
         }
 
@@ -605,7 +616,7 @@ namespace WebServices
             {
                 ProjectProgressReference.Projectprogressdetailscard_Service _obj_Binding = (ProjectProgressReference.Projectprogressdetailscard_Service)Configuration.getNavService(new ProjectProgressReference.Projectprogressdetailscard_Service(), "Projectprogressdetailscard", "Page");
                 ProjectProgressReference.Projectprogressdetailscard obj = new ProjectProgressReference.Projectprogressdetailscard();
-                List<InfraOdata.Projectprogressdetailscard> objList = GetAllProjectProgress().Where(x => string.Equals(x.AA_No, input.AA_No, StringComparison.OrdinalIgnoreCase)).ToList();
+                List<Infra.Projectprogressdetailscard> objList = GetAllProjectProgress().Where(x => string.Equals(x.AA_No, input.AA_No, StringComparison.OrdinalIgnoreCase)).ToList();
 
                 obj = _obj_Binding.Read(input.Project_Type.ToString(), input.Project_Code);
 
@@ -690,13 +701,24 @@ namespace WebServices
             }
         }
 
-        public static List<InfraOdata.VendorList> GetVendorList()
+        public static List<Infra.VendorList> GetVendorList()
         {
             string serviceUrl = string.Format(Configuration.ODataServiceUrl());
             Uri uri = new Uri(serviceUrl);
-            var container = new InfraOdata.NAV(uri);
+            var container = new Infra.NAV(uri);
             container.BuildingRequest += Context_BuildingRequest;
-            List<InfraOdata.VendorList> q = container.CreateQuery<InfraOdata.VendorList>("VendorList").ToList();
+            List<Infra.VendorList> q = container.CreateQuery<Infra.VendorList>("VendorList").ToList();
+
+            return q;
+        }
+
+        public static List<Infra.ItemList> GetItemList()
+        {
+            string serviceUrl = string.Format(Configuration.ODataServiceUrl());
+            Uri uri = new Uri(serviceUrl);
+            var container = new Infra.NAV(uri);
+            container.BuildingRequest += Context_BuildingRequest;
+            List<Infra.ItemList> q = container.CreateQuery<Infra.ItemList>("ItemList").ToList();
 
             return q;
         }

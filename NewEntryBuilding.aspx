@@ -215,7 +215,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <asp:Button ID="btnExport" OnClick="btnExport_Click" runat="server" CssClass="btn-s float-right" type="submit" Text="Export" />
+                                <asp:Button ID="btnExport" OnClick="btnExport_Click" runat="server" CssClass="btn-s float-right submit btn-yellow" type="submit" Text="Export" />
                             </div>
                         </div>
                     </div>

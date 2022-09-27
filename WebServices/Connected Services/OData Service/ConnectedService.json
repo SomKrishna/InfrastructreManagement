@@ -20,9 +20,9 @@
       "MajorRevision": 0,
       "MinorRevision": 0
     },
-    "GeneratedFileNamePrefix": "Odata Reference",
+    "GeneratedFileNamePrefix": "OdataReference",
     "UseNamespacePrefix": true,
-    "NamespacePrefix": "InfraOdata",
+    "NamespacePrefix": "Infra",
     "UseDataServiceCollection": true,
     "MakeTypesInternal": false,
     "OpenGeneratedFilesInIDE": false,

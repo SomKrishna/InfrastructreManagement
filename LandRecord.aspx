@@ -75,7 +75,7 @@
                     </div>
 
                     <div class="col-lg-12 Introduction">
-                        <p class="Introduction">Name of the Institute :</p>
+                        <%--<p class="Introduction">Name of the Institute :</p>--%>
                     </div>
                     <div class="tab-pane active" id="1">
                         <%--<h2 class="right_col_heading text-center m-0">Auditorium Building List</h2>--%>
@@ -173,7 +173,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12 ExportFoot">
-                                        <asp:Button ID="btnExport" CssClass="exportcss" OnClick="btnExport_Click" runat="server" Text="Export" />
+                                        <asp:Button ID="btnExport" CssClass="exportcss btn-yellow" OnClick="btnExport_Click" runat="server" Text="Export" />
                                     </div>
                                 </div>
                             </div>

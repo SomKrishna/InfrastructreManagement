@@ -221,7 +221,8 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Item No. </label>
-                                                    <asp:TextBox ID="txtItemNo" CssClass="form-control" runat="server"></asp:TextBox>
+                                                    <asp:DropDownList ID="ddlItemNo" CssClass="form-control" runat="server">                                                       
+                                                    </asp:DropDownList>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Equipment ID  </label>

@@ -20,6 +20,13 @@ namespace InfrastructureManagement
                 ddlAgencyName.DataValueField = "No";
                 ddlAgencyName.DataBind();
                 ddlAgencyName.Items.Insert(0, new ListItem("Select Agency", "0"));
+
+                var items = ODataServices.GetItemList();
+                ddlItemNo.DataSource = items;
+                ddlItemNo.DataTextField = "Description";
+                ddlItemNo.DataValueField = "No";
+                ddlItemNo.DataBind();
+                ddlItemNo.Items.Insert(0, new ListItem("Select Item", "0"));
             }
         }
 
@@ -37,9 +44,9 @@ namespace InfrastructureManagement
                 Date_of_Expiry = DateTimeParser.ParseDateTime(txtDateOfExpiry.Text),
                 Annual_Cost_of_AMC = NumericHandler.ConvertToDecimal(txtAnnualAMCCost.Text),
                 Payment_Status = ddlPaymentStatus.SelectedItem.Text == "Already Paid" ? WebServices.AMCCardReference.Payment_Status.Paid : WebServices.AMCCardReference.Payment_Status.To_be_paid,
-                Item_No = txtItemNo.Text,
-                Equipment_Id = txtEquipmentId.Text,
-                Item_Name = txtItemDescription.Text
+                Item_No = ddlItemNo.SelectedItem.Value,
+                Equipment_Id = txtEquipmentId.Text
+                //Item_Name = txtItemDescription.Text
             };
             var result = ODataServices.CreateMaintainceAndAMC(obj);
             Alert.ShowAlert(this, "s", result);

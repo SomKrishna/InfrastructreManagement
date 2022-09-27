@@ -146,7 +146,7 @@
                                                                 <asp:Label ID="Label3" runat="server" Text='<%# Eval("Agency")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label4" runat="server" Text='<%# Eval("Date_of_commencement_as_per_agreement")%>'> </asp:Label>
+                                                                <asp:Label ID="Label4" runat="server" Text='<%# Eval("Date_of_commencement")%>'> </asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:Label ID="Label5" runat="server" Text='<%# Eval("District")%>'> </asp:Label>
@@ -158,7 +158,7 @@
                                                                 <asp:Label ID="Label7" runat="server" Text='<%# Eval("Mode_of_Work")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label8" runat="server" Text='<%# Eval("Date_of_completion") %>'> </asp:Label>
+                                                                <asp:Label ID="Label8" runat="server" Text='<%# Eval("Date_of_completion_as_per_agreement") %>'> </asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:LinkButton ID="btnExport" runat="server" OnClick="btnExport_Click"><i class="fa-regular fa-file"></i></asp:LinkButton>

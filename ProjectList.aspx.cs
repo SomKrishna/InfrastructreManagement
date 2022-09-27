@@ -18,7 +18,7 @@ namespace InfrastructureManagement
         {
             if (!IsPostBack)
             {
-                var result = ODataServices.GetAllNewProjectDetails();
+                var result = ODataServices.GetAllProjectDetails();
                 ListView1.DataSource = result;
                 ListView1.DataBind();
             }

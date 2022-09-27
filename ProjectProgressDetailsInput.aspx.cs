@@ -18,8 +18,8 @@ namespace InfrastructureManagement
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            var ongoingobj = new InfraOdata.Ongoingprojectcard();
-            var improvementObj = new InfraOdata.Improvementprojectcard();
+            var ongoingobj = new Infra.Ongoingprojectcard();
+            var improvementObj = new Infra.Improvementprojectcard();
             var InputProgectCode = txtProjectSearch.Text;
             //var projectProgressData = ODataServices.GetProjectProgressByProjectCode(InputProgectCode);
             ongoingobj = ODataServices.GetOnGoingTypeProjectDetails().Where(x => string.Equals(x.Project_Code, InputProgectCode, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();

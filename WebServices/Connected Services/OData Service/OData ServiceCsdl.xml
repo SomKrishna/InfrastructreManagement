@@ -175,12 +175,17 @@
         <NavigationProperty Name="AccountantPortalActivityCues" Type="Collection(NAV.AccountantPortalActivityCues)" ContainsTarget="true" />
         <NavigationProperty Name="AccountantPortalFinanceCues" Type="Collection(NAV.AccountantPortalFinanceCues)" ContainsTarget="true" />
         <NavigationProperty Name="AccountantPortalUserTasks" Type="Collection(NAV.AccountantPortalUserTasks)" ContainsTarget="true" />
+        <NavigationProperty Name="AllProjectList" Type="Collection(NAV.AllProjectList)" ContainsTarget="true" />
         <NavigationProperty Name="AMCCard" Type="Collection(NAV.AMCCard)" ContainsTarget="true" />
         <NavigationProperty Name="AMCList" Type="Collection(NAV.AMCList)" ContainsTarget="true" />
         <NavigationProperty Name="AuditoriumBuilding" Type="Collection(NAV.AuditoriumBuilding)" ContainsTarget="true" />
         <NavigationProperty Name="AuditoriumBuildingsList" Type="Collection(NAV.AuditoriumBuildingsList)" ContainsTarget="true" />
         <NavigationProperty Name="Curr" Type="Collection(NAV.Curr)" ContainsTarget="true" />
         <NavigationProperty Name="Districtlist" Type="Collection(NAV.Districtlist)" ContainsTarget="true" />
+        <NavigationProperty Name="EmployeeAdditionalInfoCard" Type="Collection(NAV.EmployeeAdditionalInfoCard)" ContainsTarget="true" />
+        <NavigationProperty Name="EmployeeAdditionalInfoList" Type="Collection(NAV.EmployeeAdditionalInfoList)" ContainsTarget="true" />
+        <NavigationProperty Name="EmployeeCard" Type="Collection(NAV.EmployeeCard)" ContainsTarget="true" />
+        <NavigationProperty Name="EmployeeList" Type="Collection(NAV.EmployeeList)" ContainsTarget="true" />
         <NavigationProperty Name="EstimatePrep" Type="Collection(NAV.EstimatePrep)" ContainsTarget="true" />
         <NavigationProperty Name="EstimatePrepCard" Type="Collection(NAV.EstimatePrepCard)" ContainsTarget="true" />
         <NavigationProperty Name="HostelBuildingCard" Type="Collection(NAV.HostelBuildingCard)" ContainsTarget="true" />
@@ -190,6 +195,7 @@
         <NavigationProperty Name="InstituteBuildingCard" Type="Collection(NAV.InstituteBuildingCard)" ContainsTarget="true" />
         <NavigationProperty Name="InstituteBuildingsList" Type="Collection(NAV.InstituteBuildingsList)" ContainsTarget="true" />
         <NavigationProperty Name="Institutelist" Type="Collection(NAV.Institutelist)" ContainsTarget="true" />
+        <NavigationProperty Name="ItemList" Type="Collection(NAV.ItemList)" ContainsTarget="true" />
         <NavigationProperty Name="LandDetailList" Type="Collection(NAV.LandDetailList)" ContainsTarget="true" />
         <NavigationProperty Name="Newprojectcard" Type="Collection(NAV.Newprojectcard)" ContainsTarget="true" />
         <NavigationProperty Name="NewProjectDetails" Type="Collection(NAV.NewProjectDetails)" ContainsTarget="true" />
@@ -914,6 +920,76 @@
         </Property>
         <Annotation Term="NAV.LabelId" String="AccountantPortalUserTasks" />
       </EntityType>
+      <EntityType Name="AllProjectList">
+        <Key>
+          <PropertyRef Name="Project_Type" />
+          <PropertyRef Name="Project_Code" />
+        </Key>
+        <Property Name="Project_Type" Type="Edm.String" Nullable="false">
+          <Annotation Term="NAV.LabelId" String="Project Type" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="Project_Code" Type="Edm.String" Nullable="false" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Project Code" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="Name_of_the_Institute" Type="Edm.String" MaxLength="100">
+          <Annotation Term="NAV.LabelId" String="Name of the Institute" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Name_of_the_project" Type="Edm.String" MaxLength="100">
+          <Annotation Term="NAV.LabelId" String="Name of the project" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Agency" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Agency" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Date_of_commencement" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="Date of commencement as per agreement" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="District" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="District" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Type_of_work" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Type of work" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Mode_of_Work" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Mode of Work" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Date_of_completion_as_per_agreement" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="Date of completion as per agreement" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Annotation Term="NAV.LabelId" String="AllProjectList" />
+      </EntityType>
       <EntityType Name="AMCCard">
         <Key>
           <PropertyRef Name="Sl_No" />
@@ -964,6 +1040,25 @@
         </Property>
         <Property Name="Payment_Status" Type="Edm.String">
           <Annotation Term="NAV.LabelId" String="Payment Status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Item_No" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Item No" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Item_Name" Type="Edm.String" MaxLength="100">
+          <Annotation Term="NAV.LabelId" String="Item Description" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Equipment_Id" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Equipment Id(If any)" />
           <Annotation Term="NAV.NavType">
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
@@ -1020,6 +1115,25 @@
         </Property>
         <Property Name="Payment_Status" Type="Edm.String">
           <Annotation Term="NAV.LabelId" String="Payment Status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Item_No" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Item No" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Item_Name" Type="Edm.String" MaxLength="100">
+          <Annotation Term="NAV.LabelId" String="Item Description" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Equipment_Id" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Equipment Id(If any)" />
           <Annotation Term="NAV.NavType">
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
@@ -1472,6 +1586,555 @@
           </Annotation>
         </Property>
         <Annotation Term="NAV.LabelId" String="Districtlist" />
+      </EntityType>
+      <EntityType Name="EmployeeAdditionalInfoCard">
+        <Key>
+          <PropertyRef Name="Entry_No" />
+          <PropertyRef Name="HRMS_ID" />
+        </Key>
+        <Property Name="Entry_No" Type="Edm.Int32" Nullable="false">
+          <Annotation Term="NAV.LabelId" String="Entry No" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Int</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="HRMS_ID" Type="Edm.String" Nullable="false" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="HRMS ID" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="Employee_Name" Type="Edm.String" MaxLength="90">
+          <Annotation Term="NAV.LabelId" String="Employee Name" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="D_O_J_Service" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="D.O.J (Service)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Service_Joining_Designation" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="Service Joining Designation" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Service_Joining_Station" Type="Edm.String" MaxLength="52">
+          <Annotation Term="NAV.LabelId" String="Service Joining Stataion" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Current_Station" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Current Station" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Base_Qualification" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Base Qualification" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Employment_Status" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Employment Status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Date_of_increment" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="Date of increment" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="MACP_Status" Type="Edm.String" Nullable="false">
+          <Annotation Term="NAV.LabelId" String="MACP Status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="Pension_Remark" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Pension Remark" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Dept_Trade_Section" Type="Edm.String" MaxLength="60">
+          <Annotation Term="NAV.LabelId" String="Dept./Trade/Section" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Annotation Term="NAV.LabelId" String="EmployeeAdditionalInfoCard" />
+      </EntityType>
+      <EntityType Name="EmployeeAdditionalInfoList">
+        <Key>
+          <PropertyRef Name="Entry_No" />
+          <PropertyRef Name="HRMS_ID" />
+        </Key>
+        <Property Name="Entry_No" Type="Edm.Int32" Nullable="false">
+          <Annotation Term="NAV.LabelId" String="Entry No" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Int</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="HRMS_ID" Type="Edm.String" Nullable="false" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="HRMS ID" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="Employee_Name" Type="Edm.String" MaxLength="90">
+          <Annotation Term="NAV.LabelId" String="Employee Name" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="D_O_J_Service" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="D.O.J (Service)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Service_Joining_Designation" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="Service Joining Designation" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Service_Joining_Station" Type="Edm.String" MaxLength="52">
+          <Annotation Term="NAV.LabelId" String="Service Joining Stataion" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Current_Station" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Current Station" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Base_Qualification" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Base Qualification" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Employment_Status" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Employment Status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Date_of_increment" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="Date of increment" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="MACP_Status" Type="Edm.String" Nullable="false">
+          <Annotation Term="NAV.LabelId" String="MACP Status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="Pension_Remark" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Pension Remark" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Dept_Trade_Section" Type="Edm.String" MaxLength="60">
+          <Annotation Term="NAV.LabelId" String="Dept./Trade/Section" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Annotation Term="NAV.LabelId" String="EmployeeAdditionalInfoList" />
+        <Annotation Term="NAV.IsReadOnly" Bool="true" />
+      </EntityType>
+      <EntityType Name="EmployeeCard">
+        <Key>
+          <PropertyRef Name="No" />
+        </Key>
+        <Property Name="No" Type="Edm.String" Nullable="false" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="HRMS Id" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="First_Name" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="Employee Name" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Bill_Group" Type="Edm.String" MaxLength="50">
+          <Annotation Term="NAV.LabelId" String="Bill Group" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Account_Type" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Account Type" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="GPF_PRAN_No" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="GPF/PRAN No" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Bill_Type" Type="Edm.String" MaxLength="50">
+          <Annotation Term="NAV.LabelId" String="Bill Type" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Designation" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Designation" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Dept_Trade_Section" Type="Edm.String" MaxLength="60">
+          <Annotation Term="NAV.LabelId" String="Dept./Trade/Section" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Post_Group" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Post Group" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Birth_Date" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="D.O.B" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Gender" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Gender" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="D_O_S" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="D.O.S (Date of Superannuation)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Category" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Category" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Joining_Station" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="Service Joining Station" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="D_O_J_Service" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="D.O.J (Service)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Current_Station" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Current Station" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Joining_Designation" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="Joining Designation" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Base_Qualification" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Base Qualification" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Home_Dist" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Home Dist" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Basic_Gr_Pay" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Basic Gr. Pay" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Employment_Status" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Employment Status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Date_of_increment" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="Date of increment" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="E_Mail" Type="Edm.String" MaxLength="80">
+          <Annotation Term="NAV.LabelId" String="Email" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="MACP_Status" Type="Edm.String" Nullable="false">
+          <Annotation Term="NAV.LabelId" String="MACP Status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="EPIC_No" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="EPIC No" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Mobile_No" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="Mobile Phone No." />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Pension_Remark" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Pension Remark" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Aadhaar_No" Type="Edm.String" MaxLength="12">
+          <Annotation Term="NAV.LabelId" String="Aadhaar No" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Annotation Term="NAV.LabelId" String="EmployeeCard" />
+        <Annotation Term="NAV.IsReadOnly" Bool="true" />
+      </EntityType>
+      <EntityType Name="EmployeeList">
+        <Key>
+          <PropertyRef Name="No" />
+        </Key>
+        <Property Name="No" Type="Edm.String" Nullable="false" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="No." />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="First_Name" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="Employee Name" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Bill_Group" Type="Edm.String" MaxLength="50">
+          <Annotation Term="NAV.LabelId" String="Bill Group" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Bill_Type" Type="Edm.String" MaxLength="50">
+          <Annotation Term="NAV.LabelId" String="Bill Type" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Account_Type" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Account Type" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Designation" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Designation" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Dept_Trade_Section" Type="Edm.String" MaxLength="60">
+          <Annotation Term="NAV.LabelId" String="Dept./Trade/Section" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Post_Group" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Post Group" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="GPF_PRAN_No" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="GPF/PRAN No" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Birth_Date" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="Birth Date" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Gender" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Gender" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="D_O_S" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="D.O.S (Date of Superannuation)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Category" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Category" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Joining_Station" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="Joining Station" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="D_O_J_Service" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="D.O.J (Service)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Current_Station" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Current Station" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Service_Joining_Designation" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="Service Joining Designation" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Base_Qualification" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Base Qualification" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Home_Dist" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Home Dist" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Basic_Gr_Pay" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Basic Gr. Pay" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Employment_Status" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Employment Status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Date_of_increment" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="Date of increment" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="E_Mail" Type="Edm.String" MaxLength="80">
+          <Annotation Term="NAV.LabelId" String="Email" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="EPIC_No" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="EPIC No" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="MACP_Status" Type="Edm.String" Nullable="false">
+          <Annotation Term="NAV.LabelId" String="MACP Status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="Mobile_Phone_No" Type="Edm.String" MaxLength="30">
+          <Annotation Term="NAV.LabelId" String="Mobile Phone No." />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Pension_Remark" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Pension Remark" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Aadhaar_No" Type="Edm.String" MaxLength="12">
+          <Annotation Term="NAV.LabelId" String="Aadhaar No" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Status" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Annotation Term="NAV.LabelId" String="EmployeeList" />
+        <Annotation Term="NAV.IsReadOnly" Bool="true" />
       </EntityType>
       <EntityType Name="EstimatePrep">
         <Key>
@@ -2408,6 +3071,334 @@
         </Property>
         <Annotation Term="NAV.LabelId" String="Institutelist" />
       </EntityType>
+      <EntityType Name="ItemList">
+        <Key>
+          <PropertyRef Name="No" />
+        </Key>
+        <Property Name="No" Type="Edm.String" Nullable="false" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="No." />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="Description" Type="Edm.String" MaxLength="100">
+          <Annotation Term="NAV.LabelId" String="Description" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Type" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Type" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="InventoryField" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Inventory" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Created_From_Nonstock_Item" Type="Edm.Boolean">
+          <Annotation Term="NAV.LabelId" String="Created From Catalog Item" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Bool</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Substitutes_Exist" Type="Edm.Boolean">
+          <Annotation Term="NAV.LabelId" String="Substitutes Exist" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Bool</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Stockkeeping_Unit_Exists" Type="Edm.Boolean">
+          <Annotation Term="NAV.LabelId" String="Stockkeeping Unit Exists" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Bool</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Assembly_BOM" Type="Edm.Boolean">
+          <Annotation Term="NAV.LabelId" String="Assembly BOM" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Bool</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Production_BOM_No" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Production BOM No." />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Routing_No" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Routing No." />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Base_Unit_of_Measure" Type="Edm.String" MaxLength="10">
+          <Annotation Term="NAV.LabelId" String="Base Unit of Measure" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Shelf_No" Type="Edm.String" MaxLength="10">
+          <Annotation Term="NAV.LabelId" String="Shelf No." />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Costing_Method" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Costing Method" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Cost_is_Adjusted" Type="Edm.Boolean">
+          <Annotation Term="NAV.LabelId" String="Cost is Adjusted" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Bool</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Standard_Cost" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Standard Cost" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Unit_Cost" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Unit Cost" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Last_Direct_Cost" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Last Direct Cost" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Price_Profit_Calculation" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Price/Profit Calculation" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Profit_Percent" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Profit %" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Unit_Price" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Unit Price" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Inventory_Posting_Group" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Inventory Posting Group" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Gen_Prod_Posting_Group" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Gen. Prod. Posting Group" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="VAT_Prod_Posting_Group" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="VAT Prod. Posting Group" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Item_Disc_Group" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Item Disc. Group" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Vendor_No" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Vendor No." />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Vendor_Item_No" Type="Edm.String" MaxLength="50">
+          <Annotation Term="NAV.LabelId" String="Vendor Item No." />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Tariff_No" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Tariff No." />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Search_Description" Type="Edm.String" MaxLength="100">
+          <Annotation Term="NAV.LabelId" String="Search Description" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Overhead_Rate" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Overhead Rate" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Indirect_Cost_Percent" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Indirect Cost %" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Item_Category_Code" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Item Category Code" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Blocked" Type="Edm.Boolean">
+          <Annotation Term="NAV.LabelId" String="Blocked" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Bool</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Last_Date_Modified" Type="Edm.Date">
+          <Annotation Term="NAV.LabelId" String="Last Date Modified" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Date</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Sales_Unit_of_Measure" Type="Edm.String" MaxLength="10">
+          <Annotation Term="NAV.LabelId" String="Sales Unit of Measure" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Replenishment_System" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Replenishment System" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Purch_Unit_of_Measure" Type="Edm.String" MaxLength="10">
+          <Annotation Term="NAV.LabelId" String="Purch. Unit of Measure" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Lead_Time_Calculation" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Lead Time Calculation" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Manufacturing_Policy" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Manufacturing Policy" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Flushing_Method" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Flushing Method" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Assembly_Policy" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Assembly Policy" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Item_Tracking_Code" Type="Edm.String" MaxLength="10">
+          <Annotation Term="NAV.LabelId" String="Item Tracking Code" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Default_Deferral_Template_Code" Type="Edm.String" MaxLength="10">
+          <Annotation Term="NAV.LabelId" String="Default Deferral Template" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Coupled_to_CRM" Type="Edm.Boolean">
+          <Annotation Term="NAV.LabelId" String="Coupled to Dynamics 365 Sales" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Bool</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEdit" Bool="false" />
+        </Property>
+        <Property Name="Global_Dimension_1_Filter" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Global_Dimension_1_Filter" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Global_Dimension_2_Filter" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Global_Dimension_2_Filter" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Location_Filter" Type="Edm.String" MaxLength="10">
+          <Annotation Term="NAV.LabelId" String="Location_Filter" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Drop_Shipment_Filter" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Drop_Shipment_Filter" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Variant_Filter" Type="Edm.String" MaxLength="10">
+          <Annotation Term="NAV.LabelId" String="Variant_Filter" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Lot_No_Filter" Type="Edm.String" MaxLength="50">
+          <Annotation Term="NAV.LabelId" String="Lot_No_Filter" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Serial_No_Filter" Type="Edm.String" MaxLength="50">
+          <Annotation Term="NAV.LabelId" String="Serial_No_Filter" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Unit_of_Measure_Filter" Type="Edm.String" MaxLength="10">
+          <Annotation Term="NAV.LabelId" String="Unit_of_Measure_Filter" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Package_No_Filter" Type="Edm.String" MaxLength="50">
+          <Annotation Term="NAV.LabelId" String="Package_No_Filter" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Annotation Term="NAV.LabelId" String="ItemList" />
+        <Annotation Term="NAV.IsReadOnly" Bool="true" />
+      </EntityType>
       <EntityType Name="LandDetailList">
         <Key>
           <PropertyRef Name="Khatian_Serial_No" />
@@ -2539,6 +3530,12 @@
         </Property>
         <Property Name="Agency" Type="Edm.String">
           <Annotation Term="NAV.LabelId" String="Agency" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Specify_Agency" Type="Edm.String" MaxLength="50">
+          <Annotation Term="NAV.LabelId" String="Specify Agency" />
           <Annotation Term="NAV.NavType">
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
@@ -29201,10 +30198,82 @@
       <Action Name="SetComplete" IsBound="true">
         <Parameter Name="bindingParameter" Type="NAV.UserTaskSetComplete" />
       </Action>
+      <Action Name="InfraCodeunit_Download_Land_File">
+        <Parameter Name="khatianNo" Type="Edm.String" />
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Download_Project_File">
+        <Parameter Name="projectType" Type="Edm.Int32" />
+        <Parameter Name="projectCode" Type="Edm.String" />
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportAuditoriumBuilding">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportDTETAuditoriumBuilding">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportDTETEstimatePreparationMonitoring">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportDTETHostelBuilding">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportDTETInstitutionalBuilding">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportDTETLandDataDetails">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportDTETMaintanenceAndAMC">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportDTETProjectProgressDetails">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportDTETServiceMonitoring">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportDTETStaffBuilding">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportEstimatePreparationMonitoring">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportHostelBuilding">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportInstitutionalBuilding">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportLandDataDetails">
+        <ReturnType Type="Edm.String" />
+      </Action>
       <Action Name="InfraCodeunit_ExportLandDataTemplate">
         <Parameter Name="fileName" Type="Edm.String" />
       </Action>
+      <Action Name="InfraCodeunit_ExportMaintanenceAndAMC">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportProjectProgressDetails">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportServiceMonitoring">
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_ExportStaffBuilding">
+        <ReturnType Type="Edm.String" />
+      </Action>
       <Action Name="InfraCodeunit_ImportLandFile">
+        <Parameter Name="fileName" Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Upload_Land_File">
+        <Parameter Name="khatianNo" Type="Edm.String" />
+        <Parameter Name="fileName" Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Upload_Project_File">
+        <Parameter Name="projectType" Type="Edm.Int32" />
+        <Parameter Name="projectCode" Type="Edm.String" />
         <Parameter Name="fileName" Type="Edm.String" />
       </Action>
       <Action Name="BCPTTestSuite_AddLineToTestSuiteHeader_1490807849">
@@ -29319,8 +30388,30 @@
         <Parameter Name="workflowStepInstanceId" Type="Edm.Guid" />
       </Action>
       <EntityContainer Name="NAV">
+        <ActionImport Name="InfraCodeunit_Download_Land_File" Action="NAV.InfraCodeunit_Download_Land_File" />
+        <ActionImport Name="InfraCodeunit_Download_Project_File" Action="NAV.InfraCodeunit_Download_Project_File" />
+        <ActionImport Name="InfraCodeunit_ExportAuditoriumBuilding" Action="NAV.InfraCodeunit_ExportAuditoriumBuilding" />
+        <ActionImport Name="InfraCodeunit_ExportDTETAuditoriumBuilding" Action="NAV.InfraCodeunit_ExportDTETAuditoriumBuilding" />
+        <ActionImport Name="InfraCodeunit_ExportDTETEstimatePreparationMonitoring" Action="NAV.InfraCodeunit_ExportDTETEstimatePreparationMonitoring" />
+        <ActionImport Name="InfraCodeunit_ExportDTETHostelBuilding" Action="NAV.InfraCodeunit_ExportDTETHostelBuilding" />
+        <ActionImport Name="InfraCodeunit_ExportDTETInstitutionalBuilding" Action="NAV.InfraCodeunit_ExportDTETInstitutionalBuilding" />
+        <ActionImport Name="InfraCodeunit_ExportDTETLandDataDetails" Action="NAV.InfraCodeunit_ExportDTETLandDataDetails" />
+        <ActionImport Name="InfraCodeunit_ExportDTETMaintanenceAndAMC" Action="NAV.InfraCodeunit_ExportDTETMaintanenceAndAMC" />
+        <ActionImport Name="InfraCodeunit_ExportDTETProjectProgressDetails" Action="NAV.InfraCodeunit_ExportDTETProjectProgressDetails" />
+        <ActionImport Name="InfraCodeunit_ExportDTETServiceMonitoring" Action="NAV.InfraCodeunit_ExportDTETServiceMonitoring" />
+        <ActionImport Name="InfraCodeunit_ExportDTETStaffBuilding" Action="NAV.InfraCodeunit_ExportDTETStaffBuilding" />
+        <ActionImport Name="InfraCodeunit_ExportEstimatePreparationMonitoring" Action="NAV.InfraCodeunit_ExportEstimatePreparationMonitoring" />
+        <ActionImport Name="InfraCodeunit_ExportHostelBuilding" Action="NAV.InfraCodeunit_ExportHostelBuilding" />
+        <ActionImport Name="InfraCodeunit_ExportInstitutionalBuilding" Action="NAV.InfraCodeunit_ExportInstitutionalBuilding" />
+        <ActionImport Name="InfraCodeunit_ExportLandDataDetails" Action="NAV.InfraCodeunit_ExportLandDataDetails" />
         <ActionImport Name="InfraCodeunit_ExportLandDataTemplate" Action="NAV.InfraCodeunit_ExportLandDataTemplate" />
+        <ActionImport Name="InfraCodeunit_ExportMaintanenceAndAMC" Action="NAV.InfraCodeunit_ExportMaintanenceAndAMC" />
+        <ActionImport Name="InfraCodeunit_ExportProjectProgressDetails" Action="NAV.InfraCodeunit_ExportProjectProgressDetails" />
+        <ActionImport Name="InfraCodeunit_ExportServiceMonitoring" Action="NAV.InfraCodeunit_ExportServiceMonitoring" />
+        <ActionImport Name="InfraCodeunit_ExportStaffBuilding" Action="NAV.InfraCodeunit_ExportStaffBuilding" />
         <ActionImport Name="InfraCodeunit_ImportLandFile" Action="NAV.InfraCodeunit_ImportLandFile" />
+        <ActionImport Name="InfraCodeunit_Upload_Land_File" Action="NAV.InfraCodeunit_Upload_Land_File" />
+        <ActionImport Name="InfraCodeunit_Upload_Project_File" Action="NAV.InfraCodeunit_Upload_Project_File" />
         <ActionImport Name="BCPTTestSuite_AddLineToTestSuiteHeader_1490807849" Action="NAV.BCPTTestSuite_AddLineToTestSuiteHeader_1490807849" />
         <ActionImport Name="BCPTTestSuite_AddLineToTestSuiteHeader" Action="NAV.BCPTTestSuite_AddLineToTestSuiteHeader" />
         <ActionImport Name="BCPTTestSuite_AddLineToTestSuiteHeader_574159954" Action="NAV.BCPTTestSuite_AddLineToTestSuiteHeader_574159954" />
@@ -29417,6 +30508,28 @@
           <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
             <Record>
               <PropertyValue Property="Deletable" Bool="true" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
+            <Record>
+              <PropertyValue Property="Insertable" Bool="true" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
+            <Record>
+              <PropertyValue Property="Updatable" Bool="true" />
+            </Record>
+          </Annotation>
+        </EntitySet>
+        <EntitySet Name="AllProjectList" EntityType="NAV.AllProjectList">
+          <Annotation Term="Org.OData.Capabilities.V1.ChangeTracking">
+            <Record>
+              <PropertyValue Property="Supported" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+            <Record>
+              <PropertyValue Property="Deletable" Bool="false" />
             </Record>
           </Annotation>
           <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
@@ -29559,6 +30672,94 @@
           <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
             <Record>
               <PropertyValue Property="Updatable" Bool="true" />
+            </Record>
+          </Annotation>
+        </EntitySet>
+        <EntitySet Name="EmployeeAdditionalInfoCard" EntityType="NAV.EmployeeAdditionalInfoCard">
+          <Annotation Term="Org.OData.Capabilities.V1.ChangeTracking">
+            <Record>
+              <PropertyValue Property="Supported" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+            <Record>
+              <PropertyValue Property="Deletable" Bool="true" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
+            <Record>
+              <PropertyValue Property="Insertable" Bool="true" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
+            <Record>
+              <PropertyValue Property="Updatable" Bool="true" />
+            </Record>
+          </Annotation>
+        </EntitySet>
+        <EntitySet Name="EmployeeAdditionalInfoList" EntityType="NAV.EmployeeAdditionalInfoList">
+          <Annotation Term="Org.OData.Capabilities.V1.ChangeTracking">
+            <Record>
+              <PropertyValue Property="Supported" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+            <Record>
+              <PropertyValue Property="Deletable" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
+            <Record>
+              <PropertyValue Property="Insertable" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
+            <Record>
+              <PropertyValue Property="Updatable" Bool="false" />
+            </Record>
+          </Annotation>
+        </EntitySet>
+        <EntitySet Name="EmployeeCard" EntityType="NAV.EmployeeCard">
+          <Annotation Term="Org.OData.Capabilities.V1.ChangeTracking">
+            <Record>
+              <PropertyValue Property="Supported" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+            <Record>
+              <PropertyValue Property="Deletable" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
+            <Record>
+              <PropertyValue Property="Insertable" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
+            <Record>
+              <PropertyValue Property="Updatable" Bool="false" />
+            </Record>
+          </Annotation>
+        </EntitySet>
+        <EntitySet Name="EmployeeList" EntityType="NAV.EmployeeList">
+          <Annotation Term="Org.OData.Capabilities.V1.ChangeTracking">
+            <Record>
+              <PropertyValue Property="Supported" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+            <Record>
+              <PropertyValue Property="Deletable" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
+            <Record>
+              <PropertyValue Property="Insertable" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
+            <Record>
+              <PropertyValue Property="Updatable" Bool="false" />
             </Record>
           </Annotation>
         </EntitySet>
@@ -29757,6 +30958,28 @@
           <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
             <Record>
               <PropertyValue Property="Updatable" Bool="true" />
+            </Record>
+          </Annotation>
+        </EntitySet>
+        <EntitySet Name="ItemList" EntityType="NAV.ItemList">
+          <Annotation Term="Org.OData.Capabilities.V1.ChangeTracking">
+            <Record>
+              <PropertyValue Property="Supported" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+            <Record>
+              <PropertyValue Property="Deletable" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
+            <Record>
+              <PropertyValue Property="Insertable" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
+            <Record>
+              <PropertyValue Property="Updatable" Bool="false" />
             </Record>
           </Annotation>
         </EntitySet>
@@ -31864,6 +33087,18 @@
       <Annotations Target="NAV.AccountantPortalUserTasks/Priority">
         <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
       </Annotations>
+      <Annotations Target="NAV.AllProjectList/Project_Type">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.AllProjectList/Agency">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.AllProjectList/Type_of_work">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.AllProjectList/Mode_of_Work">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
       <Annotations Target="NAV.AMCCard/Payment_Status">
         <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
       </Annotations>
@@ -31898,6 +33133,69 @@
         <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
       </Annotations>
       <Annotations Target="NAV.Curr/VAT_Rounding_Type">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeAdditionalInfoCard/Employment_Status">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeAdditionalInfoCard/MACP_Status">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeAdditionalInfoCard/Pension_Remark">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeAdditionalInfoList/Employment_Status">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeAdditionalInfoList/MACP_Status">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeAdditionalInfoList/Pension_Remark">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeCard/Account_Type">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeCard/Post_Group">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeCard/Gender">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeCard/Category">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeCard/Employment_Status">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeCard/MACP_Status">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeCard/Pension_Remark">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeList/Account_Type">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeList/Post_Group">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeList/Gender">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeList/Category">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeList/Employment_Status">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeList/MACP_Status">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeList/Pension_Remark">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.EmployeeList/Status">
         <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
       </Annotations>
       <Annotations Target="NAV.EstimatePrep/Type_of_work">
@@ -32021,6 +33319,27 @@
         <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
       </Annotations>
       <Annotations Target="NAV.Institutelist/Institute_Type">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.ItemList/Type">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.ItemList/Costing_Method">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.ItemList/Price_Profit_Calculation">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.ItemList/Replenishment_System">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.ItemList/Manufacturing_Policy">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.ItemList/Flushing_Method">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.ItemList/Assembly_Policy">
         <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
       </Annotations>
       <Annotations Target="NAV.LandDetailList/Land_Kisam">

@@ -327,7 +327,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleAccount">Running Financial Year (yyyy-yy)</label>
-                                                <asp:TextBox ID="txtRunningFinanacialYear" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtRunningFinanacialYear" CssClass="form-control" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -346,7 +346,7 @@
                                                 <asp:TextBox ID="txtExpenditureMade" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleAccount">Balance fund required for completion of work in 22-23 (Rs In Lakh)</label>
+                                                <label for="exampleAccount">Balance fund required for completion of work in Running FY in Lakh</label>
                                                 <asp:TextBox ID="txtCompletionBalanceFund" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                             </div>
 

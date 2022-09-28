@@ -127,6 +127,9 @@
                 <div class="col-lg-12 NewEntrydiv">
                     <p class="NewEntry">Update Building</p>
                 </div>
+                <div class="loader" id="loader">
+                    <div class="loader-img"><i class="fa fa-spinner fa-spin"></i></div>
+                </div>
                 <div class="row">
                     <div class="card-body">
                         <div class="row md-12 marginx">
@@ -154,7 +157,7 @@
                                         <asp:TextBox ID="txtSearch" CssClass="form-control" runat="server"></asp:TextBox>
                                     </div>
                                     <div class="col-md-2 ">
-                                        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" CssClass="btn-s float-right submit" type="submit" Text="Search" />
+                                        <asp:Button ID="btnSearch" OnClientClick="showLoader();" runat="server" OnClick="btnSearch_Click" CssClass="btn-s float-right submit" type="submit" Text="Search" />
                                     </div>
                                     <div class="col-md-2">
                                         <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn-s float-right submit btn-yellow" Visible="false" type="submit" Text="Edit" />
@@ -173,4 +176,9 @@
             </div>
         </div>
     </div>
+    <script language="Javascript">        
+         function showLoader() {
+             $('#loader').show();
+         };
+    </script>
 </asp:Content>

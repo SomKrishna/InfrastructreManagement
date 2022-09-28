@@ -261,7 +261,21 @@
     <script src="assets/plugins/jQuery-lib/2.0.3/jquery.min.js"></script>
     <script src="assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/toastr/toastr.min.js"></script>
+    <script src="assets/toastr/toastr.min.js"></script> 
+    <script type="text/javascript">  
+        $(window).bind("load", function () {
+            var footer = $("#footer");
+            var pos = footer.position();
+            var height = $(window).height();
+            height = height - pos.top;
+            height = height - footer.height();
+            if (height > 0) {
+                footer.css({
+                    'margin-top': height + 'px'
+                });
+            }
+        });
+    </script>
     <script>
         $(document).ready(function () {
             //$(".topRightCollapseContent").hide();
@@ -504,35 +518,7 @@
                     </div>
                 </div>
             </div>
-            <footer class="p-10">©Year here Added Institute Name here, City Name here</footer>
-
-            <div id="profilePictureModal" class="modal fade" role="dialog">
-                <div class="modal-dialog modal-sm" style="margin-top: 10%;">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Upload Profile Picture</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <div class="input-group">
-                                        <label class="input-group-btn" style="vertical-align: top; top: 2px;">
-                                            <span class="btn btn-upload">Choose File&hellip;
-                                                <asp:FileUpload ID="fileuploadprofilepic" class="btn btn-light-grey form-control btn-upload" runat="server" Style="display: none" />
-                                            </span>
-                                        </label>
-                                        <input type="text" class="form-control fileUpload-textbox" id="secondaryUpload" readonly="true" />
-                                    </div>
-                                    <p><span style="color: #f00;">* Upload only .jpg image</span></p>
-                                    <button type="button" class="btn btn-danger ml-5 btn-sm pull-right" data-dismiss="modal">Close</button>
-                                    <asp:Button ID="btnupload" class="btn btn-warning btn-sm pull-right" runat="server" Text="Upload" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="footer"><footer class="p-10">©Year here Added Institute Name here, City Name here</footer></div>            
         </form>
     </div>
 

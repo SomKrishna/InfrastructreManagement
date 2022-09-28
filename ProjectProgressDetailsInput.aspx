@@ -210,6 +210,9 @@
         <div class="row">
             <div class="col-lg-3 col-md-2"></div>
             <div class="col-lg-12 col-md-12 model-box">
+                <div class="loader" id="loader">
+                                <div class="loader-img"><i class="fa fa-spinner fa-spin"></i></div>
+                            </div>
 
                 <div class="col-lg-12 col-md-12 summary-box">
                     <div class="col-lg-12 NewEntrydiv">
@@ -229,7 +232,7 @@
                                                 <asp:TextBox ID="txtProjectSearch" CssClass="form-control" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="col-md-3 input-icons">
-                                                <asp:Button ID="btnSearch" OnClick="btnSearch_Click" CssClass="btn-s float-right submit" Text="Search" runat="server" />
+                                                <asp:Button ID="btnSearch" OnClientClick="showLoader();" OnClick="btnSearch_Click" CssClass="btn-s float-right submit" Text="Search" runat="server" />
                                             </div>
                                         </div>
                                         <div class="row">
@@ -397,7 +400,13 @@
                 return false;
 
             return true;
-        }
+         }
+         function showLoader() {
+             $('#loader').show();
+         };
+         function hideLoader() {
+             $('#loader').hide();
+         };
      </script>
 
 </asp:Content>

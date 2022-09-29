@@ -24,15 +24,6 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.DropDownList ddlStaffBlockType;
 
         /// <summary>
-        /// txtStaffClassRoomsAvailable control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStaffClassRoomsAvailable;
-
-        /// <summary>
         /// txtStaffFloorArea control.
         /// </summary>
         /// <remarks>
@@ -112,6 +103,15 @@ namespace InfrastructureManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStaffPHDConsumerNo;
+
+        /// <summary>
+        /// ddlStaffOccupancyStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlStaffOccupancyStatus;
 
         /// <summary>
         /// lblstaffQuarterCodeNo control.
@@ -220,15 +220,6 @@ namespace InfrastructureManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlStaffSafetyStatus;
-
-        /// <summary>
-        /// ddlStaffOccupancyStatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlStaffOccupancyStatus;
 
         /// <summary>
         /// btnStaffSubmit control.

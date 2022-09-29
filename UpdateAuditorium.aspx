@@ -136,11 +136,11 @@
                                                 <div class="col-md-6 contact-info">
                                                     <div class="container">
                                                         <div class="form-group">
-                                                            <label for="exampleAccount">Edit Auditorium Building for Building Code.</label>
+                                                            <label for="exampleAccount">Edit Auditorium Building for Building Code No.</label>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleAccount">Building Code</label>
-                                                            <asp:TextBox ID="txtAudiBuildingCode" CssClass="form-control" runat="server"></asp:TextBox>
+                                                            <label for="exampleAccount">Building Layout Drawing Plan No.</label>
+                                                            <asp:TextBox ID="txtAudiLayoutPlanNo" CssClass="form-control" runat="server"></asp:TextBox>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Sitting Capacity</label>
@@ -168,21 +168,13 @@
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Electricity Supplier Agency </label>
                                                             <asp:TextBox ID="txtAudiSuplierAgency" CssClass="form-control" runat="server"></asp:TextBox>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleAccount">Load in KW</label>
-                                                            <asp:TextBox ID="txtAudiLoadInKW" CssClass="form-control" runat="server"></asp:TextBox>
-                                                        </div>
+                                                        </div>                                                       
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 contact-info">
                                                     <div class="container">
                                                         <div class="form-group">
                                                             <asp:Label ID="lblAuditoriumBuildingCode" CssClass="Labels" for="exampleAccount" runat="server"></asp:Label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleAccount">Building Layout Drawing Plan No.</label>
-                                                            <asp:TextBox ID="txtAudiLayoutPlanNo" CssClass="form-control" runat="server"></asp:TextBox>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Length of the Building Block(in meter)</label>
@@ -199,23 +191,29 @@
                                                                 <asp:ListItem Value="ApprovalNotObtained">Approval Not Obtained</asp:ListItem>
                                                             </asp:DropDownList>
                                                         </div>
-                                                        <label for="exampleAccount">Building in Book of Account of</label>
-                                                        <asp:DropDownList ID="ddlAudiBuildingBookOfAccount" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Selected="True" Value="PWD">PWD</asp:ListItem>
-                                                            <asp:ListItem Value="IDCO">IDCO</asp:ListItem>
-                                                            <asp:ListItem Value="SOIC">SOIC</asp:ListItem>
-                                                        </asp:DropDownList>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleAccount">Electicity Consumer No.</label>
-                                                        <asp:TextBox ID="txtElectricityConsumerNo" CssClass="form-control" runat="server"></asp:TextBox>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleAccount">Building Saftey Status</label>
-                                                        <asp:DropDownList ID="ddlAudiBuildingSafetyStatus" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Selected="True" Value="Safe">Safe</asp:ListItem>
-                                                            <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <div class="form-group">
+                                                            <label for="exampleAccount">Building in Book of Account of</label>
+                                                            <asp:DropDownList ID="ddlAudiBuildingBookOfAccount" CssClass="form-control" runat="server">
+                                                                <asp:ListItem Selected="True" Value="PWD">PWD</asp:ListItem>
+                                                                <asp:ListItem Value="IDCO">IDCO</asp:ListItem>
+                                                                <asp:ListItem Value="SOIC">SOIC</asp:ListItem>
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleAccount">Electicity Consumer No.</label>
+                                                            <asp:TextBox ID="txtElectricityConsumerNo" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleAccount">Building Saftey Status</label>
+                                                            <asp:DropDownList ID="ddlAudiBuildingSafetyStatus" CssClass="form-control" runat="server">
+                                                                <asp:ListItem Selected="True" Value="Safe">Safe</asp:ListItem>
+                                                                <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                         <div class="form-group">
+                                                            <label for="exampleAccount">Load in KW</label>
+                                                            <asp:TextBox ID="txtAudiLoadInKW" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

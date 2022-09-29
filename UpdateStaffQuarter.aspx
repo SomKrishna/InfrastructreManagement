@@ -158,10 +158,10 @@
                                                                 <asp:ListItem Value="F">F</asp:ListItem>
                                                             </asp:DropDownList>
                                                         </div>
-                                                        <div class="form-group">
+                                                        <%--<div class="form-group">
                                                             <label for="exampleAccount">No. of class room available</label>
                                                             <asp:TextBox ID="txtStaffClassRoomsAvailable" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
-                                                        </div>
+                                                        </div>--%>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Total area of floor/s in sqft</label>
                                                             <asp:TextBox ID="txtStaffFloorArea" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
@@ -204,6 +204,13 @@
                                                             <label for="exampleAccount">PHD Consumer No.(If Any) </label>
                                                             <asp:TextBox ID="txtStaffPHDConsumerNo" CssClass="form-control" runat="server"></asp:TextBox>
                                                         </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleAccount">Occupancy Status</label>
+                                                            <asp:DropDownList ID="ddlStaffOccupancyStatus" CssClass="form-control" runat="server">
+                                                                <asp:ListItem Selected="True" Value="Occupied">Occupied</asp:ListItem>
+                                                                <asp:ListItem Value="Vacant">Vacant</asp:ListItem>
+                                                            </asp:DropDownList>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 contact-info">
@@ -220,7 +227,7 @@
                                                             <asp:TextBox ID="txtStaffNumberOfFloor" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleAccount">Capacity of the Hostel Building Block</label>
+                                                            <label for="exampleAccount">No. of room available</label>
                                                             <asp:TextBox ID="txtStaffHostelCapacity" CssClass="form-control" runat="server"></asp:TextBox>
                                                         </div>
                                                         <div class="form-group">
@@ -270,14 +277,7 @@
                                                                 <asp:ListItem Selected="True" Value="Safe">Safe</asp:ListItem>
                                                                 <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>
                                                             </asp:DropDownList>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleAccount">Occupancy Status</label>
-                                                            <asp:DropDownList ID="ddlStaffOccupancyStatus" CssClass="form-control" runat="server">
-                                                                <asp:ListItem Selected="True" Value="Occupied">Occupied</asp:ListItem>
-                                                                <asp:ListItem Value="Vacant">Vacant</asp:ListItem>
-                                                            </asp:DropDownList>
-                                                        </div>
+                                                        </div>                                                       
                                                     </div>
                                                 </div>
                                             </div>

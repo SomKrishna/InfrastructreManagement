@@ -420,6 +420,15 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtHostelBlockName;
 
         /// <summary>
+        /// txtHostelRoomsAvailable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtHostelRoomsAvailable;
+
+        /// <summary>
         /// txtHostelNumberOfFloors control.
         /// </summary>
         /// <remarks>

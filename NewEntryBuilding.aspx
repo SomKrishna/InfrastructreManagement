@@ -215,7 +215,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <asp:Button ID="btnExport" OnClick="btnExport_Click" runat="server" CssClass="btn-s float-right submit btn-yellow" type="submit" Text="Export" />
+                                <asp:Button ID="btnExport" OnClick="btnExport_Click" runat="server" CssClass="btn-s float-right submit btn-yellow" Text="Export" />
                             </div>
                         </div>
                     </div>
@@ -486,11 +486,7 @@
                                                                     <asp:ListItem Selected="True" Value="Boys">Boys</asp:ListItem>
                                                                     <asp:ListItem Value="Girls">Girls</asp:ListItem>
                                                                 </asp:DropDownList>
-                                                            </div>
-                                                            <%--<div class="form-group">
-                                                                <label for="exampleAccount">No. of class room available</label>
-                                                                <asp:TextBox ID="txtHostelClassRoomsAvailable" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
-                                                            </div>--%>
+                                                            </div>                                                            
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Total area of floor/s in sqft</label>
                                                                 <asp:TextBox ID="txtHostelTotalFloorArea" CssClass="form-control" runat="server"></asp:TextBox>
@@ -503,7 +499,7 @@
                                                                 </asp:DropDownList>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleAccount">Breath of the Building Block (in meter)</label>
+                                                                <label for="exampleAccount">Width of the Building Block (in meter)</label>
                                                                 <asp:TextBox ID="txtHostelBreath" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
@@ -548,6 +544,10 @@
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Buliding Block Name <span>(if any)</span></label>
                                                                 <asp:TextBox ID="txtHostelBlockName" CssClass="form-control" runat="server"></asp:TextBox>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleAccount">No. of room available</label>
+                                                                <asp:TextBox ID="txtHostelRoomsAvailable" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Number of floor/s</label>
@@ -689,7 +689,7 @@
                                                                 </asp:DropDownList>
                                                             </div>
                                                             <%--<div class="form-group">
-                                                                <label for="exampleAccount">No. of class room available</label>
+                                                                <label for="exampleAccount">No. of rooms available</label>
                                                                 <asp:TextBox ID="txtStaffClassRoomsAvailable" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                             </div>--%>
                                                             <div class="form-group">
@@ -751,7 +751,7 @@
                                                                 <asp:TextBox ID="txtStaffNumberOfFloor" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleAccount">Capacity of the Hostel Building Block</label>
+                                                                <label for="exampleAccount">No. of rooms available</label>
                                                                 <asp:TextBox ID="txtStaffHostelCapacity" CssClass="form-control" runat="server"></asp:TextBox>
                                                             </div>
                                                             <div class="form-group">

@@ -18,11 +18,11 @@ namespace InfrastructureManagement
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        void Application_Error(object sender, EventArgs e)
-        {
-            Exception Ex = Server.GetLastError();
-            Server.ClearError();
-            Server.Transfer("Error.aspx?e=" + Ex.Message);
-        }
+        //void Application_Error(object sender, EventArgs e)
+        //{
+        //    Exception Ex = Server.GetLastError();
+        //    Server.ClearError();
+        //    Server.Transfer("Error.aspx?e=" + Ex.Message);
+        //}
     }
 }

@@ -22,7 +22,7 @@ namespace InfrastructureManagement
                     lblstaffQuarterCodeNo.Text = data.Quarter_Code;
                     ddlStaffBlockType.SelectedValue = data.Quarter_Type;
                     txtStaffBlockName.Text = data.Quarter_Block_Name;
-                    txtStaffClassRoomsAvailable.Text = Convert.ToString(data.No_Of_Room);
+                    txtStaffHostelCapacity.Text = Convert.ToString(data.No_Of_Room);
                     txtStaffNumberOfFloor.Text = Convert.ToString(data.No_Of_Floor);
                     txtStaffFloorArea.Text = Convert.ToString(data.Total_Floor_Area_in_sqft);
                     txtStaffLengthofBuilding.Text = Convert.ToString(data.Building_Length);
@@ -59,7 +59,7 @@ namespace InfrastructureManagement
                 WebServices.StaffReference.Quarter_Type.E : ddlStaffBlockType.SelectedValue == "E" ?
                 WebServices.StaffReference.Quarter_Type.E : WebServices.StaffReference.Quarter_Type.F,
                 Quarter_Block_Name = txtStaffBlockName.Text,
-                No_Of_Room = NumericHandler.ConvertToInteger(txtStaffClassRoomsAvailable.Text),
+                No_Of_Room = NumericHandler.ConvertToInteger(txtStaffHostelCapacity.Text),
                 No_Of_Floor = NumericHandler.ConvertToInteger(txtStaffNumberOfFloor.Text),
                 Total_Floor_Area_in_sqft = NumericHandler.ConvertToDecimal(txtStaffFloorArea.Text),
                 Building_Length = NumericHandler.ConvertToInteger(txtStaffLengthofBuilding.Text),

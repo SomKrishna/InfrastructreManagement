@@ -15,13 +15,13 @@ namespace InfrastructureManagement
     {
 
         /// <summary>
-        /// txtAudiBuildingCode control.
+        /// txtAudiLayoutPlanNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAudiBuildingCode;
+        protected global::System.Web.UI.WebControls.TextBox txtAudiLayoutPlanNo;
 
         /// <summary>
         /// txtAudiSittingCapacity control.
@@ -78,15 +78,6 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtAudiSuplierAgency;
 
         /// <summary>
-        /// txtAudiLoadInKW control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAudiLoadInKW;
-
-        /// <summary>
         /// lblAuditoriumBuildingCode control.
         /// </summary>
         /// <remarks>
@@ -94,15 +85,6 @@ namespace InfrastructureManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAuditoriumBuildingCode;
-
-        /// <summary>
-        /// txtAudiLayoutPlanNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAudiLayoutPlanNo;
 
         /// <summary>
         /// txtAudiTotalLength control.
@@ -157,6 +139,15 @@ namespace InfrastructureManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlAudiBuildingSafetyStatus;
+
+        /// <summary>
+        /// txtAudiLoadInKW control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAudiLoadInKW;
 
         /// <summary>
         /// btnAudiSubmit control.

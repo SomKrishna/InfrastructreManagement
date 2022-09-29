@@ -157,7 +157,7 @@
                                                             </asp:DropDownList>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleAccount">No. of class room available</label>
+                                                            <label for="exampleAccount">No. of room available</label>
                                                             <asp:TextBox ID="txtHostelClassRoomsAvailable" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                         </div>
                                                         <div class="form-group">

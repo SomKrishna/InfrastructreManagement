@@ -82,7 +82,7 @@ namespace InfrastructureManagement
                 Block_Code = txtHostelBlockCode.Text,
                 Hostel_Type = ddlHostelBlockType.SelectedValue == "Boys" ? WebServices.HostelReference.Hostel_Type.Boys : WebServices.HostelReference.Hostel_Type.Girls,
                 Block_Name = txtHostelBlockName.Text,
-                //No_Of_Room = NumericHandler.ConvertToInteger(txtHostelClassRoomsAvailable.Text),
+                No_Of_Room = NumericHandler.ConvertToInteger(txtHostelRoomsAvailable.Text),
                 No_Of_Floor = NumericHandler.ConvertToInteger(txtHostelNumberOfFloors.Text),
                 Total_Floor_Area_in_sqft = NumericHandler.ConvertToDecimal(txtHostelTotalFloorArea.Text),
                 Total_Capacity = NumericHandler.ConvertToInteger(txtHostelCapacity.Text),
@@ -133,7 +133,7 @@ namespace InfrastructureManagement
                 WebServices.StaffReference.Quarter_Type.E : ddlStaffBlockType.SelectedValue == "E" ?
                 WebServices.StaffReference.Quarter_Type.E : WebServices.StaffReference.Quarter_Type.F,
                 Quarter_Block_Name = txtStaffBlockName.Text,
-                //No_Of_Room = NumericHandler.ConvertToInteger(txtStaffClassRoomsAvailable.Text),
+                No_Of_Room = NumericHandler.ConvertToInteger(txtStaffHostelCapacity.Text),
                 No_Of_Floor = NumericHandler.ConvertToInteger(txtStaffNumberOfFloor.Text),
                 Total_Floor_Area_in_sqft = NumericHandler.ConvertToDecimal(txtStaffFloorArea.Text),
                 Building_Length = NumericHandler.ConvertToInteger(txtStaffLengthofBuilding.Text),
@@ -155,7 +155,7 @@ namespace InfrastructureManagement
                 Occupancy_Status = ddlStaffOccupancyStatus.SelectedValue == "Occupied" ? WebServices.StaffReference.Occupancy_Status.Occupied : WebServices.StaffReference.Occupancy_Status.Vacancy,
                 Year_of_Construction = NumericHandler.ConvertToInteger(txtStaffYearOfConstruction.Text)
             };
-            var result = ODataServices.UpdateStaffQuarter(obj);
+            var result = ODataServices.CreateStaffQuarter(obj);
             Alert.ShowAlert(this, "s", result);
         }
 
@@ -170,6 +170,7 @@ namespace InfrastructureManagement
                 Fire_Safety_Valid_UptoSpecified = true,
                 Fire_Safety_StatusSpecified = true,
                 Year_of_ConstructionSpecified = true,
+                Total_CapacitySpecified=true,
 
                 Building_Code = txtAudiBuildingCode.Text,
                 Total_Capacity = NumericHandler.ConvertToInteger(txtAudiSittingCapacity.Text),
@@ -195,7 +196,7 @@ namespace InfrastructureManagement
         protected void btnExport_Click(object sender, EventArgs e)
         {
             string servicePath = string.Empty;
-            if (ddlBuildingList.SelectedValue == "InstitutionalBuldings")
+            if (ddlBuildingList.SelectedValue == "InstitutionalBuildings")
             {
                 servicePath = ODataServices.ExportInstitutionalBuilding();
             }

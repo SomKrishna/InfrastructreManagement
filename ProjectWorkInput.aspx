@@ -197,7 +197,7 @@
 
                 <div class="col-lg-12 col-md-12 summary-box">
                     <div class="col-lg-12 NewEntrydiv">
-                        <p class="NewEntry">Project Work Input</p>
+                        <p class="NewEntry"><label id="lblHeader" ></label></p>
                     </div>
                     <div class="row">
                         <div class="card-body">
@@ -323,6 +323,12 @@
     <script>
         $(document).ready(function () {
             var dropDownValue = $('select').val();
+            if (dropDownValue == 'Ongoing') {
+                $("#lblHeader").text('Add Ongoing Project Progress Details');
+            }
+            else {
+                $("#lblHeader").text('Project Work Input');
+            }
             if (dropDownValue == 'Ongoing' || dropDownValue == 'New') {
                 $('.divBuilding').hide();
             }
@@ -333,6 +339,13 @@
         });
         $('select').change(function () { //on change do stuff
             $('.show-hide').hide(); //hide all with .box class
+
+            if ($(this).val() == 'Ongoing') {
+                $("#lblHeader").text('Add Ongoing Project Progress Details');
+            }
+            else {
+                $("#lblHeader").text('Project Work Input');
+            }
             if ($(this).val() == 'Ongoing' || $(this).val() == 'New') {
                 $('.divBuilding').hide();
             }

@@ -249,6 +249,15 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtAmountOfAA;
 
         /// <summary>
+        /// txtRunningFinanacialYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRunningFinanacialYear;
+
+        /// <summary>
         /// txtRunningExp control.
         /// </summary>
         /// <remarks>
@@ -292,15 +301,6 @@ namespace InfrastructureManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtWorkCompletionPercentage;
-
-        /// <summary>
-        /// txtRunningFinanacialYear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRunningFinanacialYear;
 
         /// <summary>
         /// txtAADate control.

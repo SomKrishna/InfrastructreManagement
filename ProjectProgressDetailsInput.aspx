@@ -216,7 +216,7 @@
 
                 <div class="col-lg-12 col-md-12 summary-box">
                     <div class="col-lg-12 NewEntrydiv">
-                        <p class="NewEntry">Add Ongoing Project Progress Details</p>
+                        <p class="NewEntry">Project Progress Details Input(For Ongoing & Improvement Projects)</p>
                     </div>
                     <div class="row">
                         <div class="card-body">
@@ -309,6 +309,10 @@
                                                 <asp:TextBox ID="txtAmountOfAA" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
+                                                <label for="exampleAccount">Running Financial Year (yyyy-yy)</label>
+                                                <asp:TextBox ID="txtRunningFinanacialYear" CssClass="form-control" runat="server"></asp:TextBox>
+                                            </div>
+                                            <div class="form-group">
                                                 <label for="exampleAccount">Running FY expenditure In lakh</label>
                                                 <asp:TextBox ID="txtRunningExp" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                             </div>
@@ -327,11 +331,7 @@
                                             <div class="form-group">
                                                 <label for="exampleAccount">% of work completion</label>
                                                 <asp:TextBox ID="txtWorkCompletionPercentage" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleAccount">Running Financial Year (yyyy-yy)</label>
-                                                <asp:TextBox ID="txtRunningFinanacialYear" CssClass="form-control" runat="server"></asp:TextBox>
-                                            </div>
+                                            </div>                                            
                                         </div>
                                     </div>
                                     <div class="col-md-6 contact-info">

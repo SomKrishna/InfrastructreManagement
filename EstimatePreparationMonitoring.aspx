@@ -215,7 +215,7 @@
                                                     <asp:TextBox ID="txtPresentStatus" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Estimate amount</label>
+                                                    <label for="exampleAccount">Estimate amount in lakh</label>
                                                     <asp:TextBox ID="txtEstimatedAmount" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
@@ -238,6 +238,10 @@
                                                         <asp:ListItem>Yes</asp:ListItem>
                                                         <asp:ListItem>No</asp:ListItem>
                                                     </asp:DropDownList>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleAccount">Remarks</label>
+                                                    <asp:TextBox ID="txtRemarks" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>

@@ -16,12 +16,14 @@ namespace InfrastructureManagement
             var obj = new WebServices.EstimatePrepReference.EstimatePrepCard
             {
                 Estimate_amountSpecified = true,
+                Estimate_submittedSpecified = true,
+
                 Name_of_building_work = txtbuildingName.Text,
                 Present_Status = txtPresentStatus.Text,
                 Estimate_amount = NumericHandler.ConvertToDecimal(txtEstimatedAmount.Text),
-                Estimate_submittedSpecified = true,
                 Type_of_work = ddlTypeOfWork.SelectedItem.Text == "Civil" ? WebServices.EstimatePrepReference.Type_of_work.Civil : ddlTypeOfWork.SelectedItem.Text == "Electrical" ? WebServices.EstimatePrepReference.Type_of_work.Electrical : WebServices.EstimatePrepReference.Type_of_work.PH,
-                Estimate_submitted = ddlEstimateSubmitted.SelectedItem.Text == "Yes" ? WebServices.EstimatePrepReference.Estimate_submitted.Yes : WebServices.EstimatePrepReference.Estimate_submitted.No_x003B_
+                Estimate_submitted = ddlEstimateSubmitted.SelectedItem.Text == "Yes" ? WebServices.EstimatePrepReference.Estimate_submitted.Yes : WebServices.EstimatePrepReference.Estimate_submitted.No_x003B_,
+                Remarks = txtRemarks.Text
             };
             var result = ODataServices.CreateProjectEstimate(obj);
             Alert.ShowAlert(this, "s", result);

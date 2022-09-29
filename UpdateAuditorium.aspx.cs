@@ -37,7 +37,6 @@ namespace InfrastructureManagement
         {
             var obj = new WebServices.AuditoriumReference.AuditoriumBuilding
             {
-                Building_Code = txtAudiBuildingCode.Text,
                 Total_Capacity = NumericHandler.ConvertToInteger(txtAudiSittingCapacity.Text),
                 Total_Floor_Area_in_sqft = NumericHandler.ConvertToDecimal(txtAudiTotalAreaOfFloor.Text),
                 Building_Length = NumericHandler.ConvertToInteger(txtAudiTotalLength.Text),

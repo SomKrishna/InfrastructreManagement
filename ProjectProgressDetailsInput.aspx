@@ -359,7 +359,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleAccount">Tender Variation</label>
-                                                <asp:DropDownList ID="ddlTenderVariation" CssClass="form-control" runat="server">
+                                                <asp:DropDownList ID="ddlTenderVariation" CssClass="form-control select" runat="server">
                                                     <asp:ListItem Value="Excess">Excess</asp:ListItem>
                                                     <asp:ListItem Value="Less">Less</asp:ListItem>
                                                 </asp:DropDownList>
@@ -370,7 +370,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleAccount">UC status</label>
-                                                <asp:DropDownList ID="ddlUCStatus" CssClass="form-control" runat="server">
+                                                <asp:DropDownList ID="ddlUCStatus" CssClass="form-control select" runat="server">
                                                     <asp:ListItem Value="blank"></asp:ListItem>
                                                     <asp:ListItem Value="Submitted">Submitted</asp:ListItem>
                                                     <asp:ListItem Value="ToBeSubmitted">ToBeSubmitted</asp:ListItem>

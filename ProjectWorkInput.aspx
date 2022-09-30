@@ -209,7 +209,7 @@
                                                 <label for="exampleAccount">Project Type </label>
                                             </div>
                                             <div class="col-md-5 ">
-                                                <asp:DropDownList ID="ddlProjectType" CssClass="form-control" runat="server">
+                                                <asp:DropDownList ID="ddlProjectType" CssClass="form-control select" runat="server">
                                                     <asp:ListItem Selected="True">Improvement</asp:ListItem>
                                                     <asp:ListItem>Ongoing</asp:ListItem>
                                                     <asp:ListItem>New</asp:ListItem>
@@ -239,7 +239,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Name of the Institute</label>
-                                                    <asp:DropDownList ID="ddlInstituteName" CssClass="form-control" runat="server">
+                                                    <asp:DropDownList ID="ddlInstituteName" CssClass="form-control select" runat="server">
                                                     </asp:DropDownList>
                                                 </div>
                                                 <div class="form-group">
@@ -247,8 +247,8 @@
                                                     <asp:TextBox ID="txtProjectName" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Name of the Agency</label>
-                                                    <asp:DropDownList ID="ddlNameOfAgency" CssClass="form-control" runat="server">
+                                                    <label for="exampleAccount">Name of the Agency</label> 
+                                                    <asp:DropDownList ID="ddlNameOfAgency" CssClass="form-control select" runat="server">
                                                         <asp:ListItem>R&B</asp:ListItem>
                                                         <asp:ListItem>GPHD</asp:ListItem>
                                                         <asp:ListItem>PHD</asp:ListItem>
@@ -268,12 +268,12 @@
                                             <div class="container">
                                                 <div class="form-group">
                                                     <label for="exampleAccount">District</label>
-                                                    <asp:DropDownList ID="ddlDistrict" CssClass="form-control" runat="server">
+                                                    <asp:DropDownList ID="ddlDistrict" CssClass="form-control select" runat="server">
                                                     </asp:DropDownList>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Type of work</label>
-                                                    <asp:DropDownList ID="ddlTypeOfWork" CssClass="form-control" runat="server">
+                                                    <asp:DropDownList ID="ddlTypeOfWork" CssClass="form-control select" runat="server">
                                                         <asp:ListItem>Civil</asp:ListItem>
                                                         <asp:ListItem>Electrical</asp:ListItem>
                                                         <asp:ListItem>PH</asp:ListItem>
@@ -281,7 +281,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Mode of work</label>
-                                                    <asp:DropDownList ID="ddlModeOfWork" CssClass="form-control" runat="server">
+                                                    <asp:DropDownList ID="ddlModeOfWork" CssClass="form-control select" runat="server">
                                                         <asp:ListItem>iOTMS</asp:ListItem>
                                                         <asp:ListItem>Works Module</asp:ListItem>
                                                         <asp:ListItem>Deposit mode at principal level referring to the AA issued from DTE&T/Govt.</asp:ListItem>

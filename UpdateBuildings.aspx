@@ -139,7 +139,7 @@
                                         <label for="exampleAccount">Type of Buliding </label>
                                     </div>
                                     <div class="col-md-5 ">
-                                        <asp:DropDownList ID="ddlBuildings" CssClass="form-control" runat="server">
+                                        <asp:DropDownList ID="ddlBuildings" CssClass="form-control select" runat="server">
                                             <asp:ListItem Selected="True" Value="InstitutionalBuildings">Institutional Building</asp:ListItem>
                                             <asp:ListItem Value="HostelBuildings">Hostel Building</asp:ListItem>
                                             <asp:ListItem Value="StaffQuarters">Staff Quarter</asp:ListItem>

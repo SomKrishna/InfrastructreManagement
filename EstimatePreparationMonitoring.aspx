@@ -224,7 +224,7 @@
                                             <div class="container">
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Type of work</label>
-                                                    <asp:DropDownList ID="ddlTypeOfWork" CssClass="form-control" runat="server">
+                                                    <asp:DropDownList ID="ddlTypeOfWork" CssClass="form-control select" runat="server">
                                                         <asp:ListItem>Select</asp:ListItem>
                                                         <asp:ListItem>Civil</asp:ListItem>
                                                         <asp:ListItem>Electrical</asp:ListItem>
@@ -233,7 +233,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Estimate submitted</label>
-                                                    <asp:DropDownList ID="ddlEstimateSubmitted" CssClass="form-control" runat="server">
+                                                    <asp:DropDownList ID="ddlEstimateSubmitted" CssClass="form-control select" runat="server">
                                                         <asp:ListItem>Select</asp:ListItem>
                                                         <asp:ListItem>Yes</asp:ListItem>
                                                         <asp:ListItem>No</asp:ListItem>

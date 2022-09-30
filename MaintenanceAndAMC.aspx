@@ -208,7 +208,7 @@
                                             <div class="container">
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Agency Name</label>
-                                                    <asp:DropDownList ID="ddlAgencyName" CssClass="form-control" runat="server">                                                       
+                                                    <asp:DropDownList ID="ddlAgencyName" CssClass="form-control select" runat="server">                                                       
                                                     </asp:DropDownList>
                                                 </div>
                                                 <div class="form-group">
@@ -221,7 +221,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Item No. </label>
-                                                    <asp:DropDownList ID="ddlItemNo" CssClass="form-control" runat="server">                                                       
+                                                    <asp:DropDownList ID="ddlItemNo" CssClass="form-control select" runat="server">                                                       
                                                     </asp:DropDownList>
                                                 </div>
                                                 <div class="form-group">
@@ -242,7 +242,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Payment Status</label>
-                                                    <asp:DropDownList ID="ddlPaymentStatus" CssClass="form-control" runat="server">
+                                                    <asp:DropDownList ID="ddlPaymentStatus" CssClass="form-control select" runat="server">
                                                         <asp:ListItem>Select</asp:ListItem>
                                                         <asp:ListItem>Already Paid</asp:ListItem>
                                                         <asp:ListItem>To be Paid</asp:ListItem>

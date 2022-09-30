@@ -149,7 +149,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Staff Quarter Block Type </label>
-                                                            <asp:DropDownList ID="ddlStaffBlockType" CssClass="form-control" runat="server">
+                                                            <asp:DropDownList ID="ddlStaffBlockType" CssClass="form-control select" runat="server">
                                                                 <asp:ListItem Selected="True" Value="A">A</asp:ListItem>
                                                                 <asp:ListItem Value="B">B</asp:ListItem>
                                                                 <asp:ListItem Value="C">C</asp:ListItem>
@@ -180,7 +180,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Fire Safety Status</label>
-                                                            <asp:DropDownList ID="ddlStaffFireSafetyStatus" CssClass="form-control" runat="server">
+                                                            <asp:DropDownList ID="ddlStaffFireSafetyStatus" CssClass="form-control select" runat="server">
                                                                 <asp:ListItem Selected="True" Value="CertificateObtained">Certificate Obtained</asp:ListItem>
                                                                 <asp:ListItem Value="NoCertificate">No Certificate</asp:ListItem>
                                                             </asp:DropDownList>
@@ -195,7 +195,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Water Supply Source</label>
-                                                            <asp:DropDownList ID="ddlStaffWaterSupplySource" CssClass="form-control" runat="server">
+                                                            <asp:DropDownList ID="ddlStaffWaterSupplySource" CssClass="form-control select" runat="server">
                                                                 <asp:ListItem Selected="True" Value="OwnSource">Own Source</asp:ListItem>
                                                                 <asp:ListItem Value="PHDSource">PHD Source</asp:ListItem>
                                                             </asp:DropDownList>
@@ -206,7 +206,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Occupancy Status</label>
-                                                            <asp:DropDownList ID="ddlStaffOccupancyStatus" CssClass="form-control" runat="server">
+                                                            <asp:DropDownList ID="ddlStaffOccupancyStatus" CssClass="form-control select" runat="server">
                                                                 <asp:ListItem Selected="True" Value="Occupied">Occupied</asp:ListItem>
                                                                 <asp:ListItem Value="Vacant">Vacant</asp:ListItem>
                                                             </asp:DropDownList>
@@ -240,14 +240,14 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Building Approval Status</label>
-                                                            <asp:DropDownList ID="ddlStaffBuildingApprovalStatus" CssClass="form-control" runat="server">
+                                                            <asp:DropDownList ID="ddlStaffBuildingApprovalStatus" CssClass="form-control select" runat="server">
                                                                 <asp:ListItem Selected="True" Value="ApprovalObtained">Approval Obtained</asp:ListItem>
                                                                 <asp:ListItem Value="ApprovalNotObtained">Approval Not Obtained</asp:ListItem>
                                                             </asp:DropDownList>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Building in Book of Account of</label>
-                                                            <asp:DropDownList ID="ddlStaffBookOfAccount" CssClass="form-control" runat="server">
+                                                            <asp:DropDownList ID="ddlStaffBookOfAccount" CssClass="form-control select" runat="server">
                                                                 <asp:ListItem Selected="True" Value="PWD">PWD</asp:ListItem>
                                                                 <asp:ListItem Value="IDCO">IDCO</asp:ListItem>
                                                                 <asp:ListItem Value="SOIC">SOIC</asp:ListItem>
@@ -255,7 +255,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Quarter Electricity Connection Status</label>
-                                                            <asp:DropDownList ID="ddlStaffElectricityConnectionStatus" CssClass="form-control" runat="server">
+                                                            <asp:DropDownList ID="ddlStaffElectricityConnectionStatus" CssClass="form-control select" runat="server">
                                                                 <asp:ListItem Selected="True" Value="ELECTRIFIEDBYINSTITUTE">Electrified by Institute</asp:ListItem>
                                                                 <asp:ListItem Value="ELECTRIFIEDBYPOWERDISTRIBUTIONAGENCY">Electrified by power distribution agency</asp:ListItem>
                                                             </asp:DropDownList>
@@ -266,14 +266,14 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Transformer Type</label>
-                                                            <asp:DropDownList ID="ddlTransformerType" CssClass="form-control" runat="server">
+                                                            <asp:DropDownList ID="ddlTransformerType" CssClass="form-control select" runat="server">
                                                                 <asp:ListItem Selected="True" Value="Own">Own</asp:ListItem>
                                                                 <asp:ListItem Value="Public">Public</asp:ListItem>
                                                             </asp:DropDownList>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Building Saftey Status</label>
-                                                            <asp:DropDownList ID="ddlStaffSafetyStatus" CssClass="form-control" runat="server">
+                                                            <asp:DropDownList ID="ddlStaffSafetyStatus" CssClass="form-control select" runat="server">
                                                                 <asp:ListItem Selected="True" Value="Safe">Safe</asp:ListItem>
                                                                 <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>
                                                             </asp:DropDownList>

@@ -78,6 +78,13 @@ namespace InfrastructureManagement
                 Year_of_ConstructionSpecified = true,
                 No_of_Non_RO_Water_PurifierSpecified = true,
                 No_of_RO_Water_PurifierSpecified = true,
+                Total_CapacitySpecified = true,
+                Approval_StatusSpecified = true,
+                Book_Of_AccountSpecified = true,
+                Building_Safety_StatusSpecified = true,
+                Hostel_TypeSpecified = true,
+                Source_Of_WaterSpecified = true,
+                Transformer_TypeSpecified = true,
 
                 Block_Code = txtHostelBlockCode.Text,
                 Hostel_Type = ddlHostelBlockType.SelectedValue == "Boys" ? WebServices.HostelReference.Hostel_Type.Boys : WebServices.HostelReference.Hostel_Type.Girls,
@@ -170,7 +177,7 @@ namespace InfrastructureManagement
                 Fire_Safety_Valid_UptoSpecified = true,
                 Fire_Safety_StatusSpecified = true,
                 Year_of_ConstructionSpecified = true,
-                Total_CapacitySpecified=true,
+                Total_CapacitySpecified = true,
 
                 Building_Code = txtAudiBuildingCode.Text,
                 Total_Capacity = NumericHandler.ConvertToInteger(txtAudiSittingCapacity.Text),

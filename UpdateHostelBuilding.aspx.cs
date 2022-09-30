@@ -35,6 +35,7 @@ namespace InfrastructureManagement
                     ddlHostelTransformerType.SelectedValue = data.Transformer_Type;
                     txtPHDConsumerNo.Text = data.PHD_Consumer_No;
                     ddlHostelBuildingSafetyStatus.SelectedValue = data.Building_Safety_Status;
+                    txtHostelTotalFloorArea.Text = Convert.ToString(data.Total_Floor_Area_in_sqft);
                 }
             }
         }

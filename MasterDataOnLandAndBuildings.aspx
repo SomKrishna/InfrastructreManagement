@@ -110,6 +110,9 @@
        
     <div class="container box">
         <div class="row">
+            <div class="loader" id="loader">
+                  <div class="loader-img"><i class="fa fa-spinner fa-spin"></i></div>
+            </div>
             <div class="col-lg-3 col-md-2"></div>
             <div class="col-lg-6 col-md-8 summary-box">
                 <div class="col-lg-12 NewEntrydiv">
@@ -174,7 +177,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6">
                              <div class='file float-left'>
-                                  <asp:Button ID="downloadTemplateCSVBtn"  CssClass="btn-upload float-left" runat="server" OnClick="downloadTemplateCSVBtn_Click" Text="Download Template CSV" />
+                                  <asp:Button ID="downloadTemplateCSVBtn" CssClass="btn-upload float-left" runat="server" OnClick="downloadTemplateCSVBtn_Click" Text="Download Template CSV" />
                             
                                  </div>
                       </div>
@@ -192,9 +195,9 @@
         </div>
  </div>
  </div>
-
-
-
-
-
+    <script language="Javascript">        
+         function showLoader() {
+             $('#loader').show();
+         };
+    </script>
 </asp:Content>

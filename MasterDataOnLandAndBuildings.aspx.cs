@@ -53,7 +53,14 @@ namespace InfrastructureManagement
                     this.csvUploader.SaveAs(path);
                 }
                 string servicePath = @"\\genesisnav16\PORTAL\PDF\" + finalFileName;
-                ODataServices.ImportLandFile(servicePath);
+                try
+                {
+                    ODataServices.ImportLandFile(servicePath);
+                }
+                catch (Exception ex)
+                {
+                    Alert.ShowAlert(this, "s", ex.Message);
+                }
                 Alert.ShowAlert(this, "s", "file Upload successfully");
             }
         }

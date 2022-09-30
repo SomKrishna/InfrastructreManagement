@@ -37,7 +37,7 @@ namespace InfrastructureManagement
                 string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + servicePath.Split(Path.DirectorySeparatorChar)[5];
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
-                var FileName = "Project" + "_" + projectCode.Text + ".XLS";
+                var FileName = "Project" + "_" + projectCode.Text + ".PDF";
                 var fileName = "attachment; filename=" + FileName;
                 base.Response.ClearContent();
                 base.Response.AddHeader("content-disposition", fileName);

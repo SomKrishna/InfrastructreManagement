@@ -15,6 +15,7 @@ namespace InfrastructureManagement
                 if (data != null && !string.IsNullOrWhiteSpace(buildingCode))
                 {
                     lblAuditoriumBuildingCode.Text = data.Building_Code;
+                    txtBuildingName.Text = data.Building_Name;
                     txtAudiSittingCapacity.Text = Convert.ToString(data.Total_Capacity);
                     txtAudiTotalAreaOfFloor.Text = Convert.ToString(data.Total_Floor_Area_in_sqft);
                     txtAudiTotalLength.Text = Convert.ToString(data.Building_Length);
@@ -39,6 +40,7 @@ namespace InfrastructureManagement
             {
                 Total_Capacity = NumericHandler.ConvertToInteger(txtAudiSittingCapacity.Text),
                 Total_Floor_Area_in_sqft = NumericHandler.ConvertToDecimal(txtAudiTotalAreaOfFloor.Text),
+                Building_Name = txtBuildingName.Text,
                 Building_Length = NumericHandler.ConvertToInteger(txtAudiTotalLength.Text),
                 Building_Breadth_in_Meter = NumericHandler.ConvertToInteger(txtAudiTotalBreath.Text),
                 Building_Height = NumericHandler.ConvertToInteger(txtAudiTotalHeigth.Text),

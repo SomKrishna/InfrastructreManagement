@@ -139,6 +139,10 @@
                                                             <label for="exampleAccount">Edit Auditorium Building for Building Code No.</label>
                                                         </div>
                                                         <div class="form-group">
+                                                            <label for="exampleAccount">Building Name</label>
+                                                            <asp:TextBox ID="txtBuildingName" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        </div>
+                                                        <div class="form-group">
                                                             <label for="exampleAccount">Building Layout Drawing Plan No.</label>
                                                             <asp:TextBox ID="txtAudiLayoutPlanNo" CssClass="form-control" runat="server"></asp:TextBox>
                                                         </div>
@@ -168,7 +172,7 @@
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Electricity Supplier Agency </label>
                                                             <asp:TextBox ID="txtAudiSuplierAgency" CssClass="form-control" runat="server"></asp:TextBox>
-                                                        </div>                                                       
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 contact-info">
@@ -210,7 +214,7 @@
                                                                 <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>
                                                             </asp:DropDownList>
                                                         </div>
-                                                         <div class="form-group">
+                                                        <div class="form-group">
                                                             <label for="exampleAccount">Load in KW</label>
                                                             <asp:TextBox ID="txtAudiLoadInKW" CssClass="form-control" runat="server"></asp:TextBox>
                                                         </div>

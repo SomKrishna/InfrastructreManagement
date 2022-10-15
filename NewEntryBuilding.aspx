@@ -370,7 +370,7 @@
                                                                 </asp:DropDownList>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleAccount">Building in Book of Account of</label>
+                                                                <label for="exampleAccount">Building in Book of Account</label>
                                                                 <asp:DropDownList ID="InstituteBookOfAccountDDL" CssClass="form-control select" runat="server">
                                                                     <asp:ListItem Selected="True" Value="PWD">PWD</asp:ListItem>
                                                                     <asp:ListItem Value="IDCO">IDCO</asp:ListItem>
@@ -573,7 +573,7 @@
                                                                 </asp:DropDownList>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleAccount">Building in Book of Account of</label>
+                                                                <label for="exampleAccount">Building in Book of Account</label>
                                                                 <asp:DropDownList ID="ddlHostelBookOfAccount" CssClass="form-control select" runat="server">
                                                                     <asp:ListItem Selected="True" Value="PWD">PWD</asp:ListItem>
                                                                     <asp:ListItem Value="IDCO">IDCO</asp:ListItem>
@@ -592,7 +592,7 @@
                                                                 </asp:DropDownList>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleAccount">Building Saftey Status</label>
+                                                                <label for="exampleAccount">Safety</label>
                                                                 <asp:DropDownList ID="ddlHostelBuildingSafetyStatus" CssClass="form-control select" runat="server">
                                                                     <asp:ListItem Selected="True" Value="Safe">Safe</asp:ListItem>
                                                                     <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>
@@ -770,7 +770,7 @@
                                                                 </asp:DropDownList>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleAccount">Building in Book of Account of</label>
+                                                                <label for="exampleAccount">Building in Book of Account</label>
                                                                  <asp:DropDownList ID="ddlStaffBookOfAccount" CssClass="form-control select" runat="server">
                                                                     <asp:ListItem Selected="True" Value="PWD">PWD</asp:ListItem>
                                                                     <asp:ListItem Value="IDCO">IDCO</asp:ListItem>
@@ -796,7 +796,7 @@
                                                                 </asp:DropDownList>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="exampleAccount">Building Saftey Status</label>
+                                                                <label for="exampleAccount">Safety</label>
                                                                 <asp:DropDownList ID="ddlStaffSafetyStatus" CssClass="form-control select" runat="server">
                                                                     <asp:ListItem Selected="True" Value="Safe">Safe</asp:ListItem>
                                                                     <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>
@@ -930,7 +930,7 @@
                                                                 </asp:DropDownList>
                                                             </div>
                                                             <div class="form-group">
-                                                            <label for="exampleAccount">Building in Book of Account of</label>
+                                                            <label for="exampleAccount">Building in Book of Account</label>
                                                              <asp:DropDownList ID="ddlAudiBuildingBookOfAccount" CssClass="form-control select" runat="server">
                                                                     <asp:ListItem Selected="True" Value="PWD">PWD</asp:ListItem>
                                                                     <asp:ListItem Value="IDCO">IDCO</asp:ListItem>
@@ -942,7 +942,7 @@
                                                             <asp:TextBox ID="txtElectricityConsumerNo" CssClass="form-control" runat="server"></asp:TextBox>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleAccount">Building Saftey Status</label>
+                                                            <label for="exampleAccount">Safety</label>
                                                              <asp:DropDownList ID="ddlAudiBuildingSafetyStatus" CssClass="form-control select" runat="server">
                                                                     <asp:ListItem Selected="True" Value="Safe">Safe</asp:ListItem>
                                                                     <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>

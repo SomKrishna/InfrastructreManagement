@@ -124,7 +124,7 @@
                                                                 <th runat="server">Encroachment affected areas (in acres)</th>
                                                                 <th runat="server">Encroachment affected plot no./s</th>
                                                                 <th runat="server">Disputed areas other than encroachment (in acres)</th>
-                                                                <th runat="server">Disputed plot no./s other than encroachment</th>
+                                                                <th runat="server">Area under dispute other than encroachment</th>
                                                                 <th runat="server">Plot under Court Case</th>
                                                                 <th runat="server">RoR File</th>
                                                                 <th runat="server">Upload RoR File</th>

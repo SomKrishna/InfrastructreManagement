@@ -95,7 +95,7 @@
                 <div class="col-lg-3 col-md-2"></div>
                 <div class="col-lg-12 col-md-12 summary-box">
                     <div class="col-lg-12 NewEntrydiv">
-                        <p class="NewEntry">Project List</p>
+                        <p class="NewEntry">All Projects</p>
                     </div>
                     <div class="tab-pane active" id="1">
                         <div class="right_col_bg">

@@ -18,7 +18,7 @@ namespace InfrastructureManagement
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             ddlBuildings.SelectedValue = ddlBuildings.SelectedValue;
-
+            btnEdit.Visible = false;
             if (ddlBuildings.SelectedValue == "InstitutionalBuildings")
             {
                 var data = ODataServices.GetInstituteBuilding(txtSearch.Text);

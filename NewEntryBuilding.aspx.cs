@@ -180,6 +180,7 @@ namespace InfrastructureManagement
                 Total_CapacitySpecified = true,
 
                 //Building_Code = txtAudiBuildingCode.Text,
+                Building_Name = txtAudiBuildingName.Text,
                 Total_Capacity = NumericHandler.ConvertToInteger(txtAudiSittingCapacity.Text),
                 Total_Floor_Area_in_sqft = NumericHandler.ConvertToDecimal(txtAudiTotalAreaOfFloor.Text),
                 Building_Length = NumericHandler.ConvertToInteger(txtAudiTotalLength.Text),

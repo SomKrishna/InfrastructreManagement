@@ -233,10 +233,10 @@
                                         <h3 class="hadingline">Enter Project Details Below</h3>
                                         <div class="col-md-6 contact-info">
                                             <div class="container">
-                                                <div class="form-group">
+                                                <%--<div class="form-group">
                                                     <label for="exampleAccount">Project Code</label>
                                                     <asp:TextBox ID="txtProjectCode" CssClass="form-control" runat="server"></asp:TextBox>
-                                                </div>
+                                                </div>--%>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Name of the Institute</label>
                                                     <asp:DropDownList ID="ddlInstituteName" CssClass="form-control select" runat="server">

@@ -277,10 +277,10 @@
                                                     <h3 class="hadingline">Enter Institutional Building Details Below</h3>
                                                     <div class="col-md-6 contact-info">
                                                         <div class="container">
-                                                            <div class="form-group">
+                                                            <%--<div class="form-group">
                                                                 <label for="exampleAccount">Buliding Block Code</label>
                                                                 <asp:TextBox ID="txtInstituteBlockCode" CssClass="form-control" runat="server"></asp:TextBox>
-                                                            </div>
+                                                            </div>--%>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Buliding Block Type <span>(if any)</span></label>
                                                                 <asp:TextBox ID="txtInstituteBuildingBlock" CssClass="form-control" runat="server"></asp:TextBox>
@@ -476,10 +476,10 @@
                                                     <h3 class="hadingline">Enter Hostel Building Details Below</h3>
                                                     <div class="col-md-6 contact-info">
                                                         <div class="container">
-                                                            <div class="form-group">
+                                                            <%--<div class="form-group">
                                                                 <label for="exampleAccount">Block Code</label>
                                                                 <asp:TextBox ID="txtHostelBlockCode" CssClass="form-control" runat="server"></asp:TextBox>
-                                                            </div>
+                                                            </div>--%>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Hostel Buliding Block Type </label>
                                                                 <asp:DropDownList ID="ddlHostelBlockType" CssClass="form-control select" runat="server">
@@ -673,10 +673,10 @@
                                                     <h3 class="hadingline">Enter Staff Quarters Details Below</h3>
                                                     <div class="col-md-6 contact-info">
                                                         <div class="container">
-                                                            <div class="form-group">
+                                                            <%--<div class="form-group">
                                                                 <label for="exampleAccount">Staff Quarter Code</label>
                                                                 <asp:TextBox ID="txtStaffQuarterCode" CssClass="form-control" runat="server"></asp:TextBox>
-                                                            </div>
+                                                            </div>--%>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Staff Quarter Block Type </label>
                                                                 <asp:DropDownList ID="ddlStaffBlockType" CssClass="form-control select" runat="server">
@@ -867,10 +867,10 @@
                                                     <h3 class="hadingline">Enter Auditorium Building Details Below</h3>
                                                     <div class="col-md-6 contact-info">
                                                         <div class="container">
-                                                             <div class="form-group">
+                                                             <%--<div class="form-group">
                                                                 <label for="exampleAccount">Building Code</label>
                                                                 <asp:TextBox ID="txtAudiBuildingCode" CssClass="form-control" runat="server"></asp:TextBox>
-                                                            </div>
+                                                            </div>--%>
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Building Name</label>
                                                                 <asp:TextBox ID="txtAudiBuildingName" CssClass="form-control" runat="server"></asp:TextBox>
@@ -901,7 +901,11 @@
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Electricity Supplier Agency </label>
                                                                 <asp:TextBox ID="txtAudiSuplierAgency" CssClass="form-control" runat="server"></asp:TextBox>
-                                                            </div>                                                            
+                                                            </div>
+                                                             <div class="form-group">
+                                                                <label for="exampleAccount">Year of Construction </label>
+                                                                <asp:TextBox ID="txtAudiYearOfConstruction" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 contact-info">
@@ -947,11 +951,7 @@
                                                             <div class="form-group">
                                                                 <label for="exampleAccount">Load in KW</label>
                                                                 <asp:TextBox ID="txtAudiLoadInKW" CssClass="form-control" runat="server"></asp:TextBox>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="exampleAccount">Year of Construction </label>
-                                                                <asp:TextBox ID="txtAudiYearOfConstruction" CssClass="form-control" onkeypress="return isDecimalNumberKey(event)" runat="server"></asp:TextBox>
-                                                            </div>
+                                                            </div>                                                           
                                                         </div>
                                                     </div>
                                                 </div>

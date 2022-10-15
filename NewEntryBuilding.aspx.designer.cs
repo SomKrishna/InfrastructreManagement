@@ -42,15 +42,6 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
 
         /// <summary>
-        /// txtInstituteBlockCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtInstituteBlockCode;
-
-        /// <summary>
         /// txtInstituteBuildingBlock control.
         /// </summary>
         /// <remarks>
@@ -294,15 +285,6 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.DropDownList DropDownList7;
 
         /// <summary>
-        /// txtHostelBlockCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHostelBlockCode;
-
-        /// <summary>
         /// ddlHostelBlockType control.
         /// </summary>
         /// <remarks>
@@ -537,15 +519,6 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.DropDownList DropDownList12;
 
         /// <summary>
-        /// txtStaffQuarterCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStaffQuarterCode;
-
-        /// <summary>
         /// ddlStaffBlockType control.
         /// </summary>
         /// <remarks>
@@ -771,15 +744,6 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.DropDownList DropDownList17;
 
         /// <summary>
-        /// txtAudiBuildingCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAudiBuildingCode;
-
-        /// <summary>
         /// txtAudiBuildingName control.
         /// </summary>
         /// <remarks>
@@ -841,6 +805,15 @@ namespace InfrastructureManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAudiSuplierAgency;
+
+        /// <summary>
+        /// txtAudiYearOfConstruction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAudiYearOfConstruction;
 
         /// <summary>
         /// txtAudiLayoutPlanNo control.
@@ -913,15 +886,6 @@ namespace InfrastructureManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAudiLoadInKW;
-
-        /// <summary>
-        /// txtAudiYearOfConstruction control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAudiYearOfConstruction;
 
         /// <summary>
         /// btnAudiSubmit control.

@@ -17,7 +17,7 @@ namespace InfrastructureManagement
         {
             var obj = new WebServices.InstituteReference.InstituteBuildingCard
             {
-                Block_Code = txtInstituteBlockCode.Text,
+                //Block_Code = txtInstituteBlockCode.Text,
                 Block_Type_if_any = txtInstituteBuildingBlock.Text,
                 No_Of_Class_Room = NumericHandler.ConvertToInteger(txtInstituteClassRoomNumber.Text),
                 Total_Floor_Area_in_sqft = NumericHandler.ConvertToDecimal(txtInstituteTotalArea.Text),
@@ -86,7 +86,7 @@ namespace InfrastructureManagement
                 Source_Of_WaterSpecified = true,
                 Transformer_TypeSpecified = true,
 
-                Block_Code = txtHostelBlockCode.Text,
+                //Block_Code = txtHostelBlockCode.Text,
                 Hostel_Type = ddlHostelBlockType.SelectedValue == "Boys" ? WebServices.HostelReference.Hostel_Type.Boys : WebServices.HostelReference.Hostel_Type.Girls,
                 Block_Name = txtHostelBlockName.Text,
                 No_Of_Room = NumericHandler.ConvertToInteger(txtHostelRoomsAvailable.Text),
@@ -131,7 +131,7 @@ namespace InfrastructureManagement
                 Year_of_ConstructionSpecified = true,
 
 
-                Quarter_Code = txtStaffQuarterCode.Text,
+                //Quarter_Code = txtStaffQuarterCode.Text,
                 Quarter_Type = ddlStaffBlockType.SelectedValue == "A" ?
                 WebServices.StaffReference.Quarter_Type.A : ddlStaffBlockType.SelectedValue == "B" ?
                 WebServices.StaffReference.Quarter_Type.B : ddlStaffBlockType.SelectedValue == "C" ?
@@ -179,7 +179,7 @@ namespace InfrastructureManagement
                 Year_of_ConstructionSpecified = true,
                 Total_CapacitySpecified = true,
 
-                Building_Code = txtAudiBuildingCode.Text,
+                //Building_Code = txtAudiBuildingCode.Text,
                 Total_Capacity = NumericHandler.ConvertToInteger(txtAudiSittingCapacity.Text),
                 Total_Floor_Area_in_sqft = NumericHandler.ConvertToDecimal(txtAudiTotalAreaOfFloor.Text),
                 Building_Length = NumericHandler.ConvertToInteger(txtAudiTotalLength.Text),

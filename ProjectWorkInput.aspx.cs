@@ -38,7 +38,7 @@ namespace InfrastructureManagement
                     Date_of_commencement_as_per_agreementSpecified = true,
                     Date_of_completion_as_per_agreementSpecified = true,
 
-                    Project_Code = txtProjectCode.Text,
+                    //Project_Code = txtProjectCode.Text,
                     Project_Type = WebServices.ImprovementProjectReference.Project_Type.Improvement,
                     Building_ID = txtBuildingId.Text,
                     District = ddlDistrict.SelectedItem.Text,
@@ -68,7 +68,7 @@ namespace InfrastructureManagement
                     Date_of_completion_as_per_agreementSpecified = true,
                     Date_of_commencementSpecified = true,
 
-                    Project_Code = txtProjectCode.Text,
+                    //Project_Code = txtProjectCode.Text,
                     Project_Type = WebServices.OngoingProjectReference.Project_Type.Improvement,
                     District = ddlDistrict.SelectedItem.Text,
                     Name_of_the_Institute = ddlInstituteName.SelectedItem.Value,
@@ -97,7 +97,7 @@ namespace InfrastructureManagement
                     Date_of_commencement_as_per_agreementSpecified = true,
                     Date_of_completion_as_per_agreementSpecified = true,
 
-                    Project_Code = txtProjectCode.Text,
+                    //Project_Code = txtProjectCode.Text,
                     Project_Type = WebServices.NewProjectReference.Project_Type.Improvement,
                     District = ddlDistrict.SelectedItem.Text,
                     Name_of_the_Institute = ddlInstituteName.SelectedItem.Value,

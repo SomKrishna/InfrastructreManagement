@@ -95,7 +95,7 @@
                 <div class="col-lg-3 col-md-2"></div>
                 <div class="col-lg-12 col-md-12 summary-box">
                     <div class="col-lg-12 NewEntrydiv">
-                        <p class="NewEntry">New Project List</p>
+                        <p class="NewEntry">Project List</p>
                     </div>
                     <div class="tab-pane active" id="1">
                         <div class="right_col_bg">
@@ -146,7 +146,7 @@
                                                                 <asp:Label ID="Label3" runat="server" Text='<%# Eval("Agency")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label4" runat="server" Text='<%# Eval("Date_of_commencement")%>'> </asp:Label>
+                                                                <asp:Label ID="Label4" runat="server" Text='<%# DateTime.Parse(Eval("Date_of_commencement").ToString()).ToString("d") %>'> </asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:Label ID="Label5" runat="server" Text='<%# Eval("District")%>'> </asp:Label>
@@ -158,8 +158,9 @@
                                                                 <asp:Label ID="Label7" runat="server" Text='<%# Eval("Mode_of_Work")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label8" runat="server" Text='<%# Eval("Date_of_completion_as_per_agreement") %>'> </asp:Label>
+                                                                <asp:Label ID="Label8" runat="server" Text='<%# DateTime.Parse(Eval("Date_of_completion_as_per_agreement").ToString()).ToString("d") %>'> </asp:Label>
                                                             </td>
+                                                            
                                                             <td>
                                                                 <asp:LinkButton ID="btnExport" runat="server" OnClick="btnExport_Click"><i class="fa-regular fa-file"></i></asp:LinkButton>
                                                             </td>

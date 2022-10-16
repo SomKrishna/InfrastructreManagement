@@ -63,7 +63,7 @@ namespace InfrastructureManagement
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-            if (ddlBuildings.SelectedValue == "IndustrialBuldings")
+            if (ddlBuildings.SelectedValue == "InstitutionalBuildings")
             {
                 Response.Redirect("UpdateInstituteBuilding.aspx?BlockCode=" + txtSearch.Text);
             }

@@ -137,20 +137,21 @@
                                 <p><span>
                                     2.
                                    </span>
-                                    Fill The downloaded template with data.
+                                    Fill the downloaded template with data.
                                 </p>
-                            </li> <li class="sub-list">
-                                <%--<p><span>
+                            </li> 
+                            <%--<li class="sub-list">
+                                <p><span>
                                     3.
                                    </span>
                                     Click on 'Upload RoR in PDF' button to add file.
-                                </p>--%>
-                            </li>
+                                </p>
+                            </li>--%>
                              <li class="sub-list">
                                 <p><span>
-                                    4.
+                                    3.
                                    </span>
-                                     Click o 'Upload files CSV File' to add file.
+                                     Click on 'Upload files CSV File' to add file.
                                 </p>
                             </li>
                              

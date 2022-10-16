@@ -979,8 +979,11 @@
             $('.InstitutionalBuildings').show(); //set default class to be shown here, or remove to hide all
         });
         $('select').change(function () { //on change do stuff
-            $('.show-hide').hide(); //hide all with .box class
-            $('.' + $(this).val()).show(); //show selected option's respective element
+        if ($(this).val() === "InstitutionalBuildings" || $(this).val() === "HostelBuildings" || $(this).val() === "StaffQuarters" || $(this).val() === "Auditoriums")
+            {
+                $('.show-hide').hide();
+                $('.' + $(this).val()).show();
+            }
         });
     </script>
     <script language="Javascript">

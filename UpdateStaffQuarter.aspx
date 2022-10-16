@@ -236,7 +236,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Fire Safety valid Up to</label>
-                                                            <asp:TextBox ID="txtStaffFireSafetyValidUpto" Type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
+                                                            <asp:TextBox ID="txtStaffFireSafetyValidUpto" max="9999-12-31" Type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleAccount">Building Approval Status</label>

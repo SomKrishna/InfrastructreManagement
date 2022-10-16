@@ -238,7 +238,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Date of expiry of AMC</label>
-                                                    <asp:TextBox ID="txtDateOfExpiry" type="date" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
+                                                    <asp:TextBox ID="txtDateOfExpiry" type="date" max="9999-12-31" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Payment Status</label>

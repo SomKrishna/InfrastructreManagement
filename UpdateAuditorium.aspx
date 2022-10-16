@@ -208,7 +208,7 @@
                                                             <asp:TextBox ID="txtElectricityConsumerNo" CssClass="form-control" runat="server"></asp:TextBox>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleAccount">Building Saftey Status</label>
+                                                            <label for="exampleAccount">Building Safety Status</label>
                                                             <asp:DropDownList ID="ddlAudiBuildingSafetyStatus" CssClass="form-control select" runat="server">
                                                                 <asp:ListItem Selected="True" Value="Safe">Safe</asp:ListItem>
                                                                 <asp:ListItem Value="Unsafe">Unsafe</asp:ListItem>

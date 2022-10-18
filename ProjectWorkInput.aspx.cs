@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Web.UI.WebControls;
 using WebServices;
+using WebServices.Helper;
 
 namespace InfrastructureManagement
 {
@@ -119,7 +120,14 @@ namespace InfrastructureManagement
                 result = ODataServices.CreateNewProject(newProject);
 
             }
-            Alert.ShowAlert(this, "s", result);
+            if (result == ExceptionHelper.SuccessfulMessage)
+            {
+                Alert.ShowAlert(this, "s", result);
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", result);
+            }
         }
     }
 }

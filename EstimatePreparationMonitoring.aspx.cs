@@ -1,6 +1,7 @@
 ﻿using InfrastructureManagement.Common;
 using System;
 using WebServices;
+using WebServices.Helper;
 
 namespace InfrastructureManagement
 {
@@ -26,7 +27,14 @@ namespace InfrastructureManagement
                 Remarks = txtRemarks.Text
             };
             var result = ODataServices.CreateProjectEstimate(obj);
-            Alert.ShowAlert(this, "s", result);
+            if (result == ExceptionHelper.SuccessfulMessage)
+            {
+                Alert.ShowAlert(this, "s", result);
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", result);
+            }
         }
     }
 }

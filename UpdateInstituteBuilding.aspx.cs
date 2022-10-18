@@ -1,6 +1,7 @@
 ﻿using InfrastructureManagement.Common;
 using System;
 using WebServices;
+using WebServices.Helper;
 
 namespace InfrastructureManagement
 {
@@ -68,7 +69,14 @@ namespace InfrastructureManagement
             };
 
             var result = ODataServices.UpdateInstituteBuilding(obj);
-            Alert.ShowAlert(this, "s", result);
+            if (result == ExceptionHelper.UpdateMessage)
+            {
+                Alert.ShowAlert(this, "s", result);
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", result);
+            }
 
             Response.Redirect("UpdateBuildings.aspx");
         }

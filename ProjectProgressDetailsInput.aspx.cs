@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebServices;
+using WebServices.Helper;
 
 namespace InfrastructureManagement
 {
@@ -109,7 +110,14 @@ namespace InfrastructureManagement
                 Running_Financial_Year = txtRunningFinanacialYear.Text
             };
             var result = ODataServices.AddProjectProgressDeatils(obj);
-            Alert.ShowAlert(this, "s", result);
+            if (result == ExceptionHelper.SuccessfulMessage || result == ExceptionHelper.UpdateMessage)
+            {
+                Alert.ShowAlert(this, "s", result);
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", result);
+            }
         }
     }
 }

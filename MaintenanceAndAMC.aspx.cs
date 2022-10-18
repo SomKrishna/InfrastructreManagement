@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Web.UI.WebControls;
 using WebServices;
+using WebServices.Helper;
 
 namespace InfrastructureManagement
 {
@@ -49,7 +50,21 @@ namespace InfrastructureManagement
                 //Item_Name = txtItemDescription.Text
             };
             var result = ODataServices.CreateMaintainceAndAMC(obj);
-            Alert.ShowAlert(this, "s", result);
+            if (result == ExceptionHelper.SuccessfulMessage)
+            {
+                Alert.ShowAlert(this, "s", result);
+                ddlAgencyName.SelectedIndex = 0;
+                ddlItemNo.SelectedIndex = 0;
+                ddlPaymentStatus.ClearSelection();
+                txtTypeOfEquipment.Text = string.Empty;
+                txtDuration.Text = string.Empty;
+                txtAnnualAMCCost.Text = string.Empty;
+                txtEquipmentId.Text = string.Empty;
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", result);
+            }
         }
 
         protected void btnExport_Click(object sender, EventArgs e)

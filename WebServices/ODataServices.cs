@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebServices.Helper;
 
 namespace WebServices
 {
@@ -39,7 +40,7 @@ namespace WebServices
             {
                 AuditoriumReference.AuditoriumBuilding_Service _obj_Binding = (AuditoriumReference.AuditoriumBuilding_Service)Configuration.getNavService(new AuditoriumReference.AuditoriumBuilding_Service(), "AuditoriumBuilding", "Page");
                 _obj_Binding.Create(ref obj);
-                return "Data Saved Successfully";
+                return ExceptionHelper.SuccessfulMessage;
             }
             catch (Exception ex)
             {
@@ -73,7 +74,7 @@ namespace WebServices
                 obj.Building_Safety_Status = input.Building_Safety_Status;
 
                 _obj_Binding.Update(ref obj);
-                return "Information Updated Successfully";
+                return ExceptionHelper.UpdateMessage;
             }
             catch (Exception ex)
             {
@@ -242,7 +243,7 @@ namespace WebServices
             {
                 InstituteReference.InstituteBuildingCard_Service _obj_Binding = (InstituteReference.InstituteBuildingCard_Service)Configuration.getNavService(new InstituteReference.InstituteBuildingCard_Service(), "InstituteBuildingCard", "Page");
                 _obj_Binding.Create(ref obj);
-                return "Data Saved Successfully";
+                return ExceptionHelper.SuccessfulMessage;
             }
             catch (Exception ex)
             {
@@ -293,7 +294,7 @@ namespace WebServices
                 obj.Transformer_Type = input.Transformer_Type;
                 obj.Building_Safety_Status = input.Building_Safety_Status;
                 _obj_Binding.Update(ref obj);
-                return "Information Updated Successfully";
+                return ExceptionHelper.UpdateMessage;
             }
             catch (Exception ex)
             {
@@ -374,7 +375,7 @@ namespace WebServices
                 obj.PHD_Consumer_No = input.PHD_Consumer_No;
                 obj.Building_Safety_Status = input.Building_Safety_Status;
                 _obj_Binding.Update(ref obj);
-                return "Information Updated Successfully";
+                return ExceptionHelper.UpdateMessage;
             }
             catch (Exception ex)
             {
@@ -388,7 +389,7 @@ namespace WebServices
             {
                 StaffReference.StaffQuarterCard_Service _obj_Binding = (StaffReference.StaffQuarterCard_Service)Configuration.getNavService(new StaffReference.StaffQuarterCard_Service(), "StaffQuarterCard", "Page");
                 _obj_Binding.Create(ref obj);
-                return "Data Saved Successfully";
+                return ExceptionHelper.SuccessfulMessage;
             }
             catch (Exception ex)
             {
@@ -451,7 +452,7 @@ namespace WebServices
                 obj.Occupancy_Status = input.Occupancy_Status;
 
                 _obj_Binding.Update(ref obj);
-                return "Information Updated Successfully";
+                return ExceptionHelper.UpdateMessage;
             }
             catch (Exception ex)
             {
@@ -487,7 +488,7 @@ namespace WebServices
             {
                 NewProjectReference.Newprojectcard_Service _obj_Binding = (NewProjectReference.Newprojectcard_Service)Configuration.getNavService(new NewProjectReference.Newprojectcard_Service(), "Newprojectcard", "Page");
                 _obj_Binding.Create(ref obj);
-                return "Data Saved Successfully";
+                return ExceptionHelper.SuccessfulMessage;
             }
             catch (Exception ex)
             {
@@ -501,7 +502,7 @@ namespace WebServices
             {
                 ImprovementProjectReference.Improvementprojectcard_Service _obj_Binding = (ImprovementProjectReference.Improvementprojectcard_Service)Configuration.getNavService(new ImprovementProjectReference.Improvementprojectcard_Service(), "Improvementprojectcard", "Page");
                 _obj_Binding.Create(ref obj);
-                return "Data Saved Successfully";
+                return ExceptionHelper.SuccessfulMessage;
             }
             catch (Exception ex)
             {
@@ -515,7 +516,7 @@ namespace WebServices
             {
                 OngoingProjectReference.Ongoingprojectcard_Service _obj_Binding = (OngoingProjectReference.Ongoingprojectcard_Service)Configuration.getNavService(new OngoingProjectReference.Ongoingprojectcard_Service(), "Ongoingprojectcard", "Page");
                 _obj_Binding.Create(ref obj);
-                return "Data Saved Successfully";
+                return ExceptionHelper.SuccessfulMessage;
             }
             catch (Exception ex)
             {
@@ -637,7 +638,7 @@ namespace WebServices
                 obj.UC_status = input.UC_status;
 
                 _obj_Binding.Update(ref obj);
-                return "Information Updated Successfully";
+                return ExceptionHelper.UpdateMessage;
             }
             catch (Exception ex)
             {
@@ -651,7 +652,7 @@ namespace WebServices
             {
                 ProjectProgressReference.Projectprogressdetailscard_Service _obj_Binding = (ProjectProgressReference.Projectprogressdetailscard_Service)Configuration.getNavService(new ProjectProgressReference.Projectprogressdetailscard_Service(), "Projectprogressdetailscard", "Page");
                 _obj_Binding.Create(ref obj);
-                return "Data Saved Successfully";
+                return ExceptionHelper.SuccessfulMessage;
             }
             catch (Exception ex)
             {
@@ -665,7 +666,7 @@ namespace WebServices
             {
                 EstimatePrepReference.EstimatePrepCard_Service _obj_Binding = (EstimatePrepReference.EstimatePrepCard_Service)Configuration.getNavService(new EstimatePrepReference.EstimatePrepCard_Service(), "EstimatePrepCard", "Page");
                 _obj_Binding.Create(ref obj);
-                return "Data Saved Successfully";
+                return ExceptionHelper.SuccessfulMessage;
             }
             catch (Exception ex)
             {
@@ -679,7 +680,7 @@ namespace WebServices
             {
                 ServiceCardReference.ServiceCard_Service _obj_Binding = (ServiceCardReference.ServiceCard_Service)Configuration.getNavService(new ServiceCardReference.ServiceCard_Service(), "ServiceCard", "Page");
                 _obj_Binding.Create(ref obj);
-                return "Data Saved Successfully";
+                return ExceptionHelper.SuccessfulMessage;
             }
             catch (Exception ex)
             {

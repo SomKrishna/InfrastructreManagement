@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebServices;
+using WebServices.Helper;
 
 namespace InfrastructureManagement
 {
@@ -82,7 +83,14 @@ namespace InfrastructureManagement
             };
 
             var result = ODataServices.UpdateStaffQuarter(obj);
-            Alert.ShowAlert(this, "s", result);
+            if (result == ExceptionHelper.UpdateMessage)
+            {
+                Alert.ShowAlert(this, "s", result);
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", result);
+            }
 
             Response.Redirect("UpdateBuildings.aspx");
         }

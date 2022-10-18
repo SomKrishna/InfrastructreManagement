@@ -4,6 +4,7 @@ using System.Configuration;
 using System.IO;
 using System.Net;
 using WebServices;
+using WebServices.Helper;
 
 namespace InfrastructureManagement
 {
@@ -60,7 +61,14 @@ namespace InfrastructureManagement
                 No_of_Non_RO_Water_Purifier = NumericHandler.ConvertToInteger(txtNoOfNonROPurifier.Text),
             };
             var result = ODataServices.CreateInstituteBuilding(obj);
-            Alert.ShowAlert(this, "s", result);
+            if (result == ExceptionHelper.SuccessfulMessage)
+            {
+                Alert.ShowAlert(this, "s", result);
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", result);
+            }
         }
 
         protected void btnHostelBuildingSubmit_Click(object sender, EventArgs e)
@@ -113,7 +121,14 @@ namespace InfrastructureManagement
                 No_of_RO_Water_Purifier = NumericHandler.ConvertToInteger(txtHostelNoOfROPurifier.Text)
             };
             var result = ODataServices.CreateHostelBuilding(obj);
-            Alert.ShowAlert(this, "s", result);
+            if (result == ExceptionHelper.SuccessfulMessage)
+            {
+                Alert.ShowAlert(this, "s", result);
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", result);
+            }
         }
 
         protected void btnStaffSubmit_Click(object sender, EventArgs e)
@@ -163,7 +178,14 @@ namespace InfrastructureManagement
                 Year_of_Construction = NumericHandler.ConvertToInteger(txtStaffYearOfConstruction.Text)
             };
             var result = ODataServices.CreateStaffQuarter(obj);
-            Alert.ShowAlert(this, "s", result);
+            if (result == ExceptionHelper.SuccessfulMessage)
+            {
+                Alert.ShowAlert(this, "s", result);
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", result);
+            }
         }
 
         protected void btnAudiSubmit_Click(object sender, EventArgs e)
@@ -198,7 +220,14 @@ namespace InfrastructureManagement
                 Year_of_Construction = NumericHandler.ConvertToInteger(txtAudiYearOfConstruction.Text)
             };
             var result = ODataServices.CreateAuditorium(obj);
-            Alert.ShowAlert(this, "s", result);
+            if (result == ExceptionHelper.SuccessfulMessage)
+            {
+                Alert.ShowAlert(this, "s", result);
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", result);
+            }
         }
 
         protected void btnExport_Click(object sender, EventArgs e)

@@ -16,12 +16,29 @@ namespace InfrastructureManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            ListView1.Visible = false;
+            if (ddlProjectType.SelectedItem.Text == "New")
             {
                 var result = ODataServices.GetAllProjectDetails();
-                ListView1.DataSource = result;
+                ListView1.DataSource = result.Where(x => x.Project_Type == Convert.ToString(WebServices.NewProjectReference.Project_Type.New));
                 ListView1.DataBind();
+                ListView1.Visible = true;
             }
+            if (ddlProjectType.SelectedItem.Text == "Ongoing")
+            {
+                var result = ODataServices.GetAllProjectDetails();
+                ListView1.DataSource = result.Where(x => x.Project_Type == Convert.ToString(WebServices.NewProjectReference.Project_Type.Ongoing));
+                ListView1.DataBind();
+                ListView1.Visible = true;
+            }
+            if (ddlProjectType.SelectedItem.Text == "Improvement")
+            {
+                var result = ODataServices.GetAllProjectDetails();
+                ListView1.DataSource = result.Where(x => x.Project_Type == Convert.ToString(WebServices.NewProjectReference.Project_Type.Improvement));
+                ListView1.DataBind();
+                ListView1.Visible = true;
+            }
+
         }
 
         protected void btnExport_Click(object sender, EventArgs e)

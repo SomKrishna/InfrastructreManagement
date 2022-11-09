@@ -101,6 +101,17 @@
                         <div class="right_col_bg">
                             <div class="right_col_content border-box label-responsive">
                                 <div class="row">
+                                    <div class="col-md-3 contact-info">
+                                        <div class="form-group">
+                                            <label for="exampleAccount">Type of Project</label>
+                                            <asp:DropDownList ID="ddlProjectType" AutoPostBack="True" CssClass="form-control select" runat="server">
+                                                <asp:ListItem>Select Project Type</asp:ListItem>
+                                                <asp:ListItem>New</asp:ListItem>
+                                                <asp:ListItem>Ongoing</asp:ListItem>
+                                                <asp:ListItem>Improvement</asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>
+                                    </div>
                                     <div class="col-md-12">
                                         <div class="table-responsive">
                                             <div id="exportto">

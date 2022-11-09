@@ -70,7 +70,7 @@ namespace InfrastructureManagement
                     Date_of_commencementSpecified = true,
 
                     //Project_Code = txtProjectCode.Text,
-                    Project_Type = WebServices.OngoingProjectReference.Project_Type.Improvement,
+                    Project_Type = WebServices.OngoingProjectReference.Project_Type.Ongoing,
                     District = ddlDistrict.SelectedItem.Text,
                     Name_of_the_Institute = ddlInstituteName.SelectedItem.Value,
                     Name_of_the_project = txtProjectName.Text,
@@ -99,7 +99,7 @@ namespace InfrastructureManagement
                     Date_of_completion_as_per_agreementSpecified = true,
 
                     //Project_Code = txtProjectCode.Text,
-                    Project_Type = WebServices.NewProjectReference.Project_Type.Improvement,
+                    Project_Type = WebServices.NewProjectReference.Project_Type.New,
                     District = ddlDistrict.SelectedItem.Text,
                     Name_of_the_Institute = ddlInstituteName.SelectedItem.Value,
                     Name_of_the_project = txtProjectName.Text,

@@ -436,6 +436,7 @@
                                         <ul class="dropdown-menu" id="Ul1" runat="server">
                                             <li><a href="NewEntryBuilding.aspx">New Entry</a></li>
                                             <li><a href="UpdateBuildings.aspx">Edit</a></li>
+                                            <li><a href="BuildingList.aspx">Building List</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown clearfix">

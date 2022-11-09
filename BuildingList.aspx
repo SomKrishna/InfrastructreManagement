@@ -77,77 +77,421 @@
                         <div class="right_col_bg">
                             <div class="right_col_content border-box label-responsive">
                                 <div class="row">
+                                    <div class="col-md-3 contact-info">
+                                        <div class="form-group">
+                                            <label for="exampleAccount">Type of Building</label>
+                                            <asp:DropDownList ID="ddlBuldingType" AutoPostBack="True" CssClass="form-control select" runat="server">
+                                                <asp:ListItem>Select Bulding Type</asp:ListItem>
+                                                <asp:ListItem>Hostel</asp:ListItem>
+                                                <asp:ListItem>Institute</asp:ListItem>
+                                                <asp:ListItem>StaffQuarter</asp:ListItem>
+                                                <asp:ListItem>Auditorium</asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>
+                                    </div>
                                     <div class="col-md-12">
                                         <div class="table-responsive">
                                             <div id="exportto">
-                                                <asp:ListView ID="ListView1" runat="server">
+                                                <asp:ListView ID="HostelBuildingListView" runat="server">
                                                     <LayoutTemplate>
                                                         <table runat="server" class="table table-bordered">
                                                             <tr runat="server">
-                                                                <th runat="server">Project Code</th>
-                                                                <th runat="server">Project Type</th>
-                                                                <th runat="server">Name of the Institute</th>
-                                                                <th runat="server">Name of the project</th>
-                                                                <th runat="server">Agency</th>
-                                                                <th runat="server">Date of commencement as per agreement</th>
-                                                                <th runat="server">District</th>
-                                                                <th runat="server">Type of work</th>
-                                                                <th runat="server">Mode of Work</th>
-                                                                <th runat="server">Date of completion</th>
-                                                                <th runat="server">Download Project File</th>
-                                                                <th runat="server">Upload Project File</th>
+                                                                <th runat="server">Block Code</th>
+                                                                <th runat="server">Block Name</th>
+                                                                <th runat="server">Hostel Type</th>
+                                                                <th runat="server">No Of Room</th>
+                                                                <th runat="server">No Of Floor</th>
+                                                                <th runat="server">Total Floor Area in sqft</th>
+                                                                <th runat="server">Total Capacity</th>
+                                                                <th runat="server">Building Length</th>
+                                                                <th runat="server">Building Width</th>
+                                                                <th runat="server">Building Height</th>
+                                                                <th runat="server">Fire Safety Status</th>
+                                                                <th runat="server">Fire Safety Valid Upto</th>
+                                                                <th runat="server">Layout Plan No</th>
+                                                                <th runat="server">Approval Status</th>
+                                                                <th runat="server">Electricity Agency</th>
+                                                                <th runat="server">Book Of Account</th>
+                                                                <th runat="server">Electricity Load in KW</th>
+                                                                <th runat="server">Electricity Consumer No</th>
+                                                                <th runat="server">Transformer Type</th>
+                                                                <th runat="server">Source Of Water</th>
+                                                                <th runat="server">PHD Consumer No</th>
+                                                                <th runat="server">Building Safety Status</th>
+                                                                <th runat="server">Year of Construction</th>
+                                                                <th runat="server">No of RO Water Purifier</th>
+                                                                <th runat="server">No of Non RO Water Purifier</th>
                                                             </tr>
                                                             <tr id="ItemPlaceholder" runat="server">
-                                                            </tr>
-                                                            <tr runat="server">
-                                                                <td runat="server" colspan="2"></td>
                                                             </tr>
                                                         </table>
                                                     </LayoutTemplate>
                                                     <ItemTemplate>
                                                         <tr class="TableData">
                                                             <td>
-                                                                <asp:Label ID="lblProjectCode" runat="server" Text='<%# Eval("Project_Code")%>'> </asp:Label>
+                                                                <asp:Label ID="lblProjectCode" runat="server" Text='<%# Eval("Block_Code")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="lblProjectType" runat="server" Text='<%# Eval("Project_Type")%>'> </asp:Label>
+                                                                <asp:Label ID="lblProjectType" runat="server" Text='<%# Eval("Block_Name")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("Name_of_the_Institute")%>'> </asp:Label>
+                                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("Hostel_Type")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("Name_of_the_project")%>'> </asp:Label>
+                                                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("No_Of_Room")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label3" runat="server" Text='<%# Eval("Agency")%>'> </asp:Label>
+                                                                <asp:Label ID="Label3" runat="server" Text='<%# Eval("No_Of_Floor")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label4" runat="server" Text='<%# Eval("Date_of_commencement_as_per_agreement")%>'> </asp:Label>
+                                                                <asp:Label ID="Label40" runat="server" Text='<%# Eval("Total_Floor_Area_in_sqft")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label5" runat="server" Text='<%# Eval("District")%>'> </asp:Label>
+                                                                <asp:Label ID="Label41" runat="server" Text='<%# Eval("Total_Capacity")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label6" runat="server" Text='<%# Eval("Type_of_work")%>'> </asp:Label>
+                                                                <asp:Label ID="Label42" runat="server" Text='<%# Eval("Building_Length")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label7" runat="server" Text='<%# Eval("Mode_of_Work")%>'> </asp:Label>
+                                                                <asp:Label ID="Label43" runat="server" Text='<%# Eval("Building_Breadth_in_meter")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label8" runat="server" Text='<%# Eval("Date_of_completion", "{0:dd/MM/yyyy}")%>'> </asp:Label>
+                                                                <asp:Label ID="Label44" runat="server" Text='<%# Eval("Building_Height")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:LinkButton ID="btnExport" runat="server" OnClick="btnExport_Click"><i class="fa-regular fa-file"></i></asp:LinkButton>
+                                                                <asp:Label ID="Label45" runat="server" Text='<%# Eval("Fire_Safety_Status")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <div class="input-group">
-                                                                    <label class="input-group-btn">
-                                                                        <span class="btn btn-upload">Choose File&hellip; 
-                                                                <asp:FileUpload ID="ProjectpdfUploader" runat="server" Style="display: none" class="btn btn-light-grey form-control btn-upload" accept=".pdf" />
-                                                                        <asp:LinkButton ID="btnUpload" CssClass="btn btn-yellow" OnClick="btnUpload_Click" runat="server">Upload</asp:LinkButton>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
+                                                                <asp:Label ID="Label46" runat="server" Text='<%# DateTime.Parse(Eval("Fire_Safety_Valid_Upto").ToString()).ToString("d") %>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label47" runat="server" Text='<%# Eval("Layout_Plan_No")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label48" runat="server" Text='<%# Eval("Approval_Status")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label49" runat="server" Text='<%# Eval("Electricity_Agency")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label50" runat="server" Text='<%# Eval("Book_Of_Account")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label51" runat="server" Text='<%# Eval("Electricity_Load_in_KW")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label52" runat="server" Text='<%# Eval("Electricity_Consumer_No")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label53" runat="server" Text='<%# Eval("Transformer_Type")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label54" runat="server" Text='<%# Eval("Source_Of_Water")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label55" runat="server" Text='<%# Eval("PHD_Consumer_No")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label56" runat="server" Text='<%# Eval("Building_Safety_Status")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label57" runat="server" Text='<%# Eval("Year_of_Construction")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label58" runat="server" Text='<%# Eval("No_of_RO_Water_Purifier")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label59" runat="server" Text='<%# Eval("No_of_Non_RO_Water_Purifier")%>'> </asp:Label>
+                                                            </td>
+                                                        </tr>
+                                                    </ItemTemplate>
+                                                </asp:ListView>
+                                                <asp:ListView ID="AuditoriumListView" runat="server">
+                                                    <LayoutTemplate>
+                                                        <table runat="server" class="table table-bordered">
+                                                            <tr runat="server">
+                                                                <th runat="server">Building Code</th>
+                                                                <th runat="server">Building Name</th>
+                                                                <th runat="server">Total Capacity</th>
+                                                                <th runat="server">Total Floor Area in sqft</th>
+                                                                <th runat="server">Building Length</th>
+                                                                <th runat="server">Building Width</th>
+                                                                <th runat="server">Building Height</th>
+                                                                <th runat="server">Fire Safety Status</th>
+                                                                <th runat="server">Fire Safety Valid Upto</th>
+                                                                <th runat="server">Layout Plan No</th>
+                                                                <th runat="server">Approval Status</th>
+                                                                <th runat="server">Electricity Agency</th>
+                                                                <th runat="server">Book Of Account</th>
+                                                                <th runat="server">Electricity Load in KW</th>
+                                                                <th runat="server">Electricity Consumer No</th>
+                                                                <th runat="server">Building Safety Status</th>
+                                                                <th runat="server">Year of Construction</th>
+                                                            </tr>
+                                                            <tr id="ItemPlaceholder" runat="server">
+                                                            </tr>
+                                                        </table>
+                                                    </LayoutTemplate>
+                                                    <ItemTemplate>
+                                                        <tr class="TableData">
+                                                            <td>
+                                                                <asp:Label ID="lblProjectCode" runat="server" Text='<%# Eval("Building_Code")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="lblProjectType" runat="server" Text='<%# Eval("Building_Name")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("Total_Capacity")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label5" runat="server" Text='<%# Eval("Total_Floor_Area_in_sqft")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("Building_Length")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label3" runat="server" Text='<%# Eval("Building_Breadth_in_Meter")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label60" runat="server" Text='<%# Eval("Building_Height")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label24" runat="server" Text='<%# DateTime.Parse(Eval("Fire_Safety_Valid_Upto").ToString()).ToString("d") %>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label62" runat="server" Text='<%# Eval("Fire_Safety_Valid_Upto")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label63" runat="server" Text='<%# Eval("Layout_Plan_No")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label64" runat="server" Text='<%# Eval("Approval_Status")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label65" runat="server" Text='<%# Eval("Electricity_Agency")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label66" runat="server" Text='<%# Eval("Book_Of_Account")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label67" runat="server" Text='<%# Eval("Electricity_Load_in_KW")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label68" runat="server" Text='<%# Eval("Electricity_Consumer_No")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label69" runat="server" Text='<%# Eval("Building_Safety_Status")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label70" runat="server" Text='<%# Eval("Year_of_Construction")%>'> </asp:Label>
+                                                            </td>
+                                                        </tr>
+                                                    </ItemTemplate>
+                                                </asp:ListView>
+                                                <asp:ListView ID="InstituteListView" runat="server">
+                                                    <LayoutTemplate>
+                                                        <table runat="server" class="table table-bordered">
+                                                            <tr runat="server">
+                                                                <th runat="server">Block Code</th>
+                                                                <th runat="server">Block Name</th>
+                                                                <th runat="server">Block Type</th>
+                                                                <th runat="server">No Of Class Room</th>
+                                                                <th runat="server">No Of Floor</th>
+                                                                <th runat="server">Total Floor Area in sqft</th>
+                                                                <th runat="server">Building Length in meter</th>
+                                                                <th runat="server">Building Width in meter</th>
+                                                                <th runat="server">Building Height in meter</th>
+                                                                <th runat="server">Fire Safety Status</th>
+                                                                <th runat="server">Fire Safety Valid Upto</th>
+                                                                <th runat="server">Layout Plan No</th>
+                                                                <th runat="server">Approval Status</th>
+                                                                <th runat="server">Electricity Agency</th>
+                                                                <th runat="server">Book Of Account</th>
+                                                                <th runat="server">Electricity Load in KW</th>
+                                                                <th runat="server">Electricity Consumer No</th>
+                                                                <th runat="server">Transformer Type</th>
+                                                                <th runat="server">Source Of Water</th>
+                                                                <th runat="server">PHD Consumer No</th>
+                                                                <th runat="server">Building Safety Status</th>
+                                                                <th runat="server">Year of Construction</th>
+                                                                <th runat="server">No of Smart Classes</th>
+                                                                <th runat="server">Computer Lab Available</th>
+                                                                <th runat="server">No of RO Water Purifier</th>
+                                                                <th runat="server">No of Non RO Water Purifier</th>
+                                                            </tr>
+                                                            <tr id="ItemPlaceholder" runat="server">
+                                                            </tr>
+                                                        </table>
+                                                    </LayoutTemplate>
+                                                    <ItemTemplate>
+                                                        <tr class="TableData">
+                                                            <td>
+                                                                <asp:Label ID="lblProjectCode" runat="server" Text='<%# Eval("Block_Code")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="lblProjectType" runat="server" Text='<%# Eval("Block_Name_if_any")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("Block_Type_if_any")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("No_Of_Class_Room")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label3" runat="server" Text='<%# Eval("No_Of_Floor")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label19" runat="server" Text='<%# Eval("Total_Floor_Area_in_sqft")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label20" runat="server" Text='<%# Eval("Building_Length_in_meter")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label21" runat="server" Text='<%# Eval("Building_Width_in_meter")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label22" runat="server" Text='<%# Eval("Building_Height_in_meter")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label23" runat="server" Text='<%# Eval("Fire_Safety_Status")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label24" runat="server" Text='<%# DateTime.Parse(Eval("Fire_Safety_Valid_Upto").ToString()).ToString("d") %>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label25" runat="server" Text='<%# Eval("Layout_Plan_No")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label26" runat="server" Text='<%# Eval("Approval_Status")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label27" runat="server" Text='<%# Eval("Electricity_Agency")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label28" runat="server" Text='<%# Eval("Book_Of_Account")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label29" runat="server" Text='<%# Eval("Electricity_Load_in_KW")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label30" runat="server" Text='<%# Eval("Electricity_Consumer_No")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label31" runat="server" Text='<%# Eval("Transformer_Type")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label32" runat="server" Text='<%# Eval("Source_Of_Water")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label33" runat="server" Text='<%# Eval("PHD_Consumer_No")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label34" runat="server" Text='<%# Eval("Building_Safety_Status")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label35" runat="server" Text='<%# Eval("Year_of_Construction")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label36" runat="server" Text='<%# Eval("No_of_Smart_Classes")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label37" runat="server" Text='<%# Eval("Computer_Lab_Available")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label38" runat="server" Text='<%# Eval("No_of_RO_Water_Purifier")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label39" runat="server" Text='<%# Eval("No_of_Non_RO_Water_Purifier")%>'> </asp:Label>
+                                                            </td>
+                                                        </tr>
+                                                    </ItemTemplate>
+                                                </asp:ListView>
+                                                <asp:ListView ID="StaffQuarterListView" runat="server">
+                                                    <LayoutTemplate>
+                                                        <table runat="server" class="table table-bordered">
+                                                            <tr runat="server">
+                                                                <th runat="server">Quarter Code</th>
+                                                                <th runat="server">Quarter Block Name </th>
+                                                                <th runat="server">Quarter Type </th>
+                                                                <th runat="server">Occupancy Status</th>
+                                                                <th runat="server">Fire Safety Valid Upto</th>
+                                                                <th runat="server">Book Of Account</th>
+                                                                <th runat="server">No Of Floor</th>
+                                                                <th runat="server">No Of Room</th>
+                                                                <th runat="server">Layout Plan No</th>
+                                                                <th runat="server">Year of Construction</th>
+                                                                <th runat="server">Electricity Agency</th>
+                                                                <th runat="server">Electricity Connection Status</th>
+                                                                <th runat="server">Electricity Consumer No</th>
+                                                                <th runat="server">Electricity Load in KW</th>
+                                                                <th runat="server">Approval Status</th>
+                                                                <th runat="server">Building Width </th>
+                                                                <th runat="server">Building Height</th>
+                                                                <th runat="server">Building Length</th>
+                                                                <th runat="server">Building Safety Status</th>
+                                                            </tr>
+                                                            <tr id="ItemPlaceholder" runat="server">
+                                                            </tr>
+                                                        </table>
+                                                    </LayoutTemplate>
+                                                    <ItemTemplate>
+                                                        <tr class="TableData">
+                                                            <td>
+                                                                <asp:Label ID="lblProjectCode" runat="server" Text='<%# Eval("Quarter_Code")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="lblProjectType" runat="server" Text='<%# Eval("Quarter_Block_Name")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("Quarter_Type")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("Occupancy_Status")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label4" runat="server" Text='<%# DateTime.Parse(Eval("Fire_Safety_Valid_Upto").ToString()).ToString("d") %>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label3" runat="server" Text='<%# Eval("Book_Of_Account")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label6" runat="server" Text='<%# Eval("No_Of_Floor")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label7" runat="server" Text='<%# Eval("No_Of_Room")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label8" runat="server" Text='<%# Eval("Layout_Plan_No")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label9" runat="server" Text='<%# Eval("Year_of_Construction")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label10" runat="server" Text='<%# Eval("Electricity_Agency")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label11" runat="server" Text='<%# Eval("Electricity_Connection_Status")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label12" runat="server" Text='<%# Eval("Electricity_Consumer_No")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label13" runat="server" Text='<%# Eval("Electricity_Load_in_KW")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label14" runat="server" Text='<%# Eval("Approval_Status")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label15" runat="server" Text='<%# Eval("Building_Breadth_in_Meter")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label16" runat="server" Text='<%# Eval("Building_Height")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label17" runat="server" Text='<%# Eval("Building_Length")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label18" runat="server" Text='<%# Eval("Building_Safety_Status")%>'> </asp:Label>
                                                             </td>
                                                         </tr>
                                                     </ItemTemplate>

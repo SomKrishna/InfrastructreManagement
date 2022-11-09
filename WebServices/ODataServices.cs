@@ -746,6 +746,20 @@ namespace WebServices
             return q;
         }
 
+        public static string CreateLandRecord(LandReference.LandCard obj)
+        {
+            try
+            {
+                LandReference.LandCard_Service _obj_Binding = (LandReference.LandCard_Service)Configuration.getNavService(new LandReference.LandCard_Service(), "LandCard", "Page");
+                _obj_Binding.Create(ref obj);
+                return "Data Saved Successfully";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
         private static void Context_BuildingRequest(object sender, BuildingRequestEventArgs e)
         {
             string authKey = ConfigurationManager.AppSettings["AuthKey"].ToString();

@@ -105,6 +105,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\LandReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\NewProjectReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -189,6 +194,14 @@
     </None>
     <None Include="Web References\InstituteReference\InstituteBuildingCard.wsdl" />
     <None Include="Web References\InstituteReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LandReference\LandCard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LandReference\LandCard.wsdl" />
+    <None Include="Web References\LandReference\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -316,6 +329,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>WebServices_InstituteReference_InstituteBuildingCard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/LandCard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\LandReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/LandCard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_LandReference_LandCard_Service</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/Newprojectcard">
       <UrlBehavior>Dynamic</UrlBehavior>

@@ -585,10 +585,12 @@
     <Content Include="DefaultMasterPage.Master" />
     <Content Include="BuildingMaster.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="LandRecordCard.aspx" />
     <Content Include="MaintenanceAndAMC.aspx" />
     <Content Include="MasterDataBuilding.aspx" />
     <Content Include="MasterDataOnLandAndBuildings.aspx" />
     <Content Include="NewEntryBuilding.aspx" />
+    <Content Include="NewLandRecord.aspx" />
     <Content Include="ProjectList.aspx" />
     <Content Include="ProjectProgressDetailsInput.aspx" />
     <Content Include="ProjectWorkInput.aspx" />
@@ -694,6 +696,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LandRecordCard.aspx.cs">
+      <DependentUpon>LandRecordCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LandRecordCard.aspx.designer.cs">
+      <DependentUpon>LandRecordCard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MaintenanceAndAMC.aspx.cs">
       <DependentUpon>MaintenanceAndAMC.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -721,6 +730,13 @@
     </Compile>
     <Compile Include="NewEntryBuilding.aspx.designer.cs">
       <DependentUpon>NewEntryBuilding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewLandRecord.aspx.cs">
+      <DependentUpon>NewLandRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewLandRecord.aspx.designer.cs">
+      <DependentUpon>NewLandRecord.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProjectList.aspx.cs">
       <DependentUpon>ProjectList.aspx</DependentUpon>

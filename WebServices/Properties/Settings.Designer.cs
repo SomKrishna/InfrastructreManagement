@@ -154,5 +154,16 @@ namespace WebServices.Properties {
                 return ((string)(this["WebServices_AMCCardReference_AMCCard_Service"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/" +
+            "LandCard")]
+        public string WebServices_LandReference_LandCard_Service {
+            get {
+                return ((string)(this["WebServices_LandReference_LandCard_Service"]));
+            }
+        }
     }
 }

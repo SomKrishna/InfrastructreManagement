@@ -114,6 +114,24 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Ul2;
 
         /// <summary>
+        /// Ul4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Ul4;
+
+        /// <summary>
+        /// Ul3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Ul3;
+
+        /// <summary>
         /// divLeft control.
         /// </summary>
         /// <remarks>

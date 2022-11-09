@@ -724,6 +724,28 @@ namespace WebServices
             return q;
         }
 
+        public static List<Infra.ServiceList> GetSecurityServiceList()
+        {
+            string serviceUrl = string.Format(Configuration.ODataServiceUrl());
+            Uri uri = new Uri(serviceUrl);
+            var container = new Infra.NAV(uri);
+            container.BuildingRequest += Context_BuildingRequest;
+            List<Infra.ServiceList> q = container.CreateQuery<Infra.ServiceList>("ServiceList").ToList();
+
+            return q;
+        }
+
+        public static List<Infra.AMCList> GetAMCList()
+        {
+            string serviceUrl = string.Format(Configuration.ODataServiceUrl());
+            Uri uri = new Uri(serviceUrl);
+            var container = new Infra.NAV(uri);
+            container.BuildingRequest += Context_BuildingRequest;
+            List<Infra.AMCList> q = container.CreateQuery<Infra.AMCList>("AMCList").ToList();
+
+            return q;
+        }
+
         private static void Context_BuildingRequest(object sender, BuildingRequestEventArgs e)
         {
             string authKey = ConfigurationManager.AppSettings["AuthKey"].ToString();

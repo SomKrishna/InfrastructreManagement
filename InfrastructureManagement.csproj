@@ -114,6 +114,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AMCList.aspx" />
     <Content Include="assets\css\Ajaxcal.css" />
     <Content Include="assets\css\common.css" />
     <Content Include="assets\css\custom.css" />
@@ -621,6 +622,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="SecurityServiceList.aspx" />
     <Content Include="SecurityServices.aspx" />
     <Content Include="UpdateAuditorium.aspx" />
     <Content Include="UpdateBuildings.aspx" />
@@ -632,6 +634,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AMCList.aspx.cs">
+      <DependentUpon>AMCList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMCList.aspx.designer.cs">
+      <DependentUpon>AMCList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BuildingList.aspx.cs">
@@ -748,6 +757,13 @@
     </Compile>
     <Compile Include="SanctionedStaffQuarterDetails.aspx.designer.cs">
       <DependentUpon>SanctionedStaffQuarterDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityServiceList.aspx.cs">
+      <DependentUpon>SecurityServiceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecurityServiceList.aspx.designer.cs">
+      <DependentUpon>SecurityServiceList.aspx</DependentUpon>
     </Compile>
     <Compile Include="SecurityServices.aspx.cs">
       <DependentUpon>SecurityServices.aspx</DependentUpon>

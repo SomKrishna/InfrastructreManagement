@@ -29,21 +29,21 @@ namespace InfrastructureManagement
                 Encroachment_Plot_AreaSpecified = true,
 
                 Khatian_Serial_No = txtKhatian_Serial_No.Text,
-                Land_Kisam = ddlLandKisam.SelectedItem.Text == "Abadi_Irrigated_Two_Crops" ? WebServices.LandReference.Land_Kisam.Abadi_Irrigated_Two_Crops
-                : ddlLandKisam.SelectedItem.Text == "Abadi_Irrigated_One_crop" ? WebServices.LandReference.Land_Kisam.Abadi_Irrigated_One_crop
-                : ddlLandKisam.SelectedItem.Text == "Abadi_Non_irrigated_Rainfed" ? WebServices.LandReference.Land_Kisam.Abadi_Non_irrigated_Rainfed
-                : ddlLandKisam.SelectedItem.Text == "Abadi_Orchards_Bagayat" ? WebServices.LandReference.Land_Kisam.Abadi_Orchards_Bagayat
-                : ddlLandKisam.SelectedItem.Text == "Abadi_Water_bodies_Jalashaya" ? WebServices.LandReference.Land_Kisam.Abadi_Water_bodies_Jalashaya
-                : ddlLandKisam.SelectedItem.Text == "Abadi_Homestead_Gharabari" ? WebServices.LandReference.Land_Kisam.Abadi_Homestead_Gharabari
-                : ddlLandKisam.SelectedItem.Text == "Abadi_Commercial_Byabasaika" ? WebServices.LandReference.Land_Kisam.Abadi_Commercial_Byabasaika
-                : ddlLandKisam.SelectedItem.Text == "Abadi_Industrial_Shilpabhttika" ? WebServices.LandReference.Land_Kisam.Abadi_Industrial_Shilpabhttika
-                : ddlLandKisam.SelectedItem.Text == "Abadi_Forest_Jungle" ? WebServices.LandReference.Land_Kisam.Abadi_Forest_Jungle
-                : ddlLandKisam.SelectedItem.Text == "Abadi_Institutional_Anushthan" ? WebServices.LandReference.Land_Kisam.Abadi_Institutional_Anushthan
-                : ddlLandKisam.SelectedItem.Text == "Abadi_Mine_Khani_Khadan__x0026__Others" ? WebServices.LandReference.Land_Kisam.Abadi_Mine_Khani_Khadan__x0026__Others
-                : ddlLandKisam.SelectedItem.Text == "Abada_Jogya_Anabadi" ? WebServices.LandReference.Land_Kisam.Abada_Jogya_Anabadi
-                : ddlLandKisam.SelectedItem.Text == "Abada_Ajogya_Anabadi" ? WebServices.LandReference.Land_Kisam.Abada_Ajogya_Anabadi
-                : ddlLandKisam.SelectedItem.Text == "Rakhit" ? WebServices.LandReference.Land_Kisam.Rakhit
-                : ddlLandKisam.SelectedItem.Text == "Sarbasadharana" ? WebServices.LandReference.Land_Kisam.Sarbasadharana
+                Land_Kisam = ddlLandKisam.SelectedValue == "Abadi_Irrigated_Two_Crops" ? WebServices.LandReference.Land_Kisam.Abadi_Irrigated_Two_Crops
+                : ddlLandKisam.SelectedValue == "Abadi_Irrigated_One_crop" ? WebServices.LandReference.Land_Kisam.Abadi_Irrigated_One_crop
+                : ddlLandKisam.SelectedValue == "Abadi_Non_irrigated_Rainfed" ? WebServices.LandReference.Land_Kisam.Abadi_Non_irrigated_Rainfed
+                : ddlLandKisam.SelectedValue == "Abadi_Orchards_Bagayat" ? WebServices.LandReference.Land_Kisam.Abadi_Orchards_Bagayat
+                : ddlLandKisam.SelectedValue == "Abadi_Water_bodies_Jalashaya" ? WebServices.LandReference.Land_Kisam.Abadi_Water_bodies_Jalashaya
+                : ddlLandKisam.SelectedValue == "Abadi_Homestead_Gharabari" ? WebServices.LandReference.Land_Kisam.Abadi_Homestead_Gharabari
+                : ddlLandKisam.SelectedValue == "Abadi_Commercial_Byabasaika" ? WebServices.LandReference.Land_Kisam.Abadi_Commercial_Byabasaika
+                : ddlLandKisam.SelectedValue == "Abadi_Industrial_Shilpabhttika" ? WebServices.LandReference.Land_Kisam.Abadi_Industrial_Shilpabhttika
+                : ddlLandKisam.SelectedValue == "Abadi_Forest_Jungle" ? WebServices.LandReference.Land_Kisam.Abadi_Forest_Jungle
+                : ddlLandKisam.SelectedValue == "Abadi_Institutional_Anushthan" ? WebServices.LandReference.Land_Kisam.Abadi_Institutional_Anushthan
+                : ddlLandKisam.SelectedValue == "Abadi_Mine_Khani_Khadan__x0026__Others" ? WebServices.LandReference.Land_Kisam.Abadi_Mine_Khani_Khadan__x0026__Others
+                : ddlLandKisam.SelectedValue == "Abada_Jogya_Anabadi" ? WebServices.LandReference.Land_Kisam.Abada_Jogya_Anabadi
+                : ddlLandKisam.SelectedValue == "Abada_Ajogya_Anabadi" ? WebServices.LandReference.Land_Kisam.Abada_Ajogya_Anabadi
+                : ddlLandKisam.SelectedValue == "Rakhit" ? WebServices.LandReference.Land_Kisam.Rakhit
+                : ddlLandKisam.SelectedValue== "Sarbasadharana" ? WebServices.LandReference.Land_Kisam.Sarbasadharana
                 : WebServices.LandReference.Land_Kisam._blank_,
                 Plot_No = txtPlot_No.Text,
                 District = ddlDistrict.SelectedItem.Text,
@@ -62,6 +62,21 @@ namespace InfrastructureManagement
             var result = ODataServices.CreateLandRecord(obj);
             if (result == ExceptionHelper.SuccessfulMessage)
             {
+                txtKhatian_Serial_No.Text = string.Empty;
+                ddlLandKisam.SelectedValue = "Select";
+                txtPlot_No.Text = string.Empty;
+                ddlDistrict.SelectedValue = "0";
+                txtTahasil.Text = string.Empty;
+                txtVillage.Text = string.Empty;
+                txtRI_Circle.Text = string.Empty;
+                txtLand_Owner_Details.Text = string.Empty;
+                txtLand_possessioner_Details.Text = string.Empty;
+                txtLand_Issue_Description.Text = string.Empty;
+                txtEncroachment_Plot_No.Text = string.Empty;
+                txtEncroachment_Plot_Area.Text = string.Empty;
+                txtDispute_Plot_No.Text = string.Empty;
+                txtDispute_Area.Text = string.Empty;
+                txtCasePlot_No.Text = string.Empty;
                 Alert.ShowAlert(this, "s", result);
             }
             else

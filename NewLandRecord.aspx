@@ -248,7 +248,6 @@
                                                         <asp:ListItem>Select</asp:ListItem>
                                                         <asp:ListItem Value="Abadi_Irrigated_Two_Crops">Irrigated Two Crops</asp:ListItem>
                                                         <asp:ListItem Value="Abadi_Irrigated_One_crop">Irrigated One crop</asp:ListItem>
-                                                        <asp:ListItem Value="Abadi_Initial_appointee">Initial appointee</asp:ListItem>
                                                         <asp:ListItem Value="Abadi_Non_irrigated_Rainfed">Non irrigated Rainfed</asp:ListItem>
                                                         <asp:ListItem Value="Abadi_Orchards_Bagayat">Orchards Bagayat</asp:ListItem>
                                                         <asp:ListItem Value="Abadi_Water_bodies_Jalashaya">Water bodies Jalashaya</asp:ListItem>

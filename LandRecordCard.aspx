@@ -125,7 +125,7 @@
             <%-- Master Data --%>
             <div class="col-lg-12 col-md-12 summary-box">
                 <div class="col-lg-12 NewEntrydiv">
-                    <p class="NewEntry">Update Building</p>
+                    <p class="NewEntry">Update Land Record</p>
                 </div>
                 <div class="loader" id="loader">
                     <div class="loader-img"><i class="fa fa-spinner fa-spin"></i></div>
@@ -196,20 +196,19 @@
                                                 <label for="exampleAccount">Land_Kisam</label>
                                                 <asp:DropDownList ID="ddlLandKisam" CssClass="form-control" runat="server">
                                                     <asp:ListItem>Select</asp:ListItem>
-                                                    <asp:ListItem Value="Irrigated_Two_Crops">Irrigated Two Crops</asp:ListItem>
-                                                    <asp:ListItem Value="Irrigated_One_crop">Irrigated One crop</asp:ListItem>
-                                                    <asp:ListItem Value="Initial_appointee">Initial appointee</asp:ListItem>
-                                                    <asp:ListItem Value="Non_irrigated_Rainfed">Non irrigated Rainfed</asp:ListItem>
-                                                    <asp:ListItem Value="Orchards_Bagayat">Orchards Bagayat</asp:ListItem>
-                                                    <asp:ListItem Value="Water_bodies_Jalashaya">Water bodies Jalashaya</asp:ListItem>
-                                                    <asp:ListItem Value="Homestead_Gharabari">Homestead Gharabari</asp:ListItem>
-                                                    <asp:ListItem Value="Commercial_Byabasaika">Commercial Byabasaika</asp:ListItem>
-                                                    <asp:ListItem Value="Industrial_Shilpabhttika">Industrial Shilpabhttika</asp:ListItem>
-                                                    <asp:ListItem Value="Forest_Jungle">Forest Jungle</asp:ListItem>
-                                                    <asp:ListItem Value="Institutional_Anushthan">Institutional Anushthan</asp:ListItem>
-                                                    <asp:ListItem Value="Mine_Khani_Khadan_Others">Mine Khani Khadan Others</asp:ListItem>
-                                                    <asp:ListItem Value="Jogya_Anabadi">Jogya Anabadi</asp:ListItem>
-                                                    <asp:ListItem Value="Ajogya_Anabadi">Ajogya Anabadi</asp:ListItem>
+                                                    <asp:ListItem Value="Abadi_Irrigated_Two_Crops">Irrigated Two Crops</asp:ListItem>
+                                                    <asp:ListItem Value="Abadi_Irrigated_One_crop">Irrigated One crop</asp:ListItem> 
+                                                    <asp:ListItem Value="Abadi_Non_irrigated_Rainfed">Non irrigated Rainfed</asp:ListItem>
+                                                    <asp:ListItem Value="Abadi_Orchards_Bagayat">Orchards Bagayat</asp:ListItem>
+                                                    <asp:ListItem Value="Abadi_Water_bodies_Jalashaya">Water bodies Jalashaya</asp:ListItem>
+                                                    <asp:ListItem Value="Abadi_Homestead_Gharabari">Homestead Gharabari</asp:ListItem>
+                                                    <asp:ListItem Value="Abadi_Commercial_Byabasaika">Commercial Byabasaika</asp:ListItem>
+                                                    <asp:ListItem Value="Abadi_Industrial_Shilpabhttika">Industrial Shilpabhttika</asp:ListItem>
+                                                    <asp:ListItem Value="Abadi_Forest_Jungle">Forest Jungle</asp:ListItem>
+                                                    <asp:ListItem Value="Abadi_Institutional_Anushthan">Institutional Anushthan</asp:ListItem>
+                                                    <asp:ListItem Value="Abadi_Mine_Khani_Khadan__x0026__Others">Mine Khani Khadan Others</asp:ListItem>
+                                                    <asp:ListItem Value="Abada_Jogya_Anabadi">Jogya Anabadi</asp:ListItem>
+                                                    <asp:ListItem Value="Abada_Ajogya_Anabadi">Ajogya Anabadi</asp:ListItem>
                                                     <asp:ListItem Value="Rakhit">Rakhit</asp:ListItem>
                                                     <asp:ListItem Value="Sarbasadharana">Sarbasadharana</asp:ListItem>
                                                 </asp:DropDownList>
@@ -244,7 +243,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <asp:Button ID="btnEstimateSubmit" runat="server" CssClass="btn-s float-right submit" type="submit" Text="Submit" />
+                                <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" CssClass="btn-s float-right submit" type="submit" Text="Submit" />
                             </div>
                         </div>
                     </div>

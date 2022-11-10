@@ -1,6 +1,10 @@
-﻿using System;
+﻿using InfrastructureManagement.Common;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Web.UI.WebControls;
 using WebServices;
+using WebServices.Helper;
 
 namespace InfrastructureManagement
 {
@@ -8,7 +12,14 @@ namespace InfrastructureManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                ddlDistrict.DataSource = ODataServices.GetAllDistricts();
+                ddlDistrict.DataTextField = "Name";
+                ddlDistrict.DataValueField = "Code";
+                ddlDistrict.DataBind();
+                ddlDistrict.Items.Insert(0, new ListItem("Select District", "0"));
+            }
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
@@ -18,7 +29,22 @@ namespace InfrastructureManagement
             if (filteredResult != null)
             {
                 txtKhatian_Serial_No.Text = filteredResult.Khatian_Serial_No;
-                ddlLandKisam.SelectedValue = Convert.ToString(filteredResult.Land_Kisam);
+                ddlLandKisam.SelectedValue = Convert.ToString(filteredResult.Land_Kisam) == "Abadi - Irrigated Two Crops"? "Abadi_Irrigated_Two_Crops"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abadi - Irrigated One crop" ? "Abadi_Irrigated_One_crop"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abadi - Non irrigated (Rainfed)" ? "Abadi_Non_irrigated_Rainfed"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abadi - Orchards (Bagayat)" ? "Abadi_Orchards_Bagayat"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abadi - Water bodies (Jalashaya)" ? "Abadi_Water_bodies_Jalashaya"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abadi - Homestead (Gharabari)" ? "Abadi_Homestead_Gharabari"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abadi - Commercial (Byabasaika)" ? "Abadi_Commercial_Byabasaika"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abadi - Industrial (Shilpabhttika)" ? "Abadi_Industrial_Shilpabhttika"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abadi - Forest (Jungle)" ? "Abadi_Forest_Jungle"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abadi - Institutional (Anushthan)" ? "Abadi_Institutional_Anushthan"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abadi - Mine (Khani Khadan) & Others" ? "Abadi_Mine_Khani_Khadan__x0026__Others"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abada Jogya Anabadi" ? "Abada_Jogya_Anabadi"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Abada Ajogya Anabadi" ? "Abada_Ajogya_Anabadi"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Rakhit" ? "Rakhit"
+                    : Convert.ToString(filteredResult.Land_Kisam) == "Sarbasadharana" ? "Sarbasadharana"
+                    : "";
                 txtPlot_No.Text = filteredResult.Plot_No;
                 ddlDistrict.SelectedItem.Text = filteredResult.District;
                 txtTahasil.Text = filteredResult.Tahasil;
@@ -36,8 +62,74 @@ namespace InfrastructureManagement
             }
             else
             {
+                txtKhatian_Serial_No.Text = string.Empty;
+                ddlLandKisam.SelectedValue = string.Empty;
+                txtPlot_No.Text = string.Empty;
+                ddlDistrict.SelectedItem.Text = string.Empty;
+                txtTahasil.Text = string.Empty;
+                txtVillage.Text = string.Empty;
+                txtRI_Circle.Text = string.Empty;
+                txtLand_Owner_Details.Text = string.Empty;
+                txtLand_possessioner_Details.Text = string.Empty;
+                txtLand_Issue_Description.Text = string.Empty;
+                txtEncroachment_Plot_No.Text = string.Empty;
+                txtEncroachment_Plot_Area.Text = string.Empty;
+                txtDispute_Plot_No.Text = string.Empty;
+                txtDispute_Area.Text = string.Empty;
+                txtCasePlot_No.Text = string.Empty;
                 LblMessage.Text = "No record found. Please try with valid Khatian Serial No.";
             }
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            var obj = new WebServices.LandReference.LandCard
+            {
+                Land_KisamSpecified = true,
+                Dispute_AreaSpecified = true,
+                Encroachment_Plot_AreaSpecified = true,
+
+                Khatian_Serial_No = txtKhatian_Serial_No.Text,
+                Land_Kisam = ddlLandKisam.SelectedValue == "Abadi_Irrigated_Two_Crops" ? WebServices.LandReference.Land_Kisam.Abadi_Irrigated_Two_Crops
+                : ddlLandKisam.SelectedValue == "Abadi_Irrigated_One_crop" ? WebServices.LandReference.Land_Kisam.Abadi_Irrigated_One_crop
+                : ddlLandKisam.SelectedValue == "Abadi_Non_irrigated_Rainfed" ? WebServices.LandReference.Land_Kisam.Abadi_Non_irrigated_Rainfed
+                : ddlLandKisam.SelectedValue == "Abadi_Orchards_Bagayat" ? WebServices.LandReference.Land_Kisam.Abadi_Orchards_Bagayat
+                : ddlLandKisam.SelectedValue == "Abadi_Water_bodies_Jalashaya" ? WebServices.LandReference.Land_Kisam.Abadi_Water_bodies_Jalashaya
+                : ddlLandKisam.SelectedValue == "Abadi_Homestead_Gharabari" ? WebServices.LandReference.Land_Kisam.Abadi_Homestead_Gharabari
+                : ddlLandKisam.SelectedValue == "Abadi_Commercial_Byabasaika" ? WebServices.LandReference.Land_Kisam.Abadi_Commercial_Byabasaika
+                : ddlLandKisam.SelectedValue == "Abadi_Industrial_Shilpabhttika" ? WebServices.LandReference.Land_Kisam.Abadi_Industrial_Shilpabhttika
+                : ddlLandKisam.SelectedValue == "Abadi_Forest_Jungle" ? WebServices.LandReference.Land_Kisam.Abadi_Forest_Jungle
+                : ddlLandKisam.SelectedValue == "Abadi_Institutional_Anushthan" ? WebServices.LandReference.Land_Kisam.Abadi_Institutional_Anushthan
+                : ddlLandKisam.SelectedValue == "Abadi_Mine_Khani_Khadan__x0026__Others" ? WebServices.LandReference.Land_Kisam.Abadi_Mine_Khani_Khadan__x0026__Others
+                : ddlLandKisam.SelectedValue == "Abada_Jogya_Anabadi" ? WebServices.LandReference.Land_Kisam.Abada_Jogya_Anabadi
+                : ddlLandKisam.SelectedValue == "Abada_Ajogya_Anabadi" ? WebServices.LandReference.Land_Kisam.Abada_Ajogya_Anabadi
+                : ddlLandKisam.SelectedValue == "Rakhit" ? WebServices.LandReference.Land_Kisam.Rakhit
+                : ddlLandKisam.SelectedValue == "Sarbasadharana" ? WebServices.LandReference.Land_Kisam.Sarbasadharana
+                : WebServices.LandReference.Land_Kisam._blank_,
+                Plot_No = txtPlot_No.Text,
+                District = ddlDistrict.SelectedItem.Text,
+                Tahasil = txtTahasil.Text,
+                Village = txtVillage.Text,
+                RI_Circle = txtRI_Circle.Text,
+                Land_Owner_Details = txtLand_Owner_Details.Text,
+                Land_possessioner_Details = txtLand_possessioner_Details.Text,
+                Land_Issue_Description = txtLand_Issue_Description.Text,
+                Encroachment_Plot_Area = NumericHandler.ConvertToDecimal(txtEncroachment_Plot_Area.Text),
+                Encroachment_Plot_No = txtEncroachment_Plot_No.Text,
+                Dispute_Plot_No = txtDispute_Plot_No.Text,
+                Dispute_Area = NumericHandler.ConvertToDecimal(txtDispute_Area.Text),
+                CasePlot_No = txtCasePlot_No.Text
+            };
+            var result = ODataServices.UpdateLandRecord(obj);
+            if (result == ExceptionHelper.UpdateMessage)
+            {
+                Alert.ShowAlert(this, "s", result);
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", result);
+            }
+        }
+
     }
 }

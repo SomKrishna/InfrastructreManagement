@@ -760,6 +760,41 @@ namespace WebServices
             }
         }
 
+        public static string UpdateLandRecord(LandReference.LandCard input)
+        {
+            try
+            {
+                LandReference.LandCard_Service _obj_Binding = (LandReference.LandCard_Service)Configuration.getNavService(new LandReference.LandCard_Service(), "LandCard", "Page");
+                LandReference.LandCard obj = new LandReference.LandCard();
+                //List<Infra.LandDetailList> objList = GetLandDetailList().Where(x => string.Equals(x.Khatian_Serial_No, input.Khatian_Serial_No, StringComparison.OrdinalIgnoreCase)).ToList();
+
+                obj = _obj_Binding.Read(input.Khatian_Serial_No.ToString());
+
+                obj.Land_Kisam = input.Land_Kisam;
+                obj.Plot_No = input.Plot_No;
+                obj.District = input.District;
+                obj.Tahasil = input.Tahasil;
+                obj.Village = input.Village;
+                obj.RI_Circle = input.RI_Circle;
+                obj.Land_Owner_Details = input.Land_Owner_Details;
+                obj.Land_possessioner_Details = input.Land_possessioner_Details;
+                obj.Land_Issue_Description = input.Land_Issue_Description;
+                obj.Encroachment_Plot_No = input.Encroachment_Plot_No;
+                obj.Encroachment_Plot_Area = input.Encroachment_Plot_Area;
+                obj.Dispute_Plot_No = input.Dispute_Plot_No;
+                obj.Dispute_Area = input.Dispute_Area;
+                obj.CasePlot_No = input.CasePlot_No;
+
+                _obj_Binding.Update(ref obj);
+                return ExceptionHelper.UpdateMessage;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+
         private static void Context_BuildingRequest(object sender, BuildingRequestEventArgs e)
         {
             string authKey = ConfigurationManager.AppSettings["AuthKey"].ToString();

@@ -114,6 +114,7 @@
                                                         <table runat="server" class="table table-bordered">
                                                             <tr runat="server">
                                                                 <th runat="server">Khatian No.</th>
+                                                                <th runat="server">Kisam</th>
                                                                 <th runat="server">Plot Number/s</th>
                                                                 <th runat="server">District</th>
                                                                 <th runat="server">Tahasil</th>
@@ -140,6 +141,9 @@
                                                         <tr class="TableData">
                                                             <td>
                                                                 <asp:Label ID="lblKhatianNo" runat="server" Text='<%# Eval("Khatian_Serial_No")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:Label ID="Label12" runat="server" Text='<%# Eval("Land_Kisam")%>'> </asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:Label ID="lblPlotNo" runat="server" Text='<%# Eval("Plot_No")%>'> </asp:Label>

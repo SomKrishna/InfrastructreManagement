@@ -119,6 +119,67 @@ namespace WebServices
             return returnValue;
         }
 
+        #region Building Master Plan files
+        public static string Download_Auditorium_Building_File(string buildingCode)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Download_Auditorium_Building_File(buildingCode);
+            return returnValue;
+        }
+
+        public static string Download_Hostel_Building_File(string blockCode)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Download_Hostel_Building_File(blockCode);
+            return returnValue;
+        }
+
+        public static string Download_Institutional_File(string blockCode)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Download_Institutional_File(blockCode);
+            return returnValue;
+        }
+
+        public static string Download_Staff_Building_File(string blockCode)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Download_Staff_Building_File(blockCode);
+            return returnValue;
+        }
+
+        public static void Upload_Auditorium_Buliding_File(string buildingCode, string fileName)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_Auditorium_Buliding_File(buildingCode, fileName);
+        }
+
+        public static void Upload_Hostel_Buliding_File(string blockCode, string fileName)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_Hostel_Buliding_File(blockCode, fileName);
+        }
+
+        public static void Upload_Institute_Buliding_File(string blockCode, string fileName)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_Institute_Buliding_File(blockCode, fileName);
+        }
+
+        public static void Upload_Staff_Buliding_File(string quarterCode, string fileName)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_Staff_Buliding_File(quarterCode, fileName);
+        }
+        #endregion
         public static string ExportInstitutionalBuilding()
         {
             CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();

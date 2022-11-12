@@ -121,6 +121,8 @@
                                                                 <th runat="server">Year of Construction</th>
                                                                 <th runat="server">No of RO Water Purifier</th>
                                                                 <th runat="server">No of Non RO Water Purifier</th>
+                                                                <th runat="server">Master Plan File</th>
+                                                                <th runat="server">Upload Master Plan File</th>
                                                             </tr>
                                                             <tr id="ItemPlaceholder" runat="server">
                                                             </tr>
@@ -129,7 +131,7 @@
                                                     <ItemTemplate>
                                                         <tr class="TableData">
                                                             <td>
-                                                                <asp:Label ID="lblProjectCode" runat="server" Text='<%# Eval("Block_Code")%>'> </asp:Label>
+                                                                <asp:Label ID="lblHostelBlockCode" runat="server" Text='<%# Eval("Block_Code")%>'> </asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:Label ID="lblProjectType" runat="server" Text='<%# Eval("Block_Name")%>'> </asp:Label>
@@ -203,6 +205,19 @@
                                                             <td>
                                                                 <asp:Label ID="Label59" runat="server" Text='<%# Eval("No_of_Non_RO_Water_Purifier")%>'> </asp:Label>
                                                             </td>
+                                                            <td>
+                                                                <asp:LinkButton ID="btnHostelDownload" runat="server" OnClick="btnHostelDownload_Click"><i class="fa-regular fa-file"></i></asp:LinkButton>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <label class="input-group-btn">
+                                                                        <span class="custom-file-input btn"> 
+                                                                            <asp:FileUpload ID="hostelBuildingpdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:LinkButton ID="hostelBuildingUpload" CssClass="btn btn-yellow" OnClick="hostelBuildingUpload_Click"  runat="server">Upload</asp:LinkButton>
+                                                                        </span>
+                                                                    </label>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </ItemTemplate>
                                                 </asp:ListView>
@@ -226,7 +241,9 @@
                                                                 <th runat="server">Electricity Load in KW</th>
                                                                 <th runat="server">Electricity Consumer No</th>
                                                                 <th runat="server">Building Safety Status</th>
-                                                                <th runat="server">Year of Construction</th>
+                                                                <th runat="server">Year of Construction</th>                                                                
+                                                                <th runat="server">Master Plan File</th>
+                                                                <th runat="server">Upload Master Plan File</th>
                                                             </tr>
                                                             <tr id="ItemPlaceholder" runat="server">
                                                             </tr>
@@ -235,7 +252,7 @@
                                                     <ItemTemplate>
                                                         <tr class="TableData">
                                                             <td>
-                                                                <asp:Label ID="lblProjectCode" runat="server" Text='<%# Eval("Building_Code")%>'> </asp:Label>
+                                                                <asp:Label ID="lblAuditoriumBuildingCode" runat="server" Text='<%# Eval("Building_Code")%>'> </asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:Label ID="lblProjectType" runat="server" Text='<%# Eval("Building_Name")%>'> </asp:Label>
@@ -285,6 +302,19 @@
                                                             <td>
                                                                 <asp:Label ID="Label70" runat="server" Text='<%# Eval("Year_of_Construction")%>'> </asp:Label>
                                                             </td>
+                                                            <td>
+                                                                <asp:LinkButton ID="btnAuditoriumDownload" runat="server" OnClick="btnAuditoriumDownload_Click"><i class="fa-regular fa-file"></i></asp:LinkButton>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <label class="input-group-btn">
+                                                                        <span class="custom-file-input btn"> 
+                                                                            <asp:FileUpload ID="auditoriumpdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:LinkButton ID="auditoriumUpload" CssClass="btn btn-yellow" OnClick="auditoriumUpload_Click"  runat="server">Upload</asp:LinkButton>
+                                                                        </span>
+                                                                    </label>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </ItemTemplate>
                                                 </asp:ListView>
@@ -318,6 +348,8 @@
                                                                 <th runat="server">Computer Lab Available</th>
                                                                 <th runat="server">No of RO Water Purifier</th>
                                                                 <th runat="server">No of Non RO Water Purifier</th>
+                                                                <th runat="server">Master Plan File</th>
+                                                                <th runat="server">Upload Master Plan File</th>
                                                             </tr>
                                                             <tr id="ItemPlaceholder" runat="server">
                                                             </tr>
@@ -326,7 +358,7 @@
                                                     <ItemTemplate>
                                                         <tr class="TableData">
                                                             <td>
-                                                                <asp:Label ID="lblProjectCode" runat="server" Text='<%# Eval("Block_Code")%>'> </asp:Label>
+                                                                <asp:Label ID="lblInstituteBlockCode" runat="server" Text='<%# Eval("Block_Code")%>'> </asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:Label ID="lblProjectType" runat="server" Text='<%# Eval("Block_Name_if_any")%>'> </asp:Label>
@@ -403,6 +435,19 @@
                                                             <td>
                                                                 <asp:Label ID="Label39" runat="server" Text='<%# Eval("No_of_Non_RO_Water_Purifier")%>'> </asp:Label>
                                                             </td>
+                                                            <td>
+                                                                <asp:LinkButton ID="btnInstituteDownload" runat="server" OnClick="btnInstituteDownload_Click"><i class="fa-regular fa-file"></i></asp:LinkButton>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <label class="input-group-btn">
+                                                                        <span class="custom-file-input btn"> 
+                                                                            <asp:FileUpload ID="InstitutepdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:LinkButton ID="InstituteUpload" CssClass="btn btn-yellow" OnClick="InstituteUpload_Click"  runat="server">Upload</asp:LinkButton>
+                                                                        </span>
+                                                                    </label>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </ItemTemplate>
                                                 </asp:ListView>
@@ -429,6 +474,8 @@
                                                                 <th runat="server">Building Height</th>
                                                                 <th runat="server">Building Length</th>
                                                                 <th runat="server">Building Safety Status</th>
+                                                                <th runat="server">Master Plan File</th>
+                                                                <th runat="server">Upload Master Plan File</th>
                                                             </tr>
                                                             <tr id="ItemPlaceholder" runat="server">
                                                             </tr>
@@ -437,7 +484,7 @@
                                                     <ItemTemplate>
                                                         <tr class="TableData">
                                                             <td>
-                                                                <asp:Label ID="lblProjectCode" runat="server" Text='<%# Eval("Quarter_Code")%>'> </asp:Label>
+                                                                <asp:Label ID="lblStaffQuarterCode" runat="server" Text='<%# Eval("Quarter_Code")%>'> </asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:Label ID="lblProjectType" runat="server" Text='<%# Eval("Quarter_Block_Name")%>'> </asp:Label>
@@ -492,6 +539,19 @@
                                                             </td>
                                                             <td>
                                                                 <asp:Label ID="Label18" runat="server" Text='<%# Eval("Building_Safety_Status")%>'> </asp:Label>
+                                                            </td>
+                                                            <td>
+                                                                <asp:LinkButton ID="btnStaffQuarterDownload" runat="server" OnClick="btnStaffQuarterDownload_Click"><i class="fa-regular fa-file"></i></asp:LinkButton>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <label class="input-group-btn">
+                                                                        <span class="custom-file-input btn"> 
+                                                                            <asp:FileUpload ID="StaffQuarterpdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:LinkButton ID="StaffQuarterUpload" CssClass="btn btn-yellow" OnClick="StaffQuarterUpload_Click"  runat="server">Upload</asp:LinkButton>
+                                                                        </span>
+                                                                    </label>
+                                                                </div>
                                                             </td>
                                                         </tr>
                                                     </ItemTemplate>

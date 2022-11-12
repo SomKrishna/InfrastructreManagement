@@ -29,9 +29,21 @@ namespace WebServices.CodeUnitReference {
     [System.Web.Services.WebServiceBindingAttribute(Name="InfraCodeunit_Binding", Namespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit")]
     public partial class InfraCodeunit : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
+        private System.Threading.SendOrPostCallback Download_Auditorium_Building_FileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Download_Hostel_Building_FileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Download_Institutional_FileOperationCompleted;
+        
         private System.Threading.SendOrPostCallback Download_Land_FileOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Download_ProjectEntry_FileOperationCompleted;
+        
         private System.Threading.SendOrPostCallback Download_Project_FileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Download_Staff_Building_FileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GeneralLand_Building_FileOperationCompleted;
         
         private System.Threading.SendOrPostCallback ExportAuditoriumBuildingOperationCompleted;
         
@@ -73,9 +85,21 @@ namespace WebServices.CodeUnitReference {
         
         private System.Threading.SendOrPostCallback ImportLandFileOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Upload_Auditorium_Buliding_FileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GeneralLand_Buliding_FileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_Hostel_Buliding_FileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_Institute_Buliding_FileOperationCompleted;
+        
         private System.Threading.SendOrPostCallback Upload_Land_FileOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Upload_Project_Entry_FileOperationCompleted;
+        
         private System.Threading.SendOrPostCallback Upload_Project_FileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_Staff_Buliding_FileOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -116,10 +140,28 @@ namespace WebServices.CodeUnitReference {
         }
         
         /// <remarks/>
+        public event Download_Auditorium_Building_FileCompletedEventHandler Download_Auditorium_Building_FileCompleted;
+        
+        /// <remarks/>
+        public event Download_Hostel_Building_FileCompletedEventHandler Download_Hostel_Building_FileCompleted;
+        
+        /// <remarks/>
+        public event Download_Institutional_FileCompletedEventHandler Download_Institutional_FileCompleted;
+        
+        /// <remarks/>
         public event Download_Land_FileCompletedEventHandler Download_Land_FileCompleted;
         
         /// <remarks/>
+        public event Download_ProjectEntry_FileCompletedEventHandler Download_ProjectEntry_FileCompleted;
+        
+        /// <remarks/>
         public event Download_Project_FileCompletedEventHandler Download_Project_FileCompleted;
+        
+        /// <remarks/>
+        public event Download_Staff_Building_FileCompletedEventHandler Download_Staff_Building_FileCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GeneralLand_Building_FileCompletedEventHandler Downlond_GeneralLand_Building_FileCompleted;
         
         /// <remarks/>
         public event ExportAuditoriumBuildingCompletedEventHandler ExportAuditoriumBuildingCompleted;
@@ -182,10 +224,121 @@ namespace WebServices.CodeUnitReference {
         public event ImportLandFileCompletedEventHandler ImportLandFileCompleted;
         
         /// <remarks/>
+        public event Upload_Auditorium_Buliding_FileCompletedEventHandler Upload_Auditorium_Buliding_FileCompleted;
+        
+        /// <remarks/>
+        public event Upload_GeneralLand_Buliding_FileCompletedEventHandler Upload_GeneralLand_Buliding_FileCompleted;
+        
+        /// <remarks/>
+        public event Upload_Hostel_Buliding_FileCompletedEventHandler Upload_Hostel_Buliding_FileCompleted;
+        
+        /// <remarks/>
+        public event Upload_Institute_Buliding_FileCompletedEventHandler Upload_Institute_Buliding_FileCompleted;
+        
+        /// <remarks/>
         public event Upload_Land_FileCompletedEventHandler Upload_Land_FileCompleted;
         
         /// <remarks/>
+        public event Upload_Project_Entry_FileCompletedEventHandler Upload_Project_Entry_FileCompleted;
+        
+        /// <remarks/>
         public event Upload_Project_FileCompletedEventHandler Upload_Project_FileCompleted;
+        
+        /// <remarks/>
+        public event Upload_Staff_Buliding_FileCompletedEventHandler Upload_Staff_Buliding_FileCompleted;
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Auditorium_Buildin" +
+            "g_File", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Download_Auditorium_Building_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Download_Auditorium_Building_File(string buildingCode) {
+            object[] results = this.Invoke("Download_Auditorium_Building_File", new object[] {
+                        buildingCode});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Download_Auditorium_Building_FileAsync(string buildingCode) {
+            this.Download_Auditorium_Building_FileAsync(buildingCode, null);
+        }
+        
+        /// <remarks/>
+        public void Download_Auditorium_Building_FileAsync(string buildingCode, object userState) {
+            if ((this.Download_Auditorium_Building_FileOperationCompleted == null)) {
+                this.Download_Auditorium_Building_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownload_Auditorium_Building_FileOperationCompleted);
+            }
+            this.InvokeAsync("Download_Auditorium_Building_File", new object[] {
+                        buildingCode}, this.Download_Auditorium_Building_FileOperationCompleted, userState);
+        }
+        
+        private void OnDownload_Auditorium_Building_FileOperationCompleted(object arg) {
+            if ((this.Download_Auditorium_Building_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Download_Auditorium_Building_FileCompleted(this, new Download_Auditorium_Building_FileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Hostel_Building_Fi" +
+            "le", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Download_Hostel_Building_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Download_Hostel_Building_File(string blockCode) {
+            object[] results = this.Invoke("Download_Hostel_Building_File", new object[] {
+                        blockCode});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Download_Hostel_Building_FileAsync(string blockCode) {
+            this.Download_Hostel_Building_FileAsync(blockCode, null);
+        }
+        
+        /// <remarks/>
+        public void Download_Hostel_Building_FileAsync(string blockCode, object userState) {
+            if ((this.Download_Hostel_Building_FileOperationCompleted == null)) {
+                this.Download_Hostel_Building_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownload_Hostel_Building_FileOperationCompleted);
+            }
+            this.InvokeAsync("Download_Hostel_Building_File", new object[] {
+                        blockCode}, this.Download_Hostel_Building_FileOperationCompleted, userState);
+        }
+        
+        private void OnDownload_Hostel_Building_FileOperationCompleted(object arg) {
+            if ((this.Download_Hostel_Building_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Download_Hostel_Building_FileCompleted(this, new Download_Hostel_Building_FileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Institutional_File" +
+            "", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Download_Institutional_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Download_Institutional_File(string blockCode) {
+            object[] results = this.Invoke("Download_Institutional_File", new object[] {
+                        blockCode});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Download_Institutional_FileAsync(string blockCode) {
+            this.Download_Institutional_FileAsync(blockCode, null);
+        }
+        
+        /// <remarks/>
+        public void Download_Institutional_FileAsync(string blockCode, object userState) {
+            if ((this.Download_Institutional_FileOperationCompleted == null)) {
+                this.Download_Institutional_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownload_Institutional_FileOperationCompleted);
+            }
+            this.InvokeAsync("Download_Institutional_File", new object[] {
+                        blockCode}, this.Download_Institutional_FileOperationCompleted, userState);
+        }
+        
+        private void OnDownload_Institutional_FileOperationCompleted(object arg) {
+            if ((this.Download_Institutional_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Download_Institutional_FileCompleted(this, new Download_Institutional_FileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Land_File", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Download_Land_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -218,6 +371,38 @@ namespace WebServices.CodeUnitReference {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_ProjectEntry_File", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Download_ProjectEntry_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Download_ProjectEntry_File(int projectType, string projectCode) {
+            object[] results = this.Invoke("Download_ProjectEntry_File", new object[] {
+                        projectType,
+                        projectCode});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Download_ProjectEntry_FileAsync(int projectType, string projectCode) {
+            this.Download_ProjectEntry_FileAsync(projectType, projectCode, null);
+        }
+        
+        /// <remarks/>
+        public void Download_ProjectEntry_FileAsync(int projectType, string projectCode, object userState) {
+            if ((this.Download_ProjectEntry_FileOperationCompleted == null)) {
+                this.Download_ProjectEntry_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownload_ProjectEntry_FileOperationCompleted);
+            }
+            this.InvokeAsync("Download_ProjectEntry_File", new object[] {
+                        projectType,
+                        projectCode}, this.Download_ProjectEntry_FileOperationCompleted, userState);
+        }
+        
+        private void OnDownload_ProjectEntry_FileOperationCompleted(object arg) {
+            if ((this.Download_ProjectEntry_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Download_ProjectEntry_FileCompleted(this, new Download_ProjectEntry_FileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Project_File", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Download_Project_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
         public string Download_Project_File(int projectType, string projectCode) {
@@ -246,6 +431,68 @@ namespace WebServices.CodeUnitReference {
             if ((this.Download_Project_FileCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.Download_Project_FileCompleted(this, new Download_Project_FileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Staff_Building_Fil" +
+            "e", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Download_Staff_Building_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Download_Staff_Building_File(string blockCode) {
+            object[] results = this.Invoke("Download_Staff_Building_File", new object[] {
+                        blockCode});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Download_Staff_Building_FileAsync(string blockCode) {
+            this.Download_Staff_Building_FileAsync(blockCode, null);
+        }
+        
+        /// <remarks/>
+        public void Download_Staff_Building_FileAsync(string blockCode, object userState) {
+            if ((this.Download_Staff_Building_FileOperationCompleted == null)) {
+                this.Download_Staff_Building_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownload_Staff_Building_FileOperationCompleted);
+            }
+            this.InvokeAsync("Download_Staff_Building_File", new object[] {
+                        blockCode}, this.Download_Staff_Building_FileOperationCompleted, userState);
+        }
+        
+        private void OnDownload_Staff_Building_FileOperationCompleted(object arg) {
+            if ((this.Download_Staff_Building_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Download_Staff_Building_FileCompleted(this, new Download_Staff_Building_FileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GeneralLand_Buildi" +
+            "ng_File", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GeneralLand_Building_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GeneralLand_Building_File(string primaryKey) {
+            object[] results = this.Invoke("Downlond_GeneralLand_Building_File", new object[] {
+                        primaryKey});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GeneralLand_Building_FileAsync(string primaryKey) {
+            this.Downlond_GeneralLand_Building_FileAsync(primaryKey, null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GeneralLand_Building_FileAsync(string primaryKey, object userState) {
+            if ((this.Downlond_GeneralLand_Building_FileOperationCompleted == null)) {
+                this.Downlond_GeneralLand_Building_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GeneralLand_Building_FileOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GeneralLand_Building_File", new object[] {
+                        primaryKey}, this.Downlond_GeneralLand_Building_FileOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GeneralLand_Building_FileOperationCompleted(object arg) {
+            if ((this.Downlond_GeneralLand_Building_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GeneralLand_Building_FileCompleted(this, new Downlond_GeneralLand_Building_FileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -819,6 +1066,130 @@ namespace WebServices.CodeUnitReference {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Auditorium_Buliding_" +
+            "File", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_Auditorium_Buliding_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_Auditorium_Buliding_File(string buildingCode, string fileName) {
+            this.Invoke("Upload_Auditorium_Buliding_File", new object[] {
+                        buildingCode,
+                        fileName});
+        }
+        
+        /// <remarks/>
+        public void Upload_Auditorium_Buliding_FileAsync(string buildingCode, string fileName) {
+            this.Upload_Auditorium_Buliding_FileAsync(buildingCode, fileName, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_Auditorium_Buliding_FileAsync(string buildingCode, string fileName, object userState) {
+            if ((this.Upload_Auditorium_Buliding_FileOperationCompleted == null)) {
+                this.Upload_Auditorium_Buliding_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_Auditorium_Buliding_FileOperationCompleted);
+            }
+            this.InvokeAsync("Upload_Auditorium_Buliding_File", new object[] {
+                        buildingCode,
+                        fileName}, this.Upload_Auditorium_Buliding_FileOperationCompleted, userState);
+        }
+        
+        private void OnUpload_Auditorium_Buliding_FileOperationCompleted(object arg) {
+            if ((this.Upload_Auditorium_Buliding_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_Auditorium_Buliding_FileCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GeneralLand_Buliding" +
+            "_File", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GeneralLand_Buliding_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GeneralLand_Buliding_File(string primaryKey, string fileName) {
+            this.Invoke("Upload_GeneralLand_Buliding_File", new object[] {
+                        primaryKey,
+                        fileName});
+        }
+        
+        /// <remarks/>
+        public void Upload_GeneralLand_Buliding_FileAsync(string primaryKey, string fileName) {
+            this.Upload_GeneralLand_Buliding_FileAsync(primaryKey, fileName, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GeneralLand_Buliding_FileAsync(string primaryKey, string fileName, object userState) {
+            if ((this.Upload_GeneralLand_Buliding_FileOperationCompleted == null)) {
+                this.Upload_GeneralLand_Buliding_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GeneralLand_Buliding_FileOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GeneralLand_Buliding_File", new object[] {
+                        primaryKey,
+                        fileName}, this.Upload_GeneralLand_Buliding_FileOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GeneralLand_Buliding_FileOperationCompleted(object arg) {
+            if ((this.Upload_GeneralLand_Buliding_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GeneralLand_Buliding_FileCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Hostel_Buliding_File" +
+            "", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_Hostel_Buliding_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_Hostel_Buliding_File(string blockCode, string fileName) {
+            this.Invoke("Upload_Hostel_Buliding_File", new object[] {
+                        blockCode,
+                        fileName});
+        }
+        
+        /// <remarks/>
+        public void Upload_Hostel_Buliding_FileAsync(string blockCode, string fileName) {
+            this.Upload_Hostel_Buliding_FileAsync(blockCode, fileName, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_Hostel_Buliding_FileAsync(string blockCode, string fileName, object userState) {
+            if ((this.Upload_Hostel_Buliding_FileOperationCompleted == null)) {
+                this.Upload_Hostel_Buliding_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_Hostel_Buliding_FileOperationCompleted);
+            }
+            this.InvokeAsync("Upload_Hostel_Buliding_File", new object[] {
+                        blockCode,
+                        fileName}, this.Upload_Hostel_Buliding_FileOperationCompleted, userState);
+        }
+        
+        private void OnUpload_Hostel_Buliding_FileOperationCompleted(object arg) {
+            if ((this.Upload_Hostel_Buliding_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_Hostel_Buliding_FileCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Institute_Buliding_F" +
+            "ile", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_Institute_Buliding_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_Institute_Buliding_File(string blockCode, string fileName) {
+            this.Invoke("Upload_Institute_Buliding_File", new object[] {
+                        blockCode,
+                        fileName});
+        }
+        
+        /// <remarks/>
+        public void Upload_Institute_Buliding_FileAsync(string blockCode, string fileName) {
+            this.Upload_Institute_Buliding_FileAsync(blockCode, fileName, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_Institute_Buliding_FileAsync(string blockCode, string fileName, object userState) {
+            if ((this.Upload_Institute_Buliding_FileOperationCompleted == null)) {
+                this.Upload_Institute_Buliding_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_Institute_Buliding_FileOperationCompleted);
+            }
+            this.InvokeAsync("Upload_Institute_Buliding_File", new object[] {
+                        blockCode,
+                        fileName}, this.Upload_Institute_Buliding_FileOperationCompleted, userState);
+        }
+        
+        private void OnUpload_Institute_Buliding_FileOperationCompleted(object arg) {
+            if ((this.Upload_Institute_Buliding_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_Institute_Buliding_FileCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Land_File", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_Land_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void Upload_Land_File(string khatianNo, string fileName) {
             this.Invoke("Upload_Land_File", new object[] {
@@ -845,6 +1216,38 @@ namespace WebServices.CodeUnitReference {
             if ((this.Upload_Land_FileCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.Upload_Land_FileCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Project_Entry_File", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_Project_Entry_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_Project_Entry_File(int projectType, string projectCode, string fileName) {
+            this.Invoke("Upload_Project_Entry_File", new object[] {
+                        projectType,
+                        projectCode,
+                        fileName});
+        }
+        
+        /// <remarks/>
+        public void Upload_Project_Entry_FileAsync(int projectType, string projectCode, string fileName) {
+            this.Upload_Project_Entry_FileAsync(projectType, projectCode, fileName, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_Project_Entry_FileAsync(int projectType, string projectCode, string fileName, object userState) {
+            if ((this.Upload_Project_Entry_FileOperationCompleted == null)) {
+                this.Upload_Project_Entry_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_Project_Entry_FileOperationCompleted);
+            }
+            this.InvokeAsync("Upload_Project_Entry_File", new object[] {
+                        projectType,
+                        projectCode,
+                        fileName}, this.Upload_Project_Entry_FileOperationCompleted, userState);
+        }
+        
+        private void OnUpload_Project_Entry_FileOperationCompleted(object arg) {
+            if ((this.Upload_Project_Entry_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_Project_Entry_FileCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -881,6 +1284,36 @@ namespace WebServices.CodeUnitReference {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Staff_Buliding_File", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_Staff_Buliding_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_Staff_Buliding_File(string quarterCode, string fileName) {
+            this.Invoke("Upload_Staff_Buliding_File", new object[] {
+                        quarterCode,
+                        fileName});
+        }
+        
+        /// <remarks/>
+        public void Upload_Staff_Buliding_FileAsync(string quarterCode, string fileName) {
+            this.Upload_Staff_Buliding_FileAsync(quarterCode, fileName, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_Staff_Buliding_FileAsync(string quarterCode, string fileName, object userState) {
+            if ((this.Upload_Staff_Buliding_FileOperationCompleted == null)) {
+                this.Upload_Staff_Buliding_FileOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_Staff_Buliding_FileOperationCompleted);
+            }
+            this.InvokeAsync("Upload_Staff_Buliding_File", new object[] {
+                        quarterCode,
+                        fileName}, this.Upload_Staff_Buliding_FileOperationCompleted, userState);
+        }
+        
+        private void OnUpload_Staff_Buliding_FileOperationCompleted(object arg) {
+            if ((this.Upload_Staff_Buliding_FileCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_Staff_Buliding_FileCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -896,6 +1329,84 @@ namespace WebServices.CodeUnitReference {
                 return true;
             }
             return false;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Download_Auditorium_Building_FileCompletedEventHandler(object sender, Download_Auditorium_Building_FileCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Download_Auditorium_Building_FileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Download_Auditorium_Building_FileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Download_Hostel_Building_FileCompletedEventHandler(object sender, Download_Hostel_Building_FileCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Download_Hostel_Building_FileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Download_Hostel_Building_FileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Download_Institutional_FileCompletedEventHandler(object sender, Download_Institutional_FileCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Download_Institutional_FileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Download_Institutional_FileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
         }
     }
     
@@ -927,6 +1438,32 @@ namespace WebServices.CodeUnitReference {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Download_ProjectEntry_FileCompletedEventHandler(object sender, Download_ProjectEntry_FileCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Download_ProjectEntry_FileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Download_ProjectEntry_FileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void Download_Project_FileCompletedEventHandler(object sender, Download_Project_FileCompletedEventArgs e);
     
     /// <remarks/>
@@ -938,6 +1475,58 @@ namespace WebServices.CodeUnitReference {
         private object[] results;
         
         internal Download_Project_FileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Download_Staff_Building_FileCompletedEventHandler(object sender, Download_Staff_Building_FileCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Download_Staff_Building_FileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Download_Staff_Building_FileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GeneralLand_Building_FileCompletedEventHandler(object sender, Downlond_GeneralLand_Building_FileCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GeneralLand_Building_FileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GeneralLand_Building_FileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1429,11 +2018,35 @@ namespace WebServices.CodeUnitReference {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_Auditorium_Buliding_FileCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GeneralLand_Buliding_FileCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_Hostel_Buliding_FileCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_Institute_Buliding_FileCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void Upload_Land_FileCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_Project_Entry_FileCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void Upload_Project_FileCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_Staff_Buliding_FileCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

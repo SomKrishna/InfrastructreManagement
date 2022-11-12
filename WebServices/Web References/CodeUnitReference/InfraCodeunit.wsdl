@@ -2,6 +2,48 @@
 <definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="Download_Auditorium_Building_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="buildingCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Download_Auditorium_Building_File_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Download_Hostel_Building_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="blockCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Download_Hostel_Building_File_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Download_Institutional_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="blockCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Download_Institutional_File_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
       <element name="Download_Land_File">
         <complexType>
           <sequence>
@@ -10,6 +52,21 @@
         </complexType>
       </element>
       <element name="Download_Land_File_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Download_ProjectEntry_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="projectType" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="projectCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Download_ProjectEntry_File_Result">
         <complexType>
           <sequence>
             <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
@@ -25,6 +82,34 @@
         </complexType>
       </element>
       <element name="Download_Project_File_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Download_Staff_Building_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="blockCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Download_Staff_Building_File_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GeneralLand_Building_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="primaryKey" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GeneralLand_Building_File_Result">
         <complexType>
           <sequence>
             <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
@@ -271,6 +356,58 @@
           <sequence />
         </complexType>
       </element>
+      <element name="Upload_Auditorium_Buliding_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="buildingCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fileName" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_Auditorium_Buliding_File_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GeneralLand_Buliding_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="primaryKey" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fileName" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GeneralLand_Buliding_File_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_Hostel_Buliding_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="blockCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fileName" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_Hostel_Buliding_File_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_Institute_Buliding_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="blockCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fileName" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_Institute_Buliding_File_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
       <element name="Upload_Land_File">
         <complexType>
           <sequence>
@@ -280,6 +417,20 @@
         </complexType>
       </element>
       <element name="Upload_Land_File_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_Project_Entry_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="projectType" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="projectCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fileName" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_Project_Entry_File_Result">
         <complexType>
           <sequence />
         </complexType>
@@ -298,19 +449,68 @@
           <sequence />
         </complexType>
       </element>
+      <element name="Upload_Staff_Buliding_File">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="quarterCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fileName" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_Staff_Buliding_File_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
     </schema>
   </types>
+  <message name="Download_Auditorium_Building_File">
+    <part name="parameters" element="tns:Download_Auditorium_Building_File" />
+  </message>
+  <message name="Download_Auditorium_Building_File_Result">
+    <part name="parameters" element="tns:Download_Auditorium_Building_File_Result" />
+  </message>
+  <message name="Download_Hostel_Building_File">
+    <part name="parameters" element="tns:Download_Hostel_Building_File" />
+  </message>
+  <message name="Download_Hostel_Building_File_Result">
+    <part name="parameters" element="tns:Download_Hostel_Building_File_Result" />
+  </message>
+  <message name="Download_Institutional_File">
+    <part name="parameters" element="tns:Download_Institutional_File" />
+  </message>
+  <message name="Download_Institutional_File_Result">
+    <part name="parameters" element="tns:Download_Institutional_File_Result" />
+  </message>
   <message name="Download_Land_File">
     <part name="parameters" element="tns:Download_Land_File" />
   </message>
   <message name="Download_Land_File_Result">
     <part name="parameters" element="tns:Download_Land_File_Result" />
   </message>
+  <message name="Download_ProjectEntry_File">
+    <part name="parameters" element="tns:Download_ProjectEntry_File" />
+  </message>
+  <message name="Download_ProjectEntry_File_Result">
+    <part name="parameters" element="tns:Download_ProjectEntry_File_Result" />
+  </message>
   <message name="Download_Project_File">
     <part name="parameters" element="tns:Download_Project_File" />
   </message>
   <message name="Download_Project_File_Result">
     <part name="parameters" element="tns:Download_Project_File_Result" />
+  </message>
+  <message name="Download_Staff_Building_File">
+    <part name="parameters" element="tns:Download_Staff_Building_File" />
+  </message>
+  <message name="Download_Staff_Building_File_Result">
+    <part name="parameters" element="tns:Download_Staff_Building_File_Result" />
+  </message>
+  <message name="Downlond_GeneralLand_Building_File">
+    <part name="parameters" element="tns:Downlond_GeneralLand_Building_File" />
+  </message>
+  <message name="Downlond_GeneralLand_Building_File_Result">
+    <part name="parameters" element="tns:Downlond_GeneralLand_Building_File_Result" />
   </message>
   <message name="ExportAuditoriumBuilding">
     <part name="parameters" element="tns:ExportAuditoriumBuilding" />
@@ -432,11 +632,41 @@
   <message name="ImportLandFile_Result">
     <part name="parameters" element="tns:ImportLandFile_Result" />
   </message>
+  <message name="Upload_Auditorium_Buliding_File">
+    <part name="parameters" element="tns:Upload_Auditorium_Buliding_File" />
+  </message>
+  <message name="Upload_Auditorium_Buliding_File_Result">
+    <part name="parameters" element="tns:Upload_Auditorium_Buliding_File_Result" />
+  </message>
+  <message name="Upload_GeneralLand_Buliding_File">
+    <part name="parameters" element="tns:Upload_GeneralLand_Buliding_File" />
+  </message>
+  <message name="Upload_GeneralLand_Buliding_File_Result">
+    <part name="parameters" element="tns:Upload_GeneralLand_Buliding_File_Result" />
+  </message>
+  <message name="Upload_Hostel_Buliding_File">
+    <part name="parameters" element="tns:Upload_Hostel_Buliding_File" />
+  </message>
+  <message name="Upload_Hostel_Buliding_File_Result">
+    <part name="parameters" element="tns:Upload_Hostel_Buliding_File_Result" />
+  </message>
+  <message name="Upload_Institute_Buliding_File">
+    <part name="parameters" element="tns:Upload_Institute_Buliding_File" />
+  </message>
+  <message name="Upload_Institute_Buliding_File_Result">
+    <part name="parameters" element="tns:Upload_Institute_Buliding_File_Result" />
+  </message>
   <message name="Upload_Land_File">
     <part name="parameters" element="tns:Upload_Land_File" />
   </message>
   <message name="Upload_Land_File_Result">
     <part name="parameters" element="tns:Upload_Land_File_Result" />
+  </message>
+  <message name="Upload_Project_Entry_File">
+    <part name="parameters" element="tns:Upload_Project_Entry_File" />
+  </message>
+  <message name="Upload_Project_Entry_File_Result">
+    <part name="parameters" element="tns:Upload_Project_Entry_File_Result" />
   </message>
   <message name="Upload_Project_File">
     <part name="parameters" element="tns:Upload_Project_File" />
@@ -444,14 +674,44 @@
   <message name="Upload_Project_File_Result">
     <part name="parameters" element="tns:Upload_Project_File_Result" />
   </message>
+  <message name="Upload_Staff_Buliding_File">
+    <part name="parameters" element="tns:Upload_Staff_Buliding_File" />
+  </message>
+  <message name="Upload_Staff_Buliding_File_Result">
+    <part name="parameters" element="tns:Upload_Staff_Buliding_File_Result" />
+  </message>
   <portType name="InfraCodeunit_Port">
+    <operation name="Download_Auditorium_Building_File">
+      <input name="Download_Auditorium_Building_File" message="tns:Download_Auditorium_Building_File" />
+      <output name="Download_Auditorium_Building_File_Result" message="tns:Download_Auditorium_Building_File_Result" />
+    </operation>
+    <operation name="Download_Hostel_Building_File">
+      <input name="Download_Hostel_Building_File" message="tns:Download_Hostel_Building_File" />
+      <output name="Download_Hostel_Building_File_Result" message="tns:Download_Hostel_Building_File_Result" />
+    </operation>
+    <operation name="Download_Institutional_File">
+      <input name="Download_Institutional_File" message="tns:Download_Institutional_File" />
+      <output name="Download_Institutional_File_Result" message="tns:Download_Institutional_File_Result" />
+    </operation>
     <operation name="Download_Land_File">
       <input name="Download_Land_File" message="tns:Download_Land_File" />
       <output name="Download_Land_File_Result" message="tns:Download_Land_File_Result" />
     </operation>
+    <operation name="Download_ProjectEntry_File">
+      <input name="Download_ProjectEntry_File" message="tns:Download_ProjectEntry_File" />
+      <output name="Download_ProjectEntry_File_Result" message="tns:Download_ProjectEntry_File_Result" />
+    </operation>
     <operation name="Download_Project_File">
       <input name="Download_Project_File" message="tns:Download_Project_File" />
       <output name="Download_Project_File_Result" message="tns:Download_Project_File_Result" />
+    </operation>
+    <operation name="Download_Staff_Building_File">
+      <input name="Download_Staff_Building_File" message="tns:Download_Staff_Building_File" />
+      <output name="Download_Staff_Building_File_Result" message="tns:Download_Staff_Building_File_Result" />
+    </operation>
+    <operation name="Downlond_GeneralLand_Building_File">
+      <input name="Downlond_GeneralLand_Building_File" message="tns:Downlond_GeneralLand_Building_File" />
+      <output name="Downlond_GeneralLand_Building_File_Result" message="tns:Downlond_GeneralLand_Building_File_Result" />
     </operation>
     <operation name="ExportAuditoriumBuilding">
       <input name="ExportAuditoriumBuilding" message="tns:ExportAuditoriumBuilding" />
@@ -533,17 +793,68 @@
       <input name="ImportLandFile" message="tns:ImportLandFile" />
       <output name="ImportLandFile_Result" message="tns:ImportLandFile_Result" />
     </operation>
+    <operation name="Upload_Auditorium_Buliding_File">
+      <input name="Upload_Auditorium_Buliding_File" message="tns:Upload_Auditorium_Buliding_File" />
+      <output name="Upload_Auditorium_Buliding_File_Result" message="tns:Upload_Auditorium_Buliding_File_Result" />
+    </operation>
+    <operation name="Upload_GeneralLand_Buliding_File">
+      <input name="Upload_GeneralLand_Buliding_File" message="tns:Upload_GeneralLand_Buliding_File" />
+      <output name="Upload_GeneralLand_Buliding_File_Result" message="tns:Upload_GeneralLand_Buliding_File_Result" />
+    </operation>
+    <operation name="Upload_Hostel_Buliding_File">
+      <input name="Upload_Hostel_Buliding_File" message="tns:Upload_Hostel_Buliding_File" />
+      <output name="Upload_Hostel_Buliding_File_Result" message="tns:Upload_Hostel_Buliding_File_Result" />
+    </operation>
+    <operation name="Upload_Institute_Buliding_File">
+      <input name="Upload_Institute_Buliding_File" message="tns:Upload_Institute_Buliding_File" />
+      <output name="Upload_Institute_Buliding_File_Result" message="tns:Upload_Institute_Buliding_File_Result" />
+    </operation>
     <operation name="Upload_Land_File">
       <input name="Upload_Land_File" message="tns:Upload_Land_File" />
       <output name="Upload_Land_File_Result" message="tns:Upload_Land_File_Result" />
+    </operation>
+    <operation name="Upload_Project_Entry_File">
+      <input name="Upload_Project_Entry_File" message="tns:Upload_Project_Entry_File" />
+      <output name="Upload_Project_Entry_File_Result" message="tns:Upload_Project_Entry_File_Result" />
     </operation>
     <operation name="Upload_Project_File">
       <input name="Upload_Project_File" message="tns:Upload_Project_File" />
       <output name="Upload_Project_File_Result" message="tns:Upload_Project_File_Result" />
     </operation>
+    <operation name="Upload_Staff_Buliding_File">
+      <input name="Upload_Staff_Buliding_File" message="tns:Upload_Staff_Buliding_File" />
+      <output name="Upload_Staff_Buliding_File_Result" message="tns:Upload_Staff_Buliding_File_Result" />
+    </operation>
   </portType>
   <binding name="InfraCodeunit_Binding" type="tns:InfraCodeunit_Port">
     <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Download_Auditorium_Building_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Auditorium_Building_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Download_Auditorium_Building_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Download_Auditorium_Building_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Download_Hostel_Building_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Hostel_Building_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Download_Hostel_Building_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Download_Hostel_Building_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Download_Institutional_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Institutional_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Download_Institutional_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Download_Institutional_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
     <operation name="Download_Land_File">
       <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Land_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       <input name="Download_Land_File">
@@ -553,12 +864,39 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
+    <operation name="Download_ProjectEntry_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_ProjectEntry_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Download_ProjectEntry_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Download_ProjectEntry_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
     <operation name="Download_Project_File">
       <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Project_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       <input name="Download_Project_File">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="Download_Project_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Download_Staff_Building_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Download_Staff_Building_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Download_Staff_Building_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Download_Staff_Building_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GeneralLand_Building_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GeneralLand_Building_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GeneralLand_Building_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GeneralLand_Building_File_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
@@ -742,6 +1080,42 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
+    <operation name="Upload_Auditorium_Buliding_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Auditorium_Buliding_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_Auditorium_Buliding_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_Auditorium_Buliding_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GeneralLand_Buliding_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GeneralLand_Buliding_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GeneralLand_Buliding_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GeneralLand_Buliding_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_Hostel_Buliding_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Hostel_Buliding_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_Hostel_Buliding_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_Hostel_Buliding_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_Institute_Buliding_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Institute_Buliding_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_Institute_Buliding_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_Institute_Buliding_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
     <operation name="Upload_Land_File">
       <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Land_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       <input name="Upload_Land_File">
@@ -751,12 +1125,30 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
+    <operation name="Upload_Project_Entry_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Project_Entry_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_Project_Entry_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_Project_Entry_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
     <operation name="Upload_Project_File">
       <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Project_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       <input name="Upload_Project_File">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="Upload_Project_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_Staff_Buliding_File">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_Staff_Buliding_File" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_Staff_Buliding_File">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_Staff_Buliding_File_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>

@@ -207,11 +207,11 @@
                                         <div class="col-md-6 contact-info">
                                             <div class="container">
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Khatian_Serial_No</label>
+                                                    <label for="exampleAccount">Khatian Serial No</label>
                                                     <asp:TextBox ID="txtKhatian_Serial_No" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Plot_No</label>
+                                                    <label for="exampleAccount">Plot No</label>
                                                     <asp:TextBox ID="txtPlot_No" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
@@ -219,23 +219,23 @@
                                                     <asp:TextBox ID="txtTahasil" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">RI_Circle</label>
+                                                    <label for="exampleAccount">RI Circle</label>
                                                     <asp:TextBox ID="txtRI_Circle" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Land_possessioner_Details</label>
+                                                    <label for="exampleAccount">Land Possessioner Details</label>
                                                     <asp:TextBox ID="txtLand_possessioner_Details" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Encroachment_Plot_No</label>
+                                                    <label for="exampleAccount">Encroachment Plot No</label>
                                                     <asp:TextBox ID="txtEncroachment_Plot_No" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Dispute_Plot_No</label>
+                                                    <label for="exampleAccount">Dispute Plot No</label>
                                                     <asp:TextBox ID="txtDispute_Plot_No" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">CasePlot_No</label>
+                                                    <label for="exampleAccount">CasePlot No</label>
                                                     <asp:TextBox ID="txtCasePlot_No" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
@@ -243,7 +243,7 @@
                                         <div class="col-md-6 contact-info">
                                             <div class="container">
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Land_Kisam</label>
+                                                    <label for="exampleAccount">Land Kisam</label>
                                                     <asp:DropDownList ID="ddlLandKisam" CssClass="form-control" runat="server">
                                                         <asp:ListItem>Select</asp:ListItem>
                                                         <asp:ListItem Value="Abadi_Irrigated_Two_Crops">Irrigated Two Crops</asp:ListItem>
@@ -273,20 +273,44 @@
                                                     <asp:TextBox ID="txtVillage" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Land_Owner_Details</label>
+                                                    <label for="exampleAccount">Land Owner Details</label>
                                                     <asp:TextBox ID="txtLand_Owner_Details" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Land_Issue_Description</label>
+                                                    <label for="exampleAccount">Land Issue Description</label>
                                                     <asp:TextBox ID="txtLand_Issue_Description" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Encroachment_Plot_Area</label>
+                                                    <label for="exampleAccount">Encroachment Plot Area</label>
                                                     <asp:TextBox ID="txtEncroachment_Plot_Area" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Dispute_Area</label>
+                                                    <label for="exampleAccount">Dispute Area</label>
                                                     <asp:TextBox ID="txtDispute_Area" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                                </div>
+                                                <%--<div class="form-group">
+                                                    <label class="input-group-btn">
+                                                        <span class="custom-file-input btn">
+                                                            <asp:FileUpload ID="LandpdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="btnUpload" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                        </span>
+                                                    </label>
+                                                </div>--%>
+                                                <div class="form-group">
+                                                    <label for="exampleAccount">Upload file</label>
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <div class='file'>
+                                                                    <label for='input-file'>
+                                                                        <i class="material-icons">cloud_queue
+                                                                        </i>Max PDF file size 2MB
+                                                                    </label>
+                                                                    <asp:FileUpload ID="pdfUploader" accept="application/pdf" runat="server" />&nbsp;
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </div>
                                             </div>
                                         </div>

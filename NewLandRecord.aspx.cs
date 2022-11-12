@@ -1,5 +1,6 @@
 ﻿using InfrastructureManagement.Common;
 using System;
+using System.IO;
 using System.Web.UI.WebControls;
 using WebServices;
 using WebServices.Helper;
@@ -77,6 +78,23 @@ namespace InfrastructureManagement
                 txtDispute_Plot_No.Text = string.Empty;
                 txtDispute_Area.Text = string.Empty;
                 txtCasePlot_No.Text = string.Empty;
+                if (pdfUploader.HasFile)
+                {
+                    string fileExtention = Path.GetExtension(pdfUploader.FileName);
+                    string finalFileName = Path.GetFileNameWithoutExtension(pdfUploader.FileName.Substring(0, 10)) + "_" + DateTime.Now.ToString("dd MMM yyyy") + fileExtention;
+                    string path = Path.Combine(System.Web.HttpContext.Current.Server.MapPath("./" + "PDF" + "/"));
+                    if (!Directory.Exists(path))
+                        Directory.CreateDirectory(path);
+                    if (Directory.Exists(path))
+                    {
+                        path = Path.Combine(path, finalFileName);
+                        pdfUploader.SaveAs(path);
+                    }
+                    string servicePath = @"\\genesisnav16\PORTAL\PDF\" + finalFileName;
+                    ODataServices.ImportPdfRoRFile(obj.Khatian_Serial_No, servicePath);
+                    Alert.ShowAlert(this, "s", "file Upload successfully");
+                }
+
                 Alert.ShowAlert(this, "s", result);
             }
             else

@@ -90,6 +90,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\GeneralLandBuildingReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\HostelReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -170,6 +175,14 @@
     </None>
     <None Include="Web References\EstimatePrepReference\EstimatePrepCard.wsdl" />
     <None Include="Web References\EstimatePrepReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GeneralLandBuildingReference\GeneralLandBuildingCard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GeneralLandBuildingReference\GeneralLandBuildingCard.wsdl" />
+    <None Include="Web References\GeneralLandBuildingReference\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -296,6 +309,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>WebServices_EstimatePrepReference_EstimatePrepCard_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/GeneralLandBuildingCard">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GeneralLandBuildingReference\</RelPath>
+      <UpdateFromURL>http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/GeneralLandBuildingCard</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebServices_GeneralLandBuildingReference_GeneralLandBuildingCard_Service</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%2520India%2520Ltd./Page/HostelBuildingCard">
       <UrlBehavior>Dynamic</UrlBehavior>

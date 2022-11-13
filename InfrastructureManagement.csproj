@@ -543,6 +543,7 @@
     <Content Include="BuildingList.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="EstimatePreparationMonitoring.aspx" />
+    <Content Include="GeneralLandBuildingDetailsCard.aspx" />
     <Content Include="images\loader_icon.gif" />
     <Content Include="LandRecord.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -678,6 +679,13 @@
     </Compile>
     <Compile Include="EstimatePreparationMonitoring.aspx.designer.cs">
       <DependentUpon>EstimatePreparationMonitoring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralLandBuildingDetailsCard.aspx.cs">
+      <DependentUpon>GeneralLandBuildingDetailsCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralLandBuildingDetailsCard.aspx.designer.cs">
+      <DependentUpon>GeneralLandBuildingDetailsCard.aspx</DependentUpon>
     </Compile>
     <Compile Include="LandRecord.aspx.cs">
       <DependentUpon>LandRecord.aspx</DependentUpon>

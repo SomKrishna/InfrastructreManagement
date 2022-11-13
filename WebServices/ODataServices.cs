@@ -640,12 +640,12 @@ namespace WebServices
             return q;
         }
 
-        public static Infra.Projectprogressdetailscard GetProjectProgressByProjectCode(string projectCode)
+        public static List<Infra.Projectprogressdetailscard> GetProjectProgressByProjectCode(string projectCode)
         {
             ProjectProgressReference.Projectprogressdetailscard_Service _obj_Binding = (ProjectProgressReference.Projectprogressdetailscard_Service)Configuration.getNavService(new ProjectProgressReference.Projectprogressdetailscard_Service(), "Projectprogressdetailscard", "Page");
             ProjectProgressReference.Projectprogressdetailscard obj = new ProjectProgressReference.Projectprogressdetailscard();
             List<Infra.Projectprogressdetailscard> objList = GetAllProjectProgress().Where(x => string.Equals(x.Project_Code, projectCode, StringComparison.OrdinalIgnoreCase)).ToList();
-            return objList.FirstOrDefault();
+            return objList;
         }
 
         public static string AddProjectProgressDeatils(ProjectProgressReference.Projectprogressdetailscard input)
@@ -855,7 +855,38 @@ namespace WebServices
             }
         }
 
+        public static string CreateGeneralBuildingRecord(GeneralLandBuildingReference.GeneralLandBuildingCard obj)
+        {
+            try
+            {
+                GeneralLandBuildingReference.GeneralLandBuildingCard_Service _obj_Binding = (GeneralLandBuildingReference.GeneralLandBuildingCard_Service)Configuration.getNavService(new GeneralLandBuildingReference.GeneralLandBuildingCard_Service(), "GeneralLandBuildingCard", "Page");
+                _obj_Binding.Create(ref obj);
+                return "Data Saved Successfully";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
 
+        public static string UpdateGeneralBuildingRecord(GeneralLandBuildingReference.GeneralLandBuildingCard input)
+        {
+            try
+            {
+                GeneralLandBuildingReference.GeneralLandBuildingCard_Service _obj_Binding = (GeneralLandBuildingReference.GeneralLandBuildingCard_Service)Configuration.getNavService(new GeneralLandBuildingReference.GeneralLandBuildingCard_Service(), "GeneralLandBuildingCard", "Page");
+                GeneralLandBuildingReference.GeneralLandBuildingCard obj = new GeneralLandBuildingReference.GeneralLandBuildingCard();
+
+                //obj = _obj_Binding.re
+
+                
+                _obj_Binding.Update(ref obj);
+                return ExceptionHelper.UpdateMessage;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
         private static void Context_BuildingRequest(object sender, BuildingRequestEventArgs e)
         {
             string authKey = ConfigurationManager.AppSettings["AuthKey"].ToString();

@@ -436,6 +436,7 @@
                                      <li class="dropdown clearfix">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Building<b class="caret"></b></a>
                                         <ul class="dropdown-menu" id="Ul1" runat="server">
+                                            <li><a href="GeneralLandBuildingDetailsCard.aspx">Add General Building</a></li>
                                             <li><a href="NewEntryBuilding.aspx">New Entry</a></li>
                                             <li><a href="UpdateBuildings.aspx">Edit</a></li>
                                             <li><a href="BuildingList.aspx">Building List</a></li>

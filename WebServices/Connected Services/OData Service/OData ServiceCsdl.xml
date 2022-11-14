@@ -215,6 +215,8 @@
         <NavigationProperty Name="EstimatePrepCard" Type="Collection(NAV.EstimatePrepCard)" ContainsTarget="true" />
         <NavigationProperty Name="FinancialUpgradeCard" Type="Collection(NAV.FinancialUpgradeCard)" ContainsTarget="true" />
         <NavigationProperty Name="FinancialUpgradeList" Type="Collection(NAV.FinancialUpgradeList)" ContainsTarget="true" />
+        <NavigationProperty Name="GeneralLandBuildingCard" Type="Collection(NAV.GeneralLandBuildingCard)" ContainsTarget="true" />
+        <NavigationProperty Name="GeneralLandBuildingList" Type="Collection(NAV.GeneralLandBuildingList)" ContainsTarget="true" />
         <NavigationProperty Name="GraduationList" Type="Collection(NAV.GraduationList)" ContainsTarget="true" />
         <NavigationProperty Name="HostelBuildingCard" Type="Collection(NAV.HostelBuildingCard)" ContainsTarget="true" />
         <NavigationProperty Name="HostelBuildingsList" Type="Collection(NAV.HostelBuildingsList)" ContainsTarget="true" />
@@ -1687,7 +1689,7 @@
           </Annotation>
         </Property>
         <Property Name="Session" Type="Edm.String" MaxLength="30">
-          <Annotation Term="NAV.LabelId" String="Drive" />
+          <Annotation Term="NAV.LabelId" String="Session" />
           <Annotation Term="NAV.NavType">
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
@@ -1699,7 +1701,7 @@
           </Annotation>
         </Property>
         <Property Name="Class_Timing" Type="Edm.String" MaxLength="10">
-          <Annotation Term="NAV.LabelId" String="Session" />
+          <Annotation Term="NAV.LabelId" String="Class Timing" />
           <Annotation Term="NAV.NavType">
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
@@ -2331,8 +2333,17 @@
         <NavigationProperty Name="Admission_year_Link" Type="Collection(NAV.AcademicYearList)" ContainsTarget="true">
           <ReferentialConstraint Property="Admission_year" ReferencedProperty="Code" />
         </NavigationProperty>
+        <NavigationProperty Name="Assigned_to_Link" Type="Collection(NAV.EmployeeList)" ContainsTarget="true">
+          <ReferentialConstraint Property="Assigned_to" ReferencedProperty="No" />
+        </NavigationProperty>
+        <NavigationProperty Name="AdmittedBy_Link" Type="Collection(NAV.EmployeeList)" ContainsTarget="true">
+          <ReferentialConstraint Property="AdmittedBy" ReferencedProperty="No" />
+        </NavigationProperty>
         <NavigationProperty Name="AcademicYear_Link" Type="Collection(NAV.AcademicYearList)" ContainsTarget="true">
           <ReferentialConstraint Property="AcademicYear" ReferencedProperty="Code" />
+        </NavigationProperty>
+        <NavigationProperty Name="Previous_assigned_Link" Type="Collection(NAV.EmployeeList)" ContainsTarget="true">
+          <ReferentialConstraint Property="Previous_assigned" ReferencedProperty="No" />
         </NavigationProperty>
         <Annotation Term="NAV.LabelId" String="ApplicantList" />
       </EntityType>
@@ -2444,6 +2455,12 @@
             <EnumMember>NAV.NavType/Int</EnumMember>
           </Annotation>
         </Property>
+        <Property Name="Uploaded_FileName" Type="Edm.String" MaxLength="200">
+          <Annotation Term="NAV.LabelId" String="Uploaded FileName" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
         <Annotation Term="NAV.LabelId" String="AuditoriumBuilding" />
       </EntityType>
       <EntityType Name="AuditoriumBuildingsList">
@@ -2551,6 +2568,12 @@
           <Annotation Term="NAV.LabelId" String="Year of Construction" />
           <Annotation Term="NAV.NavType">
             <EnumMember>NAV.NavType/Int</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Uploaded_FileName" Type="Edm.String" MaxLength="200">
+          <Annotation Term="NAV.LabelId" String="Uploaded FileName" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
         </Property>
         <Annotation Term="NAV.LabelId" String="AuditoriumBuildingsList" />
@@ -3917,6 +3940,9 @@
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
         </Property>
+        <NavigationProperty Name="HRMS_ID_Link" Type="Collection(NAV.EmployeeList)" ContainsTarget="true">
+          <ReferentialConstraint Property="HRMS_ID" ReferencedProperty="No" />
+        </NavigationProperty>
         <NavigationProperty Name="Dept_Trade_Section_Link" Type="Collection(NAV.DepartmentList)" ContainsTarget="true">
           <ReferentialConstraint Property="Dept_Trade_Section" ReferencedProperty="Departments_Trades_Section" />
         </NavigationProperty>
@@ -4009,6 +4035,9 @@
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
         </Property>
+        <NavigationProperty Name="HRMS_ID_Link" Type="Collection(NAV.EmployeeList)" ContainsTarget="true">
+          <ReferentialConstraint Property="HRMS_ID" ReferencedProperty="No" />
+        </NavigationProperty>
         <NavigationProperty Name="Dept_Trade_Section_Link" Type="Collection(NAV.DepartmentList)" ContainsTarget="true">
           <ReferentialConstraint Property="Dept_Trade_Section" ReferencedProperty="Departments_Trades_Section" />
         </NavigationProperty>
@@ -4856,6 +4885,9 @@
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
         </Property>
+        <NavigationProperty Name="HRMS_ID_Link" Type="Collection(NAV.EmployeeList)" ContainsTarget="true">
+          <ReferentialConstraint Property="HRMS_ID" ReferencedProperty="No" />
+        </NavigationProperty>
         <Annotation Term="NAV.LabelId" String="EmployeeTransferApplicationCard" />
       </EntityType>
       <EntityType Name="EmployeeTransferApplicationList">
@@ -4947,6 +4979,9 @@
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
         </Property>
+        <NavigationProperty Name="HRMS_ID_Link" Type="Collection(NAV.EmployeeList)" ContainsTarget="true">
+          <ReferentialConstraint Property="HRMS_ID" ReferencedProperty="No" />
+        </NavigationProperty>
         <Annotation Term="NAV.LabelId" String="EmployeeTransferApplicationList" />
       </EntityType>
       <EntityType Name="EmployeeTransferHistoryCard">
@@ -5298,6 +5333,9 @@
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
         </Property>
+        <NavigationProperty Name="HRMS_ID_Link" Type="Collection(NAV.EmployeeList)" ContainsTarget="true">
+          <ReferentialConstraint Property="HRMS_ID" ReferencedProperty="No" />
+        </NavigationProperty>
         <Annotation Term="NAV.LabelId" String="FinancialUpgradeCard" />
       </EntityType>
       <EntityType Name="FinancialUpgradeList">
@@ -5362,7 +5400,421 @@
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
         </Property>
+        <NavigationProperty Name="HRMS_ID_Link" Type="Collection(NAV.EmployeeList)" ContainsTarget="true">
+          <ReferentialConstraint Property="HRMS_ID" ReferencedProperty="No" />
+        </NavigationProperty>
         <Annotation Term="NAV.LabelId" String="FinancialUpgradeList" />
+      </EntityType>
+      <EntityType Name="GeneralLandBuildingCard">
+        <Key>
+          <PropertyRef Name="Primary_Key" />
+        </Key>
+        <Property Name="Primary_Key" Type="Edm.String" Nullable="false" MaxLength="10">
+          <Annotation Term="NAV.LabelId" String="Primary_Key" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="Year_of_Establis_of_institute" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Year of Establishment of the institution" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Field_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Field Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Field_Area_in_Acres" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Field Area (in Acres)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Sport_x2019_s_Court_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Sport’s Court Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Sports_Court_Area_in_Sqft" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Sports Court Area (in Sqft)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Field_Gallery_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Field Gallery Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Conference_Room_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Conference Room Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Video_Conference_Room_Avail" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Video Conference Room Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Floor_size_of_the_Video_conf" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Floor size of the Video conference room (in sqft)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Video_Conference_Room_Location" Type="Edm.String" MaxLength="50">
+          <Annotation Term="NAV.LabelId" String="Video Conference Room Location" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Video_Conference_Room_Capacity" Type="Edm.Int32">
+          <Annotation Term="NAV.LabelId" String="Video Conference Room Capacity" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Int</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Library_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Library Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Central_Library_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Central Library Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Digital_Library_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Digital Library Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Canteen_Caf_for_Staffs_Avail" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Canteen/Cafeteria for Staffs Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Canteen_Cafeteria_Capacity" Type="Edm.Int32">
+          <Annotation Term="NAV.LabelId" String="Canteen/Cafeteria Capacity" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Int</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Dispensary_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Dispensary Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="CoE_Program_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="CoE Program Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="CoE_Program_Details" Type="Edm.String" MaxLength="250">
+          <Annotation Term="NAV.LabelId" String="CoE Program Details" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="CSR_Activities_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="CSR Activities Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="CSR_Activity_Details" Type="Edm.String" MaxLength="250">
+          <Annotation Term="NAV.LabelId" String="CSR Activity Details" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Staff_Common_Room_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Staff Common Room Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Staff_Common_Room_Details" Type="Edm.String" MaxLength="250">
+          <Annotation Term="NAV.LabelId" String="Staff Common Room Details" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Girls_Common_Room_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Girls Common Room Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Girls_Common_Room_Details" Type="Edm.String" MaxLength="250">
+          <Annotation Term="NAV.LabelId" String="Girls Common Room Details" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Boys_Common_Room_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Boys Common Room Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Boys_Common_Room_Details" Type="Edm.String" MaxLength="250">
+          <Annotation Term="NAV.LabelId" String="Boys Common Room Details" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Roof_Top_Solar_Panel_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Roof Top Solar Panel Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Rain_Water_Harvesting_Avail" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Rain Water Harvesting Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Sewage_Treatment_Plant_Avail" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Sewage Treatment Plant Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Internet_Connection_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Internet Connection Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Uploaded_FileName" Type="Edm.String" MaxLength="200">
+          <Annotation Term="NAV.LabelId" String="Uploaded FileName" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Annotation Term="NAV.LabelId" String="GeneralLandBuildingCard" />
+      </EntityType>
+      <EntityType Name="GeneralLandBuildingList">
+        <Key>
+          <PropertyRef Name="Primary_Key" />
+        </Key>
+        <Property Name="Primary_Key" Type="Edm.String" Nullable="false" MaxLength="10">
+          <Annotation Term="NAV.LabelId" String="Primary_Key" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+          <Annotation Term="NAV.AllowEditOnCreate" Bool="true" />
+        </Property>
+        <Property Name="Year_of_Establis_of_institute" Type="Edm.String" MaxLength="20">
+          <Annotation Term="NAV.LabelId" String="Year of Establishment of the institution" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Field_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Field Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Field_Area_in_Acres" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Field Area (in Acres)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Sport_x2019_s_Court_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Sport’s Court Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Sports_Court_Area_in_Sqft" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Sports Court Area (in Sqft)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Field_Gallery_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Field Gallery Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Conference_Room_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Conference Room Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Video_Conference_Room_Avail" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Video Conference Room Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Floor_size_of_the_Video_conf" Type="Edm.Decimal" Scale="Variable">
+          <Annotation Term="NAV.LabelId" String="Floor size of the Video conference room (in sqft)" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Real</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Video_Conference_Room_Location" Type="Edm.String" MaxLength="50">
+          <Annotation Term="NAV.LabelId" String="Video Conference Room Location" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Video_Conference_Room_Capacity" Type="Edm.Int32">
+          <Annotation Term="NAV.LabelId" String="Video Conference Room Capacity" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Int</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Library_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Library Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Central_Library_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Central Library Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Digital_Library_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Digital Library Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Canteen_Caf_for_Staffs_Avail" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Canteen/Cafeteria for Staffs Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Canteen_Cafeteria_Capacity" Type="Edm.Int32">
+          <Annotation Term="NAV.LabelId" String="Canteen/Cafeteria Capacity" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/Int</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Dispensary_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Dispensary Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="CoE_Program_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="CoE Program Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="CoE_Program_Details" Type="Edm.String" MaxLength="250">
+          <Annotation Term="NAV.LabelId" String="CoE Program Details" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="CSR_Activities_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="CSR Activities Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="CSR_Activity_Details" Type="Edm.String" MaxLength="250">
+          <Annotation Term="NAV.LabelId" String="CSR Activity Details" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Staff_Common_Room_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Staff Common Room Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Staff_Common_Room_Details" Type="Edm.String" MaxLength="250">
+          <Annotation Term="NAV.LabelId" String="Staff Common Room Details" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Girls_Common_Room_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Girls Common Room Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Girls_Common_Room_Details" Type="Edm.String" MaxLength="250">
+          <Annotation Term="NAV.LabelId" String="Girls Common Room Details" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Boys_Common_Room_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Boys Common Room Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Boys_Common_Room_Details" Type="Edm.String" MaxLength="250">
+          <Annotation Term="NAV.LabelId" String="Boys Common Room Details" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Roof_Top_Solar_Panel_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Roof Top Solar Panel Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Rain_Water_Harvesting_Avail" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Rain Water Harvesting Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Sewage_Treatment_Plant_Avail" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Sewage Treatment Plant Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Internet_Connection_Available" Type="Edm.String">
+          <Annotation Term="NAV.LabelId" String="Internet Connection Available" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Uploaded_FileName" Type="Edm.String" MaxLength="200">
+          <Annotation Term="NAV.LabelId" String="Uploaded FileName" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Annotation Term="NAV.LabelId" String="GeneralLandBuildingList" />
+        <Annotation Term="NAV.IsReadOnly" Bool="true" />
       </EntityType>
       <EntityType Name="GraduationList">
         <Key>
@@ -5539,6 +5991,12 @@
             <EnumMember>NAV.NavType/Int</EnumMember>
           </Annotation>
         </Property>
+        <Property Name="Uploaded_FileName" Type="Edm.String" MaxLength="200">
+          <Annotation Term="NAV.LabelId" String="Uploaded FileName" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
         <Annotation Term="NAV.LabelId" String="HostelBuildingCard" />
       </EntityType>
       <EntityType Name="HostelBuildingsList">
@@ -5694,6 +6152,12 @@
           <Annotation Term="NAV.LabelId" String="No. of Non-RO Water Purifier" />
           <Annotation Term="NAV.NavType">
             <EnumMember>NAV.NavType/Int</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Uploaded_FileName" Type="Edm.String" MaxLength="200">
+          <Annotation Term="NAV.LabelId" String="Uploaded FileName" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
         </Property>
         <Annotation Term="NAV.LabelId" String="HostelBuildingsList" />
@@ -6016,6 +6480,12 @@
             <EnumMember>NAV.NavType/Int</EnumMember>
           </Annotation>
         </Property>
+        <Property Name="Uploaded_FileName" Type="Edm.String" MaxLength="200">
+          <Annotation Term="NAV.LabelId" String="Uploaded FileName" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
         <Annotation Term="NAV.LabelId" String="InstituteBuildingCard" />
       </EntityType>
       <EntityType Name="InstituteBuildingsList">
@@ -6177,6 +6647,12 @@
           <Annotation Term="NAV.LabelId" String="No. of Non-RO Water Purifier" />
           <Annotation Term="NAV.NavType">
             <EnumMember>NAV.NavType/Int</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Uploaded_FileName" Type="Edm.String" MaxLength="200">
+          <Annotation Term="NAV.LabelId" String="Uploaded FileName" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
         </Property>
         <Annotation Term="NAV.LabelId" String="InstituteBuildingsList" />
@@ -9465,6 +9941,12 @@
             <EnumMember>NAV.NavType/Int</EnumMember>
           </Annotation>
         </Property>
+        <Property Name="Uploaded_FileName" Type="Edm.String" MaxLength="200">
+          <Annotation Term="NAV.LabelId" String="Uploaded FileName" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
         <Annotation Term="NAV.LabelId" String="StaffQuarterCard" />
       </EntityType>
       <EntityType Name="StaffQuartersList">
@@ -9614,6 +10096,12 @@
           <Annotation Term="NAV.LabelId" String="Year of Construction" />
           <Annotation Term="NAV.NavType">
             <EnumMember>NAV.NavType/Int</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Uploaded_FileName" Type="Edm.String" MaxLength="200">
+          <Annotation Term="NAV.LabelId" String="Uploaded FileName" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
         </Property>
         <Annotation Term="NAV.LabelId" String="StaffQuartersList" />
@@ -14174,6 +14662,12 @@
         </Property>
         <Property Name="UC_status" Type="Edm.String">
           <Annotation Term="NAV.LabelId" String="UC status" />
+          <Annotation Term="NAV.NavType">
+            <EnumMember>NAV.NavType/String</EnumMember>
+          </Annotation>
+        </Property>
+        <Property Name="Uploaded_FileName" Type="Edm.String" MaxLength="200">
+          <Annotation Term="NAV.LabelId" String="Uploaded FileName" />
           <Annotation Term="NAV.NavType">
             <EnumMember>NAV.NavType/String</EnumMember>
           </Annotation>
@@ -35651,13 +36145,38 @@
       <Action Name="HRMSCodeunit_HRMSDataImportFromGovtPortal">
         <Parameter Name="fileName" Type="Edm.String" />
       </Action>
+      <Action Name="InfraCodeunit_Download_Auditorium_Building_File">
+        <Parameter Name="buildingCode" Type="Edm.String" />
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Download_Hostel_Building_File">
+        <Parameter Name="blockCode" Type="Edm.String" />
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Download_Institutional_File">
+        <Parameter Name="blockCode" Type="Edm.String" />
+        <ReturnType Type="Edm.String" />
+      </Action>
       <Action Name="InfraCodeunit_Download_Land_File">
         <Parameter Name="khatianNo" Type="Edm.String" />
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Download_ProjectEntry_File">
+        <Parameter Name="projectType" Type="Edm.Int32" />
+        <Parameter Name="projectCode" Type="Edm.String" />
         <ReturnType Type="Edm.String" />
       </Action>
       <Action Name="InfraCodeunit_Download_Project_File">
         <Parameter Name="projectType" Type="Edm.Int32" />
         <Parameter Name="projectCode" Type="Edm.String" />
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Download_Staff_Building_File">
+        <Parameter Name="blockCode" Type="Edm.String" />
+        <ReturnType Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Downlond_GeneralLand_Building_File">
+        <Parameter Name="primaryKey" Type="Edm.String" />
         <ReturnType Type="Edm.String" />
       </Action>
       <Action Name="InfraCodeunit_ExportAuditoriumBuilding">
@@ -35720,13 +36239,38 @@
       <Action Name="InfraCodeunit_ImportLandFile">
         <Parameter Name="fileName" Type="Edm.String" />
       </Action>
+      <Action Name="InfraCodeunit_Upload_Auditorium_Buliding_File">
+        <Parameter Name="buildingCode" Type="Edm.String" />
+        <Parameter Name="fileName" Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Upload_GeneralLand_Buliding_File">
+        <Parameter Name="primaryKey" Type="Edm.String" />
+        <Parameter Name="fileName" Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Upload_Hostel_Buliding_File">
+        <Parameter Name="blockCode" Type="Edm.String" />
+        <Parameter Name="fileName" Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Upload_Institute_Buliding_File">
+        <Parameter Name="blockCode" Type="Edm.String" />
+        <Parameter Name="fileName" Type="Edm.String" />
+      </Action>
       <Action Name="InfraCodeunit_Upload_Land_File">
         <Parameter Name="khatianNo" Type="Edm.String" />
+        <Parameter Name="fileName" Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Upload_Project_Entry_File">
+        <Parameter Name="projectType" Type="Edm.Int32" />
+        <Parameter Name="projectCode" Type="Edm.String" />
         <Parameter Name="fileName" Type="Edm.String" />
       </Action>
       <Action Name="InfraCodeunit_Upload_Project_File">
         <Parameter Name="projectType" Type="Edm.Int32" />
         <Parameter Name="projectCode" Type="Edm.String" />
+        <Parameter Name="fileName" Type="Edm.String" />
+      </Action>
+      <Action Name="InfraCodeunit_Upload_Staff_Buliding_File">
+        <Parameter Name="quarterCode" Type="Edm.String" />
         <Parameter Name="fileName" Type="Edm.String" />
       </Action>
       <Action Name="BCPTTestSuite_AddLineToTestSuiteHeader_1490807849">
@@ -35856,8 +36400,14 @@
         <ActionImport Name="HRMSCodeunit_ExportStaffAchivementDetails" Action="NAV.HRMSCodeunit_ExportStaffAchivementDetails" />
         <ActionImport Name="HRMSCodeunit_ExportTransferConsolidatedList" Action="NAV.HRMSCodeunit_ExportTransferConsolidatedList" />
         <ActionImport Name="HRMSCodeunit_HRMSDataImportFromGovtPortal" Action="NAV.HRMSCodeunit_HRMSDataImportFromGovtPortal" />
+        <ActionImport Name="InfraCodeunit_Download_Auditorium_Building_File" Action="NAV.InfraCodeunit_Download_Auditorium_Building_File" />
+        <ActionImport Name="InfraCodeunit_Download_Hostel_Building_File" Action="NAV.InfraCodeunit_Download_Hostel_Building_File" />
+        <ActionImport Name="InfraCodeunit_Download_Institutional_File" Action="NAV.InfraCodeunit_Download_Institutional_File" />
         <ActionImport Name="InfraCodeunit_Download_Land_File" Action="NAV.InfraCodeunit_Download_Land_File" />
+        <ActionImport Name="InfraCodeunit_Download_ProjectEntry_File" Action="NAV.InfraCodeunit_Download_ProjectEntry_File" />
         <ActionImport Name="InfraCodeunit_Download_Project_File" Action="NAV.InfraCodeunit_Download_Project_File" />
+        <ActionImport Name="InfraCodeunit_Download_Staff_Building_File" Action="NAV.InfraCodeunit_Download_Staff_Building_File" />
+        <ActionImport Name="InfraCodeunit_Downlond_GeneralLand_Building_File" Action="NAV.InfraCodeunit_Downlond_GeneralLand_Building_File" />
         <ActionImport Name="InfraCodeunit_ExportAuditoriumBuilding" Action="NAV.InfraCodeunit_ExportAuditoriumBuilding" />
         <ActionImport Name="InfraCodeunit_ExportDTETAuditoriumBuilding" Action="NAV.InfraCodeunit_ExportDTETAuditoriumBuilding" />
         <ActionImport Name="InfraCodeunit_ExportDTETEstimatePreparationMonitoring" Action="NAV.InfraCodeunit_ExportDTETEstimatePreparationMonitoring" />
@@ -35878,8 +36428,14 @@
         <ActionImport Name="InfraCodeunit_ExportServiceMonitoring" Action="NAV.InfraCodeunit_ExportServiceMonitoring" />
         <ActionImport Name="InfraCodeunit_ExportStaffBuilding" Action="NAV.InfraCodeunit_ExportStaffBuilding" />
         <ActionImport Name="InfraCodeunit_ImportLandFile" Action="NAV.InfraCodeunit_ImportLandFile" />
+        <ActionImport Name="InfraCodeunit_Upload_Auditorium_Buliding_File" Action="NAV.InfraCodeunit_Upload_Auditorium_Buliding_File" />
+        <ActionImport Name="InfraCodeunit_Upload_GeneralLand_Buliding_File" Action="NAV.InfraCodeunit_Upload_GeneralLand_Buliding_File" />
+        <ActionImport Name="InfraCodeunit_Upload_Hostel_Buliding_File" Action="NAV.InfraCodeunit_Upload_Hostel_Buliding_File" />
+        <ActionImport Name="InfraCodeunit_Upload_Institute_Buliding_File" Action="NAV.InfraCodeunit_Upload_Institute_Buliding_File" />
         <ActionImport Name="InfraCodeunit_Upload_Land_File" Action="NAV.InfraCodeunit_Upload_Land_File" />
+        <ActionImport Name="InfraCodeunit_Upload_Project_Entry_File" Action="NAV.InfraCodeunit_Upload_Project_Entry_File" />
         <ActionImport Name="InfraCodeunit_Upload_Project_File" Action="NAV.InfraCodeunit_Upload_Project_File" />
+        <ActionImport Name="InfraCodeunit_Upload_Staff_Buliding_File" Action="NAV.InfraCodeunit_Upload_Staff_Buliding_File" />
         <ActionImport Name="BCPTTestSuite_AddLineToTestSuiteHeader_1490807849" Action="NAV.BCPTTestSuite_AddLineToTestSuiteHeader_1490807849" />
         <ActionImport Name="BCPTTestSuite_AddLineToTestSuiteHeader" Action="NAV.BCPTTestSuite_AddLineToTestSuiteHeader" />
         <ActionImport Name="BCPTTestSuite_AddLineToTestSuiteHeader_574159954" Action="NAV.BCPTTestSuite_AddLineToTestSuiteHeader_574159954" />
@@ -36866,6 +37422,50 @@
           <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
             <Record>
               <PropertyValue Property="Updatable" Bool="true" />
+            </Record>
+          </Annotation>
+        </EntitySet>
+        <EntitySet Name="GeneralLandBuildingCard" EntityType="NAV.GeneralLandBuildingCard">
+          <Annotation Term="Org.OData.Capabilities.V1.ChangeTracking">
+            <Record>
+              <PropertyValue Property="Supported" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+            <Record>
+              <PropertyValue Property="Deletable" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
+            <Record>
+              <PropertyValue Property="Insertable" Bool="true" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
+            <Record>
+              <PropertyValue Property="Updatable" Bool="true" />
+            </Record>
+          </Annotation>
+        </EntitySet>
+        <EntitySet Name="GeneralLandBuildingList" EntityType="NAV.GeneralLandBuildingList">
+          <Annotation Term="Org.OData.Capabilities.V1.ChangeTracking">
+            <Record>
+              <PropertyValue Property="Supported" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+            <Record>
+              <PropertyValue Property="Deletable" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
+            <Record>
+              <PropertyValue Property="Insertable" Bool="false" />
+            </Record>
+          </Annotation>
+          <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
+            <Record>
+              <PropertyValue Property="Updatable" Bool="false" />
             </Record>
           </Annotation>
         </EntitySet>
@@ -39597,6 +40197,120 @@
         <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
       </Annotations>
       <Annotations Target="NAV.FinancialUpgradeList/Status">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Field_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Sport_x2019_s_Court_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Field_Gallery_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Conference_Room_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Video_Conference_Room_Avail">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Library_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Central_Library_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Digital_Library_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Canteen_Caf_for_Staffs_Avail">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Dispensary_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/CoE_Program_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/CSR_Activities_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Staff_Common_Room_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Girls_Common_Room_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Boys_Common_Room_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Roof_Top_Solar_Panel_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Rain_Water_Harvesting_Avail">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Sewage_Treatment_Plant_Avail">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingCard/Internet_Connection_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Field_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Sport_x2019_s_Court_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Field_Gallery_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Conference_Room_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Video_Conference_Room_Avail">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Library_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Central_Library_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Digital_Library_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Canteen_Caf_for_Staffs_Avail">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Dispensary_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/CoE_Program_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/CSR_Activities_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Staff_Common_Room_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Girls_Common_Room_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Boys_Common_Room_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Roof_Top_Solar_Panel_Available">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Rain_Water_Harvesting_Avail">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Sewage_Treatment_Plant_Avail">
+        <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
+      </Annotations>
+      <Annotations Target="NAV.GeneralLandBuildingList/Internet_Connection_Available">
         <Annotation Term="Org.OData.Core.V1.IsLanguageDependent" Bool="true" />
       </Annotations>
       <Annotations Target="NAV.HostelBuildingCard/Hostel_Type">

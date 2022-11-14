@@ -149,7 +149,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleAccount">Field Area (in Acres)</label>
-                                                        <asp:TextBox ID="txtField_Area_in_Acres" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtField_Area_in_Acres" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleAccount">Sport's Court Available</label>
@@ -161,7 +161,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleAccount">Sports Court Area (in Sqft)</label>
-                                                        <asp:TextBox ID="txtSports_Court_Area_in_Sqft" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtSports_Court_Area_in_Sqft" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleAccount">Field Gallery Available</label>
@@ -189,11 +189,11 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleAccount">Floor size of the Vide Conf.</label>
-                                                        <asp:TextBox ID="txtFloor_size_of_the_Video_conf" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtFloor_size_of_the_Video_conf" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleAccount">Video Conference Room Capacity</label>
-                                                        <asp:TextBox ID="txtVideo_Conference_Room_Capacity" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtVideo_Conference_Room_Capacity" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
                                                     </div>
 
                                                     <div class="form-group">
@@ -236,7 +236,7 @@
 
                                                     <div class="form-group">
                                                         <label for="exampleAccount">Canteen/Cafeteria Capacity</label>
-                                                        <asp:TextBox ID="txtCanteen_Cafeteria_Capacity" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtCanteen_Cafeteria_Capacity" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
@@ -354,7 +354,9 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
+                                        <asp:HiddenField ID="hdnKey" runat="server" /> 
                                         <asp:Button ID="GenralSubmitBtn" runat="server" OnClick="GenralSubmitBtn_Click" CssClass="btn-s float-right submit" type="submit" Text="Submit" />
+                                        <asp:Button ID="GenralUpdateBtn" runat="server" OnClick="GenralUpdateBtn_Click" CssClass="btn-s float-right submit" type="submit" Text="Update" />
                                     </div>
                                 </div>
                             </div>

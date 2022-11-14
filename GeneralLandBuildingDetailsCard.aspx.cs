@@ -1,5 +1,6 @@
 ﻿using InfrastructureManagement.Common;
 using System;
+using System.Linq;
 using WebServices;
 using WebServices.Helper;
 
@@ -9,14 +10,57 @@ namespace InfrastructureManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var result = ODataServices.GetGeneralLandBuildingList();
+            if (result != null && result.Any())
+            {
+                var rec = result.FirstOrDefault();
+                GenralSubmitBtn.Visible = false;
+                GenralUpdateBtn.Visible = true;
+                hdnKey.Value = rec.Primary_Key;
+                ddlBoys_Common_Room_Available.SelectedValue = rec.Boys_Common_Room_Available;
+                txtBoys_Common_Room_Details.Text = rec.Boys_Common_Room_Details;
+                txtCanteen_Cafeteria_Capacity.Text = Convert.ToString(rec.Canteen_Cafeteria_Capacity);
+                ddlCanteen_Caf_for_Staffs_Avail.SelectedValue = rec.Canteen_Caf_for_Staffs_Avail;
+                ddlCentralLibraryAvailable.SelectedValue = rec.Central_Library_Available;
+                ddlCoE_Program_Available.SelectedValue = rec.CoE_Program_Available;
+                txtCoE_Program_Details.Text = rec.CoE_Program_Details;
+                ddlConferenceRoomAvailable.SelectedValue = rec.Conference_Room_Available;
+                ddlCSR_Activities_Available.SelectedValue = rec.CSR_Activities_Available;
+                txtCSR_Activity_Details.Text = rec.CSR_Activity_Details;
+                ddlDigitalLibraryAvailable.SelectedValue = rec.Digital_Library_Available;
+                ddlDispensary_Available.SelectedValue = rec.Dispensary_Available;
+                txtField_Area_in_Acres.Text = Convert.ToString(rec.Field_Area_in_Acres);
+                ddlFieldAvailable.SelectedValue = rec.Field_Available;
+                ddlFieldGalleryAvailable.SelectedValue = rec.Field_Gallery_Available;
+                txtFloor_size_of_the_Video_conf.Text = Convert.ToString(rec.Floor_size_of_the_Video_conf);
+                ddlGirls_Common_Room_Available.SelectedValue = rec.Girls_Common_Room_Available;
+                txtGirls_Common_Room_Details.Text = rec.Girls_Common_Room_Details;
+                ddlInternet_Connection_Available.SelectedValue = rec.Internet_Connection_Available;
+                ddlLibrary_Available.SelectedValue = rec.Library_Available;
+                ddlRain_Water_Harvesting_Avail.SelectedValue = rec.Rain_Water_Harvesting_Avail;
+                ddlRoof_Top_Solar_Panel_Available.SelectedValue = rec.Roof_Top_Solar_Panel_Available;
+                ddlSewage_Treatment_Plant_Avail.SelectedValue = rec.Sewage_Treatment_Plant_Avail;
+                txtSports_Court_Area_in_Sqft.Text = Convert.ToString(rec.Sports_Court_Area_in_Sqft);
+                ddlSportCourt.SelectedValue = rec.Sport_x2019_s_Court_Available;
+                ddlStaff_Common_Room_Available.SelectedValue = rec.Staff_Common_Room_Available;
+                txtStaff_Common_Room_Details.Text = rec.Staff_Common_Room_Details;
+                txtUploaded_FileName.Text = rec.Uploaded_FileName;
+                ddlVideo_Conference_Room_Avail.SelectedValue = rec.Video_Conference_Room_Avail;
+                txtVideo_Conference_Room_Capacity.Text = Convert.ToString(rec.Video_Conference_Room_Capacity);
+                txtVideo_Conference_Room_Location.Text = rec.Video_Conference_Room_Location;
+                txtYear_of_Establis_of_institute.Text = rec.Year_of_Establis_of_institute;
+            }
+            else
+            {
+                GenralSubmitBtn.Visible = true;
+                GenralUpdateBtn.Visible = false;
+            }
         }
 
         protected void GenralSubmitBtn_Click(object sender, EventArgs e)
         {
             var obj = new WebServices.GeneralLandBuildingReference.GeneralLandBuildingCard
             {
-
                 Boys_Common_Room_AvailableSpecified = true,
                 Canteen_Cafeteria_CapacitySpecified = true,
                 Canteen_Caf_for_Staffs_AvailSpecified = true,
@@ -91,8 +135,8 @@ namespace InfrastructureManagement
                 txtCSR_Activity_Details.Text = string.Empty;
                 ddlDigitalLibraryAvailable.SelectedValue = "Select";
                 ddlDispensary_Available.SelectedValue = "Select";
-                txtField_Area_in_Acres.Text = string.Empty,
-               ddlFieldAvailable.SelectedValue = "Select";
+                txtField_Area_in_Acres.Text = string.Empty;
+                ddlFieldAvailable.SelectedValue = "Select";
                 ddlFieldGalleryAvailable.SelectedValue = "Select";
                 txtFloor_size_of_the_Video_conf.Text = string.Empty;
                 ddlGirls_Common_Room_Available.SelectedValue = "Select";
@@ -118,4 +162,10 @@ namespace InfrastructureManagement
                 Alert.ShowAlert(this, "e", result);
             }
         }
+
+        protected void GenralUpdateBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+}

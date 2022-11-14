@@ -855,6 +855,18 @@ namespace WebServices
             }
         }
 
+        public static IList<Infra.GeneralLandBuildingList> GetGeneralLandBuildingList()
+        {
+            string serviceUrl = string.Format(Configuration.ODataServiceUrl());
+            Uri uri = new Uri(serviceUrl);
+            var container = new Infra.NAV(uri);
+            container.BuildingRequest += Context_BuildingRequest;
+            List<Infra.GeneralLandBuildingList> q = container.CreateQuery<Infra.GeneralLandBuildingList>("GeneralLandBuildingList").ToList();
+
+            return q;
+        }
+
+
         public static string CreateGeneralBuildingRecord(GeneralLandBuildingReference.GeneralLandBuildingCard obj)
         {
             try
@@ -876,9 +888,42 @@ namespace WebServices
                 GeneralLandBuildingReference.GeneralLandBuildingCard_Service _obj_Binding = (GeneralLandBuildingReference.GeneralLandBuildingCard_Service)Configuration.getNavService(new GeneralLandBuildingReference.GeneralLandBuildingCard_Service(), "GeneralLandBuildingCard", "Page");
                 GeneralLandBuildingReference.GeneralLandBuildingCard obj = new GeneralLandBuildingReference.GeneralLandBuildingCard();
 
-                //obj = _obj_Binding.re
+                obj = _obj_Binding.ReadByRecId(input.Key);
 
-                
+                obj.Boys_Common_Room_Available = input.Boys_Common_Room_Available;
+                obj.Boys_Common_Room_Details = input.Boys_Common_Room_Details;
+                obj.Canteen_Cafeteria_Capacity = input.Canteen_Cafeteria_Capacity;
+                obj.Canteen_Caf_for_Staffs_Avail = input.Canteen_Caf_for_Staffs_Avail;
+                obj.Central_Library_Available = input.Central_Library_Available;
+                obj.CoE_Program_Available = input.CoE_Program_Available;
+                obj.CoE_Program_Details = input.CoE_Program_Details;
+                obj.Conference_Room_Available = input.Conference_Room_Available;
+                obj.CSR_Activities_Available = input.CSR_Activities_Available;
+                obj.CSR_Activity_Details = input.CSR_Activity_Details;
+                obj.Digital_Library_Available = input.Digital_Library_Available;
+                obj.Dispensary_Available = input.Dispensary_Available;
+                obj.Field_Area_in_Acres = input.Field_Area_in_Acres;
+                obj.Field_Available = input.Field_Available;
+                obj.Field_Gallery_Available = input.Field_Gallery_Available;
+                obj.Floor_size_of_the_Video_conf = input.Floor_size_of_the_Video_conf;
+                obj.Girls_Common_Room_Available = input.Girls_Common_Room_Available;
+                obj.Girls_Common_Room_Details = input.Girls_Common_Room_Details;
+                obj.Internet_Connection_Available = input.Internet_Connection_Available;
+                obj.Library_Available = input.Library_Available;
+                obj.Rain_Water_Harvesting_Avail = input.Rain_Water_Harvesting_Avail;
+                obj.Roof_Top_Solar_Panel_Available = input.Roof_Top_Solar_Panel_Available;
+                obj.Sewage_Treatment_Plant_Avail = input.Sewage_Treatment_Plant_Avail;
+                obj.Sports_Court_Area_in_Sqft = input.Sports_Court_Area_in_Sqft;
+                obj.Sports_Court_Available = input.Sports_Court_Available;
+                obj.Staff_Common_Room_Available = input.Staff_Common_Room_Available;
+                obj.Staff_Common_Room_Details = input.Staff_Common_Room_Details;
+                obj.Uploaded_FileName = input.Uploaded_FileName;
+                obj.Video_Conference_Room_Avail = input.Video_Conference_Room_Avail;
+                obj.Video_Conference_Room_Capacity = input.Video_Conference_Room_Capacity;
+                obj.Video_Conference_Room_Location = input.Video_Conference_Room_Location;
+                obj.Year_of_Establis_of_institute = input.Year_of_Establis_of_institute;
+
+
                 _obj_Binding.Update(ref obj);
                 return ExceptionHelper.UpdateMessage;
             }

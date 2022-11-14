@@ -303,6 +303,15 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtUploaded_FileName;
 
         /// <summary>
+        /// hdnKey control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnKey;
+
+        /// <summary>
         /// GenralSubmitBtn control.
         /// </summary>
         /// <remarks>
@@ -310,5 +319,14 @@ namespace InfrastructureManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button GenralSubmitBtn;
+
+        /// <summary>
+        /// GenralUpdateBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button GenralUpdateBtn;
     }
 }

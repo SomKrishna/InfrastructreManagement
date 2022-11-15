@@ -159,6 +159,15 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtCanteen_Cafeteria_Capacity;
 
         /// <summary>
+        /// pdfUploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload pdfUploader;
+
+        /// <summary>
         /// ddlDispensary_Available control.
         /// </summary>
         /// <remarks>
@@ -303,6 +312,15 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtUploaded_FileName;
 
         /// <summary>
+        /// btnExport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExport;
+
+        /// <summary>
         /// hdnKey control.
         /// </summary>
         /// <remarks>
@@ -319,14 +337,5 @@ namespace InfrastructureManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button GenralSubmitBtn;
-
-        /// <summary>
-        /// GenralUpdateBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GenralUpdateBtn;
     }
 }

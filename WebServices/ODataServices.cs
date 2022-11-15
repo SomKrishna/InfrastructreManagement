@@ -152,6 +152,14 @@ namespace WebServices
             return returnValue;
         }
 
+        public static string Downlond_GeneralLand_Building_File(string primaryKey)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GeneralLand_Building_File(primaryKey);
+            return returnValue;
+        }
+
         public static void Upload_Auditorium_Buliding_File(string buildingCode, string fileName)
         {
             CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
@@ -178,6 +186,13 @@ namespace WebServices
             CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
             obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
             obj.Upload_Staff_Buliding_File(quarterCode, fileName);
+        }
+
+        public static void Upload_GeneralLand_Buliding_File(string primaryKey, string fileName)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GeneralLand_Buliding_File(primaryKey, fileName);
         }
         #endregion
         public static string ExportInstitutionalBuilding()
@@ -887,9 +902,9 @@ namespace WebServices
             {
                 GeneralLandBuildingReference.GeneralLandBuildingCard_Service _obj_Binding = (GeneralLandBuildingReference.GeneralLandBuildingCard_Service)Configuration.getNavService(new GeneralLandBuildingReference.GeneralLandBuildingCard_Service(), "GeneralLandBuildingCard", "Page");
                 GeneralLandBuildingReference.GeneralLandBuildingCard obj = new GeneralLandBuildingReference.GeneralLandBuildingCard();
-
-                obj = _obj_Binding.ReadByRecId(input.Key);
-
+                var recId = _obj_Binding.GetRecIdFromKey(input.Key);
+                obj = _obj_Binding.ReadByRecId(recId);
+                //obj.Key = string.Empty;
                 obj.Boys_Common_Room_Available = input.Boys_Common_Room_Available;
                 obj.Boys_Common_Room_Details = input.Boys_Common_Room_Details;
                 obj.Canteen_Cafeteria_Capacity = input.Canteen_Cafeteria_Capacity;

@@ -3,14 +3,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" />
     <style>
         .summary-box {
             margin-top: 75px;
             height: auto;
             text-align: center;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
             border: 1px solid;
         }
+
 
         .container.box {
             margin-top: 61px;
@@ -38,7 +40,6 @@
         .row.md-12.marginx {
             margin: 69px;
             padding-bottom: 36px;
-            border-bottom: 3px solid black;
         }
 
         i.fal.fa-plus-circle.full {
@@ -111,9 +112,82 @@
             background: black;
             color: white;
         }
+        /*Files Button*/
+        .file {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-        h3.hadingline {
-            border-bottom: 1px solid;
+            .file > input[type='file'] {
+                font-size: 100px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+            }
+
+            .file > label {
+                font-size: 1rem;
+                font-weight: 300;
+                cursor: pointer;
+                outline: 0;
+                user-select: none;
+                border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+                border-style: solid;
+                border-radius: 4px;
+                border-width: 1px;
+                background-color: hsl(0, 0%, 100%);
+                color: hsl(0, 0%, 29%);
+                padding-left: 16px;
+                padding-right: 16px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .file > label:hover {
+                    border-color: hsl(0, 0%, 21%);
+                }
+
+                .file > label:active {
+                    background-color: hsl(0, 0%, 96%);
+                }
+
+                .file > label > i {
+                    padding-right: 5px;
+                }
+
+            .file.float-left {
+                float: left;
+                margin: 16px;
+            }
+
+        .btn-upload.float-right {
+            float: right;
+            margin: 16px;
+            width: 72px;
+            height: 31px;
+        }
+
+        .btn-upload.float-left {
+            float: right;
+            width: auto;
+            height: 31px;
+        }
+
+        .textalline {
+            float: left;
+            font-size: 10px;
+            width: 203px;
+            text-align: justify;
+        }
+
+        .col-lg-12.col-md-12.summary-box {
+            margin: 94px 10px 10px -113px;
         }
     </style>
 
@@ -238,6 +312,22 @@
                                                         <label for="exampleAccount">Canteen/Cafeteria Capacity</label>
                                                         <asp:TextBox ID="txtCanteen_Cafeteria_Capacity" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
                                                     </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleAccount">Upload file</label>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class='file'>
+                                                                        <label for='input-file'>
+                                                                            <i class="material-icons">cloud_queue
+                                                                            </i>Max PDF file size 2MB
+                                                                        </label>
+                                                                        <asp:FileUpload ID="pdfUploader" accept="application/pdf" runat="server" />&nbsp;
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 contact-info">
@@ -353,11 +443,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <asp:HiddenField ID="hdnKey" runat="server" /> 
-                                        <asp:Button ID="GenralSubmitBtn" runat="server" OnClick="GenralSubmitBtn_Click" CssClass="btn-s float-right submit" type="submit" Text="Submit" />
-                                        <asp:Button ID="GenralUpdateBtn" runat="server" OnClick="GenralUpdateBtn_Click" CssClass="btn-s float-right submit" type="submit" Text="Update" />
+                                    <div class="col-lg-12 ExportFoot">
+                                        <asp:Button ID="btnExport" CssClass="exportcss btn-yellow" OnClick="btnExport_Click" runat="server" Text="Export" />
                                     </div>
+                                    <div class="col-md-12">
+                                        <asp:HiddenField ID="hdnKey" runat="server" />
+                                        <asp:Button ID="GenralSubmitBtn" runat="server" OnClick="GenralSubmitBtn_Click" CssClass="btn-s float-right submit" type="submit" Text="Submit" />
+                                        <%--<asp:Button ID="GenralUpdateBtn" runat="server" OnClick="GenralUpdateBtn_Click" CssClass="btn-s float-right submit" type="submit" Text="Update" />--%>
+                                    </div>
+                                    
                                 </div>
                             </div>
 

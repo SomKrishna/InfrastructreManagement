@@ -429,24 +429,24 @@
                                         <ul class="dropdown-menu" id="lidropmenu" runat="server">
                                             <li><a href="MasterDataOnLandAndBuildings.aspx">Land Master</a></li>
                                             <li><a href="NewLandRecord.aspx">Add Land Record</a></li>
-                                            <li><a href="LandRecordCard.aspx">Edit Land Record</a></li>
-                                            <li><a href="LandRecord.aspx">Land Records</a></li>
+                                            <li><a href="LandRecordCard.aspx">Update Land Record</a></li>
+                                            <li><a href="LandRecord.aspx">Land Record List</a></li>
                                         </ul>
                                     </li>
                                      <li class="dropdown clearfix">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Building<b class="caret"></b></a>
                                         <ul class="dropdown-menu" id="Ul1" runat="server">
-                                            <li><a href="GeneralLandBuildingDetailsCard.aspx">Add General Building</a></li>
-                                            <li><a href="NewEntryBuilding.aspx">New Entry</a></li>
-                                            <li><a href="UpdateBuildings.aspx">Edit</a></li>
+                                            <li><a href="GeneralLandBuildingDetailsCard.aspx">General Land/Building Details</a></li>
+                                            <li><a href="NewEntryBuilding.aspx">New Building Entry</a></li>
+                                            <li><a href="UpdateBuildings.aspx">Update Building</a></li>
                                             <li><a href="BuildingList.aspx">Building List</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown clearfix">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project<b class="caret"></b></a>
                                         <ul class="dropdown-menu" id="Ul2" runat="server">
-                                            <li><a href="ProjectWorkInput.aspx">New Project</a></li>
-                                            <li><a href="ProjectList.aspx">All Projects</a></li>
+                                            <li><a href="ProjectWorkInput.aspx">New Project Details</a></li>
+                                            <li><a href="ProjectList.aspx">All Project Details</a></li>
                                             <li><a href="ProjectProgressDetailsInput.aspx">Project Progress</a></li>
                                             <li><a href="EstimatePreparationMonitoring.aspx">Estimate Preparation</a></li>
                                         </ul>

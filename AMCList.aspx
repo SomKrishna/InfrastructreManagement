@@ -142,7 +142,7 @@
                                                                 <asp:Label ID="Label3" runat="server" Text='<%# Eval("Duration")%>'> </asp:Label>
                                                             </td>
                                                             <td>
-                                                                <asp:Label ID="Label5" runat="server" Text='<%# Eval("Date_of_Expiry")%>'> </asp:Label>
+                                                                <asp:Label ID="Label5" runat="server" Text='<%# DateTime.Parse(Eval("Date_of_Expiry").ToString()).ToString("d") %>'> </asp:Label>
                                                             </td>
                                                             <td>
                                                                 <asp:Label ID="Label4" runat="server" Text='<%# Eval("Annual_Cost_of_AMC")%>'> </asp:Label>

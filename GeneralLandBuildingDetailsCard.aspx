@@ -262,7 +262,7 @@
                                                         </asp:DropDownList>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Floor size of the Vide Conf.</label>
+                                                        <label for="exampleAccount">Floor size of the Video conference room (in sqft)</label>
                                                         <asp:TextBox ID="txtFloor_size_of_the_Video_conf" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
@@ -412,7 +412,7 @@
                                                         </asp:DropDownList>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Rain Water Harvestin Available</label>
+                                                        <label for="exampleAccount">Rain Water Harvesting Available</label>
                                                         <asp:DropDownList ID="ddlRain_Water_Harvesting_Avail" CssClass="form-control" runat="server">
                                                             <asp:ListItem Value="Select">Select</asp:ListItem>
                                                             <asp:ListItem Value="Yes">Yes</asp:ListItem>

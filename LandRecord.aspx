@@ -127,7 +127,7 @@
                                                                 <th runat="server">Disputed areas other than encroachment (in acres)</th>
                                                                 <th runat="server">Dispute Plot No. (Other Than Encroachment)</th>
                                                                 <th runat="server">Plot under Court Case</th>
-                                                                <th runat="server">RoR File</th>
+                                                                <th runat="server">Download RoR File</th>
                                                                 <th runat="server">Upload RoR File</th>
                                                             </tr>
                                                             <tr id="ItemPlaceholder" runat="server">

@@ -126,12 +126,18 @@
                     <div class="modal-header">
                         <div class="col-lg-12 NewEntrydiv">
                             <p class="NewEntry">Reports</p>
+                            <%--<div class="col-lg-6 col-md-6">
+                            
+                             <asp:Button ID="uploadBtn" runat="server" CssClass="btn-upload float-right" type="submit" Text="Upload" />
+                           
+                      </div>--%>
                         </div>
                     </div>
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-lg-12 col-md-12 model-box">
                                 <div class="row">
+                                    <asp:LinkButton ID="btnHome" CssClass="btn-link float-right" OnClick="btnHome_Click" runat="server">Home</asp:LinkButton>
                                     <div class="row md-12 marginx">
                                         <ol>
                                             <li>

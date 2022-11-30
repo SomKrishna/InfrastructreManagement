@@ -2,6 +2,7 @@
 using System;
 using System.Configuration;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Web.UI.WebControls;
 using WebServices;
@@ -15,7 +16,7 @@ namespace InfrastructureManagement
         {
             if (!IsPostBack)
             {
-                var vendorList = ODataServices.GetVendorList();
+                var vendorList = ODataServices.GetVendorList().Where(x => x.Name != string.Empty);
                 ddlAgencyName.DataSource = vendorList;
                 ddlAgencyName.DataTextField = "Name";
                 ddlAgencyName.DataValueField = "No";

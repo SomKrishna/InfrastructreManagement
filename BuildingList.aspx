@@ -121,7 +121,7 @@
                                                                 <th runat="server">Year of Construction</th>
                                                                 <th runat="server">No of RO Water Purifier</th>
                                                                 <th runat="server">No of Non RO Water Purifier</th>
-                                                                <th runat="server">Master Plan File</th>
+                                                                <th runat="server">Download Master Plan File</th>
                                                                 <th runat="server">Upload Master Plan File</th>
                                                             </tr>
                                                             <tr id="ItemPlaceholder" runat="server">
@@ -212,7 +212,7 @@
                                                                 <div class="input-group">
                                                                     <label class="input-group-btn">
                                                                         <span class="custom-file-input btn"> 
-                                                                            <asp:FileUpload ID="hostelBuildingpdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:FileUpload ID="hostelBuildingpdfUploader" runat="server" accept=".pdf" />
                                                                             <asp:LinkButton ID="hostelBuildingUpload" CssClass="btn btn-yellow" OnClick="hostelBuildingUpload_Click"  runat="server">Upload</asp:LinkButton>
                                                                         </span>
                                                                     </label>
@@ -242,7 +242,7 @@
                                                                 <th runat="server">Electricity Consumer No</th>
                                                                 <th runat="server">Building Safety Status</th>
                                                                 <th runat="server">Year of Construction</th>                                                                
-                                                                <th runat="server">Master Plan File</th>
+                                                                <th runat="server">Download Master Plan File</th>
                                                                 <th runat="server">Upload Master Plan File</th>
                                                             </tr>
                                                             <tr id="ItemPlaceholder" runat="server">
@@ -309,7 +309,7 @@
                                                                 <div class="input-group">
                                                                     <label class="input-group-btn">
                                                                         <span class="custom-file-input btn"> 
-                                                                            <asp:FileUpload ID="auditoriumpdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:FileUpload ID="auditoriumpdfUploader" runat="server" accept=".pdf" />
                                                                             <asp:LinkButton ID="auditoriumUpload" CssClass="btn btn-yellow" OnClick="auditoriumUpload_Click"  runat="server">Upload</asp:LinkButton>
                                                                         </span>
                                                                     </label>
@@ -348,7 +348,7 @@
                                                                 <th runat="server">Computer Lab Available</th>
                                                                 <th runat="server">No of RO Water Purifier</th>
                                                                 <th runat="server">No of Non RO Water Purifier</th>
-                                                                <th runat="server">Master Plan File</th>
+                                                                <th runat="server">Download Master Plan File</th>
                                                                 <th runat="server">Upload Master Plan File</th>
                                                             </tr>
                                                             <tr id="ItemPlaceholder" runat="server">
@@ -442,7 +442,7 @@
                                                                 <div class="input-group">
                                                                     <label class="input-group-btn">
                                                                         <span class="custom-file-input btn"> 
-                                                                            <asp:FileUpload ID="InstitutepdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:FileUpload ID="InstitutepdfUploader" runat="server" accept=".pdf" />
                                                                             <asp:LinkButton ID="InstituteUpload" CssClass="btn btn-yellow" OnClick="InstituteUpload_Click"  runat="server">Upload</asp:LinkButton>
                                                                         </span>
                                                                     </label>
@@ -474,7 +474,7 @@
                                                                 <th runat="server">Building Height</th>
                                                                 <th runat="server">Building Length</th>
                                                                 <th runat="server">Building Safety Status</th>
-                                                                <th runat="server">Master Plan File</th>
+                                                                <th runat="server">Download Master Plan File</th>
                                                                 <th runat="server">Upload Master Plan File</th>
                                                             </tr>
                                                             <tr id="ItemPlaceholder" runat="server">
@@ -547,7 +547,7 @@
                                                                 <div class="input-group">
                                                                     <label class="input-group-btn">
                                                                         <span class="custom-file-input btn"> 
-                                                                            <asp:FileUpload ID="StaffQuarterpdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:FileUpload ID="StaffQuarterpdfUploader" runat="server" accept=".pdf" />
                                                                             <asp:LinkButton ID="StaffQuarterUpload" CssClass="btn btn-yellow" OnClick="StaffQuarterUpload_Click"  runat="server">Upload</asp:LinkButton>
                                                                         </span>
                                                                     </label>

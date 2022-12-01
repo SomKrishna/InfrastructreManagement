@@ -71,7 +71,7 @@ namespace InfrastructureManagement
             if (uploadedFile.HasFile)
             {
                 string fileExtention = Path.GetExtension(uploadedFile.FileName);
-                string finalFileName = Path.GetFileNameWithoutExtension(uploadedFile.FileName.Substring(0, 10)) + "_" + DateTime.Now.ToString("dd MMM yyyy") + fileExtention;
+                string finalFileName = Path.GetFileNameWithoutExtension(new string(uploadedFile.FileName.Take(10).ToArray())) + "_" + DateTime.Now.ToString("dd MMM yyyy") + fileExtention;
                 string path = Path.Combine(System.Web.HttpContext.Current.Server.MapPath("./" + "PDF" + "/"));
                 if (!Directory.Exists(path))
                     Directory.CreateDirectory(path);

@@ -62,9 +62,11 @@
         .col-lg-12.col-md-12.summary-box {
             margin: 94px 10px 10px -113px;
         }
+
         .custom-file-input::-webkit-file-upload-button {
             visibility: hidden;
         }
+
         .custom-file-input::before {
             content: 'Choose File';
             display: inline-block;
@@ -80,9 +82,11 @@
             font-weight: 700;
             font-size: 10pt;
         }
+
         .custom-file-input:hover::before {
             border-color: black;
         }
+
         .custom-file-input:active::before {
             background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
         }
@@ -100,11 +104,14 @@
                     <div class="tab-pane active" id="1">
                         <div class="right_col_bg">
                             <div class="right_col_content border-box label-responsive">
-                                <div class="row">                                    
+                                <div class="row">
                                     <div class="col-md-12">
                                         <div class="table-responsive">
                                             <div id="exportto">
                                                 <asp:ListView ID="SecurityServiceListView" runat="server">
+                                                    <EmptyDataTemplate>
+                                                        There are no records
+                                                    </EmptyDataTemplate>
                                                     <LayoutTemplate>
                                                         <table runat="server" class="table table-bordered">
                                                             <tr runat="server">

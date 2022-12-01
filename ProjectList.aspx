@@ -62,9 +62,11 @@
         .col-lg-12.col-md-12.summary-box {
             margin: 94px 10px 10px -113px;
         }
+
         .custom-file-input::-webkit-file-upload-button {
             visibility: hidden;
         }
+
         .custom-file-input::before {
             content: 'Choose File';
             display: inline-block;
@@ -80,9 +82,11 @@
             font-weight: 700;
             font-size: 10pt;
         }
+
         .custom-file-input:hover::before {
             border-color: black;
         }
+
         .custom-file-input:active::before {
             background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
         }
@@ -116,6 +120,9 @@
                                         <div class="table-responsive">
                                             <div id="exportto">
                                                 <asp:ListView ID="ListView1" runat="server">
+                                                    <EmptyDataTemplate>
+                                                        There are no records
+                                                    </EmptyDataTemplate>
                                                     <LayoutTemplate>
                                                         <table runat="server" class="table table-bordered">
                                                             <tr runat="server">
@@ -171,14 +178,14 @@
                                                             <td>
                                                                 <asp:Label ID="Label8" runat="server" Text='<%# DateTime.Parse(Eval("Date_of_completion_as_per_agreement").ToString()).ToString("d") %>'> </asp:Label>
                                                             </td>
-                                                            
+
                                                             <td>
                                                                 <asp:LinkButton ID="btnExport" runat="server" OnClick="btnExport_Click"><i class="fa-regular fa-file"></i></asp:LinkButton>
                                                             </td>
                                                             <td>
                                                                 <div class="input-group">
                                                                     <label class="input-group-btn">
-                                                                        <span class="custom-file-input btn"> 
+                                                                        <span class="custom-file-input btn">
                                                                             <asp:FileUpload ID="ProjectpdfUploader" runat="server" Style="display: none" accept=".pdf" />
                                                                             <asp:LinkButton ID="btnUpload" CssClass="btn btn-yellow" OnClick="btnUpload_Click" runat="server">Upload</asp:LinkButton>
                                                                         </span>

@@ -62,6 +62,34 @@
         .col-lg-12.col-md-12.summary-box {
             margin: 94px 10px 10px -113px;
         }
+
+        .custom-file-input::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+
+        .custom-file-input::before {
+            content: 'Choose File';
+            display: inline-block;
+            background: linear-gradient(top, #f9f9f9, #e3e3e3);
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 5px 8px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            text-shadow: 1px 1px #fff;
+            font-weight: 700;
+            font-size: 10pt;
+        }
+
+        .custom-file-input:hover::before {
+            border-color: black;
+        }
+
+        .custom-file-input:active::before {
+            background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <contenttemplate>
@@ -93,6 +121,9 @@
                                         <div class="table-responsive">
                                             <div id="exportto">
                                                 <asp:ListView ID="HostelBuildingListView" runat="server">
+                                                    <EmptyDataTemplate>
+                                                        There are no records
+                                                    </EmptyDataTemplate>
                                                     <LayoutTemplate>
                                                         <table runat="server" class="table table-bordered">
                                                             <tr runat="server">
@@ -211,9 +242,9 @@
                                                             <td>
                                                                 <div class="input-group">
                                                                     <label class="input-group-btn">
-                                                                        <span class="custom-file-input btn"> 
-                                                                            <asp:FileUpload ID="hostelBuildingpdfUploader" runat="server" accept=".pdf" />
-                                                                            <asp:LinkButton ID="hostelBuildingUpload" CssClass="btn btn-yellow" OnClick="hostelBuildingUpload_Click"  runat="server">Upload</asp:LinkButton>
+                                                                        <span class="custom-file-input btn">
+                                                                            <asp:FileUpload ID="hostelBuildingpdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:LinkButton ID="hostelBuildingUpload" CssClass="btn btn-yellow" OnClick="hostelBuildingUpload_Click" runat="server">Upload</asp:LinkButton>
                                                                         </span>
                                                                     </label>
                                                                 </div>
@@ -222,6 +253,9 @@
                                                     </ItemTemplate>
                                                 </asp:ListView>
                                                 <asp:ListView ID="AuditoriumListView" runat="server">
+                                                    <EmptyDataTemplate>
+                                                        There are no records
+                                                    </EmptyDataTemplate>
                                                     <LayoutTemplate>
                                                         <table runat="server" class="table table-bordered">
                                                             <tr runat="server">
@@ -241,7 +275,7 @@
                                                                 <th runat="server">Electricity Load in KW</th>
                                                                 <th runat="server">Electricity Consumer No</th>
                                                                 <th runat="server">Building Safety Status</th>
-                                                                <th runat="server">Year of Construction</th>                                                                
+                                                                <th runat="server">Year of Construction</th>
                                                                 <th runat="server">Download Master Plan File</th>
                                                                 <th runat="server">Upload Master Plan File</th>
                                                             </tr>
@@ -308,9 +342,9 @@
                                                             <td>
                                                                 <div class="input-group">
                                                                     <label class="input-group-btn">
-                                                                        <span class="custom-file-input btn"> 
-                                                                            <asp:FileUpload ID="auditoriumpdfUploader" runat="server" accept=".pdf" />
-                                                                            <asp:LinkButton ID="auditoriumUpload" CssClass="btn btn-yellow" OnClick="auditoriumUpload_Click"  runat="server">Upload</asp:LinkButton>
+                                                                        <span class="custom-file-input btn">
+                                                                            <asp:FileUpload ID="auditoriumpdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:LinkButton ID="auditoriumUpload" CssClass="btn btn-yellow" OnClick="auditoriumUpload_Click" runat="server">Upload</asp:LinkButton>
                                                                         </span>
                                                                     </label>
                                                                 </div>
@@ -319,6 +353,9 @@
                                                     </ItemTemplate>
                                                 </asp:ListView>
                                                 <asp:ListView ID="InstituteListView" runat="server">
+                                                    <EmptyDataTemplate>
+                                                        There are no records
+                                                    </EmptyDataTemplate>
                                                     <LayoutTemplate>
                                                         <table runat="server" class="table table-bordered">
                                                             <tr runat="server">
@@ -441,9 +478,9 @@
                                                             <td>
                                                                 <div class="input-group">
                                                                     <label class="input-group-btn">
-                                                                        <span class="custom-file-input btn"> 
-                                                                            <asp:FileUpload ID="InstitutepdfUploader" runat="server" accept=".pdf" />
-                                                                            <asp:LinkButton ID="InstituteUpload" CssClass="btn btn-yellow" OnClick="InstituteUpload_Click"  runat="server">Upload</asp:LinkButton>
+                                                                        <span class="custom-file-input btn">
+                                                                            <asp:FileUpload ID="InstitutepdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:LinkButton ID="InstituteUpload" CssClass="btn btn-yellow" OnClick="InstituteUpload_Click" runat="server">Upload</asp:LinkButton>
                                                                         </span>
                                                                     </label>
                                                                 </div>
@@ -452,6 +489,9 @@
                                                     </ItemTemplate>
                                                 </asp:ListView>
                                                 <asp:ListView ID="StaffQuarterListView" runat="server">
+                                                    <EmptyDataTemplate>
+                                                        There are no records
+                                                    </EmptyDataTemplate>
                                                     <LayoutTemplate>
                                                         <table runat="server" class="table table-bordered">
                                                             <tr runat="server">
@@ -546,9 +586,9 @@
                                                             <td>
                                                                 <div class="input-group">
                                                                     <label class="input-group-btn">
-                                                                        <span class="custom-file-input btn"> 
-                                                                            <asp:FileUpload ID="StaffQuarterpdfUploader" runat="server" accept=".pdf" />
-                                                                            <asp:LinkButton ID="StaffQuarterUpload" CssClass="btn btn-yellow" OnClick="StaffQuarterUpload_Click"  runat="server">Upload</asp:LinkButton>
+                                                                        <span class="custom-file-input btn">
+                                                                            <asp:FileUpload ID="StaffQuarterpdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                            <asp:LinkButton ID="StaffQuarterUpload" CssClass="btn btn-yellow" OnClick="StaffQuarterUpload_Click" runat="server">Upload</asp:LinkButton>
                                                                         </span>
                                                                     </label>
                                                                 </div>

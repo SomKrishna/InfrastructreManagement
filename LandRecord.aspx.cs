@@ -18,6 +18,15 @@ namespace InfrastructureManagement
         {
             var data = ODataServices.GetLandDetailList().ToList();
 
+            if (data == null || !data.Any())
+            {
+                btnExport.Visible = false;
+            }
+            else 
+            {
+                btnExport.Visible = true;
+            }
+
             LandRecordList.DataSource = data;
             LandRecordList.DataBind();
         }

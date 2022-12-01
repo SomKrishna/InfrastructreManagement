@@ -276,10 +276,10 @@
                                                     <label for="exampleAccount">Land Owner Name</label>
                                                     <asp:TextBox ID="txtLand_Owner_Details" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
-                                                <div class="form-group">
+                                                <%--<div class="form-group">
                                                     <label for="exampleAccount">Land Issue Description</label>
                                                     <asp:TextBox ID="txtLand_Issue_Description" CssClass="form-control" runat="server"></asp:TextBox>
-                                                </div>
+                                                </div>--%>
                                                 <div class="form-group">
                                                     <label for="exampleAccount">Encroachment Plot Area</label>
                                                     <asp:TextBox ID="txtEncroachment_Plot_Area" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>

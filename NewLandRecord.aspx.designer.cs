@@ -123,15 +123,6 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtLand_Owner_Details;
 
         /// <summary>
-        /// txtLand_Issue_Description control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLand_Issue_Description;
-
-        /// <summary>
         /// txtEncroachment_Plot_Area control.
         /// </summary>
         /// <remarks>

@@ -53,7 +53,7 @@ namespace InfrastructureManagement
                 RI_Circle = txtRI_Circle.Text,
                 Land_Owner_Details = txtLand_Owner_Details.Text,
                 Land_possessioner_Details = txtLand_possessioner_Details.Text,
-                Land_Issue_Description = txtLand_Issue_Description.Text,
+                //Land_Issue_Description = txtLand_Issue_Description.Text,
                 Encroachment_Plot_Area = NumericHandler.ConvertToDecimal(txtEncroachment_Plot_Area.Text),
                 Encroachment_Plot_No = txtEncroachment_Plot_No.Text,
                 Dispute_Plot_No = txtDispute_Plot_No.Text,
@@ -72,7 +72,7 @@ namespace InfrastructureManagement
                 txtRI_Circle.Text = string.Empty;
                 txtLand_Owner_Details.Text = string.Empty;
                 txtLand_possessioner_Details.Text = string.Empty;
-                txtLand_Issue_Description.Text = string.Empty;
+                //txtLand_Issue_Description.Text = string.Empty;
                 txtEncroachment_Plot_No.Text = string.Empty;
                 txtEncroachment_Plot_Area.Text = string.Empty;
                 txtDispute_Plot_No.Text = string.Empty;

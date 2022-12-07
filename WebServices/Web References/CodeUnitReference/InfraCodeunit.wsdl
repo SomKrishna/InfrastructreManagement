@@ -102,6 +102,174 @@
           </sequence>
         </complexType>
       </element>
+      <element name="Downlond_GB_Boys_Common_Room_Photos">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Boys_Common_Room_Photos_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Central_Library_Photos">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Central_Library_Photos_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Computer_Lab_Photos">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Computer_Lab_Photos_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Conference_Room_photo">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Conference_Room_photo_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Dispensary_Photos">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Dispensary_Photos_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Field_Gallery_photo">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Field_Gallery_photo_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Field_Photos">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Field_Photos_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Girls_Common_Room_Photos">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Girls_Common_Room_Photos_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Library_Photos">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Library_Photos_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Main_Entrance_Photos">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Main_Entrance_Photos_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Sports_Court_photo">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Sports_Court_photo_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Staff_Canteena47Cafeteria_Photos">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Staff_Canteena47Cafeteria_Photos_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Staff_Common_Room_Photos">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Staff_Common_Room_Photos_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Video_Conference_Room_photo">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Downlond_GB_Video_Conference_Room_photo_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
       <element name="Downlond_GeneralLand_Building_File">
         <complexType>
           <sequence>
@@ -369,6 +537,174 @@
           <sequence />
         </complexType>
       </element>
+      <element name="Upload_GB_Boys_Common_Room_Photos">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Boys_Common_Room_Photos_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Central_Library_Photos">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Central_Library_Photos_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Computer_Lab_Photos">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Computer_Lab_Photos_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Conference_Room_photo">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Conference_Room_photo_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Dispensary_Photos">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Dispensary_Photos_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Field_Gallery_photo">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Field_Gallery_photo_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Field_Photos">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Field_Photos_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Girls_Common_Room_Photos">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Girls_Common_Room_Photos_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Library_Photos">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Library_Photos_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Main_Entrance_Photos">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Main_Entrance_Photos_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Sports_Court_photo">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Sports_Court_photo_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Staff_Canteena47Cafeteria_Photos">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Staff_Canteena47Cafeteria_Photos_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Staff_Common_Room_Photos">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Staff_Common_Room_Photos_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Upload_GB_Video_Conference_Room_photo">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="fileNamepar" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Upload_GB_Video_Conference_Room_photo_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
       <element name="Upload_GeneralLand_Buliding_File">
         <complexType>
           <sequence>
@@ -506,6 +842,90 @@
   <message name="Download_Staff_Building_File_Result">
     <part name="parameters" element="tns:Download_Staff_Building_File_Result" />
   </message>
+  <message name="Downlond_GB_Boys_Common_Room_Photos">
+    <part name="parameters" element="tns:Downlond_GB_Boys_Common_Room_Photos" />
+  </message>
+  <message name="Downlond_GB_Boys_Common_Room_Photos_Result">
+    <part name="parameters" element="tns:Downlond_GB_Boys_Common_Room_Photos_Result" />
+  </message>
+  <message name="Downlond_GB_Central_Library_Photos">
+    <part name="parameters" element="tns:Downlond_GB_Central_Library_Photos" />
+  </message>
+  <message name="Downlond_GB_Central_Library_Photos_Result">
+    <part name="parameters" element="tns:Downlond_GB_Central_Library_Photos_Result" />
+  </message>
+  <message name="Downlond_GB_Computer_Lab_Photos">
+    <part name="parameters" element="tns:Downlond_GB_Computer_Lab_Photos" />
+  </message>
+  <message name="Downlond_GB_Computer_Lab_Photos_Result">
+    <part name="parameters" element="tns:Downlond_GB_Computer_Lab_Photos_Result" />
+  </message>
+  <message name="Downlond_GB_Conference_Room_photo">
+    <part name="parameters" element="tns:Downlond_GB_Conference_Room_photo" />
+  </message>
+  <message name="Downlond_GB_Conference_Room_photo_Result">
+    <part name="parameters" element="tns:Downlond_GB_Conference_Room_photo_Result" />
+  </message>
+  <message name="Downlond_GB_Dispensary_Photos">
+    <part name="parameters" element="tns:Downlond_GB_Dispensary_Photos" />
+  </message>
+  <message name="Downlond_GB_Dispensary_Photos_Result">
+    <part name="parameters" element="tns:Downlond_GB_Dispensary_Photos_Result" />
+  </message>
+  <message name="Downlond_GB_Field_Gallery_photo">
+    <part name="parameters" element="tns:Downlond_GB_Field_Gallery_photo" />
+  </message>
+  <message name="Downlond_GB_Field_Gallery_photo_Result">
+    <part name="parameters" element="tns:Downlond_GB_Field_Gallery_photo_Result" />
+  </message>
+  <message name="Downlond_GB_Field_Photos">
+    <part name="parameters" element="tns:Downlond_GB_Field_Photos" />
+  </message>
+  <message name="Downlond_GB_Field_Photos_Result">
+    <part name="parameters" element="tns:Downlond_GB_Field_Photos_Result" />
+  </message>
+  <message name="Downlond_GB_Girls_Common_Room_Photos">
+    <part name="parameters" element="tns:Downlond_GB_Girls_Common_Room_Photos" />
+  </message>
+  <message name="Downlond_GB_Girls_Common_Room_Photos_Result">
+    <part name="parameters" element="tns:Downlond_GB_Girls_Common_Room_Photos_Result" />
+  </message>
+  <message name="Downlond_GB_Library_Photos">
+    <part name="parameters" element="tns:Downlond_GB_Library_Photos" />
+  </message>
+  <message name="Downlond_GB_Library_Photos_Result">
+    <part name="parameters" element="tns:Downlond_GB_Library_Photos_Result" />
+  </message>
+  <message name="Downlond_GB_Main_Entrance_Photos">
+    <part name="parameters" element="tns:Downlond_GB_Main_Entrance_Photos" />
+  </message>
+  <message name="Downlond_GB_Main_Entrance_Photos_Result">
+    <part name="parameters" element="tns:Downlond_GB_Main_Entrance_Photos_Result" />
+  </message>
+  <message name="Downlond_GB_Sports_Court_photo">
+    <part name="parameters" element="tns:Downlond_GB_Sports_Court_photo" />
+  </message>
+  <message name="Downlond_GB_Sports_Court_photo_Result">
+    <part name="parameters" element="tns:Downlond_GB_Sports_Court_photo_Result" />
+  </message>
+  <message name="Downlond_GB_Staff_Canteena47Cafeteria_Photos">
+    <part name="parameters" element="tns:Downlond_GB_Staff_Canteena47Cafeteria_Photos" />
+  </message>
+  <message name="Downlond_GB_Staff_Canteena47Cafeteria_Photos_Result">
+    <part name="parameters" element="tns:Downlond_GB_Staff_Canteena47Cafeteria_Photos_Result" />
+  </message>
+  <message name="Downlond_GB_Staff_Common_Room_Photos">
+    <part name="parameters" element="tns:Downlond_GB_Staff_Common_Room_Photos" />
+  </message>
+  <message name="Downlond_GB_Staff_Common_Room_Photos_Result">
+    <part name="parameters" element="tns:Downlond_GB_Staff_Common_Room_Photos_Result" />
+  </message>
+  <message name="Downlond_GB_Video_Conference_Room_photo">
+    <part name="parameters" element="tns:Downlond_GB_Video_Conference_Room_photo" />
+  </message>
+  <message name="Downlond_GB_Video_Conference_Room_photo_Result">
+    <part name="parameters" element="tns:Downlond_GB_Video_Conference_Room_photo_Result" />
+  </message>
   <message name="Downlond_GeneralLand_Building_File">
     <part name="parameters" element="tns:Downlond_GeneralLand_Building_File" />
   </message>
@@ -638,6 +1058,90 @@
   <message name="Upload_Auditorium_Buliding_File_Result">
     <part name="parameters" element="tns:Upload_Auditorium_Buliding_File_Result" />
   </message>
+  <message name="Upload_GB_Boys_Common_Room_Photos">
+    <part name="parameters" element="tns:Upload_GB_Boys_Common_Room_Photos" />
+  </message>
+  <message name="Upload_GB_Boys_Common_Room_Photos_Result">
+    <part name="parameters" element="tns:Upload_GB_Boys_Common_Room_Photos_Result" />
+  </message>
+  <message name="Upload_GB_Central_Library_Photos">
+    <part name="parameters" element="tns:Upload_GB_Central_Library_Photos" />
+  </message>
+  <message name="Upload_GB_Central_Library_Photos_Result">
+    <part name="parameters" element="tns:Upload_GB_Central_Library_Photos_Result" />
+  </message>
+  <message name="Upload_GB_Computer_Lab_Photos">
+    <part name="parameters" element="tns:Upload_GB_Computer_Lab_Photos" />
+  </message>
+  <message name="Upload_GB_Computer_Lab_Photos_Result">
+    <part name="parameters" element="tns:Upload_GB_Computer_Lab_Photos_Result" />
+  </message>
+  <message name="Upload_GB_Conference_Room_photo">
+    <part name="parameters" element="tns:Upload_GB_Conference_Room_photo" />
+  </message>
+  <message name="Upload_GB_Conference_Room_photo_Result">
+    <part name="parameters" element="tns:Upload_GB_Conference_Room_photo_Result" />
+  </message>
+  <message name="Upload_GB_Dispensary_Photos">
+    <part name="parameters" element="tns:Upload_GB_Dispensary_Photos" />
+  </message>
+  <message name="Upload_GB_Dispensary_Photos_Result">
+    <part name="parameters" element="tns:Upload_GB_Dispensary_Photos_Result" />
+  </message>
+  <message name="Upload_GB_Field_Gallery_photo">
+    <part name="parameters" element="tns:Upload_GB_Field_Gallery_photo" />
+  </message>
+  <message name="Upload_GB_Field_Gallery_photo_Result">
+    <part name="parameters" element="tns:Upload_GB_Field_Gallery_photo_Result" />
+  </message>
+  <message name="Upload_GB_Field_Photos">
+    <part name="parameters" element="tns:Upload_GB_Field_Photos" />
+  </message>
+  <message name="Upload_GB_Field_Photos_Result">
+    <part name="parameters" element="tns:Upload_GB_Field_Photos_Result" />
+  </message>
+  <message name="Upload_GB_Girls_Common_Room_Photos">
+    <part name="parameters" element="tns:Upload_GB_Girls_Common_Room_Photos" />
+  </message>
+  <message name="Upload_GB_Girls_Common_Room_Photos_Result">
+    <part name="parameters" element="tns:Upload_GB_Girls_Common_Room_Photos_Result" />
+  </message>
+  <message name="Upload_GB_Library_Photos">
+    <part name="parameters" element="tns:Upload_GB_Library_Photos" />
+  </message>
+  <message name="Upload_GB_Library_Photos_Result">
+    <part name="parameters" element="tns:Upload_GB_Library_Photos_Result" />
+  </message>
+  <message name="Upload_GB_Main_Entrance_Photos">
+    <part name="parameters" element="tns:Upload_GB_Main_Entrance_Photos" />
+  </message>
+  <message name="Upload_GB_Main_Entrance_Photos_Result">
+    <part name="parameters" element="tns:Upload_GB_Main_Entrance_Photos_Result" />
+  </message>
+  <message name="Upload_GB_Sports_Court_photo">
+    <part name="parameters" element="tns:Upload_GB_Sports_Court_photo" />
+  </message>
+  <message name="Upload_GB_Sports_Court_photo_Result">
+    <part name="parameters" element="tns:Upload_GB_Sports_Court_photo_Result" />
+  </message>
+  <message name="Upload_GB_Staff_Canteena47Cafeteria_Photos">
+    <part name="parameters" element="tns:Upload_GB_Staff_Canteena47Cafeteria_Photos" />
+  </message>
+  <message name="Upload_GB_Staff_Canteena47Cafeteria_Photos_Result">
+    <part name="parameters" element="tns:Upload_GB_Staff_Canteena47Cafeteria_Photos_Result" />
+  </message>
+  <message name="Upload_GB_Staff_Common_Room_Photos">
+    <part name="parameters" element="tns:Upload_GB_Staff_Common_Room_Photos" />
+  </message>
+  <message name="Upload_GB_Staff_Common_Room_Photos_Result">
+    <part name="parameters" element="tns:Upload_GB_Staff_Common_Room_Photos_Result" />
+  </message>
+  <message name="Upload_GB_Video_Conference_Room_photo">
+    <part name="parameters" element="tns:Upload_GB_Video_Conference_Room_photo" />
+  </message>
+  <message name="Upload_GB_Video_Conference_Room_photo_Result">
+    <part name="parameters" element="tns:Upload_GB_Video_Conference_Room_photo_Result" />
+  </message>
   <message name="Upload_GeneralLand_Buliding_File">
     <part name="parameters" element="tns:Upload_GeneralLand_Buliding_File" />
   </message>
@@ -708,6 +1212,62 @@
     <operation name="Download_Staff_Building_File">
       <input name="Download_Staff_Building_File" message="tns:Download_Staff_Building_File" />
       <output name="Download_Staff_Building_File_Result" message="tns:Download_Staff_Building_File_Result" />
+    </operation>
+    <operation name="Downlond_GB_Boys_Common_Room_Photos">
+      <input name="Downlond_GB_Boys_Common_Room_Photos" message="tns:Downlond_GB_Boys_Common_Room_Photos" />
+      <output name="Downlond_GB_Boys_Common_Room_Photos_Result" message="tns:Downlond_GB_Boys_Common_Room_Photos_Result" />
+    </operation>
+    <operation name="Downlond_GB_Central_Library_Photos">
+      <input name="Downlond_GB_Central_Library_Photos" message="tns:Downlond_GB_Central_Library_Photos" />
+      <output name="Downlond_GB_Central_Library_Photos_Result" message="tns:Downlond_GB_Central_Library_Photos_Result" />
+    </operation>
+    <operation name="Downlond_GB_Computer_Lab_Photos">
+      <input name="Downlond_GB_Computer_Lab_Photos" message="tns:Downlond_GB_Computer_Lab_Photos" />
+      <output name="Downlond_GB_Computer_Lab_Photos_Result" message="tns:Downlond_GB_Computer_Lab_Photos_Result" />
+    </operation>
+    <operation name="Downlond_GB_Conference_Room_photo">
+      <input name="Downlond_GB_Conference_Room_photo" message="tns:Downlond_GB_Conference_Room_photo" />
+      <output name="Downlond_GB_Conference_Room_photo_Result" message="tns:Downlond_GB_Conference_Room_photo_Result" />
+    </operation>
+    <operation name="Downlond_GB_Dispensary_Photos">
+      <input name="Downlond_GB_Dispensary_Photos" message="tns:Downlond_GB_Dispensary_Photos" />
+      <output name="Downlond_GB_Dispensary_Photos_Result" message="tns:Downlond_GB_Dispensary_Photos_Result" />
+    </operation>
+    <operation name="Downlond_GB_Field_Gallery_photo">
+      <input name="Downlond_GB_Field_Gallery_photo" message="tns:Downlond_GB_Field_Gallery_photo" />
+      <output name="Downlond_GB_Field_Gallery_photo_Result" message="tns:Downlond_GB_Field_Gallery_photo_Result" />
+    </operation>
+    <operation name="Downlond_GB_Field_Photos">
+      <input name="Downlond_GB_Field_Photos" message="tns:Downlond_GB_Field_Photos" />
+      <output name="Downlond_GB_Field_Photos_Result" message="tns:Downlond_GB_Field_Photos_Result" />
+    </operation>
+    <operation name="Downlond_GB_Girls_Common_Room_Photos">
+      <input name="Downlond_GB_Girls_Common_Room_Photos" message="tns:Downlond_GB_Girls_Common_Room_Photos" />
+      <output name="Downlond_GB_Girls_Common_Room_Photos_Result" message="tns:Downlond_GB_Girls_Common_Room_Photos_Result" />
+    </operation>
+    <operation name="Downlond_GB_Library_Photos">
+      <input name="Downlond_GB_Library_Photos" message="tns:Downlond_GB_Library_Photos" />
+      <output name="Downlond_GB_Library_Photos_Result" message="tns:Downlond_GB_Library_Photos_Result" />
+    </operation>
+    <operation name="Downlond_GB_Main_Entrance_Photos">
+      <input name="Downlond_GB_Main_Entrance_Photos" message="tns:Downlond_GB_Main_Entrance_Photos" />
+      <output name="Downlond_GB_Main_Entrance_Photos_Result" message="tns:Downlond_GB_Main_Entrance_Photos_Result" />
+    </operation>
+    <operation name="Downlond_GB_Sports_Court_photo">
+      <input name="Downlond_GB_Sports_Court_photo" message="tns:Downlond_GB_Sports_Court_photo" />
+      <output name="Downlond_GB_Sports_Court_photo_Result" message="tns:Downlond_GB_Sports_Court_photo_Result" />
+    </operation>
+    <operation name="Downlond_GB_Staff_Canteena47Cafeteria_Photos">
+      <input name="Downlond_GB_Staff_Canteena47Cafeteria_Photos" message="tns:Downlond_GB_Staff_Canteena47Cafeteria_Photos" />
+      <output name="Downlond_GB_Staff_Canteena47Cafeteria_Photos_Result" message="tns:Downlond_GB_Staff_Canteena47Cafeteria_Photos_Result" />
+    </operation>
+    <operation name="Downlond_GB_Staff_Common_Room_Photos">
+      <input name="Downlond_GB_Staff_Common_Room_Photos" message="tns:Downlond_GB_Staff_Common_Room_Photos" />
+      <output name="Downlond_GB_Staff_Common_Room_Photos_Result" message="tns:Downlond_GB_Staff_Common_Room_Photos_Result" />
+    </operation>
+    <operation name="Downlond_GB_Video_Conference_Room_photo">
+      <input name="Downlond_GB_Video_Conference_Room_photo" message="tns:Downlond_GB_Video_Conference_Room_photo" />
+      <output name="Downlond_GB_Video_Conference_Room_photo_Result" message="tns:Downlond_GB_Video_Conference_Room_photo_Result" />
     </operation>
     <operation name="Downlond_GeneralLand_Building_File">
       <input name="Downlond_GeneralLand_Building_File" message="tns:Downlond_GeneralLand_Building_File" />
@@ -796,6 +1356,62 @@
     <operation name="Upload_Auditorium_Buliding_File">
       <input name="Upload_Auditorium_Buliding_File" message="tns:Upload_Auditorium_Buliding_File" />
       <output name="Upload_Auditorium_Buliding_File_Result" message="tns:Upload_Auditorium_Buliding_File_Result" />
+    </operation>
+    <operation name="Upload_GB_Boys_Common_Room_Photos">
+      <input name="Upload_GB_Boys_Common_Room_Photos" message="tns:Upload_GB_Boys_Common_Room_Photos" />
+      <output name="Upload_GB_Boys_Common_Room_Photos_Result" message="tns:Upload_GB_Boys_Common_Room_Photos_Result" />
+    </operation>
+    <operation name="Upload_GB_Central_Library_Photos">
+      <input name="Upload_GB_Central_Library_Photos" message="tns:Upload_GB_Central_Library_Photos" />
+      <output name="Upload_GB_Central_Library_Photos_Result" message="tns:Upload_GB_Central_Library_Photos_Result" />
+    </operation>
+    <operation name="Upload_GB_Computer_Lab_Photos">
+      <input name="Upload_GB_Computer_Lab_Photos" message="tns:Upload_GB_Computer_Lab_Photos" />
+      <output name="Upload_GB_Computer_Lab_Photos_Result" message="tns:Upload_GB_Computer_Lab_Photos_Result" />
+    </operation>
+    <operation name="Upload_GB_Conference_Room_photo">
+      <input name="Upload_GB_Conference_Room_photo" message="tns:Upload_GB_Conference_Room_photo" />
+      <output name="Upload_GB_Conference_Room_photo_Result" message="tns:Upload_GB_Conference_Room_photo_Result" />
+    </operation>
+    <operation name="Upload_GB_Dispensary_Photos">
+      <input name="Upload_GB_Dispensary_Photos" message="tns:Upload_GB_Dispensary_Photos" />
+      <output name="Upload_GB_Dispensary_Photos_Result" message="tns:Upload_GB_Dispensary_Photos_Result" />
+    </operation>
+    <operation name="Upload_GB_Field_Gallery_photo">
+      <input name="Upload_GB_Field_Gallery_photo" message="tns:Upload_GB_Field_Gallery_photo" />
+      <output name="Upload_GB_Field_Gallery_photo_Result" message="tns:Upload_GB_Field_Gallery_photo_Result" />
+    </operation>
+    <operation name="Upload_GB_Field_Photos">
+      <input name="Upload_GB_Field_Photos" message="tns:Upload_GB_Field_Photos" />
+      <output name="Upload_GB_Field_Photos_Result" message="tns:Upload_GB_Field_Photos_Result" />
+    </operation>
+    <operation name="Upload_GB_Girls_Common_Room_Photos">
+      <input name="Upload_GB_Girls_Common_Room_Photos" message="tns:Upload_GB_Girls_Common_Room_Photos" />
+      <output name="Upload_GB_Girls_Common_Room_Photos_Result" message="tns:Upload_GB_Girls_Common_Room_Photos_Result" />
+    </operation>
+    <operation name="Upload_GB_Library_Photos">
+      <input name="Upload_GB_Library_Photos" message="tns:Upload_GB_Library_Photos" />
+      <output name="Upload_GB_Library_Photos_Result" message="tns:Upload_GB_Library_Photos_Result" />
+    </operation>
+    <operation name="Upload_GB_Main_Entrance_Photos">
+      <input name="Upload_GB_Main_Entrance_Photos" message="tns:Upload_GB_Main_Entrance_Photos" />
+      <output name="Upload_GB_Main_Entrance_Photos_Result" message="tns:Upload_GB_Main_Entrance_Photos_Result" />
+    </operation>
+    <operation name="Upload_GB_Sports_Court_photo">
+      <input name="Upload_GB_Sports_Court_photo" message="tns:Upload_GB_Sports_Court_photo" />
+      <output name="Upload_GB_Sports_Court_photo_Result" message="tns:Upload_GB_Sports_Court_photo_Result" />
+    </operation>
+    <operation name="Upload_GB_Staff_Canteena47Cafeteria_Photos">
+      <input name="Upload_GB_Staff_Canteena47Cafeteria_Photos" message="tns:Upload_GB_Staff_Canteena47Cafeteria_Photos" />
+      <output name="Upload_GB_Staff_Canteena47Cafeteria_Photos_Result" message="tns:Upload_GB_Staff_Canteena47Cafeteria_Photos_Result" />
+    </operation>
+    <operation name="Upload_GB_Staff_Common_Room_Photos">
+      <input name="Upload_GB_Staff_Common_Room_Photos" message="tns:Upload_GB_Staff_Common_Room_Photos" />
+      <output name="Upload_GB_Staff_Common_Room_Photos_Result" message="tns:Upload_GB_Staff_Common_Room_Photos_Result" />
+    </operation>
+    <operation name="Upload_GB_Video_Conference_Room_photo">
+      <input name="Upload_GB_Video_Conference_Room_photo" message="tns:Upload_GB_Video_Conference_Room_photo" />
+      <output name="Upload_GB_Video_Conference_Room_photo_Result" message="tns:Upload_GB_Video_Conference_Room_photo_Result" />
     </operation>
     <operation name="Upload_GeneralLand_Buliding_File">
       <input name="Upload_GeneralLand_Buliding_File" message="tns:Upload_GeneralLand_Buliding_File" />
@@ -888,6 +1504,132 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="Download_Staff_Building_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Boys_Common_Room_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Boys_Common_Room_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Boys_Common_Room_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Boys_Common_Room_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Central_Library_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Central_Library_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Central_Library_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Central_Library_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Computer_Lab_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Computer_Lab_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Computer_Lab_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Computer_Lab_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Conference_Room_photo">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Conference_Room_photo" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Conference_Room_photo">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Conference_Room_photo_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Dispensary_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Dispensary_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Dispensary_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Dispensary_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Field_Gallery_photo">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Field_Gallery_photo" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Field_Gallery_photo">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Field_Gallery_photo_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Field_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Field_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Field_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Field_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Girls_Common_Room_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Girls_Common_Room_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Girls_Common_Room_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Girls_Common_Room_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Library_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Library_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Library_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Library_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Main_Entrance_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Main_Entrance_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Main_Entrance_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Main_Entrance_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Sports_Court_photo">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Sports_Court_photo" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Sports_Court_photo">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Sports_Court_photo_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Staff_Canteena47Cafeteria_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Staff_Canteena47Cafeteria_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Staff_Canteena47Cafeteria_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Staff_Canteena47Cafeteria_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Staff_Common_Room_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Staff_Common_Room_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Staff_Common_Room_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Staff_Common_Room_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Downlond_GB_Video_Conference_Room_photo">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Video_Conference_Room_photo" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Downlond_GB_Video_Conference_Room_photo">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Downlond_GB_Video_Conference_Room_photo_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
@@ -1086,6 +1828,132 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="Upload_Auditorium_Buliding_File_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Boys_Common_Room_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Boys_Common_Room_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Boys_Common_Room_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Boys_Common_Room_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Central_Library_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Central_Library_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Central_Library_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Central_Library_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Computer_Lab_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Computer_Lab_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Computer_Lab_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Computer_Lab_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Conference_Room_photo">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Conference_Room_photo" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Conference_Room_photo">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Conference_Room_photo_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Dispensary_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Dispensary_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Dispensary_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Dispensary_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Field_Gallery_photo">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Field_Gallery_photo" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Field_Gallery_photo">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Field_Gallery_photo_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Field_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Field_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Field_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Field_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Girls_Common_Room_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Girls_Common_Room_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Girls_Common_Room_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Girls_Common_Room_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Library_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Library_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Library_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Library_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Main_Entrance_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Main_Entrance_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Main_Entrance_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Main_Entrance_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Sports_Court_photo">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Sports_Court_photo" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Sports_Court_photo">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Sports_Court_photo_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Staff_Canteena47Cafeteria_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Staff_Canteena47Cafeteria_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Staff_Canteena47Cafeteria_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Staff_Canteena47Cafeteria_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Staff_Common_Room_Photos">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Staff_Common_Room_Photos" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Staff_Common_Room_Photos">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Staff_Common_Room_Photos_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Upload_GB_Video_Conference_Room_photo">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Video_Conference_Room_photo" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Upload_GB_Video_Conference_Room_photo">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Upload_GB_Video_Conference_Room_photo_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>

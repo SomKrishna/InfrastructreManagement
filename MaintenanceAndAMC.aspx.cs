@@ -71,16 +71,24 @@ namespace InfrastructureManagement
         protected void btnExport_Click(object sender, EventArgs e)
         {
             string FileName = "AMCAndMaintenance.XLS";
-            string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + ODataServices.ExportAMCAndMaintenanceFile().Split(Path.DirectorySeparatorChar)[5];
-            WebClient wc = new WebClient();
-            byte[] buffer = wc.DownloadData(exportedFilePath);
+            string bcPath = ODataServices.ExportAMCAndMaintenanceFile();
+            if (string.IsNullOrEmpty(bcPath))
+            {
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                WebClient wc = new WebClient();
+                byte[] buffer = wc.DownloadData(exportedFilePath);
 
-            var fileName = "attachment; filename=" + FileName;
-            base.Response.ClearContent();
-            base.Response.AddHeader("content-disposition", fileName);
-            base.Response.ContentType = "application/vnd.ms-excel";
-            base.Response.BinaryWrite(buffer);
-            base.Response.End();
+                var fileName = "attachment; filename=" + FileName;
+                base.Response.ClearContent();
+                base.Response.AddHeader("content-disposition", fileName);
+                base.Response.ContentType = "application/vnd.ms-excel";
+                base.Response.BinaryWrite(buffer);
+                base.Response.End();
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", "No file found.");
+            }
         }
     }
 }

@@ -119,6 +119,191 @@ namespace WebServices
             return returnValue;
         }
 
+        #region General Buildings
+        public static void Upload_GB_Main_Entrance_Photos(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Main_Entrance_Photos(filePath);
+        }
+        public static void Upload_GB_Field_Photos(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Field_Photos(filePath);
+        }
+        public static void Upload_GB_Sports_Court_photo(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Sports_Court_photo(filePath);
+        }
+        public static void Upload_GB_Field_Gallery_photo(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Field_Gallery_photo(filePath);
+        }
+        public static void Upload_GB_Video_Conference_Room_photo(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Video_Conference_Room_photo(filePath);
+        }
+        public static void Upload_GB_Conference_Room_photo(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Conference_Room_photo(filePath);
+        }
+        public static void Upload_GB_Library_Photos(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Library_Photos(filePath);
+        }
+        public static void Upload_GB_Central_Library_Photos(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Central_Library_Photos(filePath);
+        }
+        public static void Upload_GB_Staff_Canteena47Cafeteria_Photos(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Staff_Canteena47Cafeteria_Photos(filePath);
+        }
+        public static void Upload_GB_Dispensary_Photos(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Dispensary_Photos(filePath);
+        }
+        public static void Upload_GB_Staff_Common_Room_Photos(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Staff_Common_Room_Photos(filePath);
+        }
+        public static void Upload_GB_Girls_Common_Room_Photos(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Girls_Common_Room_Photos(filePath);
+        }
+        public static void Upload_GB_Boys_Common_Room_Photos(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Boys_Common_Room_Photos(filePath);
+        }
+        public static void Upload_GB_Computer_Lab_Photos(string filePath)
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            obj.Upload_GB_Computer_Lab_Photos(filePath);
+        }
+        public static string Downlond_GB_Main_Entrance_Photos()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Main_Entrance_Photos();
+            return returnValue;
+        }
+        public static string Downlond_GB_Field_Photos()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Field_Photos();
+            return returnValue;
+        }
+        public static string Downlond_GB_Sports_Court_photo()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Sports_Court_photo();
+            return returnValue;
+        }
+        public static string Downlond_GB_Field_Gallery_photo()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Field_Gallery_photo();
+            return returnValue;
+        }
+        public static string Downlond_GB_Video_Conference_Room_photo()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Video_Conference_Room_photo();
+            return returnValue;
+        }
+        public static string Downlond_GB_Conference_Room_photo()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Conference_Room_photo();
+            return returnValue;
+        }
+        public static string Downlond_GB_Library_Photos()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Library_Photos();
+            return returnValue;
+        }
+        public static string Downlond_GB_Central_Library_Photos()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Central_Library_Photos();
+            return returnValue;
+        }
+        public static string Downlond_GB_Staff_Canteena47Cafeteria_Photos()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Staff_Canteena47Cafeteria_Photos();
+            return returnValue;
+        }
+        public static string Downlond_GB_Dispensary_Photos()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Dispensary_Photos();
+            return returnValue;
+        }
+        public static string Downlond_GB_Staff_Common_Room_Photos()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Staff_Common_Room_Photos();
+            return returnValue;
+        }
+        public static string Downlond_GB_Girls_Common_Room_Photos()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Girls_Common_Room_Photos();
+            return returnValue;
+        }
+        public static string Downlond_GB_Boys_Common_Room_Photos()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Boys_Common_Room_Photos();
+            return returnValue;
+        }
+        public static string Downlond_GB_Computer_Lab_Photos()
+        {
+            CodeUnitReference.InfraCodeunit obj = new CodeUnitReference.InfraCodeunit();
+            obj = (CodeUnitReference.InfraCodeunit)Configuration.getNavService(new CodeUnitReference.InfraCodeunit(), "InfraCodeunit", "Codeunit");
+            var returnValue = obj.Downlond_GB_Computer_Lab_Photos();
+            return returnValue;
+        }
+        #endregion
+
         #region Building Master Plan files
         public static string Download_Auditorium_Building_File(string buildingCode)
         {

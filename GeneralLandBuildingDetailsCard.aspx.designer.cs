@@ -24,13 +24,40 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtYear_of_Establis_of_institute;
 
         /// <summary>
-        /// ddlFieldAvailable control.
+        /// chkFieldAvailable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFieldAvailable;
+        protected global::System.Web.UI.WebControls.CheckBox chkFieldAvailable;
+
+        /// <summary>
+        /// FileAvailablepdfUploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileAvailablepdfUploader;
+
+        /// <summary>
+        /// fileAvailableUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton fileAvailableUpload;
+
+        /// <summary>
+        /// btnFileAvailableDownload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnFileAvailableDownload;
 
         /// <summary>
         /// txtField_Area_in_Acres control.
@@ -42,13 +69,40 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtField_Area_in_Acres;
 
         /// <summary>
-        /// ddlSportCourt control.
+        /// chkSportCourt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSportCourt;
+        protected global::System.Web.UI.WebControls.CheckBox chkSportCourt;
+
+        /// <summary>
+        /// SportCourtFileUploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload SportCourtFileUploader;
+
+        /// <summary>
+        /// SportCourtFileUploadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton SportCourtFileUploadButton;
+
+        /// <summary>
+        /// SportCourtDownloadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton SportCourtDownloadButton;
 
         /// <summary>
         /// txtSports_Court_Area_in_Sqft control.
@@ -60,31 +114,112 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtSports_Court_Area_in_Sqft;
 
         /// <summary>
-        /// ddlFieldGalleryAvailable control.
+        /// chkFieldGalleryAvailable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFieldGalleryAvailable;
+        protected global::System.Web.UI.WebControls.CheckBox chkFieldGalleryAvailable;
 
         /// <summary>
-        /// ddlConferenceRoomAvailable control.
+        /// fieldGalleryFileUploader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlConferenceRoomAvailable;
+        protected global::System.Web.UI.WebControls.FileUpload fieldGalleryFileUploader;
 
         /// <summary>
-        /// ddlVideo_Conference_Room_Avail control.
+        /// fieldGalleryFileUploadButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlVideo_Conference_Room_Avail;
+        protected global::System.Web.UI.WebControls.LinkButton fieldGalleryFileUploadButton;
+
+        /// <summary>
+        /// fieldGalleryDownloadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton fieldGalleryDownloadButton;
+
+        /// <summary>
+        /// chkConferenceRoomAvailable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkConferenceRoomAvailable;
+
+        /// <summary>
+        /// conferenceRoomFileUploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload conferenceRoomFileUploader;
+
+        /// <summary>
+        /// conferenceRoomUploadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton conferenceRoomUploadButton;
+
+        /// <summary>
+        /// conferenceRoomDownloadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton conferenceRoomDownloadButton;
+
+        /// <summary>
+        /// chkVideo_Conference_Room_Avail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkVideo_Conference_Room_Avail;
+
+        /// <summary>
+        /// VideoConferenceRoomUploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload VideoConferenceRoomUploader;
+
+        /// <summary>
+        /// videoConferenceRoomUploadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton videoConferenceRoomUploadButton;
+
+        /// <summary>
+        /// VideoConferenceRoomDownloadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton VideoConferenceRoomDownloadButton;
 
         /// <summary>
         /// txtFloor_size_of_the_Video_conf control.
@@ -114,76 +249,148 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtVideo_Conference_Room_Location;
 
         /// <summary>
-        /// ddlLibrary_Available control.
+        /// chkLibrary_Available control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlLibrary_Available;
+        protected global::System.Web.UI.WebControls.CheckBox chkLibrary_Available;
 
         /// <summary>
-        /// ddlCentralLibraryAvailable control.
+        /// Library_AvailableFileUploader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCentralLibraryAvailable;
+        protected global::System.Web.UI.WebControls.FileUpload Library_AvailableFileUploader;
 
         /// <summary>
-        /// ddlDigitalLibraryAvailable control.
+        /// Library_AvailableUploadButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDigitalLibraryAvailable;
+        protected global::System.Web.UI.WebControls.LinkButton Library_AvailableUploadButton;
 
         /// <summary>
-        /// ddlCanteen_Caf_for_Staffs_Avail control.
+        /// Library_AvailableDownloadButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCanteen_Caf_for_Staffs_Avail;
+        protected global::System.Web.UI.WebControls.LinkButton Library_AvailableDownloadButton;
 
         /// <summary>
-        /// txtCanteen_Cafeteria_Capacity control.
+        /// chkCentralLibraryAvailable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCanteen_Cafeteria_Capacity;
+        protected global::System.Web.UI.WebControls.CheckBox chkCentralLibraryAvailable;
 
         /// <summary>
-        /// pdfUploader control.
+        /// CentralLibraryFileUploader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload pdfUploader;
+        protected global::System.Web.UI.WebControls.FileUpload CentralLibraryFileUploader;
 
         /// <summary>
-        /// ddlDispensary_Available control.
+        /// CentralLibraryUploadButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDispensary_Available;
+        protected global::System.Web.UI.WebControls.LinkButton CentralLibraryUploadButton;
 
         /// <summary>
-        /// ddlCoE_Program_Available control.
+        /// CentralLibraryDowloadButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCoE_Program_Available;
+        protected global::System.Web.UI.WebControls.LinkButton CentralLibraryDowloadButton;
+
+        /// <summary>
+        /// mainEntranceUploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload mainEntranceUploader;
+
+        /// <summary>
+        /// mainEntranceUploadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton mainEntranceUploadButton;
+
+        /// <summary>
+        /// mainEntranceDownButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton mainEntranceDownButton;
+
+        /// <summary>
+        /// chkDispensary_Available control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkDispensary_Available;
+
+        /// <summary>
+        /// DispensaryAvailableUploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload DispensaryAvailableUploader;
+
+        /// <summary>
+        /// DispensaryAvailableUploadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton DispensaryAvailableUploadButton;
+
+        /// <summary>
+        /// DispensaryAvailableDownloadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton DispensaryAvailableDownloadButton;
+
+        /// <summary>
+        /// chkCoE_Program_Available control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkCoE_Program_Available;
 
         /// <summary>
         /// txtCoE_Program_Details control.
@@ -195,13 +402,13 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtCoE_Program_Details;
 
         /// <summary>
-        /// ddlCSR_Activities_Available control.
+        /// chkCSR_Activities_Available control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCSR_Activities_Available;
+        protected global::System.Web.UI.WebControls.CheckBox chkCSR_Activities_Available;
 
         /// <summary>
         /// txtCSR_Activity_Details control.
@@ -213,13 +420,40 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtCSR_Activity_Details;
 
         /// <summary>
-        /// ddlStaff_Common_Room_Available control.
+        /// chkStaff_Common_Room_Available control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlStaff_Common_Room_Available;
+        protected global::System.Web.UI.WebControls.CheckBox chkStaff_Common_Room_Available;
+
+        /// <summary>
+        /// StaffCommonRoomAvailableUploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload StaffCommonRoomAvailableUploader;
+
+        /// <summary>
+        /// StaffCommonRoomUploadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton StaffCommonRoomUploadButton;
+
+        /// <summary>
+        /// StaffCommonRoomAvailableDownloadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton StaffCommonRoomAvailableDownloadButton;
 
         /// <summary>
         /// txtStaff_Common_Room_Details control.
@@ -231,13 +465,40 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtStaff_Common_Room_Details;
 
         /// <summary>
-        /// ddlGirls_Common_Room_Available control.
+        /// chkGirls_Common_Room_Available control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlGirls_Common_Room_Available;
+        protected global::System.Web.UI.WebControls.CheckBox chkGirls_Common_Room_Available;
+
+        /// <summary>
+        /// girlsCommonRoomAvailableUploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload girlsCommonRoomAvailableUploader;
+
+        /// <summary>
+        /// girlsCommonRoomUploadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton girlsCommonRoomUploadButton;
+
+        /// <summary>
+        /// girlsCommonRoomAvailableDownloadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton girlsCommonRoomAvailableDownloadButton;
 
         /// <summary>
         /// txtGirls_Common_Room_Details control.
@@ -249,13 +510,40 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtGirls_Common_Room_Details;
 
         /// <summary>
-        /// ddlBoys_Common_Room_Available control.
+        /// chkBoys_Common_Room_Available control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBoys_Common_Room_Available;
+        protected global::System.Web.UI.WebControls.CheckBox chkBoys_Common_Room_Available;
+
+        /// <summary>
+        /// Boys_Common_RoomUploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload Boys_Common_RoomUploader;
+
+        /// <summary>
+        /// BoysCommonRoomUploadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton BoysCommonRoomUploadButton;
+
+        /// <summary>
+        /// Boys_Common_RoomDownloadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Boys_Common_RoomDownloadButton;
 
         /// <summary>
         /// txtBoys_Common_Room_Details control.
@@ -267,58 +555,94 @@ namespace InfrastructureManagement
         protected global::System.Web.UI.WebControls.TextBox txtBoys_Common_Room_Details;
 
         /// <summary>
-        /// ddlRoof_Top_Solar_Panel_Available control.
+        /// chkRoof_Top_Solar_Panel_Available control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRoof_Top_Solar_Panel_Available;
+        protected global::System.Web.UI.WebControls.CheckBox chkRoof_Top_Solar_Panel_Available;
 
         /// <summary>
-        /// ddlRain_Water_Harvesting_Avail control.
+        /// chkRain_Water_Harvesting_Avail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRain_Water_Harvesting_Avail;
+        protected global::System.Web.UI.WebControls.CheckBox chkRain_Water_Harvesting_Avail;
 
         /// <summary>
-        /// ddlSewage_Treatment_Plant_Avail control.
+        /// chkSewage_Treatment_Plant_Avail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSewage_Treatment_Plant_Avail;
+        protected global::System.Web.UI.WebControls.CheckBox chkSewage_Treatment_Plant_Avail;
 
         /// <summary>
-        /// ddlInternet_Connection_Available control.
+        /// chkInternet_Connection_Available control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlInternet_Connection_Available;
+        protected global::System.Web.UI.WebControls.CheckBox chkInternet_Connection_Available;
 
         /// <summary>
-        /// txtUploaded_FileName control.
+        /// chkDigitalLibraryAvailable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUploaded_FileName;
+        protected global::System.Web.UI.WebControls.CheckBox chkDigitalLibraryAvailable;
 
         /// <summary>
-        /// btnExport control.
+        /// chkCanteen_Caf_for_Staffs_Avail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExport;
+        protected global::System.Web.UI.WebControls.CheckBox chkCanteen_Caf_for_Staffs_Avail;
+
+        /// <summary>
+        /// Canteen_CafUploader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload Canteen_CafUploader;
+
+        /// <summary>
+        /// Canteen_CafUploadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Canteen_CafUploadButton;
+
+        /// <summary>
+        /// Canteen_CafDownloadButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Canteen_CafDownloadButton;
+
+        /// <summary>
+        /// txtCanteen_Cafeteria_Capacity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCanteen_Cafeteria_Capacity;
 
         /// <summary>
         /// hdnKey control.
@@ -328,14 +652,5 @@ namespace InfrastructureManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnKey;
-
-        /// <summary>
-        /// GenralSubmitBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GenralSubmitBtn;
     }
 }

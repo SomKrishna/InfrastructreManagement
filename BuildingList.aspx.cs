@@ -95,16 +95,24 @@ namespace InfrastructureManagement
             if (!string.IsNullOrEmpty(blockCode.Text))
             {
                 string FileName = "Hostel" + "_" + blockCode.Text + ".pdf";
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + ODataServices.Download_Hostel_Building_File(blockCode.Text).Split(Path.DirectorySeparatorChar)[5];
-                WebClient wc = new WebClient();
-                byte[] buffer = wc.DownloadData(exportedFilePath);
+                string bcPath = ODataServices.Download_Hostel_Building_File(blockCode.Text);
+                if (string.IsNullOrEmpty(bcPath))
+                {
+                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                    WebClient wc = new WebClient();
+                    byte[] buffer = wc.DownloadData(exportedFilePath);
 
-                var fileName = "attachment; filename=" + FileName;
-                base.Response.ClearContent();
-                base.Response.AddHeader("content-disposition", fileName);
-                base.Response.ContentType = "application/pdf";
-                base.Response.BinaryWrite(buffer);
-                base.Response.End();
+                    var fileName = "attachment; filename=" + FileName;
+                    base.Response.ClearContent();
+                    base.Response.AddHeader("content-disposition", fileName);
+                    base.Response.ContentType = "application/pdf";
+                    base.Response.BinaryWrite(buffer);
+                    base.Response.End();
+                }
+                else
+                {
+                    Alert.ShowAlert(this, "e", "No file found. Please upload a file");
+                }
             }
         }
 
@@ -117,16 +125,24 @@ namespace InfrastructureManagement
             if (!string.IsNullOrEmpty(buildingCode.Text))
             {
                 string FileName = "Auditorium" + "_" + buildingCode.Text + ".pdf";
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + ODataServices.Download_Auditorium_Building_File(buildingCode.Text).Split(Path.DirectorySeparatorChar)[5];
-                WebClient wc = new WebClient();
-                byte[] buffer = wc.DownloadData(exportedFilePath);
+                string bcPath = ODataServices.Download_Auditorium_Building_File(buildingCode.Text);
+                if (!string.IsNullOrEmpty(bcPath))
+                {
+                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                    WebClient wc = new WebClient();
+                    byte[] buffer = wc.DownloadData(exportedFilePath);
 
-                var fileName = "attachment; filename=" + FileName;
-                base.Response.ClearContent();
-                base.Response.AddHeader("content-disposition", fileName);
-                base.Response.ContentType = "application/pdf";
-                base.Response.BinaryWrite(buffer);
-                base.Response.End();
+                    var fileName = "attachment; filename=" + FileName;
+                    base.Response.ClearContent();
+                    base.Response.AddHeader("content-disposition", fileName);
+                    base.Response.ContentType = "application/pdf";
+                    base.Response.BinaryWrite(buffer);
+                    base.Response.End();
+                }
+                else
+                {
+                    Alert.ShowAlert(this, "e", "No file found. Please upload a file");
+                }
             }
         }
 
@@ -140,7 +156,7 @@ namespace InfrastructureManagement
 
             if (uploadedFile.HasFile)
             {
-                string fileExtention = Path.GetExtension(uploadedFile.FileName); 
+                string fileExtention = Path.GetExtension(uploadedFile.FileName);
                 string finalFileName = Path.GetFileNameWithoutExtension(new string(uploadedFile.FileName.Take(10).ToArray())) + "_" + DateTime.Now.ToString("dd MMM yyyy") + fileExtention;
                 string path = Path.Combine(System.Web.HttpContext.Current.Server.MapPath("./" + "PDF" + "/"));
                 if (!Directory.Exists(path))
@@ -191,16 +207,24 @@ namespace InfrastructureManagement
             if (!string.IsNullOrEmpty(blockCode.Text))
             {
                 string FileName = "Institute" + "_" + blockCode.Text + ".pdf";
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + ODataServices.Download_Institutional_File(blockCode.Text).Split(Path.DirectorySeparatorChar)[5];
-                WebClient wc = new WebClient();
-                byte[] buffer = wc.DownloadData(exportedFilePath);
+                string bcPath = ODataServices.Download_Institutional_File(blockCode.Text);
+                if (string.IsNullOrEmpty(bcPath))
+                {
+                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                    WebClient wc = new WebClient();
+                    byte[] buffer = wc.DownloadData(exportedFilePath);
 
-                var fileName = "attachment; filename=" + FileName;
-                base.Response.ClearContent();
-                base.Response.AddHeader("content-disposition", fileName);
-                base.Response.ContentType = "application/pdf";
-                base.Response.BinaryWrite(buffer);
-                base.Response.End();
+                    var fileName = "attachment; filename=" + FileName;
+                    base.Response.ClearContent();
+                    base.Response.AddHeader("content-disposition", fileName);
+                    base.Response.ContentType = "application/pdf";
+                    base.Response.BinaryWrite(buffer);
+                    base.Response.End();
+                }
+                else
+                {
+                    Alert.ShowAlert(this, "e", "No file found. Please upload a file");
+                }
             }
         }
 
@@ -239,16 +263,24 @@ namespace InfrastructureManagement
             if (!string.IsNullOrEmpty(quarterCode.Text))
             {
                 string FileName = "StaffQuarter" + "_" + quarterCode.Text + ".pdf";
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + ODataServices.Download_Staff_Building_File(quarterCode.Text).Split(Path.DirectorySeparatorChar)[5];
-                WebClient wc = new WebClient();
-                byte[] buffer = wc.DownloadData(exportedFilePath);
+                string bcPath = ODataServices.Download_Staff_Building_File(quarterCode.Text);
+                if (!string.IsNullOrEmpty(bcPath))
+                {
+                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                    WebClient wc = new WebClient();
+                    byte[] buffer = wc.DownloadData(exportedFilePath);
 
-                var fileName = "attachment; filename=" + FileName;
-                base.Response.ClearContent();
-                base.Response.AddHeader("content-disposition", fileName);
-                base.Response.ContentType = "application/pdf";
-                base.Response.BinaryWrite(buffer);
-                base.Response.End();
+                    var fileName = "attachment; filename=" + FileName;
+                    base.Response.ClearContent();
+                    base.Response.AddHeader("content-disposition", fileName);
+                    base.Response.ContentType = "application/pdf";
+                    base.Response.BinaryWrite(buffer);
+                    base.Response.End();
+                }
+                else
+                {
+                    Alert.ShowAlert(this, "e", "No file found. Please upload a file");
+                }
             }
         }
     }

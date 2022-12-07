@@ -22,7 +22,7 @@ namespace InfrastructureManagement
             {
                 btnExport.Visible = false;
             }
-            else 
+            else
             {
                 btnExport.Visible = true;
             }
@@ -34,16 +34,24 @@ namespace InfrastructureManagement
         protected void btnExport_Click(object sender, EventArgs e)
         {
             string FileName = "LandRecord.XLS";
-            string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + ODataServices.ExportLandFile().Split(Path.DirectorySeparatorChar)[5];
-            WebClient wc = new WebClient();
-            byte[] buffer = wc.DownloadData(exportedFilePath);
+            string bcPath = ODataServices.ExportLandFile();
+            if (!string.IsNullOrEmpty(bcPath))
+            {
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                WebClient wc = new WebClient();
+                byte[] buffer = wc.DownloadData(exportedFilePath);
 
-            var fileName = "attachment; filename=" + FileName;
-            base.Response.ClearContent();
-            base.Response.AddHeader("content-disposition", fileName);
-            base.Response.ContentType = "application/vnd.ms-excel";
-            base.Response.BinaryWrite(buffer);
-            base.Response.End();
+                var fileName = "attachment; filename=" + FileName;
+                base.Response.ClearContent();
+                base.Response.AddHeader("content-disposition", fileName);
+                base.Response.ContentType = "application/vnd.ms-excel";
+                base.Response.BinaryWrite(buffer);
+                base.Response.End();
+            }
+            else
+            {
+                Alert.ShowAlert(this, "e", "No file found.");
+            }
         }
 
         protected void btnDownload_Click(object sender, EventArgs e)
@@ -55,16 +63,24 @@ namespace InfrastructureManagement
             if (!string.IsNullOrEmpty(khatianNo.Text))
             {
                 string FileName = "LandRecordList" + "_" + khatianNo.Text + ".pdf";
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + ODataServices.ExportLandFileInPdf(khatianNo.Text).Split(Path.DirectorySeparatorChar)[5];
-                WebClient wc = new WebClient();
-                byte[] buffer = wc.DownloadData(exportedFilePath);
+                string bcPath = ODataServices.ExportLandFileInPdf(khatianNo.Text);
+                if (!string.IsNullOrEmpty(bcPath))
+                {
+                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                    WebClient wc = new WebClient();
+                    byte[] buffer = wc.DownloadData(exportedFilePath);
 
-                var fileName = "attachment; filename=" + FileName;
-                base.Response.ClearContent();
-                base.Response.AddHeader("content-disposition", fileName);
-                base.Response.ContentType = "application/pdf";
-                base.Response.BinaryWrite(buffer);
-                base.Response.End();
+                    var fileName = "attachment; filename=" + FileName;
+                    base.Response.ClearContent();
+                    base.Response.AddHeader("content-disposition", fileName);
+                    base.Response.ContentType = "application/pdf";
+                    base.Response.BinaryWrite(buffer);
+                    base.Response.End();
+                }
+                else
+                {
+                    Alert.ShowAlert(this, "e", "No file found.");
+                }
             }
 
         }

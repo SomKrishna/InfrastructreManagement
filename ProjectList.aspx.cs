@@ -51,16 +51,23 @@ namespace InfrastructureManagement
             if (!string.IsNullOrEmpty(projectCode.Text) && !string.IsNullOrEmpty(projectType.Text))
             {
                 var servicePath = ODataServices.DownloadProjectFile(GetProjectTypeIndex(projectType.Text), projectCode.Text);
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + servicePath.Split(Path.DirectorySeparatorChar)[5];
-                WebClient wc = new WebClient();
-                byte[] buffer = wc.DownloadData(exportedFilePath);
-                var FileName = "Project" + "_" + projectCode.Text + ".PDF";
-                var fileName = "attachment; filename=" + FileName;
-                base.Response.ClearContent();
-                base.Response.AddHeader("content-disposition", fileName);
-                base.Response.ContentType = "application/vnd.ms-excel";
-                base.Response.BinaryWrite(buffer);
-                base.Response.End();
+                if (!string.IsNullOrEmpty(servicePath))
+                {
+                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + servicePath.Split(Path.DirectorySeparatorChar)[5];
+                    WebClient wc = new WebClient();
+                    byte[] buffer = wc.DownloadData(exportedFilePath);
+                    var FileName = "Project" + "_" + projectCode.Text + ".PDF";
+                    var fileName = "attachment; filename=" + FileName;
+                    base.Response.ClearContent();
+                    base.Response.AddHeader("content-disposition", fileName);
+                    base.Response.ContentType = "application/vnd.ms-excel";
+                    base.Response.BinaryWrite(buffer);
+                    base.Response.End();
+                }
+                else
+                {
+                    Alert.ShowAlert(this, "e", "No file found.");
+                }
             }
         }
 

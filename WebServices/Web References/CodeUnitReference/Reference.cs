@@ -43,6 +43,34 @@ namespace WebServices.CodeUnitReference {
         
         private System.Threading.SendOrPostCallback Download_Staff_Building_FileOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Downlond_GB_Boys_Common_Room_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Central_Library_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Computer_Lab_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Conference_Room_photoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Dispensary_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Field_Gallery_photoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Field_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Girls_Common_Room_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Library_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Main_Entrance_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Sports_Court_photoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Staff_Common_Room_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Downlond_GB_Video_Conference_Room_photoOperationCompleted;
+        
         private System.Threading.SendOrPostCallback Downlond_GeneralLand_Building_FileOperationCompleted;
         
         private System.Threading.SendOrPostCallback ExportAuditoriumBuildingOperationCompleted;
@@ -86,6 +114,34 @@ namespace WebServices.CodeUnitReference {
         private System.Threading.SendOrPostCallback ImportLandFileOperationCompleted;
         
         private System.Threading.SendOrPostCallback Upload_Auditorium_Buliding_FileOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Boys_Common_Room_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Central_Library_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Computer_Lab_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Conference_Room_photoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Dispensary_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Field_Gallery_photoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Field_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Girls_Common_Room_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Library_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Main_Entrance_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Sports_Court_photoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Staff_Common_Room_PhotosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback Upload_GB_Video_Conference_Room_photoOperationCompleted;
         
         private System.Threading.SendOrPostCallback Upload_GeneralLand_Buliding_FileOperationCompleted;
         
@@ -161,6 +217,48 @@ namespace WebServices.CodeUnitReference {
         public event Download_Staff_Building_FileCompletedEventHandler Download_Staff_Building_FileCompleted;
         
         /// <remarks/>
+        public event Downlond_GB_Boys_Common_Room_PhotosCompletedEventHandler Downlond_GB_Boys_Common_Room_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Central_Library_PhotosCompletedEventHandler Downlond_GB_Central_Library_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Computer_Lab_PhotosCompletedEventHandler Downlond_GB_Computer_Lab_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Conference_Room_photoCompletedEventHandler Downlond_GB_Conference_Room_photoCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Dispensary_PhotosCompletedEventHandler Downlond_GB_Dispensary_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Field_Gallery_photoCompletedEventHandler Downlond_GB_Field_Gallery_photoCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Field_PhotosCompletedEventHandler Downlond_GB_Field_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Girls_Common_Room_PhotosCompletedEventHandler Downlond_GB_Girls_Common_Room_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Library_PhotosCompletedEventHandler Downlond_GB_Library_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Main_Entrance_PhotosCompletedEventHandler Downlond_GB_Main_Entrance_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Sports_Court_photoCompletedEventHandler Downlond_GB_Sports_Court_photoCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Staff_Canteena47Cafeteria_PhotosCompletedEventHandler Downlond_GB_Staff_Canteena47Cafeteria_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Staff_Common_Room_PhotosCompletedEventHandler Downlond_GB_Staff_Common_Room_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Downlond_GB_Video_Conference_Room_photoCompletedEventHandler Downlond_GB_Video_Conference_Room_photoCompleted;
+        
+        /// <remarks/>
         public event Downlond_GeneralLand_Building_FileCompletedEventHandler Downlond_GeneralLand_Building_FileCompleted;
         
         /// <remarks/>
@@ -225,6 +323,48 @@ namespace WebServices.CodeUnitReference {
         
         /// <remarks/>
         public event Upload_Auditorium_Buliding_FileCompletedEventHandler Upload_Auditorium_Buliding_FileCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Boys_Common_Room_PhotosCompletedEventHandler Upload_GB_Boys_Common_Room_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Central_Library_PhotosCompletedEventHandler Upload_GB_Central_Library_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Computer_Lab_PhotosCompletedEventHandler Upload_GB_Computer_Lab_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Conference_Room_photoCompletedEventHandler Upload_GB_Conference_Room_photoCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Dispensary_PhotosCompletedEventHandler Upload_GB_Dispensary_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Field_Gallery_photoCompletedEventHandler Upload_GB_Field_Gallery_photoCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Field_PhotosCompletedEventHandler Upload_GB_Field_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Girls_Common_Room_PhotosCompletedEventHandler Upload_GB_Girls_Common_Room_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Library_PhotosCompletedEventHandler Upload_GB_Library_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Main_Entrance_PhotosCompletedEventHandler Upload_GB_Main_Entrance_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Sports_Court_photoCompletedEventHandler Upload_GB_Sports_Court_photoCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Staff_Canteena47Cafeteria_PhotosCompletedEventHandler Upload_GB_Staff_Canteena47Cafeteria_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Staff_Common_Room_PhotosCompletedEventHandler Upload_GB_Staff_Common_Room_PhotosCompleted;
+        
+        /// <remarks/>
+        public event Upload_GB_Video_Conference_Room_photoCompletedEventHandler Upload_GB_Video_Conference_Room_photoCompleted;
         
         /// <remarks/>
         public event Upload_GeneralLand_Buliding_FileCompletedEventHandler Upload_GeneralLand_Buliding_FileCompleted;
@@ -462,6 +602,410 @@ namespace WebServices.CodeUnitReference {
             if ((this.Download_Staff_Building_FileCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.Download_Staff_Building_FileCompleted(this, new Download_Staff_Building_FileCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Boys_Common_Roo" +
+            "m_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Boys_Common_Room_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Boys_Common_Room_Photos() {
+            object[] results = this.Invoke("Downlond_GB_Boys_Common_Room_Photos", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Boys_Common_Room_PhotosAsync() {
+            this.Downlond_GB_Boys_Common_Room_PhotosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Boys_Common_Room_PhotosAsync(object userState) {
+            if ((this.Downlond_GB_Boys_Common_Room_PhotosOperationCompleted == null)) {
+                this.Downlond_GB_Boys_Common_Room_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Boys_Common_Room_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Boys_Common_Room_Photos", new object[0], this.Downlond_GB_Boys_Common_Room_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Boys_Common_Room_PhotosOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Boys_Common_Room_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Boys_Common_Room_PhotosCompleted(this, new Downlond_GB_Boys_Common_Room_PhotosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Central_Library" +
+            "_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Central_Library_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Central_Library_Photos() {
+            object[] results = this.Invoke("Downlond_GB_Central_Library_Photos", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Central_Library_PhotosAsync() {
+            this.Downlond_GB_Central_Library_PhotosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Central_Library_PhotosAsync(object userState) {
+            if ((this.Downlond_GB_Central_Library_PhotosOperationCompleted == null)) {
+                this.Downlond_GB_Central_Library_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Central_Library_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Central_Library_Photos", new object[0], this.Downlond_GB_Central_Library_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Central_Library_PhotosOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Central_Library_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Central_Library_PhotosCompleted(this, new Downlond_GB_Central_Library_PhotosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Computer_Lab_Ph" +
+            "otos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Computer_Lab_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Computer_Lab_Photos() {
+            object[] results = this.Invoke("Downlond_GB_Computer_Lab_Photos", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Computer_Lab_PhotosAsync() {
+            this.Downlond_GB_Computer_Lab_PhotosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Computer_Lab_PhotosAsync(object userState) {
+            if ((this.Downlond_GB_Computer_Lab_PhotosOperationCompleted == null)) {
+                this.Downlond_GB_Computer_Lab_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Computer_Lab_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Computer_Lab_Photos", new object[0], this.Downlond_GB_Computer_Lab_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Computer_Lab_PhotosOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Computer_Lab_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Computer_Lab_PhotosCompleted(this, new Downlond_GB_Computer_Lab_PhotosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Conference_Room" +
+            "_photo", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Conference_Room_photo_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Conference_Room_photo() {
+            object[] results = this.Invoke("Downlond_GB_Conference_Room_photo", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Conference_Room_photoAsync() {
+            this.Downlond_GB_Conference_Room_photoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Conference_Room_photoAsync(object userState) {
+            if ((this.Downlond_GB_Conference_Room_photoOperationCompleted == null)) {
+                this.Downlond_GB_Conference_Room_photoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Conference_Room_photoOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Conference_Room_photo", new object[0], this.Downlond_GB_Conference_Room_photoOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Conference_Room_photoOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Conference_Room_photoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Conference_Room_photoCompleted(this, new Downlond_GB_Conference_Room_photoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Dispensary_Phot" +
+            "os", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Dispensary_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Dispensary_Photos() {
+            object[] results = this.Invoke("Downlond_GB_Dispensary_Photos", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Dispensary_PhotosAsync() {
+            this.Downlond_GB_Dispensary_PhotosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Dispensary_PhotosAsync(object userState) {
+            if ((this.Downlond_GB_Dispensary_PhotosOperationCompleted == null)) {
+                this.Downlond_GB_Dispensary_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Dispensary_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Dispensary_Photos", new object[0], this.Downlond_GB_Dispensary_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Dispensary_PhotosOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Dispensary_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Dispensary_PhotosCompleted(this, new Downlond_GB_Dispensary_PhotosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Field_Gallery_p" +
+            "hoto", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Field_Gallery_photo_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Field_Gallery_photo() {
+            object[] results = this.Invoke("Downlond_GB_Field_Gallery_photo", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Field_Gallery_photoAsync() {
+            this.Downlond_GB_Field_Gallery_photoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Field_Gallery_photoAsync(object userState) {
+            if ((this.Downlond_GB_Field_Gallery_photoOperationCompleted == null)) {
+                this.Downlond_GB_Field_Gallery_photoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Field_Gallery_photoOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Field_Gallery_photo", new object[0], this.Downlond_GB_Field_Gallery_photoOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Field_Gallery_photoOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Field_Gallery_photoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Field_Gallery_photoCompleted(this, new Downlond_GB_Field_Gallery_photoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Field_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Field_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Field_Photos() {
+            object[] results = this.Invoke("Downlond_GB_Field_Photos", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Field_PhotosAsync() {
+            this.Downlond_GB_Field_PhotosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Field_PhotosAsync(object userState) {
+            if ((this.Downlond_GB_Field_PhotosOperationCompleted == null)) {
+                this.Downlond_GB_Field_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Field_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Field_Photos", new object[0], this.Downlond_GB_Field_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Field_PhotosOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Field_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Field_PhotosCompleted(this, new Downlond_GB_Field_PhotosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Girls_Common_Ro" +
+            "om_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Girls_Common_Room_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Girls_Common_Room_Photos() {
+            object[] results = this.Invoke("Downlond_GB_Girls_Common_Room_Photos", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Girls_Common_Room_PhotosAsync() {
+            this.Downlond_GB_Girls_Common_Room_PhotosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Girls_Common_Room_PhotosAsync(object userState) {
+            if ((this.Downlond_GB_Girls_Common_Room_PhotosOperationCompleted == null)) {
+                this.Downlond_GB_Girls_Common_Room_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Girls_Common_Room_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Girls_Common_Room_Photos", new object[0], this.Downlond_GB_Girls_Common_Room_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Girls_Common_Room_PhotosOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Girls_Common_Room_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Girls_Common_Room_PhotosCompleted(this, new Downlond_GB_Girls_Common_Room_PhotosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Library_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Library_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Library_Photos() {
+            object[] results = this.Invoke("Downlond_GB_Library_Photos", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Library_PhotosAsync() {
+            this.Downlond_GB_Library_PhotosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Library_PhotosAsync(object userState) {
+            if ((this.Downlond_GB_Library_PhotosOperationCompleted == null)) {
+                this.Downlond_GB_Library_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Library_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Library_Photos", new object[0], this.Downlond_GB_Library_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Library_PhotosOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Library_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Library_PhotosCompleted(this, new Downlond_GB_Library_PhotosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Main_Entrance_P" +
+            "hotos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Main_Entrance_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Main_Entrance_Photos() {
+            object[] results = this.Invoke("Downlond_GB_Main_Entrance_Photos", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Main_Entrance_PhotosAsync() {
+            this.Downlond_GB_Main_Entrance_PhotosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Main_Entrance_PhotosAsync(object userState) {
+            if ((this.Downlond_GB_Main_Entrance_PhotosOperationCompleted == null)) {
+                this.Downlond_GB_Main_Entrance_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Main_Entrance_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Main_Entrance_Photos", new object[0], this.Downlond_GB_Main_Entrance_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Main_Entrance_PhotosOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Main_Entrance_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Main_Entrance_PhotosCompleted(this, new Downlond_GB_Main_Entrance_PhotosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Sports_Court_ph" +
+            "oto", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Sports_Court_photo_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Sports_Court_photo() {
+            object[] results = this.Invoke("Downlond_GB_Sports_Court_photo", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Sports_Court_photoAsync() {
+            this.Downlond_GB_Sports_Court_photoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Sports_Court_photoAsync(object userState) {
+            if ((this.Downlond_GB_Sports_Court_photoOperationCompleted == null)) {
+                this.Downlond_GB_Sports_Court_photoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Sports_Court_photoOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Sports_Court_photo", new object[0], this.Downlond_GB_Sports_Court_photoOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Sports_Court_photoOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Sports_Court_photoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Sports_Court_photoCompleted(this, new Downlond_GB_Sports_Court_photoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Staff_Canteena4" +
+            "7Cafeteria_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Staff_Canteena47Cafeteria_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Staff_Canteena47Cafeteria_Photos() {
+            object[] results = this.Invoke("Downlond_GB_Staff_Canteena47Cafeteria_Photos", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Staff_Canteena47Cafeteria_PhotosAsync() {
+            this.Downlond_GB_Staff_Canteena47Cafeteria_PhotosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Staff_Canteena47Cafeteria_PhotosAsync(object userState) {
+            if ((this.Downlond_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted == null)) {
+                this.Downlond_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Staff_Canteena47Cafeteria_Photos", new object[0], this.Downlond_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Staff_Canteena47Cafeteria_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Staff_Canteena47Cafeteria_PhotosCompleted(this, new Downlond_GB_Staff_Canteena47Cafeteria_PhotosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Staff_Common_Ro" +
+            "om_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Staff_Common_Room_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Staff_Common_Room_Photos() {
+            object[] results = this.Invoke("Downlond_GB_Staff_Common_Room_Photos", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Staff_Common_Room_PhotosAsync() {
+            this.Downlond_GB_Staff_Common_Room_PhotosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Staff_Common_Room_PhotosAsync(object userState) {
+            if ((this.Downlond_GB_Staff_Common_Room_PhotosOperationCompleted == null)) {
+                this.Downlond_GB_Staff_Common_Room_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Staff_Common_Room_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Staff_Common_Room_Photos", new object[0], this.Downlond_GB_Staff_Common_Room_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Staff_Common_Room_PhotosOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Staff_Common_Room_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Staff_Common_Room_PhotosCompleted(this, new Downlond_GB_Staff_Common_Room_PhotosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Downlond_GB_Video_Conferenc" +
+            "e_Room_photo", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Downlond_GB_Video_Conference_Room_photo_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string Downlond_GB_Video_Conference_Room_photo() {
+            object[] results = this.Invoke("Downlond_GB_Video_Conference_Room_photo", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Video_Conference_Room_photoAsync() {
+            this.Downlond_GB_Video_Conference_Room_photoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void Downlond_GB_Video_Conference_Room_photoAsync(object userState) {
+            if ((this.Downlond_GB_Video_Conference_Room_photoOperationCompleted == null)) {
+                this.Downlond_GB_Video_Conference_Room_photoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDownlond_GB_Video_Conference_Room_photoOperationCompleted);
+            }
+            this.InvokeAsync("Downlond_GB_Video_Conference_Room_photo", new object[0], this.Downlond_GB_Video_Conference_Room_photoOperationCompleted, userState);
+        }
+        
+        private void OnDownlond_GB_Video_Conference_Room_photoOperationCompleted(object arg) {
+            if ((this.Downlond_GB_Video_Conference_Room_photoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Downlond_GB_Video_Conference_Room_photoCompleted(this, new Downlond_GB_Video_Conference_Room_photoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1097,6 +1641,410 @@ namespace WebServices.CodeUnitReference {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Boys_Common_Room_" +
+            "Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Boys_Common_Room_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Boys_Common_Room_Photos(string fileNamepar) {
+            this.Invoke("Upload_GB_Boys_Common_Room_Photos", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Boys_Common_Room_PhotosAsync(string fileNamepar) {
+            this.Upload_GB_Boys_Common_Room_PhotosAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Boys_Common_Room_PhotosAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Boys_Common_Room_PhotosOperationCompleted == null)) {
+                this.Upload_GB_Boys_Common_Room_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Boys_Common_Room_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Boys_Common_Room_Photos", new object[] {
+                        fileNamepar}, this.Upload_GB_Boys_Common_Room_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Boys_Common_Room_PhotosOperationCompleted(object arg) {
+            if ((this.Upload_GB_Boys_Common_Room_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Boys_Common_Room_PhotosCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Central_Library_P" +
+            "hotos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Central_Library_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Central_Library_Photos(string fileNamepar) {
+            this.Invoke("Upload_GB_Central_Library_Photos", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Central_Library_PhotosAsync(string fileNamepar) {
+            this.Upload_GB_Central_Library_PhotosAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Central_Library_PhotosAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Central_Library_PhotosOperationCompleted == null)) {
+                this.Upload_GB_Central_Library_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Central_Library_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Central_Library_Photos", new object[] {
+                        fileNamepar}, this.Upload_GB_Central_Library_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Central_Library_PhotosOperationCompleted(object arg) {
+            if ((this.Upload_GB_Central_Library_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Central_Library_PhotosCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Computer_Lab_Phot" +
+            "os", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Computer_Lab_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Computer_Lab_Photos(string fileNamepar) {
+            this.Invoke("Upload_GB_Computer_Lab_Photos", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Computer_Lab_PhotosAsync(string fileNamepar) {
+            this.Upload_GB_Computer_Lab_PhotosAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Computer_Lab_PhotosAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Computer_Lab_PhotosOperationCompleted == null)) {
+                this.Upload_GB_Computer_Lab_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Computer_Lab_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Computer_Lab_Photos", new object[] {
+                        fileNamepar}, this.Upload_GB_Computer_Lab_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Computer_Lab_PhotosOperationCompleted(object arg) {
+            if ((this.Upload_GB_Computer_Lab_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Computer_Lab_PhotosCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Conference_Room_p" +
+            "hoto", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Conference_Room_photo_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Conference_Room_photo(string fileNamepar) {
+            this.Invoke("Upload_GB_Conference_Room_photo", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Conference_Room_photoAsync(string fileNamepar) {
+            this.Upload_GB_Conference_Room_photoAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Conference_Room_photoAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Conference_Room_photoOperationCompleted == null)) {
+                this.Upload_GB_Conference_Room_photoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Conference_Room_photoOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Conference_Room_photo", new object[] {
+                        fileNamepar}, this.Upload_GB_Conference_Room_photoOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Conference_Room_photoOperationCompleted(object arg) {
+            if ((this.Upload_GB_Conference_Room_photoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Conference_Room_photoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Dispensary_Photos" +
+            "", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Dispensary_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Dispensary_Photos(string fileNamepar) {
+            this.Invoke("Upload_GB_Dispensary_Photos", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Dispensary_PhotosAsync(string fileNamepar) {
+            this.Upload_GB_Dispensary_PhotosAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Dispensary_PhotosAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Dispensary_PhotosOperationCompleted == null)) {
+                this.Upload_GB_Dispensary_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Dispensary_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Dispensary_Photos", new object[] {
+                        fileNamepar}, this.Upload_GB_Dispensary_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Dispensary_PhotosOperationCompleted(object arg) {
+            if ((this.Upload_GB_Dispensary_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Dispensary_PhotosCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Field_Gallery_pho" +
+            "to", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Field_Gallery_photo_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Field_Gallery_photo(string fileNamepar) {
+            this.Invoke("Upload_GB_Field_Gallery_photo", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Field_Gallery_photoAsync(string fileNamepar) {
+            this.Upload_GB_Field_Gallery_photoAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Field_Gallery_photoAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Field_Gallery_photoOperationCompleted == null)) {
+                this.Upload_GB_Field_Gallery_photoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Field_Gallery_photoOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Field_Gallery_photo", new object[] {
+                        fileNamepar}, this.Upload_GB_Field_Gallery_photoOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Field_Gallery_photoOperationCompleted(object arg) {
+            if ((this.Upload_GB_Field_Gallery_photoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Field_Gallery_photoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Field_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Field_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Field_Photos(string fileNamepar) {
+            this.Invoke("Upload_GB_Field_Photos", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Field_PhotosAsync(string fileNamepar) {
+            this.Upload_GB_Field_PhotosAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Field_PhotosAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Field_PhotosOperationCompleted == null)) {
+                this.Upload_GB_Field_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Field_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Field_Photos", new object[] {
+                        fileNamepar}, this.Upload_GB_Field_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Field_PhotosOperationCompleted(object arg) {
+            if ((this.Upload_GB_Field_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Field_PhotosCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Girls_Common_Room" +
+            "_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Girls_Common_Room_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Girls_Common_Room_Photos(string fileNamepar) {
+            this.Invoke("Upload_GB_Girls_Common_Room_Photos", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Girls_Common_Room_PhotosAsync(string fileNamepar) {
+            this.Upload_GB_Girls_Common_Room_PhotosAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Girls_Common_Room_PhotosAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Girls_Common_Room_PhotosOperationCompleted == null)) {
+                this.Upload_GB_Girls_Common_Room_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Girls_Common_Room_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Girls_Common_Room_Photos", new object[] {
+                        fileNamepar}, this.Upload_GB_Girls_Common_Room_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Girls_Common_Room_PhotosOperationCompleted(object arg) {
+            if ((this.Upload_GB_Girls_Common_Room_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Girls_Common_Room_PhotosCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Library_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Library_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Library_Photos(string fileNamepar) {
+            this.Invoke("Upload_GB_Library_Photos", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Library_PhotosAsync(string fileNamepar) {
+            this.Upload_GB_Library_PhotosAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Library_PhotosAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Library_PhotosOperationCompleted == null)) {
+                this.Upload_GB_Library_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Library_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Library_Photos", new object[] {
+                        fileNamepar}, this.Upload_GB_Library_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Library_PhotosOperationCompleted(object arg) {
+            if ((this.Upload_GB_Library_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Library_PhotosCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Main_Entrance_Pho" +
+            "tos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Main_Entrance_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Main_Entrance_Photos(string fileNamepar) {
+            this.Invoke("Upload_GB_Main_Entrance_Photos", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Main_Entrance_PhotosAsync(string fileNamepar) {
+            this.Upload_GB_Main_Entrance_PhotosAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Main_Entrance_PhotosAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Main_Entrance_PhotosOperationCompleted == null)) {
+                this.Upload_GB_Main_Entrance_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Main_Entrance_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Main_Entrance_Photos", new object[] {
+                        fileNamepar}, this.Upload_GB_Main_Entrance_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Main_Entrance_PhotosOperationCompleted(object arg) {
+            if ((this.Upload_GB_Main_Entrance_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Main_Entrance_PhotosCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Sports_Court_phot" +
+            "o", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Sports_Court_photo_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Sports_Court_photo(string fileNamepar) {
+            this.Invoke("Upload_GB_Sports_Court_photo", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Sports_Court_photoAsync(string fileNamepar) {
+            this.Upload_GB_Sports_Court_photoAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Sports_Court_photoAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Sports_Court_photoOperationCompleted == null)) {
+                this.Upload_GB_Sports_Court_photoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Sports_Court_photoOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Sports_Court_photo", new object[] {
+                        fileNamepar}, this.Upload_GB_Sports_Court_photoOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Sports_Court_photoOperationCompleted(object arg) {
+            if ((this.Upload_GB_Sports_Court_photoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Sports_Court_photoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Staff_Canteena47C" +
+            "afeteria_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Staff_Canteena47Cafeteria_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Staff_Canteena47Cafeteria_Photos(string fileNamepar) {
+            this.Invoke("Upload_GB_Staff_Canteena47Cafeteria_Photos", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Staff_Canteena47Cafeteria_PhotosAsync(string fileNamepar) {
+            this.Upload_GB_Staff_Canteena47Cafeteria_PhotosAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Staff_Canteena47Cafeteria_PhotosAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted == null)) {
+                this.Upload_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Staff_Canteena47Cafeteria_Photos", new object[] {
+                        fileNamepar}, this.Upload_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Staff_Canteena47Cafeteria_PhotosOperationCompleted(object arg) {
+            if ((this.Upload_GB_Staff_Canteena47Cafeteria_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Staff_Canteena47Cafeteria_PhotosCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Staff_Common_Room" +
+            "_Photos", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Staff_Common_Room_Photos_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Staff_Common_Room_Photos(string fileNamepar) {
+            this.Invoke("Upload_GB_Staff_Common_Room_Photos", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Staff_Common_Room_PhotosAsync(string fileNamepar) {
+            this.Upload_GB_Staff_Common_Room_PhotosAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Staff_Common_Room_PhotosAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Staff_Common_Room_PhotosOperationCompleted == null)) {
+                this.Upload_GB_Staff_Common_Room_PhotosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Staff_Common_Room_PhotosOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Staff_Common_Room_Photos", new object[] {
+                        fileNamepar}, this.Upload_GB_Staff_Common_Room_PhotosOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Staff_Common_Room_PhotosOperationCompleted(object arg) {
+            if ((this.Upload_GB_Staff_Common_Room_PhotosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Staff_Common_Room_PhotosCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GB_Video_Conference_" +
+            "Room_photo", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GB_Video_Conference_Room_photo_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Upload_GB_Video_Conference_Room_photo(string fileNamepar) {
+            this.Invoke("Upload_GB_Video_Conference_Room_photo", new object[] {
+                        fileNamepar});
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Video_Conference_Room_photoAsync(string fileNamepar) {
+            this.Upload_GB_Video_Conference_Room_photoAsync(fileNamepar, null);
+        }
+        
+        /// <remarks/>
+        public void Upload_GB_Video_Conference_Room_photoAsync(string fileNamepar, object userState) {
+            if ((this.Upload_GB_Video_Conference_Room_photoOperationCompleted == null)) {
+                this.Upload_GB_Video_Conference_Room_photoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpload_GB_Video_Conference_Room_photoOperationCompleted);
+            }
+            this.InvokeAsync("Upload_GB_Video_Conference_Room_photo", new object[] {
+                        fileNamepar}, this.Upload_GB_Video_Conference_Room_photoOperationCompleted, userState);
+        }
+        
+        private void OnUpload_GB_Video_Conference_Room_photoOperationCompleted(object arg) {
+            if ((this.Upload_GB_Video_Conference_Room_photoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Upload_GB_Video_Conference_Room_photoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit:Upload_GeneralLand_Buliding" +
             "_File", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", ResponseElementName="Upload_GeneralLand_Buliding_File_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/InfraCodeunit", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void Upload_GeneralLand_Buliding_File(string primaryKey, string fileName) {
@@ -1501,6 +2449,370 @@ namespace WebServices.CodeUnitReference {
         private object[] results;
         
         internal Download_Staff_Building_FileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Boys_Common_Room_PhotosCompletedEventHandler(object sender, Downlond_GB_Boys_Common_Room_PhotosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Boys_Common_Room_PhotosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Boys_Common_Room_PhotosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Central_Library_PhotosCompletedEventHandler(object sender, Downlond_GB_Central_Library_PhotosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Central_Library_PhotosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Central_Library_PhotosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Computer_Lab_PhotosCompletedEventHandler(object sender, Downlond_GB_Computer_Lab_PhotosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Computer_Lab_PhotosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Computer_Lab_PhotosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Conference_Room_photoCompletedEventHandler(object sender, Downlond_GB_Conference_Room_photoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Conference_Room_photoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Conference_Room_photoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Dispensary_PhotosCompletedEventHandler(object sender, Downlond_GB_Dispensary_PhotosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Dispensary_PhotosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Dispensary_PhotosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Field_Gallery_photoCompletedEventHandler(object sender, Downlond_GB_Field_Gallery_photoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Field_Gallery_photoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Field_Gallery_photoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Field_PhotosCompletedEventHandler(object sender, Downlond_GB_Field_PhotosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Field_PhotosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Field_PhotosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Girls_Common_Room_PhotosCompletedEventHandler(object sender, Downlond_GB_Girls_Common_Room_PhotosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Girls_Common_Room_PhotosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Girls_Common_Room_PhotosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Library_PhotosCompletedEventHandler(object sender, Downlond_GB_Library_PhotosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Library_PhotosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Library_PhotosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Main_Entrance_PhotosCompletedEventHandler(object sender, Downlond_GB_Main_Entrance_PhotosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Main_Entrance_PhotosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Main_Entrance_PhotosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Sports_Court_photoCompletedEventHandler(object sender, Downlond_GB_Sports_Court_photoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Sports_Court_photoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Sports_Court_photoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Staff_Canteena47Cafeteria_PhotosCompletedEventHandler(object sender, Downlond_GB_Staff_Canteena47Cafeteria_PhotosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Staff_Canteena47Cafeteria_PhotosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Staff_Canteena47Cafeteria_PhotosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Staff_Common_Room_PhotosCompletedEventHandler(object sender, Downlond_GB_Staff_Common_Room_PhotosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Staff_Common_Room_PhotosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Staff_Common_Room_PhotosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Downlond_GB_Video_Conference_Room_photoCompletedEventHandler(object sender, Downlond_GB_Video_Conference_Room_photoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class Downlond_GB_Video_Conference_Room_photoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal Downlond_GB_Video_Conference_Room_photoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -2019,6 +3331,62 @@ namespace WebServices.CodeUnitReference {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void Upload_Auditorium_Buliding_FileCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Boys_Common_Room_PhotosCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Central_Library_PhotosCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Computer_Lab_PhotosCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Conference_Room_photoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Dispensary_PhotosCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Field_Gallery_photoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Field_PhotosCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Girls_Common_Room_PhotosCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Library_PhotosCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Main_Entrance_PhotosCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Sports_Court_photoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Staff_Canteena47Cafeteria_PhotosCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Staff_Common_Room_PhotosCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Upload_GB_Video_Conference_Room_photoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]

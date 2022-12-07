@@ -38,11 +38,11 @@
     <Setting Name="WebServices_LandReference_LandCard_Service" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/LandCard</Value>
     </Setting>
-    <Setting Name="WebServices_CodeUnitReference_InfraCodeunit" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Codeunit/InfraCodeunit</Value>
-    </Setting>
     <Setting Name="WebServices_GeneralLandBuildingReference_GeneralLandBuildingCard_Service" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Page/GeneralLandBuildingCard</Value>
+    </Setting>
+    <Setting Name="WebServices_CodeUnitReference_InfraCodeunit" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://genesisnav16.atlas.betpilani.org:8047/BC200/WS/CRONUS%20India%20Ltd./Codeunit/InfraCodeunit</Value>
     </Setting>
   </Settings>
 </SettingsFile>

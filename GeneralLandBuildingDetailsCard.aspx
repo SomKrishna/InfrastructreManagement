@@ -189,6 +189,38 @@
         .col-lg-12.col-md-12.summary-box {
             margin: 94px 10px 10px -113px;
         }
+
+        .custom-file-input::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+
+        .custom-file-input::before {
+            content: 'Choose File';
+            display: inline-block;
+            background: linear-gradient(top, #f9f9f9, #e3e3e3);
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 5px 8px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            text-shadow: 1px 1px #fff;
+            font-weight: 700;
+            font-size: 10pt;
+        }
+
+        .custom-file-input:hover::before {
+            border-color: black;
+        }
+
+        .custom-file-input:active::before {
+            background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+        }
+
+        .blockInputClass {
+            pointer-events: none;
+        }
     </style>
 
     <div class="container box">
@@ -211,247 +243,240 @@
                                                 <div class="container">
                                                     <div class="form-group">
                                                         <label for="exampleAccount">Year of Establishment</label>
-                                                        <asp:TextBox ID="txtYear_of_Establis_of_institute" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtYear_of_Establis_of_institute" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Field Available</label>
-                                                        <asp:DropDownList ID="ddlFieldAvailable" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Field Available
+                                                            <asp:CheckBox runat="server" ID="chkFieldAvailable" CssClass="blockInputClass" /></label>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="fieldAvailableSpan" style="display: none">
+                                                                    <asp:FileUpload ID="FileAvailablepdfUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="fileAvailableUpload" OnClick="fileAvailableUpload_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="btnFileAvailableDownload" OnClick="btnFileAvailableDownload_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <%--<span class="custom-file-input btn" id="fieldAvailableSpan" style="display: none">
+                                                            <asp:FileUpload ID="FileAvailablepdfUploader" runat="server" accept=".pdf" />
+                                                            <asp:LinkButton ID="fileAvailableUpload" OnClick="fileAvailableUpload_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="btnFileAvailableDownload" OnClick="btnFileAvailableDownload_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>--%>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="divFieldArea" style="display: none">
                                                         <label for="exampleAccount">Field Area (in Acres)</label>
-                                                        <asp:TextBox ID="txtField_Area_in_Acres" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtField_Area_in_Acres" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Sport's Court Available</label>
-                                                        <asp:DropDownList ID="ddlSportCourt" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Sport's Court Available
+                                                            <asp:CheckBox runat="server" ID="chkSportCourt" CssClass="blockInputClass" /></label>
+                                                        <span class="custom-file-input btn" id="sportsCourtSpan" style="display: none">
+                                                            <asp:FileUpload ID="SportCourtFileUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="SportCourtFileUploadButton" OnClick="SportCourtFileUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="SportCourtDownloadButton" OnClick="SportCourtDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="divSportCourt" style="display: none">
                                                         <label for="exampleAccount">Sports Court Area (in Sqft)</label>
-                                                        <asp:TextBox ID="txtSports_Court_Area_in_Sqft" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtSports_Court_Area_in_Sqft" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Field Gallery Available</label>
-                                                        <asp:DropDownList ID="ddlFieldGalleryAvailable" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Field Gallery Available
+                                                            <asp:CheckBox runat="server" ID="chkFieldGalleryAvailable" CssClass="blockInputClass" /></label>
+                                                        <span class="custom-file-input btn" id="fieldGallerySpan" style="display: none">
+                                                            <asp:FileUpload ID="fieldGalleryFileUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="fieldGalleryFileUploadButton" OnClick="fieldGalleryFileUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="fieldGalleryDownloadButton" OnClick="fieldGalleryDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Conference Room Available</label>
-                                                        <asp:DropDownList ID="ddlConferenceRoomAvailable" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Selected="True" Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Conference Room Available
+                                                            <asp:CheckBox runat="server" ID="chkConferenceRoomAvailable" CssClass="blockInputClass" /></label>
+                                                        <span class="custom-file-input btn" id="conferenceRoomSpan" style="display: none">
+                                                            <asp:FileUpload ID="conferenceRoomFileUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="conferenceRoomUploadButton" OnClick="conferenceRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="conferenceRoomDownloadButton" OnClick="conferenceRoomDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Video Conference Room Available </label>
-                                                        <asp:DropDownList ID="ddlVideo_Conference_Room_Avail" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Video Conference Room Available
+                                                            <asp:CheckBox runat="server" ID="chkVideo_Conference_Room_Avail" CssClass="blockInputClass" /></label>
+                                                        <span class="custom-file-input btn" id="spanVideoConferenceRoom" style="display: none">
+                                                            <asp:FileUpload ID="VideoConferenceRoomUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="videoConferenceRoomUploadButton" OnClick="videoConferenceRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="VideoConferenceRoomDownloadButton" OnClick="VideoConferenceRoomDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="divVideoConferenceRoom" style="display: none">
                                                         <label for="exampleAccount">Floor size of the Video conference room (in sqft)</label>
-                                                        <asp:TextBox ID="txtFloor_size_of_the_Video_conf" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtFloor_size_of_the_Video_conf" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="divVideoConferenceRoomCapacity" style="display: none">
                                                         <label for="exampleAccount">Video Conference Room Capacity</label>
-                                                        <asp:TextBox ID="txtVideo_Conference_Room_Capacity" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtVideo_Conference_Room_Capacity" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
 
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="divVideoConferenceRoomLocation" style="display: none">
                                                         <label for="exampleAccount">Video Conference Room Location</label>
-                                                        <asp:TextBox ID="txtVideo_Conference_Room_Location" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtVideo_Conference_Room_Location" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Library Available</label>
-                                                        <asp:DropDownList ID="ddlLibrary_Available" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="exampleAccount">Central Library Available</label>
-                                                        <asp:DropDownList ID="ddlCentralLibraryAvailable" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Library Available
+                                                            <asp:CheckBox runat="server" ID="chkLibrary_Available" CssClass="blockInputClass" /></label>
+                                                        <span class="custom-file-input btn" id="spanLibraryAvailable" style="display: none">
+                                                            <asp:FileUpload ID="Library_AvailableFileUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="Library_AvailableUploadButton" OnClick="Library_AvailableUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="Library_AvailableDownloadButton" OnClick="Library_AvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Digital Library Available</label>
-                                                        <asp:DropDownList ID="ddlDigitalLibraryAvailable" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleAccount">Canteen/Cafeteria for Staff Avail.</label>
-                                                        <asp:DropDownList ID="ddlCanteen_Caf_for_Staffs_Avail" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Central Library Available
+                                                            <asp:CheckBox runat="server" ID="chkCentralLibraryAvailable" CssClass="blockInputClass" /></label>
+                                                        <span class="custom-file-input btn" id="spanCentralLibraryAvailable" style="display: none">
+                                                            <asp:FileUpload ID="CentralLibraryFileUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="CentralLibraryUploadButton" OnClick="CentralLibraryUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="CentralLibraryDowloadButton" OnClick="CentralLibraryDowloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Canteen/Cafeteria Capacity</label>
-                                                        <asp:TextBox ID="txtCanteen_Cafeteria_Capacity" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control" runat="server"></asp:TextBox>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleAccount">Upload file</label>
-                                                        <table>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class='file'>
-                                                                        <label for='input-file'>
-                                                                            <i class="material-icons">cloud_queue
-                                                                            </i>Max PDF file size 2MB
-                                                                        </label>
-                                                                        <asp:FileUpload ID="pdfUploader" accept="application/pdf" runat="server" />&nbsp;
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
+                                                        <label for="exampleAccount">Main Entrance Photo</label>
+                                                        <span class="custom-file-input btn">
+                                                            <asp:FileUpload ID="mainEntranceUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="mainEntranceUploadButton" OnClick="mainEntranceUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="mainEntranceDownButton" OnClick="mainEntranceDownButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 contact-info">
                                                 <div class="container">
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Dispensary Available</label>
-                                                        <asp:DropDownList ID="ddlDispensary_Available" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Dispensary Available
+                                                            <asp:CheckBox runat="server" ID="chkDispensary_Available" CssClass="blockInputClass" /></label>
+                                                        <span class="custom-file-input btn" id="spanDispensaryAvailable" style="display: none">
+                                                            <asp:FileUpload ID="DispensaryAvailableUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="DispensaryAvailableUploadButton" OnClick="DispensaryAvailableUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="DispensaryAvailableDownloadButton" OnClick="DispensaryAvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">COE Program Available</label>
-                                                        <asp:DropDownList ID="ddlCoE_Program_Available" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            COE Program Available
+                                                            <asp:CheckBox runat="server" ID="chkCoE_Program_Available" CssClass="blockInputClass" /></label>
+
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="divCOEProgramDetails" style="display: none">
                                                         <label for="exampleAccount">COE Program Details</label>
-                                                        <asp:TextBox ID="txtCoE_Program_Details" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtCoE_Program_Details" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">CSR Activities Available</label>
-                                                        <asp:DropDownList ID="ddlCSR_Activities_Available" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            CSR Activities Available
+                                                            <asp:CheckBox runat="server" ID="chkCSR_Activities_Available" CssClass="blockInputClass" /></label>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="divCSRActivity" style="display: none">
                                                         <label for="exampleAccount">CSR Activity Details</label>
-                                                        <asp:TextBox ID="txtCSR_Activity_Details" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtCSR_Activity_Details" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Staff Common Room Available</label>
-                                                        <asp:DropDownList ID="ddlStaff_Common_Room_Available" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Staff Common Room Available
+                                                            <asp:CheckBox runat="server" ID="chkStaff_Common_Room_Available" CssClass="blockInputClass" /></label>
+                                                        <span class="custom-file-input btn" id="spanStaffCommonRoomAvailable" style="display: none">
+                                                            <asp:FileUpload ID="StaffCommonRoomAvailableUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="StaffCommonRoomUploadButton" OnClick="StaffCommonRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="StaffCommonRoomAvailableDownloadButton" OnClick="StaffCommonRoomAvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="divStaffCommonRoom" style="display: none">
                                                         <label for="exampleAccount">Staff Common Room Details</label>
-                                                        <asp:TextBox ID="txtStaff_Common_Room_Details" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtStaff_Common_Room_Details" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Girls Common Room Available</label>
-                                                        <asp:DropDownList ID="ddlGirls_Common_Room_Available" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Girls Common Room Available
+                                                            <asp:CheckBox runat="server" ID="chkGirls_Common_Room_Available" CssClass="blockInputClass" /></label>
+                                                        <span class="custom-file-input btn" id="spanGirlsCommonRoomAvailable" style="display: none">
+                                                            <asp:FileUpload ID="girlsCommonRoomAvailableUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="girlsCommonRoomUploadButton" OnClick="girlsCommonRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="girlsCommonRoomAvailableDownloadButton" OnClick="girlsCommonRoomAvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="divgirlsCommonRoomAvailable" style="display: none">
                                                         <label for="exampleAccount">Girls Common Room Details</label>
-                                                        <asp:TextBox ID="txtGirls_Common_Room_Details" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtGirls_Common_Room_Details" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Boys Common Room Available</label>
-                                                        <asp:DropDownList ID="ddlBoys_Common_Room_Available" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Selected="True" Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Boys Common Room Available
+                                                            <asp:CheckBox runat="server" ID="chkBoys_Common_Room_Available" CssClass="blockInputClass" /></label>
+                                                        <span class="custom-file-input btn" id="spanboysCommonRoomAvailable" style="display: none">
+                                                            <asp:FileUpload ID="Boys_Common_RoomUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="BoysCommonRoomUploadButton" OnClick="BoysCommonRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="Boys_Common_RoomDownloadButton" OnClick="Boys_Common_RoomDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="divboysCommonRoomAvailable" style="display: none">
                                                         <label for="exampleAccount">Boys Common Room Details</label>
-                                                        <asp:TextBox ID="txtBoys_Common_Room_Details" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtBoys_Common_Room_Details" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleAccount">
+                                                            Roof Top Solar Panel Available
+                                                            <asp:CheckBox runat="server" ID="chkRoof_Top_Solar_Panel_Available" CssClass="blockInputClass" /></label>
 
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleAccount">
+                                                            Rain Water Harvesting Available
+                                                            <asp:CheckBox runat="server" ID="chkRain_Water_Harvesting_Avail" CssClass="blockInputClass" /></label>
 
-                                                    <div class="form-group">
-                                                        <label for="exampleAccount">Roof Top Solar Panel Available</label>
-                                                        <asp:DropDownList ID="ddlRoof_Top_Solar_Panel_Available" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Rain Water Harvesting Available</label>
-                                                        <asp:DropDownList ID="ddlRain_Water_Harvesting_Avail" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Sewage Treatment Plant Available
+                                                            <asp:CheckBox runat="server" ID="chkSewage_Treatment_Plant_Avail" CssClass="blockInputClass" /></label>
+
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Sewage Treatment Plant Available</label>
-                                                        <asp:DropDownList ID="ddlSewage_Treatment_Plant_Avail" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Internet Connection Available
+                                                            <asp:CheckBox runat="server" ID="chkInternet_Connection_Available" CssClass="blockInputClass" /></label>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Internet Connection Available</label>
-                                                        <asp:DropDownList ID="ddlInternet_Connection_Available" CssClass="form-control" runat="server">
-                                                            <asp:ListItem Value="Select">Select</asp:ListItem>
-                                                            <asp:ListItem Value="Yes">Yes</asp:ListItem>
-                                                            <asp:ListItem Value="No">No</asp:ListItem>
-                                                        </asp:DropDownList>
+                                                        <label for="exampleAccount">
+                                                            Digital Library Available
+                                                            <asp:CheckBox runat="server" ID="chkDigitalLibraryAvailable" CssClass="blockInputClass" /></label>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleAccount">Uploaded FileName</label>
-                                                        <asp:TextBox ID="txtUploaded_FileName" CssClass="form-control" runat="server"></asp:TextBox>
+                                                        <label for="exampleAccount">
+                                                            Canteen/Cafeteria for Staff Avail.
+                                                            <asp:CheckBox runat="server" ID="chkCanteen_Caf_for_Staffs_Avail" CssClass="blockInputClass" /></label>
+                                                        <span class="custom-file-input btn" id="spanCanteen_Caf_for_Staffs_Avail" style="display: none">
+                                                            <asp:FileUpload ID="Canteen_CafUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                            <asp:LinkButton ID="Canteen_CafUploadButton" OnClick="Canteen_CafUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                            <asp:LinkButton ID="Canteen_CafDownloadButton" OnClick="Canteen_CafDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                        </span>
+                                                    </div>
+                                                    <div class="form-group" id="divCanteenCapacity" style="display: none">
+                                                        <label for="exampleAccount">Canteen/Cafeteria Capacity</label>
+                                                        <asp:TextBox ID="txtCanteen_Cafeteria_Capacity" onkeypress="return isDecimalNumberKey(event)" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 ExportFoot">
-                                        <asp:Button ID="btnExport" CssClass="exportcss btn-yellow" OnClick="btnExport_Click" runat="server" Text="Export" />
-                                    </div>
-                                    <div class="col-md-12">
-                                        <asp:HiddenField ID="hdnKey" runat="server" />
-                                        <asp:Button ID="GenralSubmitBtn" runat="server" OnClick="GenralSubmitBtn_Click" CssClass="btn-s float-right submit" type="submit" Text="Submit" />
-                                        <%--<asp:Button ID="GenralUpdateBtn" runat="server" OnClick="GenralUpdateBtn_Click" CssClass="btn-s float-right submit" type="submit" Text="Update" />--%>
-                                    </div>
-                                    
+                                    <asp:HiddenField ID="hdnKey" runat="server" />
                                 </div>
                             </div>
 
@@ -472,5 +497,138 @@
                 return false;
             return true;
         }
+
+        //function fieldAvailableChanged() {
+        if ($("#<%= chkFieldAvailable.ClientID %>").is(":checked")) {
+            $("#fieldAvailableSpan").show();
+            $("#divFieldArea").show();
+        }
+        else {
+            $("#fieldAvailableSpan").hide();
+            $("#divFieldArea").hide();
+        }
+        //}
+        //function sportsCourtChanged() {
+        if ($("#<%= chkSportCourt.ClientID %>").is(":checked")) {
+            $("#sportsCourtSpan").show();
+            $("#divSportCourt").show();
+        }
+        else {
+            $("#sportsCourtSpan").hide();
+            $("#divSportCourt").hide();
+        }
+        //}
+
+        //function fieldGalleryChanged() {
+        if ($("#<%= chkFieldGalleryAvailable.ClientID %>").is(":checked")) {
+            $("#fieldGallerySpan").show();
+        }
+        else {
+            $("#fieldGallerySpan").hide();
+        }
+        //}
+        //function conferenceRoomChanged() {
+        if ($("#<%= chkConferenceRoomAvailable.ClientID %>").is(":checked")) {
+            $("#conferenceRoomSpan").show();
+        }
+        else {
+            $("#conferenceRoomSpan").hide();
+        }
+        //}
+        //function videoConferenceRoomChanged() {
+        if ($("#<%= chkVideo_Conference_Room_Avail.ClientID %>").is(":checked")) {
+            $("#spanVideoConferenceRoom").show();
+            $("#divVideoConferenceRoom").show();
+            $("#divVideoConferenceRoomCapacity").show();
+            $("#divVideoConferenceRoomLocation").show();
+        }
+        else {
+            $("#spanVideoConferenceRoom").hide();
+            $("#divVideoConferenceRoom").hide();
+            $("#divVideoConferenceRoomCapacity").hide();
+            $("#divVideoConferenceRoomLocation").hide();
+        }
+        //}
+
+        //function libraryAvailableChanged() {
+        if ($("#<%= chkLibrary_Available.ClientID %>").is(":checked")) {
+            $("#spanLibraryAvailable").show();
+        }
+        else {
+            $("#spanLibraryAvailable").hide();
+        }
+        //}
+        //function centralLibraryAvailableChanged() {
+        if ($("#<%= chkCentralLibraryAvailable.ClientID %>").is(":checked")) {
+            $("#spanCentralLibraryAvailable").show();
+        }
+        else {
+            $("#spanCentralLibraryAvailable").hide();
+        }
+        //}
+        //function canteenCafeteriaChanged() {
+        if ($("#<%= chkCanteen_Caf_for_Staffs_Avail.ClientID %>").is(":checked")) {
+            $("#spanCanteen_Caf_for_Staffs_Avail").show();
+            $("#divCanteenCapacity").show();
+        }
+        else {
+            $("#spanCanteen_Caf_for_Staffs_Avail ").hide();
+            $("#divCanteenCapacity").hide();
+        }
+        //}
+        //function dispensaryAvailableChanged() {
+        if ($("#<%= chkDispensary_Available.ClientID %>").is(":checked")) {
+            $("#spanDispensaryAvailable").show();
+        }
+        else {
+            $("#spanDispensaryAvailable  ").hide();
+        }
+        //}
+        //function COEProgramAvailableChanged() {
+        if ($("#<%= chkCoE_Program_Available.ClientID %>").is(":checked")) {
+            $("#divCOEProgramDetails").show();
+        }
+        else {
+            $("#divCOEProgramDetails").hide();
+        }
+        //}
+        //function CSRActivitiesChanged() {
+        if ($("#<%= chkCSR_Activities_Available.ClientID %>").is(":checked")) {
+            $("#divCSRActivity").show();
+        }
+        else {
+            $("#divCSRActivity").hide();
+        }
+        //}
+        //function staffCommonRoomAvailableChanged() {
+        if ($("#<%= chkStaff_Common_Room_Available.ClientID %>").is(":checked")) {
+            $("#spanStaffCommonRoomAvailable").show();
+            $("#divStaffCommonRoom").show();
+        }
+        else {
+            $("#spanStaffCommonRoomAvailable").hide();
+            $("#divStaffCommonRoom").hide();
+        }
+        //}
+        //function girlsCommonRoomAvailableChanged() {
+        if ($("#<%= chkGirls_Common_Room_Available.ClientID %>").is(":checked")) {
+            $("#spanGirlsCommonRoomAvailable").show();
+            $("#divgirlsCommonRoomAvailable").show();
+        }
+        else {
+            $("#spanGirlsCommonRoomAvailable").hide();
+            $("#divgirlsCommonRoomAvailable").hide();
+        }
+        //}
+        //function boysCommonRoomAvailableChanged() {
+        if ($("#<%= chkBoys_Common_Room_Available.ClientID %>").is(":checked")) {
+            $("#spanboysCommonRoomAvailable").show();
+            $("#divboysCommonRoomAvailable").show();
+        }
+        else {
+            $("#spanboysCommonRoomAvailable").hide();
+            $("#divboysCommonRoomAvailable").hide();
+        }
+        //}
     </script>
 </asp:Content>

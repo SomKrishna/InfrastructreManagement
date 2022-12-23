@@ -168,7 +168,7 @@ namespace InfrastructureManagement
                 }
                 string servicePath = @"\\genesisnav16\PORTAL\PDF\" + finalFileName;
                 ODataServices.Upload_Auditorium_Buliding_File(buildingCode.Text, servicePath);
-                Alert.ShowAlert(this, "s", "file Upload successfully");
+                Alert.ShowAlert(this, "s", "file Uploaded successfully");
             }
         }
 

@@ -106,6 +106,12 @@
         .col-lg-12.col-md-12.summary-box {
             margin: 94px 10px 10px -113px;
         }
+        input#ContentPlaceHolder1_csvUploader {
+            width: 160px;
+            height: 34px;
+            left: 36px;
+            top: 0px;
+        }
     </style>
        
     <div class="container box">
@@ -130,7 +136,7 @@
                                 <p><span>
                                     1.
                                    </span>
-                                    Download the themplate csv file.
+                                    Download the template csv file.
                                 </p>
                             </li>
                              <li class="sub-list">
@@ -197,8 +203,8 @@
  </div>
  </div>
     <script language="Javascript">        
-         function showLoader() {
-             $('#loader').show();
-         };
+        function showLoader() {
+            $('#loader').show();
+        };
     </script>
 </asp:Content>

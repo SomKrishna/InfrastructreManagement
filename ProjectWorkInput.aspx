@@ -185,9 +185,10 @@
             width: 203px;
             text-align: justify;
         }
+
         .col-lg-12.col-md-12.model-box {
-    margin: 34px 10px 10px -113px;
-}
+            margin: 34px 10px 10px -113px;
+        }
     </style>
 
     <div class="container box">
@@ -197,7 +198,9 @@
 
                 <div class="col-lg-12 col-md-12 summary-box">
                     <div class="col-lg-12 NewEntrydiv">
-                        <p class="NewEntry"><label id="lblHeader" ></label></p>
+                        <p class="NewEntry">
+                            <label id="lblHeader"></label>
+                        </p>
                     </div>
                     <div class="row">
                         <div class="card-body">
@@ -216,9 +219,9 @@
                                                 </asp:DropDownList>
                                             </div>
                                         </div>
-                                    </div>                                    
-                                        <div class="row show-hide divBuilding" id="divBuilding">
-                                            <div class="col-md-6 Buliding">
+                                    </div>
+                                    <div class="row" runat="server" id="divBuilding">
+                                        <div class="col-md-6 Buliding">
                                             <div class="col-md-6 ">
                                                 <label for="exampleCtrl" runat="server" id="lblbuilding">Building ID</label>
                                             </div>
@@ -226,8 +229,8 @@
                                                 <asp:TextBox ID="txtBuildingId" CssClass="form-control" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
-                                       </div>
-                                    </div>                                
+                                    </div>
+                                </div>
                                 <div class="col-md-12" id="Improvement">
                                     <div class="row">
                                         <h3 class="hadingline">Enter Project Details Below</h3>
@@ -247,7 +250,7 @@
                                                     <asp:TextBox ID="txtProjectName" CssClass="form-control" runat="server"></asp:TextBox>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleAccount">Name of the Agency</label> 
+                                                    <label for="exampleAccount">Name of the Agency</label>
                                                     <asp:DropDownList ID="ddlNameOfAgency" CssClass="form-control select" runat="server">
                                                         <asp:ListItem>R&B</asp:ListItem>
                                                         <asp:ListItem>GPHD</asp:ListItem>
@@ -305,7 +308,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                                                
+
                                 <div class="col-md-12">
                                     <asp:Button ID="btnSubmit" OnClick="btnSubmit_Click" runat="server" CssClass="btn-s float-right submit" type="submit" Text="Submit" />
                                 </div>
@@ -330,16 +333,13 @@
                 $("#lblHeader").text('Project Work Input');
             }
             if (dropDownValue == 'Ongoing' || dropDownValue == 'New') {
-                $('.divBuilding').hide();
+                $("#<%= divBuilding.ClientID %>").hide();
             }
-            else
-            {
-                $('.divBuilding').show();
+            if (dropDownValue == 'Improvement') {
+                $("#<%= divBuilding.ClientID %>").show();
             }
         });
         $('select').change(function () { //on change do stuff
-            $('.show-hide').hide(); //hide all with .box class
-
             if ($(this).val() == 'Ongoing') {
                 $("#lblHeader").text('Add Ongoing Project Progress Details');
             }
@@ -347,11 +347,10 @@
                 $("#lblHeader").text('Project Work Input');
             }
             if ($(this).val() == 'Ongoing' || $(this).val() == 'New') {
-                $('.divBuilding').hide();
+                $("#<%= divBuilding.ClientID %>").hide();
             }
-            else
-            {
-                $('.divBuilding').show();
+            if ($(this).val() == 'Improvement') {
+                $("#<%= divBuilding.ClientID %>").show();
             }
         });
     </script>

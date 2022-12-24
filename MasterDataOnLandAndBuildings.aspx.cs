@@ -59,9 +59,9 @@ namespace InfrastructureManagement
                 }
                 catch (Exception ex)
                 {
-                    Alert.ShowAlert(this, "s", ex.Message);
+                    Alert.ShowAlert(this, "e", ex.Message);
                 }
-                Alert.ShowAlert(this, "s", "file Upload successfully");
+                Alert.ShowAlert(this, "s", "file uploaded successfully");
             }
         }
 

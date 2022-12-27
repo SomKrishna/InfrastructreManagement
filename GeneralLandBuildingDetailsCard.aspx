@@ -272,11 +272,15 @@
                                                         <label for="exampleAccount">
                                                             Sport's Court Available
                                                             <asp:CheckBox runat="server" ID="chkSportCourt" CssClass="blockInputClass" /></label>
-                                                        <span class="custom-file-input btn" id="sportsCourtSpan" style="display: none">
-                                                            <asp:FileUpload ID="SportCourtFileUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="SportCourtFileUploadButton" OnClick="SportCourtFileUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="SportCourtDownloadButton" OnClick="SportCourtDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="sportsCourtSpan" style="display: none">
+                                                                    <asp:FileUpload ID="SportCourtFileUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="SportCourtFileUploadButton" OnClick="SportCourtFileUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="SportCourtDownloadButton" OnClick="SportCourtDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group" id="divSportCourt" style="display: none">
                                                         <label for="exampleAccount">Sports Court Area (in Sqft)</label>
@@ -286,31 +290,43 @@
                                                         <label for="exampleAccount">
                                                             Field Gallery Available
                                                             <asp:CheckBox runat="server" ID="chkFieldGalleryAvailable" CssClass="blockInputClass" /></label>
-                                                        <span class="custom-file-input btn" id="fieldGallerySpan" style="display: none">
-                                                            <asp:FileUpload ID="fieldGalleryFileUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="fieldGalleryFileUploadButton" OnClick="fieldGalleryFileUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="fieldGalleryDownloadButton" OnClick="fieldGalleryDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="fieldGallerySpan" style="display: none">
+                                                                    <asp:FileUpload ID="fieldGalleryFileUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="fieldGalleryFileUploadButton" OnClick="fieldGalleryFileUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="fieldGalleryDownloadButton" OnClick="fieldGalleryDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleAccount">
                                                             Conference Room Available
                                                             <asp:CheckBox runat="server" ID="chkConferenceRoomAvailable" CssClass="blockInputClass" /></label>
-                                                        <span class="custom-file-input btn" id="conferenceRoomSpan" style="display: none">
-                                                            <asp:FileUpload ID="conferenceRoomFileUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="conferenceRoomUploadButton" OnClick="conferenceRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="conferenceRoomDownloadButton" OnClick="conferenceRoomDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="conferenceRoomSpan" style="display: none">
+                                                                    <asp:FileUpload ID="conferenceRoomFileUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="conferenceRoomUploadButton" OnClick="conferenceRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="conferenceRoomDownloadButton" OnClick="conferenceRoomDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleAccount">
                                                             Video Conference Room Available
                                                             <asp:CheckBox runat="server" ID="chkVideo_Conference_Room_Avail" CssClass="blockInputClass" /></label>
-                                                        <span class="custom-file-input btn" id="spanVideoConferenceRoom" style="display: none">
-                                                            <asp:FileUpload ID="VideoConferenceRoomUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="videoConferenceRoomUploadButton" OnClick="videoConferenceRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="VideoConferenceRoomDownloadButton" OnClick="VideoConferenceRoomDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="spanVideoConferenceRoom" style="display: none">
+                                                                    <asp:FileUpload ID="VideoConferenceRoomUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="videoConferenceRoomUploadButton" OnClick="videoConferenceRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="VideoConferenceRoomDownloadButton" OnClick="VideoConferenceRoomDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group" id="divVideoConferenceRoom" style="display: none">
                                                         <label for="exampleAccount">Floor size of the Video conference room (in sqft)</label>
@@ -329,30 +345,42 @@
                                                         <label for="exampleAccount">
                                                             Library Available
                                                             <asp:CheckBox runat="server" ID="chkLibrary_Available" CssClass="blockInputClass" /></label>
-                                                        <span class="custom-file-input btn" id="spanLibraryAvailable" style="display: none">
-                                                            <asp:FileUpload ID="Library_AvailableFileUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="Library_AvailableUploadButton" OnClick="Library_AvailableUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="Library_AvailableDownloadButton" OnClick="Library_AvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="spanLibraryAvailable" style="display: none">
+                                                                    <asp:FileUpload ID="Library_AvailableFileUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="Library_AvailableUploadButton" OnClick="Library_AvailableUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="Library_AvailableDownloadButton" OnClick="Library_AvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleAccount">
                                                             Central Library Available
                                                             <asp:CheckBox runat="server" ID="chkCentralLibraryAvailable" CssClass="blockInputClass" /></label>
-                                                        <span class="custom-file-input btn" id="spanCentralLibraryAvailable" style="display: none">
-                                                            <asp:FileUpload ID="CentralLibraryFileUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="CentralLibraryUploadButton" OnClick="CentralLibraryUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="CentralLibraryDowloadButton" OnClick="CentralLibraryDowloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="spanCentralLibraryAvailable" style="display: none">
+                                                                    <asp:FileUpload ID="CentralLibraryFileUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="CentralLibraryUploadButton" OnClick="CentralLibraryUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="CentralLibraryDowloadButton" OnClick="CentralLibraryDowloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="exampleAccount">Main Entrance Photo</label>
-                                                        <span class="custom-file-input btn">
-                                                            <asp:FileUpload ID="mainEntranceUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="mainEntranceUploadButton" OnClick="mainEntranceUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="mainEntranceDownButton" OnClick="mainEntranceDownButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn">
+                                                                    <asp:FileUpload ID="mainEntranceUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="mainEntranceUploadButton" OnClick="mainEntranceUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="mainEntranceDownButton" OnClick="mainEntranceDownButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -362,11 +390,15 @@
                                                         <label for="exampleAccount">
                                                             Dispensary Available
                                                             <asp:CheckBox runat="server" ID="chkDispensary_Available" CssClass="blockInputClass" /></label>
-                                                        <span class="custom-file-input btn" id="spanDispensaryAvailable" style="display: none">
-                                                            <asp:FileUpload ID="DispensaryAvailableUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="DispensaryAvailableUploadButton" OnClick="DispensaryAvailableUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="DispensaryAvailableDownloadButton" OnClick="DispensaryAvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="spanDispensaryAvailable" style="display: none">
+                                                                    <asp:FileUpload ID="DispensaryAvailableUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="DispensaryAvailableUploadButton" OnClick="DispensaryAvailableUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="DispensaryAvailableDownloadButton" OnClick="DispensaryAvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleAccount">
@@ -391,11 +423,15 @@
                                                         <label for="exampleAccount">
                                                             Staff Common Room Available
                                                             <asp:CheckBox runat="server" ID="chkStaff_Common_Room_Available" CssClass="blockInputClass" /></label>
-                                                        <span class="custom-file-input btn" id="spanStaffCommonRoomAvailable" style="display: none">
-                                                            <asp:FileUpload ID="StaffCommonRoomAvailableUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="StaffCommonRoomUploadButton" OnClick="StaffCommonRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="StaffCommonRoomAvailableDownloadButton" OnClick="StaffCommonRoomAvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="spanStaffCommonRoomAvailable" style="display: none">
+                                                                    <asp:FileUpload ID="StaffCommonRoomAvailableUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="StaffCommonRoomUploadButton" OnClick="StaffCommonRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="StaffCommonRoomAvailableDownloadButton" OnClick="StaffCommonRoomAvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group" id="divStaffCommonRoom" style="display: none">
                                                         <label for="exampleAccount">Staff Common Room Details</label>
@@ -405,11 +441,15 @@
                                                         <label for="exampleAccount">
                                                             Girls Common Room Available
                                                             <asp:CheckBox runat="server" ID="chkGirls_Common_Room_Available" CssClass="blockInputClass" /></label>
-                                                        <span class="custom-file-input btn" id="spanGirlsCommonRoomAvailable" style="display: none">
-                                                            <asp:FileUpload ID="girlsCommonRoomAvailableUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="girlsCommonRoomUploadButton" OnClick="girlsCommonRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="girlsCommonRoomAvailableDownloadButton" OnClick="girlsCommonRoomAvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="spanGirlsCommonRoomAvailable" style="display: none">
+                                                                    <asp:FileUpload ID="girlsCommonRoomAvailableUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="girlsCommonRoomUploadButton" OnClick="girlsCommonRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="girlsCommonRoomAvailableDownloadButton" OnClick="girlsCommonRoomAvailableDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group" id="divgirlsCommonRoomAvailable" style="display: none">
                                                         <label for="exampleAccount">Girls Common Room Details</label>
@@ -420,11 +460,15 @@
                                                         <label for="exampleAccount">
                                                             Boys Common Room Available
                                                             <asp:CheckBox runat="server" ID="chkBoys_Common_Room_Available" CssClass="blockInputClass" /></label>
-                                                        <span class="custom-file-input btn" id="spanboysCommonRoomAvailable" style="display: none">
-                                                            <asp:FileUpload ID="Boys_Common_RoomUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="BoysCommonRoomUploadButton" OnClick="BoysCommonRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="Boys_Common_RoomDownloadButton" OnClick="Boys_Common_RoomDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="spanboysCommonRoomAvailable" style="display: none">
+                                                                    <asp:FileUpload ID="Boys_Common_RoomUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="BoysCommonRoomUploadButton" OnClick="BoysCommonRoomUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="Boys_Common_RoomDownloadButton" OnClick="Boys_Common_RoomDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group" id="divboysCommonRoomAvailable" style="display: none">
                                                         <label for="exampleAccount">Boys Common Room Details</label>
@@ -462,11 +506,15 @@
                                                         <label for="exampleAccount">
                                                             Canteen/Cafeteria for Staff Avail.
                                                             <asp:CheckBox runat="server" ID="chkCanteen_Caf_for_Staffs_Avail" CssClass="blockInputClass" /></label>
-                                                        <span class="custom-file-input btn" id="spanCanteen_Caf_for_Staffs_Avail" style="display: none">
-                                                            <asp:FileUpload ID="Canteen_CafUploader" runat="server" Style="display: none" accept=".pdf" />
-                                                            <asp:LinkButton ID="Canteen_CafUploadButton" OnClick="Canteen_CafUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
-                                                            <asp:LinkButton ID="Canteen_CafDownloadButton" OnClick="Canteen_CafDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
-                                                        </span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="custom-file-input btn" id="spanCanteen_Caf_for_Staffs_Avail" style="display: none">
+                                                                    <asp:FileUpload ID="Canteen_CafUploader" runat="server" Style="display: none" accept=".pdf" />
+                                                                    <asp:LinkButton ID="Canteen_CafUploadButton" OnClick="Canteen_CafUploadButton_Click" CssClass="btn btn-yellow" runat="server">Upload</asp:LinkButton>
+                                                                    <asp:LinkButton ID="Canteen_CafDownloadButton" OnClick="Canteen_CafDownloadButton_Click" CssClass="btn btn-link" runat="server">Download File</asp:LinkButton>
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="form-group" id="divCanteenCapacity" style="display: none">
                                                         <label for="exampleAccount">Canteen/Cafeteria Capacity</label>

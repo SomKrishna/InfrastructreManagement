@@ -126,10 +126,7 @@
             <div class="col-lg-12 col-md-12 summary-box">
                 <div class="col-lg-12 NewEntrydiv">
                     <p class="NewEntry">Update Land Record</p>
-                </div>
-                <div class="loader" id="loader">
-                    <div class="loader-img"><i class="fa fa-spinner fa-spin"></i></div>
-                </div>
+                </div>                
                 <div class="row">
                     <div id="LandRecordSearch" class="card-body" runat="server">
                         <div class="row md-12 marginx">

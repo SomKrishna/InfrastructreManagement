@@ -189,7 +189,7 @@
         .col-lg-12.col-md-12.summary-box {
             margin: 94px 10px 10px -113px;
         }
-        .input#ContentPlaceHolder1_csvUploader {
+        .input#ContentPlaceHolder1_pdfUploader {
            width: 160px;
             height: 34px;
             left: 36px;
@@ -312,7 +312,7 @@
                                                                         <i class="material-icons">cloud_queue
                                                                         </i>Max PDF file size 2MB
                                                                     </label>
-                                                                    <asp:FileUpload ID="pdfUploader" accept="application/pdf" runat="server" />&nbsp;
+                                                                    <asp:FileUpload ID="pdfUploader" accept="application/pdf" style="width:160px;height: 34px;" runat="server" />
                                                                 </div>
                                                             </td>
                                                         </tr>

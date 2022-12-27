@@ -117,6 +117,9 @@
         .col-lg-12.col-md-12.summary-box {
             margin: 94px 10px 10px -113px;
         }
+        .blockInputClass {
+            pointer-events: none;
+        }
     </style>
 
     <div class="container box" id="booggg">
@@ -155,7 +158,7 @@
                                         <div class="container">
                                             <div class="form-group">
                                                 <label for="exampleAccount">Khatian Serial No</label>
-                                                <asp:TextBox ID="txtKhatian_Serial_No" ReadOnly="true" CssClass="form-control" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtKhatian_Serial_No" CssClass="form-control blockInputClass" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleAccount">Plot No</label>

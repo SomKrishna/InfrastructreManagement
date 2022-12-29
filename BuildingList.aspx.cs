@@ -98,7 +98,7 @@ namespace InfrastructureManagement
                 string bcPath = ODataServices.Download_Hostel_Building_File(blockCode.Text);
                 if (string.IsNullOrEmpty(bcPath))
                 {
-                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                     WebClient wc = new WebClient();
                     byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -128,7 +128,7 @@ namespace InfrastructureManagement
                 string bcPath = ODataServices.Download_Auditorium_Building_File(buildingCode.Text);
                 if (!string.IsNullOrEmpty(bcPath))
                 {
-                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                     WebClient wc = new WebClient();
                     byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -208,9 +208,9 @@ namespace InfrastructureManagement
             {
                 string FileName = "Institute" + "_" + blockCode.Text + ".pdf";
                 string bcPath = ODataServices.Download_Institutional_File(blockCode.Text);
-                if (string.IsNullOrEmpty(bcPath))
+                if (!string.IsNullOrEmpty(bcPath))
                 {
-                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                     WebClient wc = new WebClient();
                     byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -266,7 +266,7 @@ namespace InfrastructureManagement
                 string bcPath = ODataServices.Download_Staff_Building_File(quarterCode.Text);
                 if (!string.IsNullOrEmpty(bcPath))
                 {
-                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                     WebClient wc = new WebClient();
                     byte[] buffer = wc.DownloadData(exportedFilePath);
 

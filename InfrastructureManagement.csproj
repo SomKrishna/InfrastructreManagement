@@ -662,10 +662,8 @@
     </Compile>
     <Compile Include="Common\Alert.cs" />
     <Compile Include="Common\DateTimeParser.cs" />
-    <Compile Include="Common\GovtColleges.cs" />
-    <Compile Include="Common\District.cs" />
     <Compile Include="Common\NumericHandler.cs" />
-    <Compile Include="Common\OdishaDistrict.cs" />
+    <Compile Include="Common\StringHelper.cs" />
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -796,7 +794,6 @@
     <Compile Include="SecurityServices.aspx.designer.cs">
       <DependentUpon>SecurityServices.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Common\College.cs" />
     <Compile Include="UpdateAuditorium.aspx.cs">
       <DependentUpon>UpdateAuditorium.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

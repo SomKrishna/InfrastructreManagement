@@ -209,11 +209,7 @@
     <div class="container box">
         <div class="row">
             <div class="col-lg-3 col-md-2"></div>
-            <div class="col-lg-12 col-md-12 model-box">
-                <div class="loader" id="loader">
-                                <div class="loader-img"><i class="fa fa-spinner fa-spin"></i></div>
-                            </div>
-
+            <div class="col-lg-12 col-md-12 model-box">                
                 <div class="col-lg-12 col-md-12 summary-box">
                     <div class="col-lg-12 NewEntrydiv">
                         <p class="NewEntry">Project Progress Details Input(For Ongoing & Improvement Projects)</p>

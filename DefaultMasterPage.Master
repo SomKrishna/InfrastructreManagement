@@ -459,10 +459,10 @@
                                         </ul>
                                     </li>
                                      <li>
-                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">AMC<b class="caret"></b></a>
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Maintenance&AMC<b class="caret"></b></a>
                                         <ul class="dropdown-menu" id="Ul3" runat="server">
-                                            <li><a href="MaintenanceAndAMC.aspx">Add AMC</a></li>
-                                            <li><a href="AMCList.aspx">AMC List</a></li>
+                                            <li><a href="MaintenanceAndAMC.aspx">Add Maintenance&AMC</a></li>
+                                            <li><a href="AMCList.aspx">Maintenance&AMC List</a></li>
                                         </ul>
                                     </li>
                                      <li>

@@ -72,9 +72,9 @@ namespace InfrastructureManagement
         {
             string FileName = "AMCAndMaintenance.XLS";
             string bcPath = ODataServices.ExportAMCAndMaintenanceFile();
-            if (string.IsNullOrEmpty(bcPath))
+            if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 

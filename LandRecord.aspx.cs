@@ -37,7 +37,7 @@ namespace InfrastructureManagement
             string bcPath = ODataServices.ExportLandFile();
             if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -66,7 +66,7 @@ namespace InfrastructureManagement
                 string bcPath = ODataServices.ExportLandFileInPdf(khatianNo.Text);
                 if (!string.IsNullOrEmpty(bcPath))
                 {
-                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                    string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                     WebClient wc = new WebClient();
                     byte[] buffer = wc.DownloadData(exportedFilePath);
 

@@ -127,9 +127,6 @@
                 <div class="col-lg-12 NewEntrydiv">
                     <p class="NewEntry">Update Building</p>
                 </div>
-                <div class="loader" id="loader">
-                    <div class="loader-img"><i class="fa fa-spinner fa-spin"></i></div>
-                </div>
                 <div class="row">
                     <div class="card-body">
                         <div class="row md-12 marginx">

@@ -402,7 +402,7 @@ namespace InfrastructureManagement
             string bcPath = ODataServices.Downlond_GB_Field_Photos();
             if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -444,7 +444,7 @@ namespace InfrastructureManagement
             string bcPath = ODataServices.Downlond_GB_Sports_Court_photo();
             if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -486,7 +486,7 @@ namespace InfrastructureManagement
             string bcPath = ODataServices.Downlond_GB_Field_Gallery_photo();
             if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -528,7 +528,7 @@ namespace InfrastructureManagement
             string bcPath = ODataServices.Downlond_GB_Conference_Room_photo();
             if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -570,7 +570,7 @@ namespace InfrastructureManagement
             string bcPath = ODataServices.Downlond_GB_Video_Conference_Room_photo();
             if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -612,7 +612,7 @@ namespace InfrastructureManagement
             string bcPath = ODataServices.Downlond_GB_Library_Photos();
             if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + ODataServices.Downlond_GB_Library_Photos().Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -651,10 +651,10 @@ namespace InfrastructureManagement
         protected void CentralLibraryDowloadButton_Click(object sender, EventArgs e)
         {
             string FileName = "Library_Photos" + "_" + ".pdf";
-            string bcPath = ODataServices.Downlond_GB_Library_Photos();
+            string bcPath = ODataServices.Downlond_GB_Central_Library_Photos();
             if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -696,7 +696,7 @@ namespace InfrastructureManagement
             string bcPath = ODataServices.Downlond_GB_Main_Entrance_Photos();
             if (string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -738,7 +738,7 @@ namespace InfrastructureManagement
             string bcPath = ODataServices.Downlond_GB_Dispensary_Photos();
             if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -780,7 +780,7 @@ namespace InfrastructureManagement
             string bcPath = ODataServices.Downlond_GB_Staff_Common_Room_Photos();
             if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -820,9 +820,9 @@ namespace InfrastructureManagement
         {
             string FileName = "Girls_Common_Room_Photos" + "_" + ".pdf";
             string bcPath = ODataServices.Downlond_GB_Girls_Common_Room_Photos();
-            if (string.IsNullOrEmpty(bcPath))
+            if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 
@@ -864,7 +864,7 @@ namespace InfrastructureManagement
             string bcPath = ODataServices.Downlond_GB_Boys_Common_Room_Photos();
             if (!string.IsNullOrEmpty(bcPath))
             {
-                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + bcPath.Split(Path.DirectorySeparatorChar)[5];
+                string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();
                 byte[] buffer = wc.DownloadData(exportedFilePath);
 

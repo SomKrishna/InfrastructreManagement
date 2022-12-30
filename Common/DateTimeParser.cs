@@ -19,7 +19,7 @@ namespace InfrastructureManagement.Common
 
         public static string ConvertDateTimeToText(Microsoft.OData.Edm.Date? date)
         {
-            if (date.HasValue)
+            if (date.HasValue && date != DateTime.MinValue)
             {
                 var convertedDateTime = Convert.ToDateTime(date.Value);
                 return convertedDateTime.ToString("yyyy'-'MM'-'dd");

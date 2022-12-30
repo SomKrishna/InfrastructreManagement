@@ -38,8 +38,8 @@ namespace InfrastructureManagement
                 lblAgencyName.InnerText = improvementObj.Agency;
                 lblWorkType.InnerText = improvementObj.Type_of_work;
                 lblWorkMode.InnerText = improvementObj.Mode_of_Work;
-                lblCommencementDate.InnerText = Convert.ToString(improvementObj.Date_of_commencement_as_per_agreement);
-                lblCompletionDate.InnerText = Convert.ToString(improvementObj.Date_of_completion_as_per_agreement);
+                lblCommencementDate.InnerText = DateTimeParser.ConvertDateTimeToText(improvementObj.Date_of_commencement_as_per_agreement);
+                lblCompletionDate.InnerText = DateTimeParser.ConvertDateTimeToText(improvementObj.Date_of_completion_as_per_agreement);
             }
             else if (ongoingobj != null)
             {
@@ -50,7 +50,7 @@ namespace InfrastructureManagement
                 lblAgencyName.InnerText = ongoingobj.Agency;
                 lblWorkType.InnerText = ongoingobj.Type_of_work;
                 lblWorkMode.InnerText = ongoingobj.Mode_of_Work;
-                lblCompletionDate.InnerText = Convert.ToString(ongoingobj.Date_of_completion_as_per_agreement);
+                lblCompletionDate.InnerText = DateTimeParser.ConvertDateTimeToText(ongoingobj.Date_of_completion_as_per_agreement);
             }
             else
             {
@@ -71,6 +71,7 @@ namespace InfrastructureManagement
             }
             else
             {
+                hiddenFiledProjectCode.Value = txtProjectSearch.Text;
                 LblMessage.Text = string.Empty;
             }
         }
@@ -89,9 +90,12 @@ namespace InfrastructureManagement
                 Balance_fund_requried_for_completion_of_work_in_Running_FY_in_LakhSpecified = true,
                 Percentage_of_work_completionSpecified = true,
                 Fund_now_proposed_for_release_in_Running_FY_inSpecified = true,
+                Project_TypeSpecified = true,
+                Tender_VariationSpecified = true,
+                UC_statusSpecified = true,
 
                 Project_Type = lblProjectType.InnerText == "Improvement" ? WebServices.ProjectProgressReference.Project_Type.Improvement : lblProjectType.InnerText == "Ongoing" ? WebServices.ProjectProgressReference.Project_Type.Ongoing : WebServices.ProjectProgressReference.Project_Type.New,
-                //Project_Code = hiddenFiledProjectCode.Value,
+                Project_Code = hiddenFiledProjectCode.Value,
                 AA_No = txtAANo.Text,
                 AA_date = DateTimeParser.ParseDateTime(txtAADate.Text),
                 Amount_of_AA_accorded = NumericHandler.ConvertToDecimal(txtAmountOfAA.Text),

@@ -853,18 +853,18 @@ namespace WebServices
             try
             {
                 var result = string.Empty;
-                var obj = GetAllProjectProgress().Where(x => string.Equals(x.AA_No, input.AA_No, StringComparison.OrdinalIgnoreCase)).ToList();
+                //var obj = GetAllProjectProgress().Where(x => string.Equals(x.AA_No, input.AA_No, StringComparison.OrdinalIgnoreCase)).ToList();
 
-                if (obj != null && obj.Count > 0)
-                {
-                    result = UpdateProjectProgressDetails(input);
-                }
-                else
-                {
-                    result = CreateProjectProgress(input);
-                }
+                //if (obj != null && obj.Count > 0)
+                //{
+                //    result = UpdateProjectProgressDetails(input);
+                //}
+                //else
+                //{
+                return CreateProjectProgress(input);
+                //}
 
-                return result;
+                //return result;
             }
             catch (Exception ex)
             {
@@ -911,7 +911,9 @@ namespace WebServices
         {
             try
             {
-                ProjectProgressReference.Projectprogressdetailscard_Service _obj_Binding = (ProjectProgressReference.Projectprogressdetailscard_Service)Configuration.getNavService(new ProjectProgressReference.Projectprogressdetailscard_Service(), "Projectprogressdetailscard", "Page");
+                ProjectProgressReference.Projectprogressdetailscard_Service _obj_Binding = 
+                    (ProjectProgressReference.Projectprogressdetailscard_Service)Configuration
+                    .getNavService(new ProjectProgressReference.Projectprogressdetailscard_Service(), "Projectprogressdetailscard", "Page");
                 _obj_Binding.Create(ref obj);
                 return ExceptionHelper.SuccessfulMessage;
             }

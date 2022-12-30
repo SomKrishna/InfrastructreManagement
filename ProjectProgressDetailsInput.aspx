@@ -350,7 +350,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="exampleAccount">Expected/Target date for complection </label>
+                                                <label for="exampleAccount">Expected/Target date for completion </label>
                                                 <asp:TextBox ID="txtExpectedDate" type="date" max="9999-12-31" CssClass="form-control ajax__calendar_body" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">

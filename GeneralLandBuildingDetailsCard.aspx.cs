@@ -694,7 +694,7 @@ namespace InfrastructureManagement
         {
             string FileName = "Main_Entrance" + "_" + ".pdf";
             string bcPath = ODataServices.Downlond_GB_Main_Entrance_Photos();
-            if (string.IsNullOrEmpty(bcPath))
+            if (!string.IsNullOrEmpty(bcPath))
             {
                 string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                 WebClient wc = new WebClient();

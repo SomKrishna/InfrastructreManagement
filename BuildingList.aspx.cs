@@ -96,7 +96,7 @@ namespace InfrastructureManagement
             {
                 string FileName = "Hostel" + "_" + blockCode.Text + ".pdf";
                 string bcPath = ODataServices.Download_Hostel_Building_File(blockCode.Text);
-                if (string.IsNullOrEmpty(bcPath))
+                if (!string.IsNullOrEmpty(bcPath))
                 {
                     string exportedFilePath = ConfigurationManager.AppSettings["LandandBuildingTemplatePath"].ToString() + StringHelper.GetFileNameFromURL(bcPath);
                     WebClient wc = new WebClient();
